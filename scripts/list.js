@@ -20,30 +20,33 @@ function createElement(arrayElement, sectionToQuery){
         
         const itemContainer = document.createElement("div");
         const itemContainerParent = document.createElement("div");
-        const item = document.createElement("div");
-
 
         const link = document.createElement("a");
         const linkName = document.createElement("p");
         const desc = document.createElement("p");
 
         if (sectionToQuery === "media"){
-            createImageTag(array, itemContainerParent, item)
+            createImageTag(array, itemContainerParent)
             console.log("Img created for " + sectionToQuery);
         }
         
         //const iconElement = document.createElement("img");
         //iconElement.src = "https://s2.googleusercontent.com/s2/favicons?domain_url=" + link.link;
 
-        defineElements(array, itemContainer, itemContainerParent, item, link, linkName, desc);
-        appendElements(section, sectionItems, itemContainer, itemContainerParent, item, link, linkName, desc);
+        defineElements(array, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery);
+        appendElements(section, sectionItems, itemContainer, itemContainerParent, link, linkName, desc);
     }
 }
 
-function defineElements(array, itemContainer, itemContainerParent, item, link, linkName, desc){
-    itemContainer.className = "item-container";
+function defineElements(array, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery){
+    if(sectionToQuery === "media"){
+        itemContainer.className = "item-container-" + array.id;
+    }
+    else{
+        itemContainer.className = "item-container";
+    }
+    
     itemContainerParent.className = "item-container-parent";
-    item.className = "item-" + array.id;
     link.href = array.link;
     link.setAttribute("target", "_blank");
     linkName.innerText = array.name;
@@ -52,23 +55,21 @@ function defineElements(array, itemContainer, itemContainerParent, item, link, l
     desc.className = "item-desc";
 }
 
-function appendElements(section, sectionItems, itemContainer, itemContainerParent, item, link, linkName, desc){
+function appendElements(section, sectionItems, itemContainer, itemContainerParent, link, linkName, desc){
     section.appendChild(sectionItems);
     sectionItems.appendChild(itemContainer);
 
     itemContainer.appendChild(link);
     link.appendChild(itemContainerParent);
     itemContainerParent.appendChild(linkName);
-    itemContainerParent.appendChild(item);
     itemContainer.appendChild(desc);
 }
 
-function createImageTag(array, itemContainerParent, item){
+function createImageTag(array, itemContainerParent){
     const img = document.createElement("img");
     img.className = "thumbnail-" + array.id;
     img.src = array.pic;
     itemContainerParent.appendChild(img);
-    itemContainerParent.insertBefore(item, img);
 }
 
 function sortByName(array) {

@@ -1,0 +1,98 @@
+{
+    "grammar": [
+        {
+            "id": "g1",
+            "name": "JLPT",
+            "link": "http://www.tanos.co.uk/jlpt/",
+            "description": "JLPT Resources"
+        },
+
+        {
+            "id": "g2",
+            "name": "Onomatopedia",
+            "link": "https://www.onomatopedia.jp/?utm_source=Tofugu",
+            "description": "Encyclopedia of Japanese onomatopoeia"
+        },
+
+        {
+            "id": "g3",
+            "name": "Kanji Link",
+            "link": "https://www.kanji-link.com/fr/#",
+            "description": "Japanese grammar simply explained"
+        },
+
+        {
+            "id": "g4",
+            "name": "Conjugation",
+            "link": "https://i.redd.it/q9glb8nn5jpz.png",
+            "description": "General verb conjugation chart"
+        },
+
+        {
+            "id": "g5",
+            "name": "Maggie Sensei",
+            "link": "https://maggiesensei.com/",
+            "description": "Learn Japanese in a funny way"
+        }
+
+    ],
+
+    "kanji": [
+        {
+            "id": "k1",
+            "name": "Kanji Practice",
+            "link": "https://kanjipractice.com/",
+            "description": "Practice your kanji"
+        },
+
+        {
+            "id": "k2",
+            "name": "Bretmayer",
+            "link": "http://www.bretmayer.com/kanji.html",
+            "description": "Kanji database"
+        }
+    ],
+
+    "books": [
+        {
+            "id": "b1",
+            "name": "Genki",
+            "link": "https://drive.google.com/drive/u/0/folders/0B81GSkGtkS4VSzdYZ0pfelRFcHc?resourcekey=0-9myX0w14meJyu5cUEij0Ug",
+            "description": "Genki textbooks and audio"
+        },
+
+        {
+            "id": "b2",
+            "name": "Minna no Nihongo",
+            "link": "https://mfadhillah.files.wordpress.com/2012/12/minna-no-nihongo-i-c3bcbersetzungen-grammatikalische-erklc3a4rungen-englisch.pdf",
+            "description": "Minna no Nihongo textbook"
+        }
+    ],
+
+    "media": [
+        {
+            "id": "m1",
+            "name": "Osho Taigu",
+            "link": "https://www.youtube.com/@osho_taigu/",
+            "description": "A monk talking about positive things with a nice pace",
+            "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqPboCQXDb9eH6Qcc__SWRsSymRgRmLyTZFEPhto=s176-c-k-c0x00ffffff-no-rj"
+        },
+
+        {
+            "id": "m2",
+            "name": "Nihongo no Mori",
+            "link": "https://www.youtube.com/@nihongonomori2013",
+            "description": "A great youtube channel for all level",
+            "pic": "https://yt3.googleusercontent.com/OwiBlQvGLr3AjwETXWQG0yjmZab0eR41dhTnaXJaV8h5IzQMzzwfbf5iLX9FulOZxP96Opc0CA=s176-c-k-c0x00ffffff-no-rj"
+        },
+
+        {
+            "id": "m3",
+            "name": "Dogen",
+            "link": "https://www.youtube.com/@Dogen",
+            "description": "Japanese teacher",
+            "pic": "https://yt3.googleusercontent.com/2H0nF7hyTRv_tnN-uMAtX_PJyT2q7m1YRunz7nMtyu31GXTbZu4Q9PiJ3f--BawmD2U41b55pQ=s176-c-k-c0x00ffffff-no-rj"
+        }
+        
+    ]
+}

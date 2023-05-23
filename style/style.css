@@ -89,7 +89,6 @@ section h2 {
 
 .section-grammar-items,
 .section-books-items,
-.section-misc-items,
 .section-kanji-items {
     display: grid;
     justify-content: center;
@@ -164,9 +163,16 @@ section h2 {
     transform: scale(1.1);
 }
 
-.item-container .item-desc {
+.item-container .item-desc{
     position: relative;
     font-size: 1em;
+}
+
+.section-media-items .item-desc::before{
+    position:relative;
+    top: 2px;
+    padding-right: 10px;
+    content: url("https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico");
 }
 
 .item-container a{
@@ -197,4 +203,70 @@ section h2 {
 
 .item-container-parent img:hover{
     transform: scale(1.8);
+}
+
+.section-misc-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 150px 0 150px;
+
+}
+
+.section-misc-items .item-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px
+}
+
+.section-misc-items .item-container-parent{
+    width: 500px;
+}
+
+#mi1{
+    background: rgb(36,38,41);
+    background: linear-gradient(90deg, rgba(36,38,41,1) 0%, rgba(0,255,220,1) 100%);
+
+    background-size: 200%;
+    background-position: -200px;
+}
+
+.section-misc-items .item-desc::after{
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 7px;
+    left: -5px;
+    background-size:25px;
+    opacity: 0;
+    width: 25px;
+    height: 25px;
+    transition: left .3s, opacity .2s ease;
+}
+
+#desc-mi1::after{
+    background-image: url("../images/windows+mac.png");
+    background-size:50px 25px;
+    width: 50px;
+    height: 25px;
+}
+
+#desc-mi2::after{
+    background-image: url("../images/android.png");
+}
+
+.item-container a:hover + #desc-mi1::after,
+.item-container a:hover + #desc-mi2::after{
+    opacity: 1;
+    left: 20px;
+}
+
+
+#mi2{
+    background: rgb(82,117,150);
+    background: linear-gradient(90deg, rgba(82,117,150,1) 0%, rgba(57,146,207,1) 100%);
+
+    background-size: 200%;
+    background-position: -100px;
 }

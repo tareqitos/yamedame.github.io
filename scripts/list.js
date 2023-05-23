@@ -4,11 +4,13 @@ const grammarArray = links.grammar;
 const kanjiArray = links.kanji;
 const booksArray = links.books;
 const mediaArray = links.media;
+const miscArray = links.misc;
 
 createElement(grammarArray, "grammar");
 createElement(kanjiArray, "kanji");
 createElement(booksArray, "books");
 createElement(mediaArray, "media");
+createElement(miscArray, "misc");
 
 function createElement(arrayElement, sectionToQuery){
 
@@ -43,7 +45,12 @@ function defineElements(array, itemContainer, itemContainerParent, link, linkNam
         itemContainer.className = "item-container-" + array.id;
     }
     else{
-        itemContainer.className = "item-container";
+        itemContainer.className = "item-container";   
+    }
+
+    if(sectionToQuery === "misc"){
+        itemContainerParent.id = array.id;
+        desc.id = "desc-" + array.id;
     }
     
     itemContainerParent.className = "item-container-parent";

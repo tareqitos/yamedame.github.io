@@ -75,7 +75,8 @@
             "name": "Osho Taigu",
             "link": "https://www.youtube.com/@osho_taigu/",
             "description": "A monk talking about positive things with a nice pace",
-            "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqPboCQXDb9eH6Qcc__SWRsSymRgRmLyTZFEPhto=s176-c-k-c0x00ffffff-no-rj"
+            "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqPboCQXDb9eH6Qcc__SWRsSymRgRmLyTZFEPhto=s176-c-k-c0x00ffffff-no-rj",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
         },
 
         {
@@ -101,5 +102,21 @@
             "pic": "https://coursdejaponais.com/wp-content/uploads/2021/10/coursdejaponais-website-image-016-1024x683.jpg"
         }
         
+    ],
+
+    "misc": [
+        {
+            "id": "mi1",
+            "name": "Voracious",
+            "link": "https://voracious.app/",
+            "description": "A video player for learning languages"
+        },
+
+        {
+            "id": "mi2",
+            "name": "Tachiyomi",
+            "link": "https://tachiyomi.org/",
+            "description": "Free and open source manga reader for Android "
+        }
     ]
 }

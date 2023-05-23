@@ -51,6 +51,8 @@ function defineElements(array, itemContainer, itemContainerParent, link, linkNam
     if(sectionToQuery === "misc"){
         itemContainerParent.id = array.id;
         desc.id = "desc-" + array.id;
+        linkName.className = "item-title";
+        linkName.id ="title-" + array.id;
     }
     
     itemContainerParent.className = "item-container-parent";

@@ -232,34 +232,42 @@ section h2 {
     background-position: -200px;
 }
 
-.section-misc-items .item-desc::after{
+.section-misc-items .item-title{
+    position:relative;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.section-misc-items .item-title::after{
     content: "";
     display: inline-block;
-    position: relative;
-    top: 7px;
-    left: -5px;
+    position: absolute;
+    top: 5px;
+    left: -200px;
     background-size:25px;
-    opacity: 0;
+    filter: invert(1);
+    opacity: 1;
     width: 25px;
     height: 25px;
     transition: left .3s, opacity .2s ease;
 }
 
-#desc-mi1::after{
+#title-mi1::after{
     background-image: url("../images/windows+mac.png");
     background-size:50px 25px;
     width: 50px;
     height: 25px;
 }
 
-#desc-mi2::after{
+#title-mi2::after{
     background-image: url("../images/android.png");
 }
 
-.item-container a:hover + #desc-mi1::after,
-.item-container a:hover + #desc-mi2::after{
+.item-container a:hover  #title-mi1::after,
+.item-container a:hover  #title-mi2::after{
     opacity: 1;
-    left: 20px;
+    left: -110px;
 }
 
 

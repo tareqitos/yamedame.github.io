@@ -50,6 +50,13 @@
             "name": "Bretmayer",
             "link": "http://www.bretmayer.com/kanji.html",
             "description": "Kanji database"
+        },
+
+        {
+            "id": "k3",
+            "name": "Genkoyoushi Generator",
+            "link": "https://www.incompetech.com/graphpaper/genkoyoushi/",
+            "description": "Japanese graph paper generator to practice kanji"
         }
     ],
 

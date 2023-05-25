@@ -378,6 +378,9 @@
     .section-media-items {
       grid-template-columns: repeat(2, 150px)
     }
+    .item-container-parent img {
+      transform: scale(1.1);
+    }
     .item-container-parent p {
         font-size: 1em
     }
@@ -400,6 +403,7 @@
     .section-media-items {
       grid-template-columns: repeat(1,250px);
     }
+
     .section-misc-items{
         padding: 0;
     }

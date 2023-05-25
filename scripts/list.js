@@ -12,8 +12,10 @@ const autoDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 if(autoDarkTheme.matches){
     html.classList.toggle("nightMode");
+    themeSwitch.innerHTML = "明";
 }else{
     html.classList.remove("nightMode");
+    themeSwitch.innerHTML = "暗";
 }
 
 themeSwitch.addEventListener("click", () => {

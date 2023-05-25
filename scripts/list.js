@@ -6,6 +6,18 @@ const booksArray = links.books;
 const mediaArray = links.media;
 const miscArray = links.misc;
 
+const html = document.getElementsByTagName("html")[0];
+const themeSwitch = document.getElementById("theme-logo");
+
+themeSwitch.addEventListener("click", () => {
+    html.classList.toggle("nightMode");
+    if(html.classList.contains("nightMode")){
+        themeSwitch.innerHTML = "明";
+    }else{
+        themeSwitch.innerHTML = "暗";
+    }
+});
+
 createElement(grammarArray, "grammar");
 createElement(kanjiArray, "kanji");
 createElement(booksArray, "books");
@@ -31,9 +43,6 @@ function createElement(arrayElement, sectionToQuery){
             createImageTag(array, itemContainerParent)
             console.log("Img created for " + sectionToQuery);
         }
-        
-        //const iconElement = document.createElement("img");
-        //iconElement.src = "https://s2.googleusercontent.com/s2/favicons?domain_url=" + link.link;
 
         defineElements(array, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery);
         appendElements(section, sectionItems, itemContainer, itemContainerParent, link, linkName, desc);
@@ -78,6 +87,7 @@ function createImageTag(array, itemContainerParent){
     const img = document.createElement("img");
     img.className = "thumbnail-" + array.id;
     img.src = array.pic;
+    img.alt = array.name;
     itemContainerParent.appendChild(img);
 }
 

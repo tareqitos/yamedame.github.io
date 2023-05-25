@@ -88,9 +88,6 @@
   nav a:hover {
     color: #c93d1a
   }
-  nav a:link {
-    color: #c93d1a
-  }
   .footer {
     display: flex;
     justify-content: space-between;

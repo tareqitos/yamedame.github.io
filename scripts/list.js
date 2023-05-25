@@ -8,6 +8,13 @@ const miscArray = links.misc;
 
 const html = document.getElementsByTagName("html")[0];
 const themeSwitch = document.getElementById("theme-logo");
+const autoDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+if(autoDarkTheme.matches){
+    html.classList.toggle("nightMode");
+}else{
+    html.classList.remove("nightMode");
+}
 
 themeSwitch.addEventListener("click", () => {
     html.classList.toggle("nightMode");
@@ -17,6 +24,7 @@ themeSwitch.addEventListener("click", () => {
         themeSwitch.innerHTML = "暗";
     }
 });
+
 
 createElement(grammarArray, "grammar");
 createElement(kanjiArray, "kanji");

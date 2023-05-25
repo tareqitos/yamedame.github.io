@@ -34,7 +34,6 @@
             "link": "https://maggiesensei.com/",
             "description": "Learn Japanese in a funny way"
         }
-
     ],
 
     "kanji": [
@@ -107,6 +106,14 @@
             "link": "https://www.youtube.com/@coursdejaponais",
             "description": "Japanese class in French",
             "pic": "https://coursdejaponais.com/wp-content/uploads/2021/10/coursdejaponais-website-image-016-1024x683.jpg"
+        },
+
+        {
+            "id": "m5",
+            "name": "Learn Japanese Reddit",
+            "link": "https://www.reddit.com/r/LearnJapanese/",
+            "description": "A subreddit for learners of the Japanese language ",
+            "pic": "https://styles.redditmedia.com/t5_2qyls/styles/communityIcon_b1dnoekabjk11.jpg?width=256&format=pjpg&v=enabled&s=d312ae943f665b52ac590e75653a57e7d6a6cefd"
         }
         
     ],
@@ -123,7 +130,14 @@
             "id": "mi2",
             "name": "Tachiyomi",
             "link": "https://tachiyomi.org/",
-            "description": "Free and open source manga reader for Android "
+            "description": "Free and open source manga reader for Android"
+        },
+
+        {
+            "id": "mi3",
+            "name": "Free Japanese Fonts",
+            "link": "https://www.freejapanesefont.com/",
+            "description": "270 Japanese unicode fonts free to download for Mac and Windows"
         }
     ]
 }

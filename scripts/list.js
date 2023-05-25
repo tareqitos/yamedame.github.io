@@ -61,19 +61,17 @@ function createElement(arrayElement, sectionToQuery){
 
 function defineElements(array, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery){
     if(sectionToQuery === "media"){
-        itemContainer.className = "item-container-" + array.id;
+    desc.id = array.id;
     }
-    else{
-        itemContainer.className = "item-container";   
-    }
-
+    
     if(sectionToQuery === "misc"){
         itemContainerParent.id = array.id;
         desc.id = "desc-" + array.id;
         linkName.className = "item-title";
         linkName.id ="title-" + array.id;
     }
-    
+
+    itemContainer.className = "item-container";   
     itemContainerParent.className = "item-container-parent";
     link.href = array.link;
     link.setAttribute("target", "_blank");
@@ -97,7 +95,6 @@ function createImageTag(array, itemContainerParent){
     const img = document.createElement("img");
     img.className = "thumbnail-" + array.id;
     img.src = array.pic;
-    img.alt = array.name;
     itemContainerParent.appendChild(img);
 }
 

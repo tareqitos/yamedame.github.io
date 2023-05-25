@@ -27,6 +27,10 @@
     padding-top: 100px;
     margin-top: -100px;
   }
+  #top{
+    position: absolute;
+    top: 0;
+  }
   header {
     top: 0;
     z-index: 5;
@@ -132,16 +136,6 @@
     grid-auto-rows: max-content;
     gap: 20px;
   }
-  .section-media-items {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(4,250px);
-    grid-template-rows: auto;
-    gap: 40px
-  }
-  .section-media-items a {
-    text-decoration: none
-  }
   .item-container-m3 {
     order: 2
   }
@@ -160,9 +154,6 @@
     background: linear-gradient(90deg,#ee6c4d 0,#fcb045 100%);
     background-size: 200% auto;
     transition: background-color .25s,transform .25s ease
-  }
-  .section-media-items .item-container-parent {
-    height: 250px
   }
   .section-kanji-items .item-container-parent {
     background: #4266ff;
@@ -184,11 +175,30 @@
     position: relative;
     font-size: 1em
   }
-  .section-media-items .item-desc::before {
+  .section-media-items {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4,250px);
+    grid-template-rows: auto;
+    gap: 40px
+  }
+  .section-media-items a {
+    text-decoration: none
+  }
+  .section-media-items .item-container-parent {
+    height: 250px
+  }
+  #m1::before,
+  #m2::before, 
+  #m3::before, 
+  #m4::before{
     position: relative;
     top: 2px;
     padding-right: 10px;
     content: url("https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico")
+  }
+  .section-media-items .item-container-parent p {
+    text-shadow: 0 2px 4px rgba(0,0,0,.6)
   }
   .item-container a {
     text-decoration: none
@@ -202,11 +212,8 @@
     font-variant-caps: all-small-caps;
     transform: transform .25s,ease
   }
-  .section-media-items .item-container-parent p {
-    text-shadow: 0 2px 4px rgba(0,0,0,.6)
-  }
   .item-container-parent img {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
@@ -214,7 +221,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(1.6);
+    transform: scale(1.3);
     transition: transform .6s ease
   }
   .item-container-parent img:hover {
@@ -260,7 +267,8 @@
     height: 25px;
     transition: left .3s,opacity .2s ease
   }
-  #title-mi1::after {
+  #title-mi1::after,
+  #title-mi3::after {
     background-image: url("../images/windows+mac.png");
     background-size: 50px 25px;
     width: 50px;
@@ -270,13 +278,19 @@
     background-image: url("../images/android.png")
   }
   .item-container a:hover #title-mi1::after,
-  .item-container a:hover #title-mi2::after {
+  .item-container a:hover #title-mi2::after,
+  .item-container a:hover #title-mi3::after {
     opacity: 1;
     left: -110px
   }
   #mi2 {
     background: #527596;
     background: linear-gradient(90deg,#527596 0,#3992cf 100%);
+    background-size: 200%;
+    background-position: -100px
+  }
+  #mi3 {
+    background: linear-gradient(90deg, rgb(71, 70, 69) 0%, rgb(206, 201, 199) 100%);
     background-size: 200%;
     background-position: -100px
   }
@@ -319,7 +333,7 @@
       bottom: 0;
       width: 100%;
       height: 100%;
-      transform: scale(1)
+      transform: scale(1.2)
     }
     .item-container-parent:hover {
       transform: scale(1)
@@ -341,7 +355,8 @@
       left: -80px
     }
     .item-container a:hover #title-mi1::after,
-    .item-container a:hover #title-mi2::after {
+    .item-container a:hover #title-mi2::after,
+    .item-container a:hover #title-mi3::after {
       opacity: 1;
       left: -80px
     }

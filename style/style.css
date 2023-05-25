@@ -91,7 +91,7 @@
   nav a:link {
     color: #c93d1a
   }
-  footer {
+  .footer {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -100,20 +100,22 @@
     box-shadow: 1px -3px 12px -1px rgba(0,0,0,.15);
     background-color: var(--header-footer);
   }
-  footer p {
+  .footer p {
     margin: 0;
     padding: 0
   }
-  footer img {
+  .footer img {
     width: 25px;
     height: 25px;
     filter: var(--mail-color);
     transition: transform .25s ease
   }
-  footer img:hover {
+  .footer img:hover {
     transform: scale(1.3)
   }
   .top{
+    position: absolute;
+    left: 50%;
     color: var(--text);
   }
   section {
@@ -332,7 +334,7 @@
       transform: scale(1.3)
     }
     .item-container-parent p {
-      font-size: 1.1em
+      font-size: 1.3em
     }
     .section-misc-items .item-container-parent {
       width: 350px
@@ -371,10 +373,13 @@
     .section-books-items,
     .section-grammar-items,
     .section-kanji-items {
-      grid-template-columns: repeat(2,150px)
+      grid-template-columns: repeat(2, 150px)
     }
     .section-media-items {
-      grid-template-columns: repeat(2,150px)
+      grid-template-columns: repeat(2, 150px)
+    }
+    .item-container-parent p {
+        font-size: 1em
     }
     nav {
       display: flex;
@@ -383,5 +388,45 @@
     }
     nav a h2 {
       font-size: 1.3em
+    }
+  }
+
+  @media screen and (max-width:400px) {
+    .section-books-items,
+    .section-grammar-items,
+    .section-kanji-items {
+      grid-template-columns: repeat(1,250px)
+    }
+    .section-media-items {
+      grid-template-columns: repeat(1,250px);
+    }
+    .section-misc-items{
+        padding: 0;
+    }
+    .section-misc-items .item-container-parent {
+        width: 300px
+    }
+    .section-misc-items .item-title::after {
+        opacity: 1;
+        left: -70px
+    }
+    .item-container-parent p {
+        font-size: 1.3em
+    }
+    nav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap
+    }
+    nav a h2 {
+      font-size: 1.1em
+    }
+    .button{
+        top: 10px;
+        right: 13px;
+        transform: scale(.6);
+    }
+    .button:hover{
+        transform: scale(.7);
     }
   }

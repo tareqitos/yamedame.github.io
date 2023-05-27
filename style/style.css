@@ -4,12 +4,17 @@
     box-sizing: border-box;
   }
   html {
+    position:relative;
+    min-height: 100%;
     scroll-behavior: smooth;
     --bg: #ffffff !important;
     --text: #212529 !important;
     --header-footer: #ffffff !important;
     --btn-shadow: rgba(33, 37, 41, 0.3) 0px 2px 8px !important;
     --mail-color: invert(0) !important;
+    --input-bg-color: #ffffff !important;
+    --input-border: 1.5px solid #979797 !important; 
+    --input-category-color: #9fa0a9;
   }
   html.nightMode{
     --bg: #212529 !important;
@@ -17,11 +22,15 @@
     --header-footer: #17191c !important;
     --btn-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px !important;
     --mail-color: invert(1) !important;
+    --input-bg-color: #303245 !important; 
+    --input-border: 0 !important;
+    --input-category-color: #979797;
   }
   body{
     color: var(--text) !important;
     background-color: var(--bg) !important;
     transition: 0.1s;
+    min-height: 100vh;
   }
   .anchor {
     padding-top: 100px;
@@ -118,6 +127,52 @@
     position: absolute;
     left: 50%;
     color: var(--text);
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    margin: auto auto 30px auto;
+    width: 500px;
+    background-color: var(--header-footer);
+    box-shadow: var(--btn-shadow);
+    padding: 40px 20px 40px 20px;
+    border-radius: 20px;
+    gap: 20px;
+  }
+  .input,
+  #category{
+    border-radius: 10px;
+    height: 50px;
+    border: var(--input-border);
+    outline: 0;
+    padding-left: 20px;
+    background-color: var(--input-bg-color);
+    color: var(--text)
+  }
+  #category{
+    color: var(--input-category-color);
+  }
+  #category,
+  #submit{
+    width: 200px;
+  }
+  #submit{
+    margin: auto;
+    border-radius: 20px;
+    text-align: center;
+    width:150px;
+    height:50px;
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: white;
+    outline: 0;
+    border: 0;
+    background: linear-gradient(90deg,#ee6c4d 0,#fcb045 100%);
+    transform: scale(1);
+    transition: transform .3s ease;
+  }
+  #submit:hover{
+    transform: scale(1.1);
   }
   section {
     padding: 40px;
@@ -312,6 +367,9 @@
     .section-media-items {
       grid-template-columns: repeat(2,250px)
     }
+    form{
+      width: 400px;
+    }
   }
   @media screen and (max-width:550px) {
     nav a h2 {
@@ -404,6 +462,9 @@
     nav a h2 {
       font-size: 1.3em
     }
+    form{
+      width: 350px;
+    }
   }
 
   @media screen and (max-width:400px) {
@@ -444,5 +505,8 @@
     }
     .button:hover{
         transform: scale(.7);
+    }
+    form{
+      width: 250px;
     }
   }

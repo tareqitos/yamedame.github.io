@@ -46,7 +46,7 @@
         <section class="section-grammar">
             <h3 id="grammar" class="anchor">structure</h3>
             <div class="section-grammar-items">
-           
+
             </div>
         </section>
         <section class="section-kanji">
@@ -72,6 +72,25 @@
             <div class="section-misc-items">
 
             </div>
+        </section>
+        <section>
+            <h3 id="send" class="anchor">send a suggestion</h3>
+            <form method="POST" action="https://formsubmit.co/d9b3671da52ddfd7eb3cddab0776808e">
+                <input type="hidden" name="_next" value="https://tareqitos.me/confirm.html">
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="text" name="title" id="add-title" class="input" placeholder="title" required>
+                <input type="text" name="link" id="add-link" class="input" placeholder="link" required>
+                <select name="category" id="category">
+                    <option value="structure">structure</option>
+                    <option value="kanji">kanji</option>
+                    <option value="books">books</option>
+                    <option value="media">media</option>
+                    <option value="misc">misc</option>
+                </select>
+                <input type="textarea" name="desc-area" id="desc-area" class="input" placeholder="description">
+                <input type="submit" value="SUBMIT" id="submit">
+            </form>
         </section>
     </main>
     <footer>

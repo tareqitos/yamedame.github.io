@@ -1,17 +1,68 @@
 {
+    "dictionaries": [
+        {
+            "id": "d1",
+            "name": "Jisho",
+            "link": "http://www.jisho.org",
+            "description": "English/Japanese dictionary"
+        },
+
+        {
+            "id": "d2",
+            "name": "Jotoba",
+            "link": "http://www.jisho.org",
+            "description": "Jisho-like dictionary with name and sentence search options"
+        },
+
+        {
+            "id": "d3",
+            "name": "Onomatopedia",
+            "link": "https://www.onomatopedia.jp/?utm_source=Tofugu",
+            "description": "Encyclopedia of Japanese onomatopoeia"
+        },
+
+        {
+            "id": "d4",
+            "name": "JLect",
+            "link": "https://kanji.jitenon.jp/cat/joyo.html",
+            "description": "Dictionary of Japanese dialects"
+        },
+
+        {
+            "id": "d5",
+            "name": "漢字辞典",
+            "link": "https://kanji.jitenon.jp/",
+            "description": "Exhaustive dictionary in Japanese"
+        },
+
+        {
+            "id": "d6",
+            "name": "goo",
+            "link": "https://dictionary.goo.ne.jp/",
+            "description": "Goo's dictionary"
+        },
+
+        {
+            "id": "d7",
+            "name": "DeepL",
+            "link": "https://www.deepl.com/en/translator#",
+            "description": "Translator using AI and doing great with Japanese"
+        },
+
+        {
+            "id": "d8",
+            "name": "Yomichan",
+            "link": "https://foosoft.net/projects/yomichan/",
+            "description": "Web extension pop-up dictionary"
+        }
+    ],
+
     "grammar": [
         {
             "id": "g1",
             "name": "JLPT",
             "link": "http://www.tanos.co.uk/jlpt/",
             "description": "JLPT Resources"
-        },
-
-        {
-            "id": "g2",
-            "name": "Onomatopedia",
-            "link": "https://www.onomatopedia.jp/?utm_source=Tofugu",
-            "description": "Encyclopedia of Japanese onomatopoeia"
         },
 
         {
@@ -59,7 +110,7 @@
         }
     ],
 
-    "books": [
+    "misc": [
         {
             "id": "b1",
             "name": "Genki",
@@ -118,7 +169,7 @@
         
     ],
 
-    "misc": [
+    "software": [
         {
             "id": "mi1",
             "name": "Voracious",

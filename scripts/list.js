@@ -1,57 +1,24 @@
 const reponse = await fetch("scripts/list-links.json");
 const links = await reponse.json();
+const dicoArray = links.dictionaries;
 const grammarArray = links.grammar;
 const kanjiArray = links.kanji;
-const booksArray = links.books;
-const mediaArray = links.media;
 const miscArray = links.misc;
+const mediaArray = links.media;
+const softwareArray = links.software;
+const categories = [dicoArray, grammarArray, kanjiArray, miscArray, mediaArray, softwareArray];
+const categoriesName = ["dictionaries", "grammar", "kanji", "misc", "media", "software"];
 
-const html = document.getElementsByTagName("html")[0];
-const themeSwitch = document.getElementById("theme-logo");
-const autoDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+darkTheme();
+createCategoriesAndSort()
+collapseCategories()
 
-if(autoDarkTheme.matches){
-    html.classList.toggle("nightMode");
-    themeSwitch.innerHTML = "明";
-}else{
-    html.classList.remove("nightMode");
-    themeSwitch.innerHTML = "暗";
-}
-
-themeSwitch.addEventListener("click", () => {
-    html.classList.toggle("nightMode");
-    if(html.classList.contains("nightMode")){
-        themeSwitch.innerHTML = "明";
-    }else{
-        themeSwitch.innerHTML = "暗";
+function createCategoriesAndSort(){
+    for (let i = 0; i < categories.length; i++){
+        sortByName(categories[i]);
+        createElement(categories[i], categoriesName[i]);
     }
-});
-
-
-createElement(grammarArray, "grammar");
-createElement(kanjiArray, "kanji");
-createElement(booksArray, "books");
-createElement(mediaArray, "media");
-createElement(miscArray, "misc");
-
-document.querySelectorAll('.collapse-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const collapseContent = button.nextElementSibling;
-
-        button.classList.toggle('collapse-button--active');
-
-        if (button.classList.contains('collapse-button--active')) {
-
-            collapseContent.style.maxHeight = 0;
-            collapseContent.style.opacity = 0;
-            collapseContent.style.marginTop = 0;
-        } else {
-            collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
-            collapseContent.style.opacity = 1;
-            collapseContent.style.marginTop = 40 + 'px';
-        }
-    });
-});
+}
 
 function createElement(arrayElement, sectionToQuery){
 
@@ -73,7 +40,9 @@ function createElement(arrayElement, sectionToQuery){
         }
 
         defineElements(array, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery);
-        appendElements(sectionItems, itemContainer, itemContainerParent, link, linkName, desc);
+        appendElements(sectionItems, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery);
+
+
     }
 }
 
@@ -82,7 +51,7 @@ function defineElements(array, itemContainer, itemContainerParent, link, linkNam
     desc.id = array.id;
     }
     
-    if(sectionToQuery === "misc"){
+    if(sectionToQuery === "software"){
         itemContainerParent.id = array.id;
         desc.id = "desc-" + array.id;
         linkName.className = "item-title";
@@ -90,7 +59,7 @@ function defineElements(array, itemContainer, itemContainerParent, link, linkNam
     }
 
     itemContainer.className = "item-container";   
-    itemContainerParent.className = "item-container-parent";
+    itemContainerParent.className = "item-container-parent " + sectionToQuery;
     link.href = array.link;
     link.setAttribute("target", "_blank");
     linkName.innerText = array.name;
@@ -99,12 +68,16 @@ function defineElements(array, itemContainer, itemContainerParent, link, linkNam
     desc.className = "item-desc";
 }
 
-function appendElements(sectionItems, itemContainer, itemContainerParent, link, linkName, desc){
+function appendElements(sectionItems, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery){
     sectionItems.appendChild(itemContainer);
 
     itemContainer.appendChild(link);
     link.appendChild(itemContainerParent);
-    itemContainerParent.appendChild(linkName);
+    if(sectionToQuery === "media"){
+        itemContainer.appendChild(linkName);
+    } else {
+        itemContainerParent.appendChild(linkName);
+    }
     itemContainer.appendChild(desc);
 }
 
@@ -113,6 +86,28 @@ function createImageTag(array, itemContainerParent){
     img.className = "thumbnail-" + array.id;
     img.src = array.pic;
     itemContainerParent.appendChild(img);
+}
+
+function collapseCategories(){
+    
+    document.querySelectorAll('.collapse-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const collapseContent = button.nextElementSibling;
+    
+            button.classList.toggle('collapse-button--active');
+    
+            if (button.classList.contains('collapse-button--active')) {
+    
+                collapseContent.style.maxHeight = 0;
+                collapseContent.style.opacity = 0;
+                collapseContent.style.marginTop = 0;
+            } else {
+                collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
+                collapseContent.style.opacity = 1;
+                collapseContent.style.marginTop = 40 + 'px';
+            }
+        });
+    });
 }
 
 function sortByName(array) {
@@ -124,5 +119,28 @@ function sortByName(array) {
             return 1;
         }
         return 0;
+    });
+}
+
+function darkTheme(){
+    const html = document.getElementsByTagName("html")[0];
+    const themeSwitch = document.getElementById("theme-logo");
+    const autoDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if(autoDarkTheme.matches){
+        html.classList.toggle("nightMode");
+        themeSwitch.innerHTML = "明";
+    }else{
+        html.classList.remove("nightMode");
+        themeSwitch.innerHTML = "暗";
+    }
+    
+    themeSwitch.addEventListener("click", () => {
+        html.classList.toggle("nightMode");
+        if(html.classList.contains("nightMode")){
+            themeSwitch.innerHTML = "明";
+        }else{
+            themeSwitch.innerHTML = "暗";
+        }
     });
 }

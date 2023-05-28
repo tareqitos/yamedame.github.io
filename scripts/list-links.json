@@ -10,7 +10,7 @@
         {
             "id": "d2",
             "name": "Jotoba",
-            "link": "http://www.jisho.org",
+            "link": "https://jotoba.de/",
             "description": "Jisho-like dictionary with name and sentence search options"
         },
 
@@ -24,7 +24,7 @@
         {
             "id": "d4",
             "name": "JLect",
-            "link": "https://kanji.jitenon.jp/cat/joyo.html",
+            "link": "https://www.jlect.com",
             "description": "Dictionary of Japanese dialects"
         },
 
@@ -107,7 +107,29 @@
             "name": "Genkoyoushi Generator",
             "link": "https://www.incompetech.com/graphpaper/genkoyoushi/",
             "description": "Japanese graph paper generator to practice kanji"
-        }
+        },
+
+        {
+            "id": "k4",
+            "name": "漢字ぺディア",
+            "link": "https://www.kanjipedia.jp/howto/about.html",
+            "description": "Kanji search website"
+        },
+        
+        {
+            "id": "k5",
+            "name": "意味解説ノート",
+            "link": "https://meaning.jp/",
+            "description": "Explanation of vocabulary words and expressions"
+        },
+
+        {
+            "id": "k6",
+            "name": "語彙力診断",
+            "link": "https://site.kotobanogakko.com/special/",
+            "description": "Test your vocabulary!"
+        } 
+         
     ],
 
     "misc": [

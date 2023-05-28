@@ -34,12 +34,30 @@ createElement(booksArray, "books");
 createElement(mediaArray, "media");
 createElement(miscArray, "misc");
 
+document.querySelectorAll('.collapse-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const collapseContent = button.nextElementSibling;
+
+        button.classList.toggle('collapse-button--active');
+
+        if (button.classList.contains('collapse-button--active')) {
+
+            collapseContent.style.maxHeight = 0;
+            collapseContent.style.opacity = 0;
+            collapseContent.style.marginTop = 0;
+        } else {
+            collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
+            collapseContent.style.opacity = 1;
+            collapseContent.style.marginTop = 40 + 'px';
+        }
+    });
+});
+
 function createElement(arrayElement, sectionToQuery){
 
     for (let i = 0; i < arrayElement.length; i++) {
         const array = arrayElement[i];
 
-        const section = document.querySelector(".section-" + sectionToQuery);
         const sectionItems = document.querySelector(".section-" + sectionToQuery + "-items");
         
         const itemContainer = document.createElement("div");
@@ -55,7 +73,7 @@ function createElement(arrayElement, sectionToQuery){
         }
 
         defineElements(array, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery);
-        appendElements(section, sectionItems, itemContainer, itemContainerParent, link, linkName, desc);
+        appendElements(sectionItems, itemContainer, itemContainerParent, link, linkName, desc);
     }
 }
 
@@ -81,8 +99,7 @@ function defineElements(array, itemContainer, itemContainerParent, link, linkNam
     desc.className = "item-desc";
 }
 
-function appendElements(section, sectionItems, itemContainer, itemContainerParent, link, linkName, desc){
-    section.appendChild(sectionItems);
+function appendElements(sectionItems, itemContainer, itemContainerParent, link, linkName, desc){
     sectionItems.appendChild(itemContainer);
 
     itemContainer.appendChild(link);

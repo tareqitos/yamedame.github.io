@@ -138,6 +138,12 @@
             "name": "Free Japanese Fonts",
             "link": "https://www.freejapanesefont.com/",
             "description": "270 Japanese unicode fonts free to download for Mac and Windows"
+        },
+        {
+            "id": "mi4",
+            "name": "Anki",
+            "link": "https://apps.ankiweb.net/",
+            "description": "Powerful, intelligent flash cards. Remembering things just became much easier."
         }
     ]
 }

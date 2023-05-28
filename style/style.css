@@ -33,8 +33,8 @@
     min-height: 100vh;
   }
   .anchor {
-    padding-top: 100px;
-    margin-top: -100px;
+    padding-top: 65px;
+    margin-top: -65px;
   }
   #top{
     position: absolute;
@@ -82,6 +82,11 @@
   .title-acronym {
     font-size: 1.3em;
     margin-bottom: 5px
+  }
+  .last-updated{
+    text-align: center;
+    right:0;
+    padding: 10px 40px;
   }
   nav {
     display: flex;
@@ -175,12 +180,52 @@
     transform: scale(1.1);
   }
   section {
-    padding: 40px;
+    padding: 0px 40px;
   }
   section h3 {
     text-align: center;
     font-size: 3em;
     margin-bottom: 50px
+  }
+  .section-suggestion{
+    margin: 65px 0 30px 0;
+  }
+  .collapse-button{
+    display: block;
+    text-align: left;
+    font-size: 3em;
+    margin: auto auto 10px auto;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    color: var(--text);
+  }
+  .collapse-button::after{
+    content: '';
+    background-image: url("../images/down-arrow.png");
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 28px;
+    left: 5px;
+    float: right;
+    filter: var(--mail-color)
+  }
+  .collapse-button--active::after{
+    content: '';
+    background-image: url("../images/right-arrow.png");
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+  .collapse-content{
+    overflow-y: clip;
+    margin-top: 40px;
+    max-height: 100%;
+    opacity: 1;
+    transition: max-height 0.2s, opacity 0.2s, margin-top 0.2s;
   }
   .section-books-items,
   .section-grammar-items,
@@ -346,6 +391,11 @@
   }
   #mi3 {
     background: linear-gradient(90deg, rgb(71, 70, 69) 0%, rgb(206, 201, 199) 100%);
+    background-size: 200%;
+    background-position: -100px
+  }
+  #mi4 {
+    background: linear-gradient(90deg, rgb(0, 132, 221) 0%, rgb(126, 193, 237) 100%);
     background-size: 200%;
     background-position: -100px
   }

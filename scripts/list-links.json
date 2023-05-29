@@ -76,7 +76,7 @@
         },
 
         {
-            "id": "g3",
+            "id": "g2",
             "name": "Kanji Link",
             "link": "https://www.kanji-link.com/fr/#",
             "description": "Japanese grammar simply explained",
@@ -84,7 +84,7 @@
         },
 
         {
-            "id": "g4",
+            "id": "g3",
             "name": "Conjugation",
             "link": "https://i.redd.it/q9glb8nn5jpz.png",
             "description": "General verb conjugation chart",
@@ -92,7 +92,7 @@
         },
 
         {
-            "id": "g5",
+            "id": "g4",
             "name": "Maggie Sensei",
             "link": "https://maggiesensei.com/",
             "description": "Learn Japanese in a funny way",
@@ -100,7 +100,7 @@
         },
 
         {
-            "id": "g6",
+            "id": "g5",
             "name": "Tae Kim",
             "link": "https://guidetojapanese.org/learn/",
             "description": "Tae Kim's guide to learning Japanese",
@@ -108,12 +108,28 @@
         },
 
         {
-            "id": "g7",
+            "id": "g6",
             "name": "毎日のんびり日本語教師",
             "link": "https://nihongonosensei.net/?page_id=10246#linkn4n5",
             "description": "All level grammar list with explanations",
             "furigana": "まいにちのんびりにほんごきょうし",
             "favicon": "http://www.google.com/s2/favicons?domain=http://www.nihongonosensei.net"
+        },
+
+        {
+            "id": "g7",
+            "name": "JLPT Grammar List",
+            "link": "https://jlptgrammarlist.neocities.org/",
+            "description": "A grammar list grouped by JLPT level",
+            "favicon": ""
+        },
+
+        {
+            "id": "g8",
+            "name": "Grammar List",
+            "link": "https://djtarchive.neocities.org/bunpou/full_day",
+            "description": "An other exhaustive grammar list",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://djtguide.neocities.org/"
         }
     ],
 

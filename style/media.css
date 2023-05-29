@@ -59,7 +59,7 @@
   .section-dictionaries-items,
   .section-grammar-items,
   .section-kanji-items {
-    grid-template-columns: repeat(2, 200px)
+    grid-template-columns: repeat(3, 180px)
   }
 
   .section-media-items {

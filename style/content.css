@@ -10,7 +10,7 @@
   line-height: 30px;
   text-align: center;
   padding: 20px;
-  box-shadow: 0 1.3px 2.7px rgba(0, 0, 0, .019), 0 2.7px 4.7px rgba(0, 0, 0, .029), 0 4.4px 6.3px rgba(0, 0, 0, .036), 0 6.4px 8.1px rgba(0, 0, 0, .042), 0 8.8px 11px rgba(0, 0, 0, .049), 0 12.1px 16.5px rgba(0, 0, 0, .057), 0 16.8px 29px rgba(0, 0, 0, .068), 0 24px 96px rgba(0, 0, 0, .09);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
   transition: background-color .25s, transform .25s ease
 }
 
@@ -44,6 +44,14 @@
 
 .item-container-parent img:hover {
   transform: scale(1.8)
+}
+
+.item-desc {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
 }
 
 .section-media-items p {
@@ -99,18 +107,15 @@
 
 /* ================================================= MEDIA ICONS  ================================================= */
 
-
-#m1::before,
-#m2::before,
-#m3::before,
-#m4::before {
+.desc-favicon {
+  height: 100%;
+  border-radius: 10px;
   position: relative;
-  top: 2px;
-  padding-right: 10px;
-  content: url("https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico")
+  top: 5px;
+  align-self: flex-start;
 }
 
-/* ================================================= software ICONS ================================================= */
+/* ================================================= SOFTWARE ICONS ================================================= */
 
 .software .item-title {
   position: relative;
@@ -145,9 +150,17 @@
   background-image: url("../images/android.png")
 }
 
+#title-mi4::after {
+  background-image: url("../images/windows+mac+android.png");
+  background-size: 75px 25px;
+  width: 75px;
+  height: 25px
+}
+
 .item-container a:hover #title-mi1::after,
 .item-container a:hover #title-mi2::after,
-.item-container a:hover #title-mi3::after {
+.item-container a:hover #title-mi3::after,
+.item-container a:hover #title-mi4::after {
   opacity: 1;
   left: -110px
 }
@@ -157,7 +170,7 @@
 form {
   display: flex;
   flex-direction: column;
-  margin: auto auto 30px auto;
+  margin: auto auto 100px auto;
   width: 500px;
   background-color: var(--header-footer);
   box-shadow: var(--btn-shadow);

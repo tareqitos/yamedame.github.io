@@ -78,7 +78,7 @@ section h3 {
 .section-software-items {
     display: grid;
     justify-content: center;
-    padding: 0 150px 0 150px;
+    padding: 0 150px 20px 150px;
     gap: 30px
 }
 

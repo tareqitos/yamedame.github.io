@@ -9,9 +9,9 @@ const softwareArray = links.software;
 const categories = [dicoArray, grammarArray, kanjiArray, miscArray, mediaArray, softwareArray];
 const categoriesName = ["dictionaries", "grammar", "kanji", "misc", "media", "software"];
 
-darkTheme();
 createCategoriesAndSort()
 collapseCategories()
+darkTheme();
 
 function createCategoriesAndSort(){
     for (let i = 0; i < categories.length; i++){
@@ -34,15 +34,20 @@ function createElement(arrayElement, sectionToQuery){
         const linkName = document.createElement("p");
         const desc = document.createElement("p");
 
+        defineElements(array, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery);
+        appendElements(sectionItems, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery);
+        
         if (sectionToQuery === "media"){
             createImageTag(array, itemContainerParent)
             console.log("Img created for " + sectionToQuery);
+        } 
+        
+        if (sectionToQuery !== "software") {
+            const descIcon = document.createElement("img");
+            descIcon.className = "desc-favicon";
+            descIcon.src = array.favicon;
+            desc.appendChild(descIcon);
         }
-
-        defineElements(array, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery);
-        appendElements(sectionItems, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery);
-
-
     }
 }
 
@@ -124,23 +129,28 @@ function sortByName(array) {
 
 function darkTheme(){
     const html = document.getElementsByTagName("html")[0];
+    console.log(html);
     const themeSwitch = document.getElementById("theme-logo");
     const autoDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
     if(autoDarkTheme.matches){
         html.classList.toggle("nightMode");
         themeSwitch.innerHTML = "明";
+        localStorage.setItem(html.classList, "nightMode");
     }else{
         html.classList.remove("nightMode");
         themeSwitch.innerHTML = "暗";
+        localStorage.setItem(html.classList, "");
     }
     
     themeSwitch.addEventListener("click", () => {
         html.classList.toggle("nightMode");
         if(html.classList.contains("nightMode")){
             themeSwitch.innerHTML = "明";
+            localStorage.setItem(html, "nightMode");
         }else{
             themeSwitch.innerHTML = "暗";
+            localStorage.setItem(html.classList, "");
         }
     });
 }

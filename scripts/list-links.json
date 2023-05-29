@@ -4,56 +4,65 @@
             "id": "d1",
             "name": "Jisho",
             "link": "http://www.jisho.org",
-            "description": "English/Japanese dictionary"
+            "description": "English/Japanese dictionary",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.jisho.org"
         },
 
         {
             "id": "d2",
             "name": "Jotoba",
             "link": "https://jotoba.de/",
-            "description": "Jisho-like dictionary with name and sentence search options"
+            "description": "Jisho-like dictionary with name and sentence search options",
+            "favicon": ""
         },
 
         {
             "id": "d3",
             "name": "Onomatopedia",
             "link": "https://www.onomatopedia.jp/?utm_source=Tofugu",
-            "description": "Encyclopedia of Japanese onomatopoeia"
+            "description": "Encyclopedia of Japanese onomatopoeia",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.onomatopedia.jp"
         },
 
         {
             "id": "d4",
             "name": "JLect",
             "link": "https://www.jlect.com",
-            "description": "Dictionary of Japanese dialects"
+            "description": "Dictionary of Japanese dialects",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.jlect.com"
         },
 
         {
             "id": "d5",
             "name": "漢字辞典",
             "link": "https://kanji.jitenon.jp/",
-            "description": "Exhaustive dictionary in Japanese"
+            "description": "Exhaustive dictionary in Japanese",
+            "furigana": "かんじじてん",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.kanji.jitenon.jp/"
         },
 
         {
             "id": "d6",
             "name": "goo",
             "link": "https://dictionary.goo.ne.jp/",
-            "description": "Goo's dictionary"
+            "description": "Goo's dictionary",
+            "favicon": ""
         },
 
         {
             "id": "d7",
             "name": "DeepL",
             "link": "https://www.deepl.com/en/translator#",
-            "description": "Translator using AI and doing great with Japanese"
+            "description": "Translator using AI and doing great with Japanese",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.deepl.com"
         },
 
         {
             "id": "d8",
             "name": "Yomichan",
             "link": "https://foosoft.net/projects/yomichan/",
-            "description": "Web extension pop-up dictionary"
+            "description": "Web extension pop-up dictionary",
+            "favicon": ""
         }
     ],
 
@@ -62,28 +71,49 @@
             "id": "g1",
             "name": "JLPT",
             "link": "http://www.tanos.co.uk/jlpt/",
-            "description": "JLPT Resources"
+            "description": "JLPT Resources",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.tanos.co.uk/jlpt/"
         },
 
         {
             "id": "g3",
             "name": "Kanji Link",
             "link": "https://www.kanji-link.com/fr/#",
-            "description": "Japanese grammar simply explained"
+            "description": "Japanese grammar simply explained",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.kanji-link.com"
         },
 
         {
             "id": "g4",
             "name": "Conjugation",
             "link": "https://i.redd.it/q9glb8nn5jpz.png",
-            "description": "General verb conjugation chart"
+            "description": "General verb conjugation chart",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.reddit.com"
         },
 
         {
             "id": "g5",
             "name": "Maggie Sensei",
             "link": "https://maggiesensei.com/",
-            "description": "Learn Japanese in a funny way"
+            "description": "Learn Japanese in a funny way",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.maggiesensei.com/"
+        },
+
+        {
+            "id": "g6",
+            "name": "Tae Kim",
+            "link": "https://guidetojapanese.org/learn/",
+            "description": "Tae Kim's guide to learning Japanese",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.guidetojapanese.org"
+        },
+
+        {
+            "id": "g7",
+            "name": "毎日のんびり日本語教師",
+            "link": "https://nihongonosensei.net/?page_id=10246#linkn4n5",
+            "description": "All level grammar list with explanations",
+            "furigana": "まいにちのんびりにほんごきょうし",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.nihongonosensei.net"
         }
     ],
 
@@ -92,42 +122,70 @@
             "id": "k1",
             "name": "Kanji Practice",
             "link": "https://kanjipractice.com/",
-            "description": "Practice your kanji"
+            "description": "Practice your kanji",
+            "favicon": ""
         },
 
         {
             "id": "k2",
             "name": "Bretmayer",
             "link": "http://www.bretmayer.com/kanji.html",
-            "description": "Kanji database"
+            "description": "Kanji database",
+            "favicon": ""
+            
         },
 
         {
             "id": "k3",
             "name": "Genkoyoushi Generator",
             "link": "https://www.incompetech.com/graphpaper/genkoyoushi/",
-            "description": "Japanese graph paper generator to practice kanji"
+            "description": "Japanese graph paper generator to practice kanji",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.incompetech.com"
         },
 
         {
             "id": "k4",
             "name": "漢字ぺディア",
             "link": "https://www.kanjipedia.jp/howto/about.html",
-            "description": "Kanji search website"
+            "description": "Kanji search website",
+            "furigana": "かんじ",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.kanjipedia.jp"
         },
         
         {
             "id": "k5",
             "name": "意味解説ノート",
             "link": "https://meaning.jp/",
-            "description": "Explanation of vocabulary words and expressions"
+            "description": "Explanation of vocabulary words and expressions",
+            "furigana": "いみかいせつ",
+            "favicon": ""
         },
 
         {
             "id": "k6",
             "name": "語彙力診断",
             "link": "https://site.kotobanogakko.com/special/",
-            "description": "Test your vocabulary!"
+            "description": "Test your vocabulary!",
+            "furigana": "ごいりょくしんだん",
+            "favicon": ""
+        },
+
+        {
+            "id": "k7",
+            "name": "毎日漢字",
+            "link": "https://mainichikanji.com/",
+            "description": "Every day a new list of kanji to study",
+            "furigana": "まいにちかんじ",
+            "favicon": ""
+        },
+
+        {
+            "id": "k8",
+            "name": "漢字の読み方は？",
+            "link": "https://yomikatawa.com/",
+            "description": "Gives you the multiple readings of words with the same characters ",
+            "furigana": "かんじのよみかたは",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.yomikatawa.com/"
         } 
          
     ],
@@ -137,14 +195,16 @@
             "id": "b1",
             "name": "Genki",
             "link": "https://drive.google.com/drive/u/0/folders/0B81GSkGtkS4VSzdYZ0pfelRFcHc?resourcekey=0-9myX0w14meJyu5cUEij0Ug",
-            "description": "Genki textbooks and audio"
+            "description": "Genki textbooks and audio",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.drive.google.com/"
         },
 
         {
             "id": "b2",
             "name": "Minna no Nihongo",
             "link": "https://mfadhillah.files.wordpress.com/2012/12/minna-no-nihongo-i-c3bcbersetzungen-grammatikalische-erklc3a4rungen-englisch.pdf",
-            "description": "Minna no Nihongo textbook"
+            "description": "Minna no Nihongo textbook",
+            "favicon": ""
         }
     ],
 
@@ -163,7 +223,8 @@
             "name": "Nihongo no Mori",
             "link": "https://www.youtube.com/@nihongonomori2013",
             "description": "A great youtube channel for all level",
-            "pic": "https://yt3.googleusercontent.com/OwiBlQvGLr3AjwETXWQG0yjmZab0eR41dhTnaXJaV8h5IzQMzzwfbf5iLX9FulOZxP96Opc0CA=s176-c-k-c0x00ffffff-no-rj"
+            "pic": "https://yt3.googleusercontent.com/OwiBlQvGLr3AjwETXWQG0yjmZab0eR41dhTnaXJaV8h5IzQMzzwfbf5iLX9FulOZxP96Opc0CA=s176-c-k-c0x00ffffff-no-rj",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
         },
 
         {
@@ -171,14 +232,16 @@
             "name": "Dogen",
             "link": "https://www.youtube.com/@Dogen",
             "description": "Japanese teacher",
-            "pic": "https://yt3.googleusercontent.com/2H0nF7hyTRv_tnN-uMAtX_PJyT2q7m1YRunz7nMtyu31GXTbZu4Q9PiJ3f--BawmD2U41b55pQ=s176-c-k-c0x00ffffff-no-rj"
+            "pic": "https://yt3.googleusercontent.com/2H0nF7hyTRv_tnN-uMAtX_PJyT2q7m1YRunz7nMtyu31GXTbZu4Q9PiJ3f--BawmD2U41b55pQ=s176-c-k-c0x00ffffff-no-rj",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
         },
         {
             "id": "m4",
             "name": "Cours de japonais!",
             "link": "https://www.youtube.com/@coursdejaponais",
             "description": "Japanese class in French",
-            "pic": "https://coursdejaponais.com/wp-content/uploads/2021/10/coursdejaponais-website-image-016-1024x683.jpg"
+            "pic": "https://coursdejaponais.com/wp-content/uploads/2021/10/coursdejaponais-website-image-016-1024x683.jpg",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
         },
 
         {
@@ -186,7 +249,8 @@
             "name": "Learn Japanese Reddit",
             "link": "https://www.reddit.com/r/LearnJapanese/",
             "description": "A subreddit for learners of the Japanese language ",
-            "pic": "https://styles.redditmedia.com/t5_2qyls/styles/communityIcon_b1dnoekabjk11.jpg?width=256&format=pjpg&v=enabled&s=d312ae943f665b52ac590e75653a57e7d6a6cefd"
+            "pic": "https://styles.redditmedia.com/t5_2qyls/styles/communityIcon_b1dnoekabjk11.jpg?width=256&format=pjpg&v=enabled&s=d312ae943f665b52ac590e75653a57e7d6a6cefd",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.reddit.com"
         }
         
     ],

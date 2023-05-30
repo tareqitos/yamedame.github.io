@@ -42,6 +42,10 @@
     height: 150px;
   }
 
+  nav {
+    padding-top: 5px;
+  }
+
   form {
     width: 400px;
   }
@@ -181,6 +185,18 @@
   }
 }
 
+/* ================================================= 430 ================================================= */
+
+@media screen and (max-width: 430px) {
+
+  .section-misc-items,
+  .section-dictionaries-items,
+  .section-grammar-items,
+  .section-kanji-items {
+    grid-template-columns: repeat(2, 180px)
+  } 
+}
+
 /* ================================================= 400 ================================================= */
 
 @media screen and (max-width:400px) {
@@ -221,6 +237,14 @@
 
   nav a h2 {
     font-size: .9em
+  }
+
+  .collapse-button {
+    font-size: 1.5em;
+  }
+
+  .collapse-button::after {
+    top:13px;
   }
 
   .button {

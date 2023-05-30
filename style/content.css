@@ -105,6 +105,14 @@
   background: linear-gradient(90deg, rgb(45, 115, 36) 0%, rgb(100, 150, 40) 200%);
 }
 
+#mi5 {
+  background: linear-gradient(90deg, rgb(138, 138, 138) 0%, rgb(175, 175, 175) 200%);
+}
+
+#mi6 {
+  background: linear-gradient(90deg, #4257b2 0%, #3ccfcf 200%);
+}
+
 /* ================================================= MEDIA ICONS  ================================================= */
 
 .desc-favicon {

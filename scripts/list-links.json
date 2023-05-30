@@ -130,7 +130,24 @@
             "link": "https://djtarchive.neocities.org/bunpou/full_day",
             "description": "An other exhaustive grammar list",
             "favicon": "http://www.google.com/s2/favicons?domain=https://djtguide.neocities.org/"
+        },
+
+        {
+            "id": "g9",
+            "name": "Genki",
+            "link": "https://drive.google.com/drive/u/0/folders/0B81GSkGtkS4VSzdYZ0pfelRFcHc?resourcekey=0-9myX0w14meJyu5cUEij0Ug",
+            "description": "Genki textbooks and audio",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.drive.google.com/"
+        },
+
+        {
+            "id": "g10",
+            "name": "Minna no Nihongo",
+            "link": "https://mfadhillah.files.wordpress.com/2012/12/minna-no-nihongo-i-c3bcbersetzungen-grammatikalische-erklc3a4rungen-englisch.pdf",
+            "description": "Minna no Nihongo textbook",
+            "favicon": ""
         }
+
     ],
 
     "kanji": [
@@ -148,7 +165,6 @@
             "link": "http://www.bretmayer.com/kanji.html",
             "description": "Kanji database",
             "favicon": ""
-            
         },
 
         {
@@ -202,26 +218,60 @@
             "description": "Gives you the multiple readings of words with the same characters ",
             "furigana": "かんじのよみかたは",
             "favicon": "http://www.google.com/s2/favicons?domain=http://www.yomikatawa.com/"
+        },
+
+        {
+            "id": "k9",
+            "name": "yojijukugo",
+            "link": "https://kotowaza.co.uk/index.php",
+            "description": "Random compound words generator with stroke animation",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://kotowaza.co.uk/index.php"
         } 
          
     ],
 
     "misc": [
         {
-            "id": "b1",
-            "name": "Genki",
-            "link": "https://drive.google.com/drive/u/0/folders/0B81GSkGtkS4VSzdYZ0pfelRFcHc?resourcekey=0-9myX0w14meJyu5cUEij0Ug",
-            "description": "Genki textbooks and audio",
-            "favicon": "http://www.google.com/s2/favicons?domain=http://www.drive.google.com/"
+            "id": "mi1",
+            "name": "Free Japanese Fonts",
+            "link": "https://www.freejapanesefont.com/",
+            "description": "270 Japanese unicode fonts free to download for Mac and Windows",
+            "favicon": ""
         },
 
         {
-            "id": "b2",
-            "name": "Minna no Nihongo",
-            "link": "https://mfadhillah.files.wordpress.com/2012/12/minna-no-nihongo-i-c3bcbersetzungen-grammatikalische-erklc3a4rungen-englisch.pdf",
-            "description": "Minna no Nihongo textbook",
-            "favicon": ""
+            "id": "mi2",
+            "name": "痛みの英語用語集",
+            "link": "https://rondely.com/EigoYogo/irir/iti.htm",
+            "description": "Vocabulary about pain. Useful when going to the doctor",
+            "furigana": "いたみのえいごようごしゅう",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://rondely.com/EigoYogo/irir/iti.htm"
+        },
+
+        {
+            "id": "mi3",
+            "name": "Japanese Wiki Corpus",
+            "link": "https://www.japanesewiki.com/",
+            "description": "Japanese-English bilingual corpus of Wikipedia's Kyoto Articles",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://www.japanesewiki.com/"
+        },
+
+        {
+            "id": "mi4",
+            "name": "Learn Japanese Reddit",
+            "link": "https://www.reddit.com/r/LearnJapanese/",
+            "description": "A subreddit for learners of the Japanese language",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.reddit.com"
+        },
+
+        {
+            "id": "mi5",
+            "name": "Otokake",
+            "link": "https://otokake.com/",
+            "description": "Articles about meaning behind lyrics",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://otokake.com/"
         }
+
     ],
 
     "media": [
@@ -229,7 +279,7 @@
             "id": "m1",
             "name": "Osho Taigu",
             "link": "https://www.youtube.com/@osho_taigu/",
-            "description": "A monk talking about positive things with a nice pace",
+            "description": "A monk talking about positive things with a nice pace 🟦🟩",
             "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqPboCQXDb9eH6Qcc__SWRsSymRgRmLyTZFEPhto=s176-c-k-c0x00ffffff-no-rj",
             "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
         },
@@ -238,7 +288,7 @@
             "id": "m2",
             "name": "Nihongo no Mori",
             "link": "https://www.youtube.com/@nihongonomori2013",
-            "description": "A great youtube channel for all level",
+            "description": "A great youtube channel for all level 🟦🟧",
             "pic": "https://yt3.googleusercontent.com/OwiBlQvGLr3AjwETXWQG0yjmZab0eR41dhTnaXJaV8h5IzQMzzwfbf5iLX9FulOZxP96Opc0CA=s176-c-k-c0x00ffffff-no-rj",
             "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
         },
@@ -247,28 +297,73 @@
             "id": "m3",
             "name": "Dogen",
             "link": "https://www.youtube.com/@Dogen",
-            "description": "Japanese teacher",
+            "description": "Japanese teacher 🟦",
             "pic": "https://yt3.googleusercontent.com/2H0nF7hyTRv_tnN-uMAtX_PJyT2q7m1YRunz7nMtyu31GXTbZu4Q9PiJ3f--BawmD2U41b55pQ=s176-c-k-c0x00ffffff-no-rj",
             "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
         },
         {
             "id": "m4",
-            "name": "Cours de japonais!",
-            "link": "https://www.youtube.com/@coursdejaponais",
-            "description": "Japanese class in French",
-            "pic": "https://coursdejaponais.com/wp-content/uploads/2021/10/coursdejaponais-website-image-016-1024x683.jpg",
+            "name": "あかね的日本語教室",
+            "link": "https://www.youtube.com/@Akane-JapaneseClass/",
+            "description": "Japanese teacher/vloger 🟦🟩",
+            "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqMePt9c6zAVqfa1RnX3CavP_aeIqf3aTDcASgNG=s176-c-k-c0x00ffffff-no-rj",
             "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
         },
 
         {
             "id": "m5",
-            "name": "Learn Japanese Reddit",
-            "link": "https://www.reddit.com/r/LearnJapanese/",
-            "description": "A subreddit for learners of the Japanese language ",
-            "pic": "https://styles.redditmedia.com/t5_2qyls/styles/communityIcon_b1dnoekabjk11.jpg?width=256&format=pjpg&v=enabled&s=d312ae943f665b52ac590e75653a57e7d6a6cefd",
-            "favicon": "http://www.google.com/s2/favicons?domain=http://www.reddit.com"
+            "name": "三本塾 Sambon Juku",
+            "link": "https://www.youtube.com/@sambonjuku/",
+            "description": "Japanese teacher speaking in a slow pace 🟧",
+            "pic": "https://yt3.googleusercontent.com/M-d7HApBZIPAglxDCOmsu_jtQ2v8F7qihwl2DQ88b-XLF9bYyB77gI4BYujYSlT6-NqX0sJ_=s176-c-k-c0x00ffffff-no-rj",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+        },
+
+        {
+            "id": "m6",
+            "name": "Onomappu",
+            "link": "https://www.youtube.com/@Onomappu/",
+            "description": "Introducing onomatopoeia used in everyday life 🟦",
+            "pic": "https://yt3.googleusercontent.com/_t51KqX6mv8SjFCCUModZKhjAKOWfIlIE7OY8aIDDL-VuntteU2ub5_UWmG8tMi0c-Oj_SLivg=s176-c-k-c0x00ffffff-no-rj",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            
+        },
+
+        {
+            "id": "m7",
+            "name": "じゃぱすた/Let's study Japanese",
+            "link": "https://www.youtube.com/@japasuta",
+            "description": "Channel about Japanese grammar 🟧",
+            "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqOj5Y9XKr90qXcoXudRvr4TIlW4b8TJig7WY1Hr=s176-c-k-c0x00ffffff-no-rj",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+        },
+
+        {
+            "id": "m8",
+            "name": "Meshclass 日本語",
+            "link": "https://www.youtube.com/@meshclass",
+            "description": "Channel teachning mostly Japanese grammar 🟧",
+            "pic": "https://yt3.googleusercontent.com/d3oavNBiI2I9Ha2eUIOoUVLxe2ari9DHUHH-J_wILEwT01rs17tpmznVN6yhKuLfyWk5yJbjDA=s176-c-k-c0x00ffffff-no-rj",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+        },
+
+        {
+            "id": "m9",
+            "name": "キヨ。",
+            "link": "https://www.youtube.com/@KIYOisGOD",
+            "description": "Channel about games 🟥",
+            "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqMVCDHBjvGY04CNkr3YCDPhUBrEXiQZ7x66D97fSQ=s176-c-k-c0x00ffffff-no-rj",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+        },
+
+        {
+            "id": "m10",
+            "name": "Archipel",
+            "link": "https://www.youtube.com/@ArchipelDocumentaries",
+            "description": "Documentaries about Japanese artists and creators 🟩",
+            "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqMLg4N2y4myn5RqQZhrpCtl80Uis-NVNgUk8qMBSw=s176-c-k-c0x00ffffff-no-rj",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
         }
-        
     ],
 
     "software": [
@@ -288,15 +383,16 @@
 
         {
             "id": "mi3",
-            "name": "Free Japanese Fonts",
-            "link": "https://www.freejapanesefont.com/",
-            "description": "270 Japanese unicode fonts free to download for Mac and Windows"
-        },
-        {
-            "id": "mi4",
             "name": "Anki",
             "link": "https://apps.ankiweb.net/",
-            "description": "Powerful, intelligent flash cards. Remembering things just became much easier."
+            "description": "Powerful, intelligent flash cards"
+        },
+
+        {
+            "id": "mi4",
+            "name": "Shirabe Jisho",
+            "link": "https://apps.apple.com/app/shirabe-jisho/id1005203380",
+            "description": "Powerful dictionary app for iOS"
         }
     ]
 }

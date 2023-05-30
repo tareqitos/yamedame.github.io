@@ -147,7 +147,7 @@
   .section-dictionaries-items,
   .section-grammar-items,
   .section-kanji-items {
-    grid-template-columns: repeat(2, 180px)
+    grid-template-columns: repeat(2, 200px)
   }
 
   .section-media-items {

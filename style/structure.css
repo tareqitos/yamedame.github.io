@@ -75,6 +75,15 @@ section h3 {
     height: 200px
   }
 
+.media-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+    font-size: .8em;
+}
+
 .section-software-items {
     display: grid;
     justify-content: center;

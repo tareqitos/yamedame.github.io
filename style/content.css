@@ -43,7 +43,7 @@
 }
 
 .item-container-parent img:hover {
-  transform: scale(1.8)
+  transform: scale(1.6)
 }
 
 .item-desc {
@@ -98,11 +98,11 @@
 }
 
 #mi3 {
-  background: linear-gradient(90deg, rgb(71, 70, 69) 0%, rgb(206, 201, 199) 200%);
+  background: linear-gradient(90deg, rgb(0, 132, 221) 0%, rgb(126, 193, 237) 200%);
 }
 
 #mi4 {
-  background: linear-gradient(90deg, rgb(0, 132, 221) 0%, rgb(126, 193, 237) 200%);
+  background: linear-gradient(90deg, rgb(45, 115, 36) 0%, rgb(100, 150, 40) 200%);
 }
 
 /* ================================================= MEDIA ICONS  ================================================= */
@@ -124,7 +124,7 @@
   margin: auto
 }
 
-.software .item-title::after {
+/*.software .item-title::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -138,8 +138,7 @@
   transition: left .3s, opacity .2s ease
 }
 
-#title-mi1::after,
-#title-mi3::after {
+#title-mi1::after {
   background-image: url("../images/windows+mac.png");
   background-size: 50px 25px;
   width: 50px;
@@ -150,7 +149,7 @@
   background-image: url("../images/android.png")
 }
 
-#title-mi4::after {
+#title-mi3::after {
   background-image: url("../images/windows+mac+android.png");
   background-size: 75px 25px;
   width: 75px;
@@ -159,11 +158,10 @@
 
 .item-container a:hover #title-mi1::after,
 .item-container a:hover #title-mi2::after,
-.item-container a:hover #title-mi3::after,
-.item-container a:hover #title-mi4::after {
+.item-container a:hover #title-mi3::after {
   opacity: 1;
   left: -110px
-}
+}*/
 
 /* ================================================= SUGGESTION FORM ================================================= */
 

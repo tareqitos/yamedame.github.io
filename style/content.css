@@ -139,45 +139,6 @@
   text-align: center;
 }
 
-/*.software .item-title::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 5px;
-  left: -200px;
-  background-size: 25px;
-  filter: invert(1);
-  opacity: 0;
-  width: 25px;
-  height: 25px;
-  transition: left .3s, opacity .2s ease
-}
-
-#title-mi1::after {
-  background-image: url("../images/windows+mac.png");
-  background-size: 50px 25px;
-  width: 50px;
-  height: 25px
-}
-
-#title-mi2::after {
-  background-image: url("../images/android.png")
-}
-
-#title-mi3::after {
-  background-image: url("../images/windows+mac+android.png");
-  background-size: 75px 25px;
-  width: 75px;
-  height: 25px
-}
-
-.item-container a:hover #title-mi1::after,
-.item-container a:hover #title-mi2::after,
-.item-container a:hover #title-mi3::after {
-  opacity: 1;
-  left: -110px
-}*/
-
 /* ================================================= SUGGESTION FORM ================================================= */
 
 form {

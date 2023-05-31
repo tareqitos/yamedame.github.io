@@ -20,6 +20,8 @@ function createCategoriesAndSort(){
     }
 }
 
+// CREATE HTML // 
+
 function createElement(arrayElement, sectionToQuery){
 
     for (let i = 0; i < arrayElement.length; i++) {
@@ -37,11 +39,15 @@ function createElement(arrayElement, sectionToQuery){
         defineElements(array, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery);
         appendElements(sectionItems, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery);
         
+        // IF SECTION IS MEDIA, CREATE IMAGE MINIATURE //
+
         if (sectionToQuery === "media"){
             createImageTag(array, itemContainerParent)
             console.log("Img created for " + sectionToQuery);
         } 
         
+        // ADD FAVICON TO DESCRIPTION EXCEPT FOR SOFTWARE //
+
         if (sectionToQuery !== "software") {
             const descIcon = document.createElement("img");
             descIcon.className = "desc-favicon";
@@ -52,6 +58,8 @@ function createElement(arrayElement, sectionToQuery){
         addSoftwareIcons(sectionToQuery, array, itemContainer);
     }
 }
+
+// ADD ATTRIBUTE TO CREATED ELEMENT //
 
 function defineElements(array, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery){
     if(sectionToQuery === "media"){
@@ -75,6 +83,8 @@ function defineElements(array, itemContainer, itemContainerParent, link, linkNam
     desc.className = "item-desc";
 }
 
+// PARENT ELEMENT TO HIERARCHY //
+
 function appendElements(sectionItems, itemContainer, itemContainerParent, link, linkName, desc, sectionToQuery){
     sectionItems.appendChild(itemContainer);
 
@@ -87,6 +97,8 @@ function appendElements(sectionItems, itemContainer, itemContainerParent, link, 
     }
     itemContainer.appendChild(desc);
 }
+
+// ADD SOFTWARE ICONS //
 
 function addSoftwareIcons(sectionToQuery, array, itemContainer){
     if (sectionToQuery === "software"){
@@ -107,12 +119,16 @@ function addSoftwareIcons(sectionToQuery, array, itemContainer){
     }
 }
 
+// CREATE IMAGE TAG FOR MEDIA ELEMENTS // 
+
 function createImageTag(array, itemContainerParent){
     const img = document.createElement("img");
     img.className = "thumbnail-" + array.id;
     img.src = array.pic;
     itemContainerParent.appendChild(img);
 }
+
+// SORT ELEMENTS //
 
 function sortByName(array) {
     array.sort(function(a, b){

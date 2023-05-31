@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="List of Japanese language resources for Japanese learners">
-    <meta name="keywords" content="Japanese, language, learning, resources, japan">
+    <meta name="keywords" content="Japanese, language, learning, resources, japan, learn japanese, language learning, language resources">
     <meta name="author" content="Tareqitos">
     <link href="style/style.css" rel="stylesheet">
     <link href="style/structure.css" rel="stylesheet">
@@ -133,24 +133,29 @@
             </div>
         </section>
         <section class="section-suggestion">
-            <h3 id="send" class="anchor">send a suggestion</h3>
-            <form method="POST" action="https://formsubmit.co/d9b3671da52ddfd7eb3cddab0776808e">
-                <input type="hidden" name="_next" value="https://tareqitos.me/confirm.html">
-                <input type="hidden" name="_captcha" value="false">
-
-                <input type="text" name="title" id="add-title" class="input" placeholder="title" required>
-                <input type="text" name="link" id="add-link" class="input" placeholder="link" required>
-                <select name="category" id="category">
-                    <option value="dictionaries">dictionaries</option>
-                    <option value="structure">structure - grammar</option>
-                    <option value="kanji">kanji - vocabulary</option>
-                    <option value="media">media</option>
-                    <option value="misc">misc</option>
-                    <option value="software">software - apps</option>
-                </select>
-                <input type="textarea" name="desc-area" id="desc-area" class="input" placeholder="description">
-                <input type="submit" value="SUBMIT" id="submit">
-            </form>
+            <div class="collapse-software">
+                <button type="button" id="send" class="collapse-button anchor">
+                    send a suggestion
+                </button>
+                <div class="collapse-content">
+                    <form method="POST" action="https://formsubmit.co/d9b3671da52ddfd7eb3cddab0776808e">
+                        <input type="hidden" name="_next" value="https://tareqitos.me/confirm.html">
+                        <input type="hidden" name="_captcha" value="false">
+        
+                        <input type="text" name="title" id="add-title" class="input" placeholder="title" required>
+                        <input type="text" name="link" id="add-link" class="input" placeholder="link" required>
+                        <select name="category" id="category">
+                            <option value="dictionaries">dictionaries</option>
+                            <option value="structure">structure - grammar</option>
+                            <option value="kanji">kanji - vocabulary</option>
+                            <option value="media">media</option>
+                            <option value="misc">misc</option>
+                            <option value="software">software - apps</option>
+                        </select>
+                        <input type="textarea" name="desc-area" id="desc-area" class="input" placeholder="description">
+                        <input type="submit" value="SUBMIT" id="submit">
+                    </form>
+                </div>
         </section>
     </main>
     <footer id="footer">

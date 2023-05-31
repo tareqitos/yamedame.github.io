@@ -395,42 +395,48 @@
             "id": "mi1",
             "name": "Voracious",
             "link": "https://voracious.app/",
-            "description": "A video player for learning languages for Windows"
+            "description": "A video player for learning languages for Windows",
+            "device": "windows"
         },
 
         {
             "id": "mi2",
             "name": "Tachiyomi",
             "link": "https://tachiyomi.org/",
-            "description": "Free and open source manga reader for Android"
+            "description": "Free and open source manga reader for Android",
+            "device": "android"
         },
 
         {
             "id": "mi3",
             "name": "Anki",
             "link": "https://apps.ankiweb.net/",
-            "description": "Powerful, intelligent flash cards"
+            "description": "Powerful, intelligent flash cards",
+            "device": "windows android apple"
         },
 
         {
             "id": "mi4",
             "name": "Shirabe Jisho",
             "link": "https://apps.apple.com/app/shirabe-jisho/id1005203380",
-            "description": "Powerful dictionary app for iOS"
+            "description": "Powerful dictionary app for iOS",
+            "device": "apple"
         },
 
         {
             "id": "mi5",
             "name": "Kaku",
             "link": "https://kaku.fuwafuwa.ca/",
-            "description": "OCR Dictionary for Android"
+            "description": "OCR Dictionary for Android",
+            "device": "android"
         },
 
         {
             "id": "mi6",
             "name": "Quizlet",
             "link": "https://quizlet.com",
-            "description": "Flashcard app for iOS and Android"
+            "description": "Flashcard app for iOS and Android",
+            "device": "windows android apple"
         }
     ]
 }

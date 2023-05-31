@@ -19,7 +19,11 @@
 
   .section-software-items .item-container {
     flex-direction: column;
-    gap: 0
+    gap: 0;
+  }
+
+  .software-icon {
+    text-align: center;
   }
 }
 

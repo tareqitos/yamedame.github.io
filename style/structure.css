@@ -14,7 +14,7 @@
 
 .collapse-button::after {
     content: '';
-    background-image: url("../images/down-arrow.png");
+    background-image: url("../images/right-arrow.png");
     background-size: 18px;
     width: 18px;
     height: 18px;
@@ -27,14 +27,14 @@
 
 .collapse-button--active::after {
     content: '';
-    background-image: url("../images/right-arrow.png");
+    background-image: url("../images/down-arrow.png");
 }
 
 .collapse-content {
     overflow-y: clip;
-    margin-top: 40px;
-    max-height: 100%;
-    opacity: 1;
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
     transition: max-height 0.2s, opacity 0.2s, margin-top 0.2s;
 }
 

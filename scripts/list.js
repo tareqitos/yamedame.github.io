@@ -9,9 +9,9 @@ const softwareArray = links.software;
 const categories = [dicoArray, grammarArray, kanjiArray, miscArray, mediaArray, softwareArray];
 const categoriesName = ["dictionaries", "grammar", "kanji", "misc", "media", "software"];
 
-createCategoriesAndSort()
-collapseCategories()
-darkTheme();
+createCategoriesAndSort();
+
+// SORT ELEMENT IN CATEGORY //
 
 function createCategoriesAndSort(){
     for (let i = 0; i < categories.length; i++){
@@ -48,6 +48,8 @@ function createElement(arrayElement, sectionToQuery){
             descIcon.src = array.favicon;
             desc.appendChild(descIcon);
         }
+
+        addSoftwareIcons(sectionToQuery, array, itemContainer);
     }
 }
 
@@ -86,33 +88,30 @@ function appendElements(sectionItems, itemContainer, itemContainerParent, link, 
     itemContainer.appendChild(desc);
 }
 
+function addSoftwareIcons(sectionToQuery, array, itemContainer){
+    if (sectionToQuery === "software"){
+        const devices = ["windows", "apple", "android"];
+        const softwareDesc = document.querySelector(".item-container #desc-" + array.id);
+        const iDiv = document.createElement("div");
+        iDiv.className = "software-icon";
+
+        for (let i = 0; i < devices.length; i++){
+            const icon = document.createElement("i");
+            if (array.device.includes(devices[i])){
+                icon.classList = "fa-brands fa-" + devices[i];
+                itemContainer.appendChild(iDiv).appendChild(icon);
+                iDiv.appendChild(softwareDesc);
+                iDiv.prepend(softwareDesc);   
+            }
+        }
+    }
+}
+
 function createImageTag(array, itemContainerParent){
     const img = document.createElement("img");
     img.className = "thumbnail-" + array.id;
     img.src = array.pic;
     itemContainerParent.appendChild(img);
-}
-
-function collapseCategories(){
-    
-    document.querySelectorAll('.collapse-button').forEach(button => {
-        button.addEventListener('click', () => {
-            const collapseContent = button.nextElementSibling;
-    
-            button.classList.toggle('collapse-button--active');
-    
-            if (button.classList.contains('collapse-button--active')) {
-    
-                collapseContent.style.maxHeight = 0;
-                collapseContent.style.opacity = 0;
-                collapseContent.style.marginTop = 0;
-            } else {
-                collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
-                collapseContent.style.opacity = 1;
-                collapseContent.style.marginTop = 40 + 'px';
-            }
-        });
-    });
 }
 
 function sortByName(array) {
@@ -127,30 +126,3 @@ function sortByName(array) {
     });
 }
 
-function darkTheme(){
-    const html = document.getElementsByTagName("html")[0];
-    console.log(html);
-    const themeSwitch = document.getElementById("theme-logo");
-    const autoDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-    if(autoDarkTheme.matches){
-        html.classList.toggle("nightMode");
-        themeSwitch.innerHTML = "明";
-        localStorage.setItem(html.classList, "nightMode");
-    }else{
-        html.classList.remove("nightMode");
-        themeSwitch.innerHTML = "暗";
-        localStorage.setItem(html.classList, "");
-    }
-    
-    themeSwitch.addEventListener("click", () => {
-        html.classList.toggle("nightMode");
-        if(html.classList.contains("nightMode")){
-            themeSwitch.innerHTML = "明";
-            localStorage.setItem(html, "nightMode");
-        }else{
-            themeSwitch.innerHTML = "暗";
-            localStorage.setItem(html.classList, "");
-        }
-    });
-}

@@ -132,6 +132,13 @@
   margin: auto
 }
 
+.software-icon i {
+  position: relative;
+  bottom: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
 /*.software .item-title::after {
   content: "";
   display: inline-block;

@@ -87,7 +87,7 @@
             "id": "g3",
             "name": "Conjugation",
             "link": "https://i.redd.it/q9glb8nn5jpz.png",
-            "description": "General verb conjugation chart",
+            "description": "General verb conjugation chart from Reddit",
             "favicon": "http://www.google.com/s2/favicons?domain=http://www.reddit.com"
         },
 
@@ -130,22 +130,6 @@
             "link": "https://djtarchive.neocities.org/bunpou/full_day",
             "description": "An other exhaustive grammar list",
             "favicon": "http://www.google.com/s2/favicons?domain=https://djtguide.neocities.org/"
-        },
-
-        {
-            "id": "g9",
-            "name": "Genki",
-            "link": "https://drive.google.com/drive/u/0/folders/0B81GSkGtkS4VSzdYZ0pfelRFcHc?resourcekey=0-9myX0w14meJyu5cUEij0Ug",
-            "description": "Genki textbooks and audio",
-            "favicon": "http://www.google.com/s2/favicons?domain=http://www.drive.google.com/"
-        },
-
-        {
-            "id": "g10",
-            "name": "Minna no Nihongo",
-            "link": "https://mfadhillah.files.wordpress.com/2012/12/minna-no-nihongo-i-c3bcbersetzungen-grammatikalische-erklc3a4rungen-englisch.pdf",
-            "description": "Minna no Nihongo textbook",
-            "favicon": ""
         }
 
     ],

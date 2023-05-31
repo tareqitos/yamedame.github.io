@@ -38,6 +38,10 @@
     transition: max-height 0.2s, opacity 0.2s, margin-top 0.2s;
 }
 
+.collapse-suggestion {
+    padding: 10px 0 40px 0;
+}
+
 /* ================================================= SECTIONS ================================================= */
 
 section {

@@ -3,7 +3,7 @@
 collapseCategories();
 
 function collapseCategories(){
-    
+
     document.querySelectorAll('.collapse-button').forEach(button => {
         button.addEventListener('click', () => {
             const collapseContent = button.nextElementSibling;
@@ -14,11 +14,12 @@ function collapseCategories(){
                 collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
                 collapseContent.style.opacity = 1;
                 collapseContent.style.marginTop = 40 + 'px';
-
+                collapseContent.style.overflowY = "visible";
             } else {
                 collapseContent.style.maxHeight = 0;
                 collapseContent.style.opacity = 0;
                 collapseContent.style.marginTop = 0;
+                collapseContent.style.overflowY = "clip";
             }
         });
     });

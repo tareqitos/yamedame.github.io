@@ -35,12 +35,11 @@ body {
   color: var(--text) !important;
   background-color: var(--bg) !important;
   transition: 0.1s;
+  
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
+  padding-bottom: 50px;
 }
 
 .anchor {
@@ -52,7 +51,6 @@ html, body {
   position: absolute;
   top: 0;
 }
-
 /* ================================================= HEADER ================================================= */
 
 header {
@@ -67,6 +65,7 @@ header {
   position: absolute;
   top: 30px;
   right: 40px;
+  z-index: 10;
   font-weight: 100;
   font-size: 25px;
   color: var(--text) !important;
@@ -163,6 +162,12 @@ nav a:hover {
     transform: scale(1.1);
 }
 /* ================================================= FOOTER ================================================= */
+
+#footer {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+}
 
 .footer {
   display: flex;

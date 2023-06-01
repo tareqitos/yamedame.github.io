@@ -38,8 +38,8 @@
     transition: max-height 0.2s, opacity 0.2s, margin-top 0.2s;
 }
 
-.collapse-suggestion {
-    padding: 10px 0 40px 0;
+.collapse-contributors {
+    padding: 0 0 150px 0;
 }
 
 /* ================================================= SECTIONS ================================================= */
@@ -106,6 +106,11 @@ section h3 {
     width: 500px
 }
 
-.section-suggestion {
-    margin: 0 0 60px 0;
+.section-thanks {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: auto;
+    gap: 20px;   
 }
+

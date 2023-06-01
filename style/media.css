@@ -162,6 +162,15 @@
     grid-template-columns: repeat(2, 150px)
   }
 
+  .section-thanks {
+    grid-template-columns: repeat(1, auto);
+    text-align: center;
+  }
+
+  .section-thanks p {
+    margin-bottom: 0;
+  }
+
   .item-container-parent img {
     transform: scale(1.1);
   }
@@ -187,6 +196,10 @@
   form {
     width: 350px;
   }
+
+  .footer {
+    gap: 180px;
+  }
 }
 
 /* ================================================= 430 ================================================= */
@@ -198,7 +211,9 @@
   .section-grammar-items,
   .section-kanji-items {
     grid-template-columns: repeat(2, 180px)
-  } 
+  }
+  
+
 }
 
 /* ================================================= 400 ================================================= */

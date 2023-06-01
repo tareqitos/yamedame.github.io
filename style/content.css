@@ -123,6 +123,18 @@
   align-self: flex-start;
 }
 
+/* ================================================= THANKS ICONS ================================================= */
+
+.fa-star {
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 /* ================================================= SOFTWARE ICONS ================================================= */
 
 .software .item-title {

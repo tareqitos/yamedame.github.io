@@ -226,6 +226,14 @@
             "link": "https://en.m.wikibooks.org/wiki/Japanese/Vocabulary/Linguistics",
             "description": "List of terminologies for grammar, vocabulary and more",
             "favicon": "http://www.google.com/s2/favicons?domain=https://en.m.wikibooks.org/wiki/Japanese/Vocabulary/Linguistics"
+        },
+
+        {
+            "id": "k11",
+            "name": "Japanese Graph",
+            "link": "https://japanesegraph.com/",
+            "description": "Learn Japanese by exploring the relationships between characters alongside examples that illustrate their use.",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://japanesegraph.com/"
         } 
          
     ],
@@ -310,6 +318,14 @@
             "link": "https://langpractice.com/japanese/",
             "description": "Practice your Japanese number listening",
             "favicon": "http://www.google.com/s2/favicons?domain=https://langpractice.com/japanese/"
+        },
+
+        {
+            "id": "mi11",
+            "name": "Mangaz",
+            "link": "https://www.mangaz.com/",
+            "description": "Free manga to read",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://www.mangaz.com/"
         }
 
     ],

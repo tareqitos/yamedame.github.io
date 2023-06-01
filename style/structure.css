@@ -31,7 +31,7 @@
 }
 
 .collapse-content {
-    overflow-y: clip;
+    overflow-y: hidden;
     margin-top: 0;
     max-height: 0;
     opacity: 0;

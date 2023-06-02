@@ -5,9 +5,9 @@ collapseCategories();
 function collapseCategories(){
 
     document.querySelectorAll('.collapse-button').forEach(button => {
+        const collapseContent = button.nextElementSibling;
         button.addEventListener('click', () => {
-            const collapseContent = button.nextElementSibling;
-    
+            
             button.classList.toggle('collapse-button--active');
     
             if (button.classList.contains('collapse-button--active')) {
@@ -15,11 +15,20 @@ function collapseCategories(){
                 collapseContent.style.opacity = 1;
                 collapseContent.style.marginTop = 40 + 'px';
                 collapseContent.style.overflowY = "visible";
+                
+                window.addEventListener('resize', e => {
+                    collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
+                });
+
             } else {
                 collapseContent.style.maxHeight = 0;
                 collapseContent.style.opacity = 0;
                 collapseContent.style.marginTop = 0;
-                collapseContent.style.overflowY = "clip";
+                collapseContent.style.overflowY = "hidden";
+
+                window.addEventListener('resize', e => {
+                    collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
+                });
             }
         });
     });

@@ -16,9 +16,12 @@ function collapseCategories(){
                 collapseContent.style.marginTop = 40 + 'px';
                 collapseContent.style.overflowY = "visible";
                 
-                window.addEventListener('resize', e => {
-                    collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
-                });
+                if (collapseContent.style.maxHeight !== 0) {
+                    window.addEventListener('resize', () => {
+                        collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
+                    });
+                }
+                
 
             } else {
                 collapseContent.style.maxHeight = 0;
@@ -26,8 +29,8 @@ function collapseCategories(){
                 collapseContent.style.marginTop = 0;
                 collapseContent.style.overflowY = "hidden";
 
-                window.addEventListener('resize', e => {
-                    collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
+                window.addEventListener('resize', () => {
+                    collapseContent.style.maxHeight = 0;
                 });
             }
         });

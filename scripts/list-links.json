@@ -326,6 +326,14 @@
             "link": "https://www.mangaz.com/",
             "description": "Free manga to read",
             "favicon": "http://www.google.com/s2/favicons?domain=https://www.mangaz.com/"
+        },
+
+        {
+            "id": "mi12",
+            "name": "Anime/Games Anki Decks",
+            "link": "https://www.mediafire.com/folder/p17g5uk4phb41/User_Uploaded_Anki_Decks",
+            "description": "Mega list of Anki decks about anime/manga and video games",
+            "favicon": ""
         }
 
     ],
@@ -437,6 +445,24 @@
             "description": "Learn Japanese with Misa through videos about many different topics 🟦🟥",
             "pic": "https://yt3.ggpht.com/yti/AHyvSCCiHqsHpNibJ6I1tFsBXnEF5jRZQZfj0_fexFNVVQ=s108-c-k-c0x00ffffff-no-rj",
             "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+        },
+
+        {
+            "id": "m13",
+            "name": "The Real Japanese Podcast!",
+            "link": "https://open.spotify.com/show/1gQ0ZdFpTOqiyLeOaCCn6U?si=e81755200ffd4fbd&nd=1",
+            "description": "Podcast on various topics for every level 🟦",
+            "pic": "https://i.scdn.co/image/ab67656300005f1f94d653087c1dc89441cf4afc",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://open.spotify.com"
+        },
+
+        {
+            "id": "m14",
+            "name": "ゲームなんとか",
+            "link": "https://open.spotify.com/show/0VpJSbTokWLLJ0zppnbrlM?si=0125c9258f4244f7&nd=1",
+            "description": "Podcast about video games 🟦",
+            "pic": "https://i.scdn.co/image/ab6765630000ba8aa532c56fb8af85809c03d791",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://open.spotify.com"
         }
     ],
 

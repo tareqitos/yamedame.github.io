@@ -234,6 +234,14 @@
             "link": "https://japanesegraph.com/",
             "description": "Learn Japanese by exploring the relationships between characters alongside examples that illustrate their use.",
             "favicon": "http://www.google.com/s2/favicons?domain=https://japanesegraph.com/"
+        }, 
+
+        {
+            "id": "k12",
+            "name": "Kanji Koohii",
+            "link": "https://kanji.koohii.com",
+            "description": "Website designed to help Japanese language learners remember the kanji",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://kanji.koohii.com"
         } 
          
     ],

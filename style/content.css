@@ -129,6 +129,18 @@
   animation: rotate 5s linear infinite;
 }
 
+.star-user {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.star-user-media {
+  color: var(--text);
+  margin-left: 8px;
+}
+
 @keyframes rotate {
   to {
     transform: rotate(359deg);

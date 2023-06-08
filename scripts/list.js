@@ -56,6 +56,7 @@ function createElement(arrayElement, sectionToQuery){
         }
 
         addSoftwareIcons(sectionToQuery, array, itemContainer);
+        addRecommendationStar(array, itemContainerParent, linkName, sectionToQuery);
     }
 }
 
@@ -126,6 +127,22 @@ function createImageTag(array, itemContainerParent){
     img.className = "thumbnail-" + array.id;
     img.src = array.pic;
     itemContainerParent.appendChild(img);
+}
+
+function addRecommendationStar(array, itemContainerParent, linkName, sectionToQuery){
+    if (array.recommended === "true") {
+        const star = document.createElement("i");  
+        
+        if(sectionToQuery === "media") {
+            star.className = "fa-solid fa-star star-user-media";
+            linkName.appendChild(star);
+        } else {
+            star.className = "fa-solid fa-star star-user";
+            itemContainerParent.appendChild(star);
+        }
+
+        console.log("Star created for " + array)
+    }   
 }
 
 // SORT ELEMENTS //

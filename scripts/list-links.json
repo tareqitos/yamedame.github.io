@@ -137,7 +137,17 @@
             "name": "いまび",
             "link": "https://www.imabi.net/",
             "description": "All level grammar list with explanations",
-            "favicon": "http://www.google.com/s2/favicons?domain=https://www.imabi.net/"
+            "favicon": "http://www.google.com/s2/favicons?domain=https://www.imabi.net/",
+            "recommended": "true"
+        },
+
+        {
+            "id": "g10",
+            "name": "Marugoto self-study courses",
+            "link": "https://minato-jf.jp/",
+            "description": "Self-study courses/tutor support courses based on Marugoto learning materials",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://minato-jf.jp/",
+            "recommended": "true"
         }
 
     ],
@@ -233,7 +243,8 @@
             "name": "Japanese Graph",
             "link": "https://japanesegraph.com/",
             "description": "Learn Japanese by exploring the relationships between characters alongside examples that illustrate their use.",
-            "favicon": "http://www.google.com/s2/favicons?domain=https://japanesegraph.com/"
+            "favicon": "http://www.google.com/s2/favicons?domain=https://japanesegraph.com/",
+            "recommended": "true"
         }, 
 
         {
@@ -309,7 +320,8 @@
             "name": "Natively",
             "link": "https://learnnatively.com/",
             "description": "The book-reading community for Japanese language learners sorted by JLPT level",
-            "favicon": "http://www.google.com/s2/favicons?domain=https://learnnatively.com/"
+            "favicon": "http://www.google.com/s2/favicons?domain=https://learnnatively.com/",
+            "recommended": "true"
         },
 
         {
@@ -317,7 +329,8 @@
             "name": "Dokusho Bookclub",
             "link": "https://dokushoclub.com/",
             "description": "Free books and tales to read for all level",
-            "favicon": "http://www.google.com/s2/favicons?domain=https://dokushoclub.com/"
+            "favicon": "http://www.google.com/s2/favicons?domain=https://dokushoclub.com/",
+            "recommended": "true"
         },
 
         {
@@ -325,7 +338,8 @@
             "name": "Number Listening Practice",
             "link": "https://langpractice.com/japanese/",
             "description": "Practice your Japanese number listening",
-            "favicon": "http://www.google.com/s2/favicons?domain=https://langpractice.com/japanese/"
+            "favicon": "http://www.google.com/s2/favicons?domain=https://langpractice.com/japanese/",
+            "recommended": "true"
         },
 
         {
@@ -333,7 +347,8 @@
             "name": "Mangaz",
             "link": "https://www.mangaz.com/",
             "description": "Free manga to read",
-            "favicon": "http://www.google.com/s2/favicons?domain=https://www.mangaz.com/"
+            "favicon": "http://www.google.com/s2/favicons?domain=https://www.mangaz.com/",
+            "recommended": "true"
         },
 
         {
@@ -442,17 +457,19 @@
             "name": "Japanese slang and idioms 101",
             "link": "https://www.youtube.com/channel/UCm76IyHFNsR_7NGWMO3BGHg",
             "description": "A channel to learn Japanese slang and idioms through watching skits 🟥",
-            "pic": "https://yt3.googleusercontent.com/ww8nrZ4SohjHcYr9nKXvU96PfAO-4U1rlpzGUKmnu-xkH8JZqjBeEQ6ogB5yUau3zNzY3Wejqo8=s176-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "pic": "https://yt3.ggpht.com/yti/AHyvSCCiHqsHpNibJ6I1tFsBXnEF5jRZQZfj0_fexFNVVQ=s108-c-k-c0x00ffffff-no-rj",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "recommended": "true"
         },
 
         {
             "id": "m12",
-            "name": "Japanese slang and idioms 101",
+            "name": "Japanese Ammo with Misa",
             "link": "https://www.youtube.com/@JapaneseAmmowithMisa",
             "description": "Learn Japanese with Misa through videos about many different topics 🟦🟥",
-            "pic": "https://yt3.ggpht.com/yti/AHyvSCCiHqsHpNibJ6I1tFsBXnEF5jRZQZfj0_fexFNVVQ=s108-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "pic": "https://yt3.googleusercontent.com/ww8nrZ4SohjHcYr9nKXvU96PfAO-4U1rlpzGUKmnu-xkH8JZqjBeEQ6ogB5yUau3zNzY3Wejqo8=s176-c-k-c0x00ffffff-no-rj",
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "recommended": "true"
         },
 
         {

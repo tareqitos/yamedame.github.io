@@ -357,6 +357,14 @@
             "link": "https://www.mediafire.com/folder/p17g5uk4phb41/User_Uploaded_Anki_Decks",
             "description": "Mega list of Anki decks about anime/manga and video games",
             "favicon": ""
+        },
+
+        {
+            "id": "mi13",
+            "name": "English-Japanese Discord",
+            "link": "https://discord.gg/japanese",
+            "description": "English/Japanese language exchange discord server",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://discord.gg/japanese"
         }
 
     ],
@@ -493,7 +501,7 @@
 
     "software": [
         {
-            "id": "mi1",
+            "id": "so1",
             "name": "Voracious",
             "link": "https://voracious.app/",
             "description": "A video player for learning languages for Windows",
@@ -501,7 +509,7 @@
         },
 
         {
-            "id": "mi2",
+            "id": "so2",
             "name": "Tachiyomi",
             "link": "https://tachiyomi.org/",
             "description": "Free and open source manga reader for Android",
@@ -509,7 +517,7 @@
         },
 
         {
-            "id": "mi3",
+            "id": "so3",
             "name": "Anki",
             "link": "https://apps.ankiweb.net/",
             "description": "Powerful, intelligent flash cards",
@@ -517,7 +525,7 @@
         },
 
         {
-            "id": "mi4",
+            "id": "so4",
             "name": "Shirabe Jisho",
             "link": "https://apps.apple.com/app/shirabe-jisho/id1005203380",
             "description": "Powerful dictionary app for iOS",
@@ -525,7 +533,7 @@
         },
 
         {
-            "id": "mi5",
+            "id": "so5",
             "name": "Kaku",
             "link": "https://kaku.fuwafuwa.ca/",
             "description": "OCR Dictionary for Android",
@@ -533,7 +541,7 @@
         },
 
         {
-            "id": "mi6",
+            "id": "so6",
             "name": "Quizlet",
             "link": "https://quizlet.com",
             "description": "Flashcard app for iOS and Android",

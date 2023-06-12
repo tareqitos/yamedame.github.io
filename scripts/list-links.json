@@ -63,6 +63,15 @@
             "link": "https://foosoft.net/projects/yomichan/",
             "description": "Web extension pop-up dictionary",
             "favicon": ""
+        },
+
+        {
+            "id": "d9",
+            "name": "10ten Japanese Reader",
+            "link": "https://github.com/birchill/10ten-ja-reader/",
+            "description": "Web extension pop-up dictionary with image recognition",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.github.com",
+            "recommended": "true"
         }
     ],
 
@@ -376,7 +385,8 @@
             "link": "https://www.youtube.com/@osho_taigu/",
             "description": "A monk talking about positive things with a nice pace 🟦🟩",
             "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqPboCQXDb9eH6Qcc__SWRsSymRgRmLyTZFEPhto=s176-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "type": "video podcast"
         },
 
         {
@@ -385,7 +395,8 @@
             "link": "https://www.youtube.com/@nihongonomori2013",
             "description": "A great youtube channel for all level 🟦🟧",
             "pic": "https://yt3.googleusercontent.com/OwiBlQvGLr3AjwETXWQG0yjmZab0eR41dhTnaXJaV8h5IzQMzzwfbf5iLX9FulOZxP96Opc0CA=s176-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "type": "video"
         },
 
         {
@@ -394,7 +405,8 @@
             "link": "https://www.youtube.com/@Dogen",
             "description": "Japanese teacher 🟦",
             "pic": "https://yt3.googleusercontent.com/2H0nF7hyTRv_tnN-uMAtX_PJyT2q7m1YRunz7nMtyu31GXTbZu4Q9PiJ3f--BawmD2U41b55pQ=s176-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "type": "video"
         },
         {
             "id": "m4",
@@ -402,7 +414,8 @@
             "link": "https://www.youtube.com/@Akane-JapaneseClass/",
             "description": "Japanese teacher/vloger 🟦🟩",
             "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqMePt9c6zAVqfa1RnX3CavP_aeIqf3aTDcASgNG=s176-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "type": "video"
         },
 
         {
@@ -411,7 +424,8 @@
             "link": "https://www.youtube.com/@sambonjuku/",
             "description": "Japanese teacher speaking in a slow pace 🟧",
             "pic": "https://yt3.googleusercontent.com/M-d7HApBZIPAglxDCOmsu_jtQ2v8F7qihwl2DQ88b-XLF9bYyB77gI4BYujYSlT6-NqX0sJ_=s176-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "type": "video"
         },
 
         {
@@ -420,7 +434,8 @@
             "link": "https://www.youtube.com/@Onomappu/",
             "description": "Introducing onomatopoeia used in everyday life 🟦",
             "pic": "https://yt3.googleusercontent.com/_t51KqX6mv8SjFCCUModZKhjAKOWfIlIE7OY8aIDDL-VuntteU2ub5_UWmG8tMi0c-Oj_SLivg=s176-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "type": "video"
             
         },
 
@@ -430,7 +445,8 @@
             "link": "https://www.youtube.com/@japasuta",
             "description": "Channel about Japanese grammar 🟧",
             "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqOj5Y9XKr90qXcoXudRvr4TIlW4b8TJig7WY1Hr=s176-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "type": "video"
         },
 
         {
@@ -439,7 +455,8 @@
             "link": "https://www.youtube.com/@meshclass",
             "description": "Channel teachning mostly Japanese grammar 🟧",
             "pic": "https://yt3.googleusercontent.com/d3oavNBiI2I9Ha2eUIOoUVLxe2ari9DHUHH-J_wILEwT01rs17tpmznVN6yhKuLfyWk5yJbjDA=s176-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "type": "video"
         },
 
         {
@@ -448,7 +465,8 @@
             "link": "https://www.youtube.com/@KIYOisGOD",
             "description": "Channel about games 🟥",
             "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqMVCDHBjvGY04CNkr3YCDPhUBrEXiQZ7x66D97fSQ=s176-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "type": "video"
         },
 
         {
@@ -457,7 +475,8 @@
             "link": "https://www.youtube.com/@ArchipelDocumentaries",
             "description": "Documentaries about Japanese artists and creators 🟩",
             "pic": "https://yt3.googleusercontent.com/ytc/AGIKgqMLg4N2y4myn5RqQZhrpCtl80Uis-NVNgUk8qMBSw=s176-c-k-c0x00ffffff-no-rj",
-            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico"
+            "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "type": "video"
         },
 
         {
@@ -467,7 +486,8 @@
             "description": "A channel to learn Japanese slang and idioms through watching skits 🟥",
             "pic": "https://yt3.ggpht.com/yti/AHyvSCCiHqsHpNibJ6I1tFsBXnEF5jRZQZfj0_fexFNVVQ=s108-c-k-c0x00ffffff-no-rj",
             "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
-            "recommended": "true"
+            "recommended": "true",
+            "type": "video"
         },
 
         {
@@ -477,7 +497,8 @@
             "description": "Learn Japanese with Misa through videos about many different topics 🟦🟥",
             "pic": "https://yt3.googleusercontent.com/ww8nrZ4SohjHcYr9nKXvU96PfAO-4U1rlpzGUKmnu-xkH8JZqjBeEQ6ogB5yUau3zNzY3Wejqo8=s176-c-k-c0x00ffffff-no-rj",
             "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
-            "recommended": "true"
+            "recommended": "true",
+            "type": "video"
         },
 
         {
@@ -486,7 +507,8 @@
             "link": "https://open.spotify.com/show/1gQ0ZdFpTOqiyLeOaCCn6U?si=e81755200ffd4fbd&nd=1",
             "description": "Podcast on various topics for every level 🟦",
             "pic": "https://i.scdn.co/image/ab67656300005f1f94d653087c1dc89441cf4afc",
-            "favicon": "http://www.google.com/s2/favicons?domain=https://open.spotify.com"
+            "favicon": "http://www.google.com/s2/favicons?domain=https://open.spotify.com",
+            "type": "podcast"
         },
 
         {
@@ -495,7 +517,8 @@
             "link": "https://open.spotify.com/show/0VpJSbTokWLLJ0zppnbrlM?si=0125c9258f4244f7&nd=1",
             "description": "Podcast about video games 🟦",
             "pic": "https://i.scdn.co/image/ab6765630000ba8aa532c56fb8af85809c03d791",
-            "favicon": "http://www.google.com/s2/favicons?domain=https://open.spotify.com"
+            "favicon": "http://www.google.com/s2/favicons?domain=https://open.spotify.com",
+            "type": "podcast"
         }
     ],
 

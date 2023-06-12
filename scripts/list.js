@@ -11,6 +11,28 @@ const categoriesName = ["dictionaries", "grammar", "kanji", "misc", "media", "so
 
 createCategoriesAndSort();
 
+showSortedMediaElement('.sort-all', '');
+showSortedMediaElement('.sort-videos', 'video');
+showSortedMediaElement('.sort-podcast', 'podcast');
+
+function showSortedMediaElement(sortListenerQuery, mediaContainsString) {
+    const sortListener = document.querySelector(sortListenerQuery);
+    const mediaElement = document.querySelector('.section-media-items');
+    const collapseContent = document.querySelector('.collapse-media .collapse-content');    
+
+    sortListener.addEventListener('click', () => {
+        const sortCategory = links.media.filter(all => all.type.includes(mediaContainsString));
+
+        while (mediaElement.lastElementChild) {
+            mediaElement.removeChild(mediaElement.lastElementChild);
+            console.log('removed : ' + mediaElement);       
+        }
+
+        createElement(sortCategory, "media");
+        collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
+    }); 
+}
+
 // SORT ELEMENT IN CATEGORY //
 
 function createCategoriesAndSort(){

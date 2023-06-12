@@ -31,7 +31,7 @@ function showSortedMediaElement(sortListenerQuery, mediaContainsString) {
         createElement(sortCategory, "media");
         collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
     }); 
-}
+} 
 
 // SORT ELEMENT IN CATEGORY //
 

@@ -54,13 +54,14 @@ section h3 {
     margin-bottom: 50px
 }
 
-#dictionaries {
+#beginners {
     margin-top: -45px;
 }
 
 .section-misc-items,
 .section-grammar-items,
 .section-dictionaries-items,
+.section-beginners-items,
 .section-kanji-items {
     display: grid;
     justify-content: center;

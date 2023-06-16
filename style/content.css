@@ -70,6 +70,10 @@
 
 /* ================================================= ITEMS COLORS ================================================= */
 
+.beginners {
+  background: linear-gradient(90deg, rgba(255,37,37,1) 0%, rgba(255,90,46,1) 150%);
+}
+
 .dictionaries {
   background: linear-gradient(90deg, #39a464 0, #68e78e 200%);
 }

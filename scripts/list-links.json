@@ -1,4 +1,32 @@
 {
+    "beginners": [
+        {
+            "id": "beg1",
+            "name": "Anki",
+            "link": "https://apps.ankiweb.net/",
+            "description": "Powerful, intelligent flash cards",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://apps.ankiweb.net/",
+            "device": "windows android apple"
+        },
+
+        {
+            "id": "beg2",
+            "name": "10ten Japanese Reader",
+            "link": "https://github.com/birchill/10ten-ja-reader/",
+            "description": "Web extension pop-up dictionary with image recognition",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.github.com",
+            "recommended": "true" 
+        },
+
+        {
+            "id": "beg3",
+            "name": "Linguistic terms",
+            "link": "https://japanese.meta.stackexchange.com/questions/352/glossary-simple-linguistics-terms-and-cross-reference",
+            "description": "Japanese/English linguistic terms",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://japanese.meta.stackexchange.com/"
+        }
+    ],
+    
     "dictionaries": [
         {
             "id": "d1",

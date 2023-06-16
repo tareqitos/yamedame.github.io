@@ -1,13 +1,14 @@
 const reponse = await fetch("scripts/list-links.json");
 const links = await reponse.json();
+const beginnersArray = links.beginners;
 const dicoArray = links.dictionaries;
 const grammarArray = links.grammar;
 const kanjiArray = links.kanji;
 const miscArray = links.misc;
 const mediaArray = links.media;
 const softwareArray = links.software;
-const categories = [dicoArray, grammarArray, kanjiArray, miscArray, mediaArray, softwareArray];
-const categoriesName = ["dictionaries", "grammar", "kanji", "misc", "media", "software"];
+const categories = [beginnersArray, dicoArray, grammarArray, kanjiArray, miscArray, mediaArray, softwareArray];
+const categoriesName = ["beginners", "dictionaries", "grammar", "kanji", "misc", "media", "software"];
 
 createCategoriesAndSort();
 

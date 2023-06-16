@@ -11,6 +11,7 @@ const categoriesName = ["dictionaries", "grammar", "kanji", "misc", "media", "so
 
 createCategoriesAndSort();
 
+/* TO IMPROVE
 showSortedMediaElement('.sort-all', '');
 showSortedMediaElement('.sort-videos', 'video');
 showSortedMediaElement('.sort-podcast', 'podcast');
@@ -32,6 +33,7 @@ function showSortedMediaElement(sortListenerQuery, mediaContainsString) {
         collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
     }); 
 } 
+*/
 
 // SORT ELEMENT IN CATEGORY //
 

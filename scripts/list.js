@@ -1,4 +1,4 @@
-const reponse = await fetch("../scripts/list-links.json");
+const reponse = await fetch("scripts/list-links.json");
 const links = await reponse.json();
 const beginnersArray = links.beginners;
 const dicoArray = links.dictionaries;

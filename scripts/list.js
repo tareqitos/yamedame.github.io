@@ -1,4 +1,4 @@
-const reponse = await fetch("scripts/list-links.json");
+const reponse = await fetch("../scripts/list-links.json");
 const links = await reponse.json();
 const beginnersArray = links.beginners;
 const dicoArray = links.dictionaries;
@@ -40,8 +40,13 @@ function showSortedMediaElement(sortListenerQuery, mediaContainsString) {
 
 function createCategoriesAndSort(){
     for (let i = 0; i < categories.length; i++){
-        sortByName(categories[i]);
-        createElement(categories[i], categoriesName[i]);
+        const checkCategory = document.getElementById(categoriesName[i]);
+
+        if (checkCategory) {
+            console.log(categoriesName[i]);
+            sortByName(categories[i]);
+            createElement(categories[i], categoriesName[i]);
+        } 
     }
 }
 

@@ -126,6 +126,20 @@ nav {
   box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 0px;
 }
 
+.nav-mobile {
+  font-size: 1.3em;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto;
+  gap: 20px;
+  position: static;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  background: none;
+  box-shadow: none;
+}
+
 nav a {
   text-decoration: none;
   padding: 10px;

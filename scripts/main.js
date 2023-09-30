@@ -11,6 +11,16 @@ function collapseCategories(){
             button.classList.toggle('collapse-button--active');
     
             if (button.classList.contains('collapse-button--active')) {
+                collapseContent.style.maxHeight = 0;
+                collapseContent.style.opacity = 0;
+                collapseContent.style.marginTop = 0;
+                collapseContent.style.overflowY = "hidden";
+
+                window.addEventListener('resize', () => {
+                    collapseContent.style.maxHeight = 0;
+                });
+
+            } else {
                 collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
                 collapseContent.style.opacity = 1;
                 collapseContent.style.marginTop = 40 + 'px';
@@ -21,17 +31,6 @@ function collapseCategories(){
                         collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
                     });
                 }
-                
-
-            } else {
-                collapseContent.style.maxHeight = 0;
-                collapseContent.style.opacity = 0;
-                collapseContent.style.marginTop = 0;
-                collapseContent.style.overflowY = "hidden";
-
-                window.addEventListener('resize', () => {
-                    collapseContent.style.maxHeight = 0;
-                });
             }
         });
     });

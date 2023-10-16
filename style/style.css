@@ -18,6 +18,7 @@ html {
   --input-bg-color: #ffffff !important;
   --input-border: 1.5px solid #979797 !important;
   --input-category-color: #9fa0a9;
+  --category-bg-color: rgba(98, 140, 193, 0.11);
 }
 
 html.nightMode {
@@ -29,6 +30,7 @@ html.nightMode {
   --input-bg-color: #303245 !important;
   --input-border: 0 !important;
   --input-category-color: #979797;
+  --category-bg-color: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -43,8 +45,8 @@ body {
 }
 
 .anchor {
-  padding-top: 65px;
-  margin-top: -65px;
+  padding-top: 35px;
+  margin-top: -35px;
 }
 
 #top {
@@ -58,7 +60,9 @@ header {
   z-index: 5;
   text-align: center;
   padding: 20px 20px 5px 20px;
+  margin-bottom: 10px;
   background-color: var(--header-footer);
+  box-shadow: 1px 3px 12px -1px rgba(0, 0, 0, .15);
 }
 
 .button {
@@ -83,7 +87,8 @@ header {
   text-transform: lowercase;
 }
 
-.button:hover {
+.button:hover,
+.open-btn:hover {
   transform: scale(1.1);
 }
 
@@ -140,7 +145,7 @@ nav {
   box-shadow: none;
 }
 
-nav a {
+nav a{
   text-decoration: none;
   padding: 10px;
   color: var(--text);
@@ -148,6 +153,50 @@ nav a {
 
 nav a:hover {
   color: #c93d1a
+}
+
+.open-btn {
+  text-align: center;
+  position:sticky;
+  z-index: 4;
+  cursor: pointer;
+  padding-bottom: 10px;
+  color: var(--text) !important;
+  background-color: var(--header-footer) !important;
+  padding: 10px 16px;
+  border: none;
+  box-shadow: var(--btn-shadow) !important;
+  border-radius: 100px;
+  transition: transform .2s ease;
+  font-weight: 100;
+  font-size: 25px;
+  width: 80px;
+  margin: auto;
+}
+
+.sidebar {
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  top: -400px;
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 200px;
+  padding: 20px 0;
+  z-index: 4;
+  overflow-y: hidden;
+  opacity: 0;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--header-footer);
+  transition: top .3s, opacity .2s;
+}
+
+.sidebar a {
+  text-align: center;
+  text-decoration: none;
+  padding: 0px;
+  color: var(--text);
 }
 
 /* ================================================= GO TO TOP BUTTON ================================================= */

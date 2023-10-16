@@ -7,22 +7,12 @@
     <meta name="description" content="List of Japanese language resources for Japanese learners">
     <meta name="keywords" content="Japanese, language, learning, resources, japan, learn japanese, language learning, language resources">
     <meta name="author" content="Tareqitos">
+    <script src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/list.js" defer></script>
     <link href="style/style.css" rel="stylesheet">
     <link href="style/structure.css" rel="stylesheet">
     <link href="style/content.css" rel="stylesheet">
     <link href="style/media.css" rel="stylesheet">
-    <script type="module" src="scripts/main.js" defer></script>
-    <script type="module" src="scripts/list.js" defer></script>
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MB6202903"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-2MB6202903');
-    </script>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3235774193267121" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/782ee8fee8.js" crossorigin="anonymous"></script>
@@ -30,8 +20,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
     <title>No excuses not to learn Japanese</title>
+    
+    
 </head>
-<body>
+<body id="body">
     <div id="top"></div>
     <header>
         <a href="index.html">
@@ -44,7 +36,7 @@
     <button id="back-to-top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
-    <nav>
+    <!--<nav>
             <a href="#beginners">
                 <h2>beginner</h2>
             </a>
@@ -66,8 +58,39 @@
             <a href="#software">
                 <h2>software</h2>
             </a>
-    </nav>
-    <main>
+    </nav>-->
+
+
+    <div class="open-btn" id="open-btn">
+        &#9776;
+    </div>
+
+    
+    <div class="sidebar" id="sidebar">
+        <a href="#beginners">
+            <h2>beginner</h2>
+        </a>
+        <a href="#dictionaries">
+            <h2>dictionaries</h2>
+        </a>
+        <a href="#grammar">
+            <h2>grammar</h2>
+        </a>
+        <a href="#kanji">
+            <h2>kanji</h2>
+        </a>
+        <a href="#media">
+            <h2>media</h2>
+        </a>
+        <a href="#misc">
+            <h2>misc</h2>
+        </a>
+        <a href="#software">
+            <h2>software</h2>
+        </a>
+    </div>
+
+    <main id="main">
         <p class="last-updated" id="lu-update">Last updated: 2023年09月30日</p>
         <p class="last-updated" id="lu-star"><i class="fa-solid fa-star"></i> = user recommendation</p>
 
@@ -169,34 +192,7 @@
                 </div>
             </div>
         </section>
-        <!--
-        <section class="section-suggestion">
-            <div class="collapse-suggestion">
-                <button type="button" id="send" class="collapse-button anchor">
-                    send a suggestion
-                </button>
-                <div class="collapse-content">
-                    <form method="POST" action="https://formsubmit.co/0c6accd973dd9b497af0b9fc6e341b19">
-                        <input type="hidden" name="_next" value="https://tareqitos.me/confirm.html">
-                        <input type="hidden" name="_captcha" value="false">
-        
-                        <input type="text" name="name" id="add-name" class="input" placeholder="nickname (will add it to the thanks list)">
-                        <input type="text" name="title" id="add-title" class="input" placeholder="title" required>
-                        <input type="text" name="link" id="add-link" class="input" placeholder="link" required>
-                        <select name="category" id="category">
-                            <option value="dictionaries">dictionaries</option>
-                            <option value="structure">structure - grammar</option>
-                            <option value="kanji">kanji - vocabulary</option>
-                            <option value="media">media</option>
-                            <option value="misc">misc</option>
-                            <option value="software">software - apps</option>
-                        </select>
-                        <input type="textarea" name="desc-area" id="desc-area" class="input" placeholder="description">
-                        <input type="submit" value="SUBMIT" id="submit">
-                    </form>
-                </div>
-        </section>
-        -->
+
         <section class="section-contributors">
             <div class="collapse-contributors">
                 <button type="button" id="send" class="collapse-button anchor">

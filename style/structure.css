@@ -57,6 +57,21 @@ section h3 {
     margin-top: -45px;
 }
 
+/*.section-misc-items,
+.section-grammar-items,
+.section-dictionaries-items,
+.section-beginners-items,
+.section-kanji-items {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 350px);
+    grid-auto-rows: max-content;
+    gap: 20px;
+    padding: 10px 0;
+}*/
+
+
+/*section list form*/
 .section-misc-items,
 .section-grammar-items,
 .section-dictionaries-items,
@@ -64,10 +79,23 @@ section h3 {
 .section-kanji-items {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(4, 250px);
+    grid-template-columns: repeat(1, 1000px);
     grid-auto-rows: max-content;
     gap: 20px;
-    padding: 10px 0;
+    padding: 20px 0;
+    background-color: var(--category-bg-color);
+    border-radius: 10px;
+}
+
+.section-misc-items .item-container,
+.section-grammar-items .item-container,
+.section-dictionaries-items .item-container,
+.section-beginners-items .item-container,
+.section-kanji-items .item-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px
 }
 
 .section-media-items {

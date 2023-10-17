@@ -1,3 +1,61 @@
+
+// SIDEBAR //
+toggleSidebar();
+
+function toggleSidebar(){
+    const sidebar = document.getElementById("open-btn");
+    const mainArea = document.getElementById("nav-sticky");
+    let isNavOpen;
+
+    if(sidebar === null || mainArea === null) {
+        return;
+    }
+
+    sidebar.addEventListener('click', () => {
+        sidebar.classList.toggle('open-btn--active');
+        
+        if (sidebar.classList.contains('open-btn--active')) {
+            isNavOpen = true;
+            openNav();
+
+        } else {
+            isNavOpen = false;
+            closeNav();
+        }
+
+        console.log("sidebar bool: " + isNavOpen);
+    });
+
+}
+
+function openNav(){
+    const sidebar = document.getElementById('sidebar');
+    sidebar.style.opacity = 1;
+    sidebar.style.top = 75 + "px";
+    sidebar.style.overflowY = "visible";
+}
+
+function closeNav(){
+    const sidebar = document.getElementById('sidebar');
+    sidebar.style.opacity = 0;
+    sidebar.style.top = -400 + "px";
+    setTimeout(function(){
+        sidebar.style.overflowY = "hidden";
+        console.log("I am the third log after 5 seconds");
+    }, 50);
+}
+
+function navPositionRight(){
+    const navButton = document.getElementById("open-btn");
+    const sidebar = document.getElementById("sidebar")
+
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        navButton.style.margin = "auto 15px auto auto";
+    } else {
+        navButton.style.margin = "auto";
+    }
+}
+
 // COLLAPSE CATEGORY //
 
 collapseCategories();
@@ -43,6 +101,7 @@ const footer = document.getElementById("footer");
 
 window.onscroll = function(){
     scrollFunction();
+    //navPositionRight();
 };
 
 backToTopButton.addEventListener("click", backToTop)
@@ -78,28 +137,39 @@ darkTheme();
 
 function darkTheme(){
     const html = document.getElementsByTagName("html")[0];
-    console.log(html);
     const themeSwitch = document.getElementById("theme-logo");
     const autoDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-    if(autoDarkTheme.matches){
-        html.classList.toggle("nightMode");
-        themeSwitch.innerHTML = "明";
-        localStorage.setItem(html.classList, "nightMode");
-    }else{
-        html.classList.remove("nightMode");
-        themeSwitch.innerHTML = "暗";
-        localStorage.setItem(html.classList, "");
+    // Fonction pour définir le thème et enregistrer la préférence de l'utilisateur
+    function setTheme(theme) {
+        if(theme === "dark"){
+            html.classList.toggle("nightMode");
+            themeSwitch.innerHTML = "明";
+            localStorage.setItem("themePreference", "dark");
+        }else{
+            html.classList.remove("nightMode");
+            themeSwitch.innerHTML = "暗";
+            localStorage.setItem("themePreference", "light");
+        }
     }
     
+    // Vérifie s'il y a une préférence de thème enregistrée dans localStorage
+    const userThemePreference = localStorage.getItem("themePreference");
+
+    if (userThemePreference) {
+        setTheme(userThemePreference); // Si une préférence utilisateur est enregistrée, utilisez-la
+    } else if (autoDarkTheme.matches) {
+        setTheme("dark"); // Sinon, utilisez le thème automatique
+    } else {
+        setTheme("light");
+    }
+
     themeSwitch.addEventListener("click", () => {
-        html.classList.toggle("nightMode");
+        html.classList.contains("nightMode");
         if(html.classList.contains("nightMode")){
-            themeSwitch.innerHTML = "明";
-            localStorage.setItem(html, "nightMode");
+            setTheme("light");
         }else{
-            themeSwitch.innerHTML = "暗";
-            localStorage.setItem(html.classList, "");
+            setTheme("dark");
         }
     });
 }

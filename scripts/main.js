@@ -4,10 +4,10 @@ toggleSidebar();
 
 function toggleSidebar(){
     const sidebar = document.getElementById("open-btn");
-    const mainArea = document.getElementById('main');
+    const mainArea = document.getElementById("nav-sticky");
     let isNavOpen;
 
-    if(sidebar === null) {
+    if(sidebar === null || mainArea === null) {
         return;
     }
 
@@ -26,7 +26,8 @@ function toggleSidebar(){
         console.log("sidebar bool: " + isNavOpen);
     });
 
-    mainArea.addEventListener('click', () => {
+    
+    mainArea.addEventListener('mouseleave', () => {
         
         if (isNavOpen == true) {
             sidebar.classList.toggle('open-btn--active');
@@ -43,7 +44,7 @@ function toggleSidebar(){
 function openNav(){
     const sidebar = document.getElementById('sidebar');
     sidebar.style.opacity = 1;
-    sidebar.style.top = 240 + "px";
+    sidebar.style.top = 75 + "px";
     sidebar.style.overflowY = "visible";
 }
 

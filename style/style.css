@@ -155,10 +155,14 @@ nav a:hover {
   color: #c93d1a
 }
 
+.nav-sticky {
+  position: sticky;
+  top: 15px;
+  z-index: 4;
+}
+
 .open-btn {
   text-align: center;
-  position:sticky;
-  z-index: 4;
   cursor: pointer;
   padding-bottom: 10px;
   color: var(--text) !important;

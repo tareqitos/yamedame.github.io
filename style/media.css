@@ -7,7 +7,7 @@
   .section-dictionaries-items,
   .section-beginners-items,
   .section-kanji-items {
-    grid-template-columns: repeat(3, 250px)
+    grid-template-columns: repeat(1, 900px);
   }
 
   .section-media-items {
@@ -37,7 +37,11 @@
   .section-dictionaries-items,
   .section-beginners-items,
   .section-kanji-items {
-    grid-template-columns: repeat(3, 200px)
+    grid-template-columns: repeat(1, 800px);
+  }
+
+  .item-container-parent {
+
   }
 
   .section-media-items {
@@ -48,29 +52,40 @@
     height: 150px;
   }
 
-  nav {
-    padding-top: 5px;
-  }
-
   form {
     width: 400px;
   }
 }
 
 /* ================================================= 750 ================================================= */
+@media screen and (max-width:900px) {
+  .section-misc-items,
+  .section-grammar-items,
+  .section-dictionaries-items,
+  .section-beginners-items,
+  .section-kanji-items {
+    grid-template-columns: repeat(1, 700px);
+  }
+}
 
 @media screen and (max-width:750px) {
-
-  nav a h2 {
-    font-size: 1.3em
-  }
 
   .section-misc-items,
   .section-dictionaries-items,
   .section-grammar-items,
   .section-beginners-items,
   .section-kanji-items {
-    grid-template-columns: repeat(3, 180px)
+    grid-template-columns: repeat(1, 500px)
+  }
+
+  .section-misc-items .item-container-parent,
+  .section-grammar-items .item-container-parent,
+  .section-dictionaries-items .item-container-parent,
+  .section-beginners-items .item-container-parent,
+  .section-kanji-items .item-container-parent{
+    width: 150px;
+    text-align: center;
+    line-height: 15px;
   }
 
   .section-media-items {
@@ -105,7 +120,8 @@
   }
 
   .item-container-parent p {
-    font-size: 1.3em
+    font-size: 0.9em;
+    font-weight: 600;
   }
 
   .section-software-items .item-container-parent {
@@ -159,8 +175,16 @@
   .section-grammar-items,
   .section-beginners-items,
   .section-kanji-items {
-    grid-template-columns: repeat(2, 200px)
+    grid-template-columns: repeat(1, 400px)
   }
+
+  .section-misc-items .item-container,
+  .section-grammar-items .item-container,
+  .section-dictionaries-items .item-container,
+  .section-beginners-items .item-container,
+  .section-kanji-items .item-container{
+    gap: 15px;
+}
 
   .section-media-items {
     grid-template-columns: repeat(2, 150px)
@@ -180,21 +204,8 @@
   }
 
   .item-container-parent p {
-    font-size: 1.08em
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  nav a{
-    padding: 5px;
-  }
-
-  nav a h2 {
-    font-size: 1.1em
+    font-size: 0.9em;
+    font-weight: 600;
   }
 
   form {
@@ -208,17 +219,53 @@
 
 /* ================================================= 430 ================================================= */
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 512px) {
 
   .section-misc-items,
   .section-dictionaries-items,
   .section-grammar-items,
   .section-beginners-items,
   .section-kanji-items {
-    grid-template-columns: repeat(2, 180px)
+    grid-template-columns: repeat(1, 300px)
   }
   
+  .section-misc-items .item-container,
+  .section-grammar-items .item-container,
+  .section-dictionaries-items .item-container,
+  .section-beginners-items .item-container,
+  .section-kanji-items .item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
 
+  .section-misc-items .item-container-parent,
+  .section-grammar-items .item-container-parent,
+  .section-dictionaries-items .item-container-parent,
+  .section-beginners-items .item-container-parent,
+  .section-kanji-items .item-container-parent{
+    width: 250px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.section-misc-items .desc-favicon,
+.section-dictionaries-items .desc-favicon,
+.section-grammar-items .desc-favicon,
+.section-beginners-items .desc-favicon,
+.section-kanji-items .desc-favicon {
+  display: none;
+}
+
+  .item-container-parent p {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+
+  .desc-favicon {
+    height: 15px;
+  }
 }
 
 /* ================================================= 400 ================================================= */
@@ -252,16 +299,6 @@
 
   .item-container-parent p {
     font-size: 1.3em
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap
-  }
-
-  nav a h2 {
-    font-size: .9em
   }
 
   .collapse-button {

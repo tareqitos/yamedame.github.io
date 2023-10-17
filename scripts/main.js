@@ -26,20 +26,7 @@ function toggleSidebar(){
         console.log("sidebar bool: " + isNavOpen);
     });
 
-    
-    mainArea.addEventListener('mouseleave', () => {
-        
-        if (isNavOpen == true) {
-            sidebar.classList.toggle('open-btn--active');
-            isNavOpen = false;
-            closeNav();
-        }
-
-        console.log("main bool: " + isNavOpen);
-    });
 }
-
-
 
 function openNav(){
     const sidebar = document.getElementById('sidebar');
@@ -58,8 +45,16 @@ function closeNav(){
     }, 50);
 }
 
+function navPositionRight(){
+    const navButton = document.getElementById("open-btn");
+    const sidebar = document.getElementById("sidebar")
 
-
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        navButton.style.margin = "auto 15px auto auto";
+    } else {
+        navButton.style.margin = "auto";
+    }
+}
 
 // COLLAPSE CATEGORY //
 
@@ -106,6 +101,7 @@ const footer = document.getElementById("footer");
 
 window.onscroll = function(){
     scrollFunction();
+    //navPositionRight();
 };
 
 backToTopButton.addEventListener("click", backToTop)

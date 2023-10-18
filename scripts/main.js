@@ -3,18 +3,19 @@
 toggleSidebar();
 
 function toggleSidebar(){
-    const sidebar = document.getElementById("open-btn");
-    const mainArea = document.getElementById("nav-sticky");
+    const button = document.getElementById("open-btn");
+    const mainArea = document.getElementById("main");
+    const sidebar = document.getElementById('sidebar');
     let isNavOpen;
 
-    if(sidebar === null || mainArea === null) {
+    if(button === null || mainArea === null) {
         return;
     }
 
-    sidebar.addEventListener('click', () => {
-        sidebar.classList.toggle('open-btn--active');
+    button.addEventListener('click', () => {
+        button.classList.toggle('open-btn--active');
         
-        if (sidebar.classList.contains('open-btn--active')) {
+        if (button.classList.contains('open-btn--active')) {
             isNavOpen = true;
             openNav();
 
@@ -24,6 +25,22 @@ function toggleSidebar(){
         }
 
         console.log("sidebar bool: " + isNavOpen);
+    });
+
+    mainArea.addEventListener('click', () => {
+        if (button.classList.contains('open-btn--active')) {
+            button.classList.toggle('open-btn--active');
+        }
+        isNavOpen = false;        
+        closeNav();
+    });
+
+    sidebar.addEventListener('click', () => {
+        if (button.classList.contains('open-btn--active')) {
+            button.classList.toggle('open-btn--active');
+        }
+        isNavOpen = false;
+        closeNav();
     });
 
 }

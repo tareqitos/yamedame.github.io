@@ -25,6 +25,7 @@ function toggleSidebar () {
   }
 
   if (isMobileDevice()) {
+    sidebar.style.display = 'none'
     sidebar.style.top = 100 + 'px'
   } else {
     sidebar.style.top = -400 + 'px'
@@ -61,15 +62,19 @@ function toggleSidebar () {
 
 function openNav () {
   const sidebar = document.getElementById('sidebar')
-  sidebar.style.opacity = 1
-  sidebar.style.overflowY = 'visible'
+  sidebar.style.display = null
+  setTimeout(function () {
+    sidebar.style.opacity = 1
+    sidebar.style.overflowY = 'visible'
 
-  if (isMobileDevice()) {
-    sidebar.style.top = -360 + 'px'
-  } else {
-    sidebar.style.top = 75 + 'px'
-  }
+    if (isMobileDevice()) {
+      sidebar.style.top = -360 + 'px'
+    } else {
+      sidebar.style.top = 80 + 'px'
+    }
+  }, 10)
 }
+
 
 function closeNav () {
   const sidebar = document.getElementById('sidebar')
@@ -83,6 +88,7 @@ function closeNav () {
 
   setTimeout(function () {
     sidebar.style.overflowY = 'hidden'
+    sidebar.style.display = 'none'
     console.log('I am the third log after 5 seconds')
   }, 50)
 }
@@ -156,6 +162,7 @@ const footer = document.getElementById('footer')
 
 window.onscroll = function () {
   scrollFunction()
+  closeNav()
 }
 
 backToTopButton.addEventListener('click', backToTop)

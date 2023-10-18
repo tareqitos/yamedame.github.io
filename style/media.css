@@ -26,6 +26,7 @@
   .software-icon {
     text-align: center;
   }
+
 }
 
 /* ================================================= 1000 ================================================= */
@@ -52,10 +53,15 @@
   form {
     width: 400px;
   }
+
+  .anchor {
+    padding-top: 20px;
+  }
 }
 
 /* ================================================= 750 ================================================= */
 @media screen and (max-width:900px) {
+
   .section-misc-items,
   .section-grammar-items,
   .section-dictionaries-items,
@@ -79,7 +85,7 @@
   .section-grammar-items .item-container-parent,
   .section-dictionaries-items .item-container-parent,
   .section-beginners-items .item-container-parent,
-  .section-kanji-items .item-container-parent{
+  .section-kanji-items .item-container-parent {
     width: 150px;
     text-align: center;
     line-height: 15px;
@@ -117,8 +123,7 @@
   }
 
   .item-container-parent p {
-    font-size: 0.9em;
-    font-weight: 600;
+    font-size: 1.1em;
   }
 
   .section-software-items .item-container-parent {
@@ -179,9 +184,9 @@
   .section-grammar-items .item-container,
   .section-dictionaries-items .item-container,
   .section-beginners-items .item-container,
-  .section-kanji-items .item-container{
+  .section-kanji-items .item-container {
     gap: 15px;
-}
+  }
 
   .section-media-items {
     grid-template-columns: repeat(2, 150px)
@@ -201,8 +206,7 @@
   }
 
   .item-container-parent p {
-    font-size: 0.9em;
-    font-weight: 600;
+    font-size: 1.1em;
   }
 
   form {
@@ -214,50 +218,56 @@
   }
 }
 
-/* ================================================= 430 ================================================= */
+/* ================================================= 512 ================================================= */
 
 @media screen and (max-width: 512px) {
+
+  section {
+    padding: 0 20px;
+  }
 
   .section-misc-items,
   .section-dictionaries-items,
   .section-grammar-items,
   .section-beginners-items,
   .section-kanji-items {
-    grid-template-columns: repeat(1, 300px)
+    grid-template-columns: repeat(1, 350px)
   }
-  
+
   .section-misc-items .item-container,
   .section-grammar-items .item-container,
   .section-dictionaries-items .item-container,
   .section-beginners-items .item-container,
-  .section-kanji-items .item-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .section-kanji-items .item-container {
     gap: 15px;
-}
+  }
 
   .section-misc-items .item-container-parent,
   .section-grammar-items .item-container-parent,
   .section-dictionaries-items .item-container-parent,
   .section-beginners-items .item-container-parent,
-  .section-kanji-items .item-container-parent{
-    width: 310px;
+  .section-kanji-items .item-container-parent {
+    width: 120px;
     text-align: center;
     line-height: 20px;
-}
+  }
 
-.section-misc-items .desc-favicon,
-.section-dictionaries-items .desc-favicon,
-.section-grammar-items .desc-favicon,
-.section-beginners-items .desc-favicon,
-.section-kanji-items .desc-favicon {
-  display: none;
-}
+  .section-misc-items .desc-favicon,
+  .section-dictionaries-items .desc-favicon,
+  .section-grammar-items .desc-favicon,
+  .section-beginners-items .desc-favicon,
+  .section-kanji-items .desc-favicon {
+    display: none;
+  }
 
   .item-container-parent p {
-    font-size: 1.2em;
-    font-weight: 400;
+    font-size: .9em;
+
+    word-break: break-word;
+  }
+
+  .item-desc {
+    font-size: .8em;
   }
 
   .desc-favicon {
@@ -278,7 +288,11 @@
   }
 
   .section-media-items {
-    grid-template-columns: repeat(1, 250px);
+    grid-template-columns: repeat(2, 120px);
+  }
+
+  .section-media-items .item-desc {
+    font-size: .9em;
   }
 
   .section-software-items {
@@ -286,7 +300,7 @@
   }
 
   .section-software-items .item-container-parent {
-    width: 300px
+    width: 250px
   }
 
   .section-software-items .item-title::after {
@@ -294,16 +308,12 @@
     left: -70px
   }
 
-  .item-container-parent p {
-    font-size: 1.3em
-  }
-
   .collapse-button {
     font-size: 1.5em;
   }
 
   .collapse-button::after {
-    top:13px;
+    top: 13px;
   }
 
   .button {

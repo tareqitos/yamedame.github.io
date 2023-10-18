@@ -19,7 +19,7 @@ html {
   --input-border: 1.5px solid #979797 !important;
   --input-category-color: #9fa0a9;
   --category-bg-color: rgba(98, 140, 193, 0.11);
-  --nav-bg-color: rgba(255,255,255,.8);
+  --nav-bg-color: rgba(255, 255, 255, .8);
 }
 
 html.nightMode {
@@ -32,14 +32,14 @@ html.nightMode {
   --input-border: 0 !important;
   --input-category-color: #979797;
   --category-bg-color: rgba(0, 0, 0, 0.1);
-  --nav-bg-color: rgba(23,25,28,.8);
+  --nav-bg-color: rgba(23, 25, 28, .8);
 }
 
 body {
   color: var(--text) !important;
   background-color: var(--bg) !important;
   transition: 0.1s;
-  
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -47,14 +47,21 @@ body {
 }
 
 .anchor {
-  padding-top: 65px;
-  margin-top: -65px;
+  padding-top: 20px;
+  margin-top: -20px;
+  transition: padding-top .2s ease;
+}
+
+.anchorage {
+  position: relative;
+  bottom: 70px;
 }
 
 #top {
   position: absolute;
   top: 0;
 }
+
 /* ================================================= HEADER ================================================= */
 
 header {
@@ -115,7 +122,7 @@ header {
   padding-bottom: 10px;
 }
 
-#lu-star{
+#lu-star {
   position: relative;
   margin: 0;
 }
@@ -136,6 +143,7 @@ header {
   color: var(--text) !important;
   background-color: var(--nav-bg-color) !important;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 10px 16px;
   border: none;
   box-shadow: var(--btn-shadow) !important;
@@ -144,16 +152,16 @@ header {
   font-weight: 100;
   font-size: 25px;
   width: 80px;
-  margin: auto;
+  margin: 10px auto auto auto;
 }
 
 .sidebar {
-  position: absolute; 
-  left: 0; 
-  right: 0; 
+  position: absolute;
+  left: 0;
+  right: 0;
   top: -400px;
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto;
+  margin-right: auto;
   width: 200px;
   padding: 20px 0;
   z-index: 4;
@@ -163,6 +171,7 @@ header {
   border-radius: 10px;
   background-color: var(--nav-bg-color);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--btn-shadow) !important;
   transition: top .3s ease-out, opacity .2s;
 }
@@ -174,7 +183,7 @@ header {
   color: var(--text);
 }
 
-.sidebar h2{
+.sidebar h2 {
   font-size: 1.5em;
 }
 
@@ -185,39 +194,41 @@ header {
 /* ================================================= GO TO TOP BUTTON ================================================= */
 
 #back-to-top {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 99;
-    font-weight: 100;
-    font-size: 15px;
-    color: var(--text) !important;
-    background-color: var(--nav-bg-color) !important;
-    padding: 10px 16px;
-    border: none;
-    box-shadow: var(--btn-shadow) !important;
-    backdrop-filter: blur(10px);
-    border-radius: 100px;
-    opacity: 0;
-    transform: scale(1);
-    transition: transform .3s, opacity .2s ease;
-    cursor: pointer;
-  }
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  font-weight: 100;
+  font-size: 15px;
+  color: var(--text) !important;
+  background-color: var(--nav-bg-color) !important;
+  padding: 10px 16px;
+  border: none;
+  box-shadow: var(--btn-shadow) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 100px;
+  opacity: 0;
+  transform: scale(1);
+  transition: transform .3s, opacity .2s ease;
+  cursor: pointer;
+}
 
 #back-to-top:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
+
 /* ================================================= FOOTER ================================================= */
 
 #footer {
-  position:absolute;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
 
 .footer {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   flex-direction: row;
   align-items: center;
   gap: 100px;
@@ -244,7 +255,7 @@ header {
   transition: transform .25s ease;
 }
 
-.footer-links i:hover{
+.footer-links i:hover {
   transform: scale(1.5)
 }
 

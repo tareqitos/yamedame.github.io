@@ -40,9 +40,6 @@
     grid-template-columns: repeat(1, 800px);
   }
 
-  .item-container-parent {
-
-  }
 
   .section-media-items {
     grid-template-columns: repeat(4, 150px)
@@ -245,7 +242,7 @@
   .section-dictionaries-items .item-container-parent,
   .section-beginners-items .item-container-parent,
   .section-kanji-items .item-container-parent{
-    width: 250px;
+    width: 310px;
     text-align: center;
     line-height: 20px;
 }

@@ -18,15 +18,19 @@ function toggleSidebar () {
   const button = document.getElementById('open-btn')
   const mainArea = document.getElementById('main')
   const sidebar = document.getElementById('sidebar')
+  const anchor = document.querySelectorAll('.anchorage')
   let isNavOpen
 
-  if (button === null || mainArea === null) {
+  if (button === null || mainArea === null || anchor === null) {
     return
   }
 
   if (isMobileDevice()) {
     sidebar.style.display = 'none'
     sidebar.style.top = 100 + 'px'
+    for (var i = 0; i < anchor.length; i++) {
+      anchor[i].style.bottom = 0
+    }
   } else {
     sidebar.style.top = -400 + 'px'
   }
@@ -74,7 +78,6 @@ function openNav () {
     }
   }, 10)
 }
-
 
 function closeNav () {
   const sidebar = document.getElementById('sidebar')

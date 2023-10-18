@@ -65,7 +65,7 @@ function openNav () {
   sidebar.style.overflowY = 'visible'
 
   if (isMobileDevice()) {
-    sidebar.style.top = -310 + 'px'
+    sidebar.style.top = -360 + 'px'
   } else {
     sidebar.style.top = 75 + 'px'
   }

@@ -38,7 +38,7 @@
 }
 
 .collapse-contributors {
-    padding: 0 0 150px 0;
+    padding: 0 0 80px 0
 }
 
 /* ================================================= SECTIONS ================================================= */
@@ -54,7 +54,7 @@ section h3 {
 }
 
 #beginners {
-    margin-top: -30px;
+    margin-top: 0;
 }
 
 /*.section-misc-items,
@@ -85,13 +85,14 @@ section h3 {
     padding: 20px 0;
     background-color: var(--category-bg-color);
     border-radius: 10px;
+    transition: grid-template-columns .2s ease;
 }
 
 .section-misc-items .item-container,
 .section-grammar-items .item-container,
 .section-dictionaries-items .item-container,
 .section-beginners-items .item-container,
-.section-kanji-items .item-container{
+.section-kanji-items .item-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -109,7 +110,7 @@ section h3 {
 
 .media {
     height: 200px
-  }
+}
 
 .media-legend {
     display: flex;
@@ -135,7 +136,8 @@ section h3 {
 }
 
 .section-software-items .item-container-parent {
-    width: 500px
+    width: 500px;
+    transition: width .2s ease;
 }
 
 .section-thanks {
@@ -143,6 +145,5 @@ section h3 {
     justify-content: center;
     grid-template-columns: repeat(4, auto);
     grid-template-rows: auto;
-    gap: 20px;   
+    gap: 20px;
 }
-

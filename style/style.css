@@ -121,7 +121,7 @@ header {
 }
 
 /* ================================================= NAV ================================================= */
-
+/*
 .nav-sticky {
   position: sticky;
   top: 15px;
@@ -136,6 +136,7 @@ header {
   color: var(--text) !important;
   background-color: var(--nav-bg-color) !important;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 10px 16px;
   border: none;
   box-shadow: var(--btn-shadow) !important;
@@ -163,6 +164,55 @@ header {
   border-radius: 10px;
   background-color: var(--nav-bg-color);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--btn-shadow) !important;
+  transition: top .3s ease-out, opacity .2s;
+}
+*/
+
+.nav-sticky {
+  position: sticky;
+  top: 15px;
+  z-index: 4;
+}
+
+.open-btn {
+  z-index: 10;
+  text-align: center;
+  cursor: pointer;
+  padding-bottom: 10px;
+  color: var(--text) !important;
+  background-color: var(--nav-bg-color) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  border: none;
+  box-shadow: var(--btn-shadow) !important;
+  border-radius: 100px;
+  transition: transform .2s ease;
+  font-weight: 100;
+  font-size: 25px;
+  width: 80px;
+  margin: auto;
+}
+
+.sidebar {
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  top: -400px;
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 200px;
+  padding: 20px 0;
+  z-index: 4;
+  overflow-y: hidden;
+  opacity: 0;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--nav-bg-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--btn-shadow) !important;
   transition: top .3s ease-out, opacity .2s;
 }

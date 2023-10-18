@@ -63,13 +63,27 @@ function closeNav(){
 }
 
 function navPositionRight(){
-    const navButton = document.getElementById("open-btn");
-    const sidebar = document.getElementById("sidebar")
+    const nav = document.getElementById('nav-sticky');
+    const footer = document.getElementById('footer');
+    const main = document.getElementById('main');
 
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-        navButton.style.margin = "auto 15px auto auto";
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150 && window.innerWidth < 600) {
+        if (nav.parentNode) {
+            nav.parentNode.removeChild(nav);
+        }
+        // Insérez-le avant le footer
+        footer.parentNode.insertBefore(nav, footer);
+        nav.style.top = null;
+        nav.style.bottom =  15 + "px";
+        nav.style.marginBottom = 2 + "em";
     } else {
-        navButton.style.margin = "auto";
+        if (nav.parentNode) {
+            nav.parentNode.removeChild(nav);
+        }
+        // Insérez-le avant le main
+        main.parentNode.insertBefore(nav, main);
+        nav.style.top = 15 + "px";
+        nav.style.bottom =  null;
     }
 }
 
@@ -118,7 +132,7 @@ const footer = document.getElementById("footer");
 
 window.onscroll = function(){
     scrollFunction();
-    //navPositionRight();
+    navPositionRight();
 };
 
 backToTopButton.addEventListener("click", backToTop)

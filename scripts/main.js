@@ -1,10 +1,13 @@
 document.body.addEventListener('click', function(e) {
-  if (e.target.tagName === 'A' && e.target.getAttribute('href').charAt(0) === '#') {
-      e.preventDefault();
-      const targetId = e.target.getAttribute('href').substring(1);
-      const targetSection = document.getElementById(targetId);
-      if (targetSection) {
-          targetSection.scrollIntoView({ behavior: 'smooth' });
+  if (e.target.tagName === 'A') {
+      const href = e.target.getAttribute('href');
+      if (href.startsWith('#')) {
+          e.preventDefault();
+          const targetId = href.substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+              targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
       }
   }
 });

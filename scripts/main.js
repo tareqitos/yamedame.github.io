@@ -1,15 +1,22 @@
-document.body.addEventListener('click', function(e) {
-  if (e.target.tagName === 'A') {
-      const href = e.target.getAttribute('href');
-      if (href.startsWith('#')) {
-          e.preventDefault();
-          const targetId = href.substring(1);
-          const targetSection = document.getElementById(targetId);
-          if (targetSection) {
-              targetSection.scrollIntoView({ behavior: 'smooth' });
-          }
-      }
+//Prevent anchors links being added to the URL
+document.querySelectorAll("a[href*='#']").forEach(function(current) {
+
+  // Original JavaScript code by Chirp Internet: www.chirpinternet.eu
+  // Please acknowledge use of this code by including this header.
+
+  if(current.origin + current.pathname != self.location.href) {
+    return;
   }
+
+  (function(anchorPoint) {
+    if(anchorPoint) {
+      current.addEventListener("click", function(e) {
+        anchorPoint.scrollIntoView({behavior: "smooth"});
+        e.preventDefault();
+      }, false);
+    }
+  })(document.querySelector(current.hash));
+
 });
 
 // SIDEBAR //

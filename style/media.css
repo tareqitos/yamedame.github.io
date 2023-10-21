@@ -1,6 +1,6 @@
 /* ================================================= 1200 ================================================= */
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1280px) {
 
   .section-misc-items,
   .section-grammar-items,
@@ -31,7 +31,7 @@
 
 /* ================================================= 1000 ================================================= */
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1024px) {
 
   .section-misc-items,
   .section-grammar-items,
@@ -71,14 +71,14 @@
   }
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width:815px) {
 
   .section-misc-items,
   .section-dictionaries-items,
   .section-grammar-items,
   .section-beginners-items,
   .section-kanji-items {
-    grid-template-columns: repeat(1, 500px)
+    grid-template-columns: repeat(1, 650px)
   }
 
   .section-misc-items .item-container-parent,
@@ -86,7 +86,7 @@
   .section-dictionaries-items .item-container-parent,
   .section-beginners-items .item-container-parent,
   .section-kanji-items .item-container-parent {
-    width: 150px;
+    width: 200px;
     text-align: center;
     line-height: 15px;
   }
@@ -170,14 +170,14 @@
 
 /* ================================================= 580 ================================================= */
 
-@media screen and (max-width:580px) {
+@media screen and (max-width:750px) {
 
   .section-misc-items,
   .section-dictionaries-items,
   .section-grammar-items,
   .section-beginners-items,
   .section-kanji-items {
-    grid-template-columns: repeat(1, 400px)
+    grid-template-columns: repeat(1, 600px)
   }
 
   .section-misc-items .item-container,
@@ -218,13 +218,35 @@
   }
 }
 
+/* ================================================= 712 ================================================= */
+
+@media screen and (max-width:750px) {
+  section {
+    padding: 0 10px;
+  }
+
+  .section-misc-items,
+  .section-dictionaries-items,
+  .section-grammar-items,
+  .section-beginners-items,
+  .section-kanji-items {
+    grid-template-columns: repeat(1, 480px)
+  }
+
+  .section-misc-items .item-container-parent,
+  .section-grammar-items .item-container-parent,
+  .section-dictionaries-items .item-container-parent,
+  .section-beginners-items .item-container-parent,
+  .section-kanji-items .item-container-parent {
+    width: 200px;
+    text-align: center;
+    line-height: 20px;
+  }
+
+}
 /* ================================================= 512 ================================================= */
 
 @media screen and (max-width: 512px) {
-
-  section {
-    padding: 0 20px;
-  }
 
   .section-misc-items,
   .section-dictionaries-items,
@@ -277,14 +299,14 @@
 
 /* ================================================= 400 ================================================= */
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:428px) {
 
   .section-misc-items,
   .section-grammar-items,
   .section-dictionaries-items,
   .section-beginners-items,
   .section-kanji-items {
-    grid-template-columns: repeat(1, 250px)
+    grid-template-columns: repeat(1, 350px)
   }
 
   .section-media-items {

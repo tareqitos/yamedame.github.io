@@ -28,29 +28,58 @@ const categoriesName = [
 
 createCategoriesAndSort()
 
-/* TO IMPROVE
-showSortedMediaElement('.sort-all', '');
-showSortedMediaElement('.sort-videos', 'video');
-showSortedMediaElement('.sort-podcast', 'podcast');
+const isSortSelectEnabled =
+  localStorage.getItem('isSortSelectEnabled') === 'true'
+showSortedMediaElement('.sort-select', '', isSortSelectEnabled)
+showSortedMediaElement('.sort-all', '', true)
+showSortedMediaElement('.sort-videos', 'video', true)
+showSortedMediaElement('.sort-podcast', 'podcast', true)
 
-function showSortedMediaElement(sortListenerQuery, mediaContainsString) {
-    const sortListener = document.querySelector(sortListenerQuery);
-    const mediaElement = document.querySelector('.section-media-items');
-    const collapseContent = document.querySelector('.collapse-media .collapse-content');    
+function showSortedMediaElement (
+  sortListenerQuery,
+  mediaContainsString,
+  initialHidden
+) {
+  const sortListener = document.querySelector(sortListenerQuery)
+  const mediaElement = document.querySelector('.section-media-items')
+  const legendElement = document.querySelector('.media-legend')
+  const sortSelect = document.querySelector('.sort-select')
+  const selectMessage = document.querySelector('.selection-message')
 
-    sortListener.addEventListener('click', () => {
-        const sortCategory = links.media.filter(all => all.type.includes(mediaContainsString));
+  if (initialHidden) {
+    mediaElement.style.display = 'none'
+    legendElement.style.display = 'none'
+    selectMessage.style.display = null
+    sortSelect.selected = true
+  } else {
+    mediaElement.style.display = 'grid'
+    legendElement.style.display = 'flex'
+    selectMessage.style.display = 'none'
+  }
 
-        while (mediaElement.lastElementChild) {
-            mediaElement.removeChild(mediaElement.lastElementChild);
-            console.log('removed : ' + mediaElement);       
-        }
+  sortListener.addEventListener('click', () => {
+    const sortCategory = links.media.filter(all =>
+      all.type.includes(mediaContainsString)
+    )
 
-        createElement(sortCategory, "media");
-        collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
-    }); 
-} 
-*/
+    while (mediaElement.lastElementChild) {
+      mediaElement.removeChild(mediaElement.lastElementChild)
+      console.log('removed : ' + mediaElement)
+    }
+
+    if (sortListenerQuery == '.sort-select' && mediaContainsString == '') {
+      localStorage.setItem('isSortSelectEnabled', 'true')
+      mediaElement.style.display = 'none'
+      legendElement.style.display = 'none'
+    } else {
+      localStorage.setItem('isSortSelectEnabled', 'false')
+      mediaElement.style.display = 'grid'
+      legendElement.style.display = 'flex'
+      selectMessage.style.display = 'none'
+      createElement(sortCategory, 'media')
+    }
+  })
+}
 
 // SORT ELEMENT IN CATEGORY //
 

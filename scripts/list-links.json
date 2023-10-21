@@ -24,6 +24,14 @@
             "link": "https://japanese.meta.stackexchange.com/questions/352/glossary-simple-linguistics-terms-and-cross-reference",
             "description": "Japanese/English linguistic terms",
             "favicon": "http://www.google.com/s2/favicons?domain=https://japanese.meta.stackexchange.com/"
+        },
+
+        {
+            "id": "beg4",
+            "name": "Tae Kim",
+            "link": "https://guidetojapanese.org/learn/",
+            "description": "Tae Kim's guide to learning Japanese",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://www.guidetojapanese.org"
         }
     ],
     

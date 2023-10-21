@@ -76,7 +76,7 @@
 /* ================================================= ITEMS COLORS ================================================= */
 
 .beginners {
-  background: linear-gradient(90deg, rgba(255, 37, 37, 1) 0%, rgba(255, 90, 46, 1) 150%);
+  background: linear-gradient(90deg, rgb(223, 49, 49) 0%, rgb(238, 97, 59) 150%);
 }
 
 .dictionaries {
@@ -95,7 +95,7 @@
 
 .misc {
   background: #ce42ff;
-  background: linear-gradient(90deg, #ce42ff 0, #ea61ec 200%);
+  background: linear-gradient(90deg, #a327ce 0, #c865ca 200%);
 }
 
 #so1 {
@@ -130,6 +130,14 @@
   position: relative;
   top: 5px;
   align-self: flex-start;
+}
+
+.selection-message {
+  text-align: center;
+  line-height: .6;
+  font-size: 1.5em;
+  margin-top: 30px;
+  color: rgba(148, 152, 185, 0.5);
 }
 
 /* ================================================= THANKS ICONS ================================================= */

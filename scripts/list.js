@@ -28,58 +28,59 @@ const categoriesName = [
 
 createCategoriesAndSort()
 
-const isSortSelectEnabled =
-  localStorage.getItem('isSortSelectEnabled') === 'true'
-showSortedMediaElement('.sort-select', '', isSortSelectEnabled)
-showSortedMediaElement('.sort-all', '', true)
-showSortedMediaElement('.sort-videos', 'video', true)
-showSortedMediaElement('.sort-podcast', 'podcast', true)
+/*const isSortSelectEnabled = localStorage.getItem('isSortSelectEnabled') === 'true';
+
+showSortedMediaElement('.sort-select', '', isSortSelectEnabled);
+showSortedMediaElement('.sort-all', '', true);
+showSortedMediaElement('.sort-videos', 'videos', true); // Remarquez le changement ici
+showSortedMediaElement('.sort-podcast', 'podcast', true); // Remarquez le changement ici
 
 function showSortedMediaElement (
   sortListenerQuery,
   mediaContainsString,
   initialHidden
 ) {
-  const sortListener = document.querySelector(sortListenerQuery)
-  const mediaElement = document.querySelector('.section-media-items')
-  const legendElement = document.querySelector('.media-legend')
-  const sortSelect = document.querySelector('.sort-select')
-  const selectMessage = document.querySelector('.selection-message')
+  const sortListener = document.querySelector(sortListenerQuery);
+  const mediaElement = document.querySelector('.section-media-items');
+  const legendElement = document.querySelector('.media-legend');
+  const sortSelect = document.querySelector('.sort-select');
+  const selectMessage = document.querySelector('.selection-message');
 
   if (initialHidden) {
-    mediaElement.style.display = 'none'
-    legendElement.style.display = 'none'
-    selectMessage.style.display = null
-    sortSelect.selected = true
+    mediaElement.style.display = 'none';
+    legendElement.style.display = 'none';
+    selectMessage.style.display = null;
+    sortSelect.selected = true;
   } else {
-    mediaElement.style.display = 'grid'
-    legendElement.style.display = 'flex'
-    selectMessage.style.display = 'none'
+    mediaElement.style.display = 'grid';
+    legendElement.style.display = 'flex';
+    selectMessage.style.display = 'none';
   }
 
-  sortListener.addEventListener('click', () => {
+  // Remarquez le changement de l'événement de "click" à "change" pour le sélecteur
+  sortListener.addEventListener('change', () => {
     const sortCategory = links.media.filter(all =>
       all.type.includes(mediaContainsString)
-    )
+    );
 
     while (mediaElement.lastElementChild) {
-      mediaElement.removeChild(mediaElement.lastElementChild)
-      console.log('removed : ' + mediaElement)
+      mediaElement.removeChild(mediaElement.lastElementChild);
+      console.log('removed : ' + mediaElement);
     }
 
     if (sortListenerQuery == '.sort-select' && mediaContainsString == '') {
-      localStorage.setItem('isSortSelectEnabled', 'true')
-      mediaElement.style.display = 'none'
-      legendElement.style.display = 'none'
+      localStorage.setItem('isSortSelectEnabled', 'true');
+      mediaElement.style.display = 'none';
+      legendElement.style.display = 'none';
     } else {
-      localStorage.setItem('isSortSelectEnabled', 'false')
-      mediaElement.style.display = 'grid'
-      legendElement.style.display = 'flex'
-      selectMessage.style.display = 'none'
-      createElement(sortCategory, 'media')
+      localStorage.setItem('isSortSelectEnabled', 'false');
+      mediaElement.style.display = 'grid';
+      legendElement.style.display = 'flex';
+      selectMessage.style.display = 'none';
+      createElement(sortCategory, 'media');
     }
-  })
-}
+  });
+}*/
 
 // SORT ELEMENT IN CATEGORY //
 

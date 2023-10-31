@@ -32,7 +32,24 @@
             "link": "https://guidetojapanese.org/learn/",
             "description": "Tae Kim's guide to learning Japanese",
             "favicon": "http://www.google.com/s2/favicons?domain=http://www.guidetojapanese.org"
-        }
+        },
+
+        {
+            "id": "beg5",
+            "name": "Kanji Explosion",
+            "link": "https://kurumi.com/jp/kjbh/?k=%E6%9C%AC",
+            "description": "Enter any character and it will show you its radicals and other parts",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://kurumi.com/jp/",
+            "recommended": "true"
+        },
+
+        {
+            "id": "beg6",
+            "name": "Irodori",
+            "link": "https://www.irodori.jpf.go.jp/en/index.html",
+            "description": "Free digital textbook series with native audio focusing on useful vocabulary and a bit less on grammar",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://www.irodori.jpf.go.jp/en/index.html"
+        } 
     ],
     
     "dictionaries": [
@@ -193,6 +210,14 @@
             "description": "Self-study courses/tutor support courses based on Marugoto learning materials",
             "favicon": "http://www.google.com/s2/favicons?domain=https://minato-jf.jp/",
             "recommended": "true"
+        },
+
+        {
+            "id": "g11",
+            "name": "Edewakaru",
+            "link": "https://www.edewakaru.com/",
+            "description": "Drawings to help understand Japanese grammar, verbs and more",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://www.edewakaru.com/"
         }
 
     ],
@@ -298,6 +323,15 @@
             "link": "https://kanji.koohii.com",
             "description": "Website designed to help Japanese language learners remember the kanji",
             "favicon": "http://www.google.com/s2/favicons?domain=https://kanji.koohii.com"
+        },
+
+        {
+            "id": "k12",
+            "name": "Kanji Explosion",
+            "link": "https://kurumi.com/jp/kjbh/?k=%E6%9C%AC",
+            "description": "Enter any character and it will show you its radicals and other parts.",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://kurumi.com/jp/",
+            "recommended": "true"
         } 
          
     ],
@@ -555,6 +589,16 @@
             "pic": "https://i.scdn.co/image/ab6765630000ba8aa532c56fb8af85809c03d791",
             "favicon": "http://www.google.com/s2/favicons?domain=https://open.spotify.com",
             "type": "podcast"
+        },
+
+        {
+            "id": "m15",
+            "name": "しのせんせい",
+            "link": "https://www.youtube.com/@user-dz8ku4zg5k/featured",
+            "description": "Japanese folk tales with native audio and transcripts. 🟧🟩",
+            "pic": "https://yt3.googleusercontent.com/ytc/APkrFKal-XrZEAWuVjbQUDI-z5ZgGh8bbA64JAzTSoNtxw=s176-c-k-c0x00ffffff-no-rj",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
+            "type": "video"
         }
     ],
 

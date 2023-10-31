@@ -28,84 +28,60 @@ const categoriesName = [
 
 createCategoriesAndSort()
 
-const isSortSelectEnabled = localStorage.getItem('isSortSelectEnabled') === 'true';
+// Fonction pour mettre à jour les éléments affichés en fonction de la catégorie sélectionnée
+function updateDisplayedItems (category) {
+  const mediaContainer = document.querySelector('.section-media-items')
 
-showSortedMediaElement('.sort-select', '', isSortSelectEnabled);
-showSortedMediaElement('.sort-all', '', true);
-showSortedMediaElement('.sort-videos', 'video', true);
-showSortedMediaElement('.sort-podcast', 'podcast', true);
+  let mediaData
 
-function showSortedMediaElement(
-  sortListenerQuery,
-  mediaContainsString,
-  initialHidden
-) {
-  const sortListener = document.querySelector(sortListenerQuery);
-  const mediaElement = document.querySelector('.section-media-items');
-  const legendElement = document.querySelector('.media-legend');
-  const sortSelect = document.querySelector('.sort-select');
-  const selectMessage = document.querySelector('.selection-message');
-
-  if (initialHidden) {
-    mediaElement.style.display = 'none';
-    legendElement.style.display = 'none';
-    selectMessage.style.display = 'block'; // Change 'null' to 'block' for mobile
-    sortSelect.selected = true;
+  // Sélectionnez les données en fonction de la catégorie choisie
+  if (category === 'all') {
+    mediaData = links.media
   } else {
-    mediaElement.style.display = 'grid';
-    legendElement.style.display = 'flex';
-    selectMessage.style.display = 'none';
+    mediaData = links.media.filter(all => all.type.includes(category))
   }
 
-  sortListener.addEventListener('click', () => {
-    const sortCategory = links.media.filter((all) =>
-      all.type.includes(mediaContainsString)
-    );
+  // Affichez les éléments correspondants
 
-    while (mediaElement.lastElementChild) {
-      mediaElement.removeChild(mediaElement.lastElementChild);
-      console.log('removed : ' + mediaElement);
-    }
-
-    if (sortListenerQuery === '.sort-select' && mediaContainsString === '') {
-      localStorage.setItem('isSortSelectEnabled', 'true');
-      mediaElement.style.display = 'none';
-      legendElement.style.display = 'none';
-      selectMessage.style.display = 'block'; // Change 'null' to 'block' for mobile
-    } else {
-      localStorage.setItem('isSortSelectEnabled', 'false');
-      mediaElement.style.display = 'grid';
-      legendElement.style.display = 'flex';
-      selectMessage.style.display = 'none';
-      createElement(sortCategory, 'media');
-    }
-  });
+  while (mediaContainer.lastElementChild) {
+    mediaContainer.removeChild(mediaContainer.lastElementChild)
+  }
+  createElement(mediaData, 'media')
 }
 
+// Event listener pour l'élément select
+const sortMediaSelect = document.getElementById('sort-media')
+sortMediaSelect.addEventListener('change', event => {
+  const selectedCategory = event.target.value
+  updateDisplayedItems(selectedCategory)
+})
+
+// Initialize en affichant tous les éléments initialement
+updateDisplayedItems()
 
 // SORT ELEMENT IN CATEGORY //
 
-function sortItems() {
-  const selectedCategory = document.getElementById('sort-media').value;
+function sortItems () {
+  const selectedCategory = document.getElementById('sort-media').value
 
-  const items = document.querySelectorAll('.item');
+  const items = document.querySelectorAll('.item')
 
   items.forEach(item => {
-      const category = item.getAttribute('data-category');
-      if (selectedCategory === 'all' || selectedCategory === category) {
-          item.style.display = 'block';
-      } else {
-          item.style.display = 'none';
-      }
-  });
+    const category = item.getAttribute('data-category')
+    if (selectedCategory === 'all' || selectedCategory === category) {
+      item.style.display = 'block'
+    } else {
+      item.style.display = 'none'
+    }
+  })
 }
 
 // Écouter les changements de sélection dans la liste déroulante
-const selectElement = document.getElementById('sort-media');
-selectElement.addEventListener('change', sortItems);
+const selectElement = document.getElementById('sort-media')
+selectElement.addEventListener('change', sortItems)
 
 // Appeler la fonction de tri initialement pour afficher correctement la page
-sortItems();
+sortItems()
 
 function createCategoriesAndSort () {
   for (let i = 0; i < categories.length; i++) {

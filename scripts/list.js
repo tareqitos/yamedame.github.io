@@ -51,8 +51,12 @@ function updateDisplayedItems (category) {
 
 // Event listener pour l'élément select
 const sortMediaSelect = document.getElementById('sort-media')
+const selectionMessage = document.querySelector('.selection-message')
+sortMediaSelect.selectedIndex = 0
+console.log(sortMediaSelect.selectedIndex)
 sortMediaSelect.addEventListener('change', event => {
   const selectedCategory = event.target.value
+  selectionMessage.style.display = 'none'
   updateDisplayedItems(selectedCategory)
 })
 

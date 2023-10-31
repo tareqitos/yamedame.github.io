@@ -28,14 +28,14 @@ const categoriesName = [
 
 createCategoriesAndSort()
 
-/*const isSortSelectEnabled = localStorage.getItem('isSortSelectEnabled') === 'true';
+const isSortSelectEnabled = localStorage.getItem('isSortSelectEnabled') === 'true';
 
 showSortedMediaElement('.sort-select', '', isSortSelectEnabled);
 showSortedMediaElement('.sort-all', '', true);
-showSortedMediaElement('.sort-videos', 'videos', true); // Remarquez le changement ici
-showSortedMediaElement('.sort-podcast', 'podcast', true); // Remarquez le changement ici
+showSortedMediaElement('.sort-videos', 'video', true);
+showSortedMediaElement('.sort-podcast', 'podcast', true);
 
-function showSortedMediaElement (
+function showSortedMediaElement(
   sortListenerQuery,
   mediaContainsString,
   initialHidden
@@ -49,7 +49,7 @@ function showSortedMediaElement (
   if (initialHidden) {
     mediaElement.style.display = 'none';
     legendElement.style.display = 'none';
-    selectMessage.style.display = null;
+    selectMessage.style.display = 'block'; // Change 'null' to 'block' for mobile
     sortSelect.selected = true;
   } else {
     mediaElement.style.display = 'grid';
@@ -57,9 +57,8 @@ function showSortedMediaElement (
     selectMessage.style.display = 'none';
   }
 
-  // Remarquez le changement de l'événement de "click" à "change" pour le sélecteur
-  sortListener.addEventListener('change', () => {
-    const sortCategory = links.media.filter(all =>
+  sortListener.addEventListener('click', () => {
+    const sortCategory = links.media.filter((all) =>
       all.type.includes(mediaContainsString)
     );
 
@@ -68,10 +67,11 @@ function showSortedMediaElement (
       console.log('removed : ' + mediaElement);
     }
 
-    if (sortListenerQuery == '.sort-select' && mediaContainsString == '') {
+    if (sortListenerQuery === '.sort-select' && mediaContainsString === '') {
       localStorage.setItem('isSortSelectEnabled', 'true');
       mediaElement.style.display = 'none';
       legendElement.style.display = 'none';
+      selectMessage.style.display = 'block'; // Change 'null' to 'block' for mobile
     } else {
       localStorage.setItem('isSortSelectEnabled', 'false');
       mediaElement.style.display = 'grid';
@@ -80,9 +80,32 @@ function showSortedMediaElement (
       createElement(sortCategory, 'media');
     }
   });
-}*/
+}
+
 
 // SORT ELEMENT IN CATEGORY //
+
+function sortItems() {
+  const selectedCategory = document.getElementById('sort-media').value;
+
+  const items = document.querySelectorAll('.item');
+
+  items.forEach(item => {
+      const category = item.getAttribute('data-category');
+      if (selectedCategory === 'all' || selectedCategory === category) {
+          item.style.display = 'block';
+      } else {
+          item.style.display = 'none';
+      }
+  });
+}
+
+// Écouter les changements de sélection dans la liste déroulante
+const selectElement = document.getElementById('sort-media');
+selectElement.addEventListener('change', sortItems);
+
+// Appeler la fonction de tri initialement pour afficher correctement la page
+sortItems();
 
 function createCategoriesAndSort () {
   for (let i = 0; i < categories.length; i++) {

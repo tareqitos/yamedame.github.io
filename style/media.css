@@ -57,6 +57,10 @@
   .anchor {
     padding-top: 20px;
   }
+
+  section {
+    padding: 0;
+  }
 }
 
 /* ================================================= 750 ================================================= */
@@ -221,16 +225,12 @@
 /* ================================================= 712 ================================================= */
 
 @media screen and (max-width:750px) {
-  section {
-    padding: 0 10px;
-  }
-
   .section-misc-items,
   .section-dictionaries-items,
   .section-grammar-items,
   .section-beginners-items,
   .section-kanji-items {
-    grid-template-columns: repeat(1, 480px)
+    grid-template-columns: repeat(1, 580px)
   }
 
   .section-misc-items .item-container-parent,
@@ -244,16 +244,17 @@
   }
 
 }
+
 /* ================================================= 512 ================================================= */
 
-@media screen and (max-width: 512px) {
+@media screen and (max-width: 602px) {
 
   .section-misc-items,
   .section-dictionaries-items,
   .section-grammar-items,
   .section-beginners-items,
   .section-kanji-items {
-    grid-template-columns: repeat(1, 350px)
+    grid-template-columns: repeat(1, 420px)
   }
 
   .section-misc-items .item-container,
@@ -269,7 +270,7 @@
   .section-dictionaries-items .item-container-parent,
   .section-beginners-items .item-container-parent,
   .section-kanji-items .item-container-parent {
-    width: 120px;
+    width: 160px;
     text-align: center;
     line-height: 20px;
   }

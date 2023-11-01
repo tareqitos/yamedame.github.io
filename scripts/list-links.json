@@ -595,10 +595,30 @@
             "id": "m15",
             "name": "しのせんせい",
             "link": "https://www.youtube.com/@user-dz8ku4zg5k/featured",
-            "description": "Japanese folk tales with native audio and transcripts. 🟧🟩",
+            "description": "Japanese folk tales with native audio and transcripts 🟧🟩",
             "pic": "https://yt3.googleusercontent.com/ytc/APkrFKal-XrZEAWuVjbQUDI-z5ZgGh8bbA64JAzTSoNtxw=s176-c-k-c0x00ffffff-no-rj",
             "favicon": "http://www.google.com/s2/favicons?domain=https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
             "type": "video"
+        },
+
+        {
+            "id": "m16",
+            "name": "Joe Inoue",
+            "link": "https://instagram.com/joeinoueofficial?igshid=NGVhN2U2NjQ0Yg==",
+            "description": "A funny guy giving you mnemonics for Japanese words 🟦🟥",
+            "pic": "https://cdn.instadp.io/?url=https%3A%2F%2Fscontent-lax3-1.cdninstagram.com%2Fv%2Ft51.2885-19%2F396749011_678144367409874_5959319579083352202_n.jpg%3Fstp%3Ddst-jpg_s200x200%26_nc_cat%3D1%26ccb%3D1-7%26_nc_sid%3Dc4dd86%26_nc_ohc%3D7YOY1vWhRjkAX_UR_in%26_nc_ht%3Dscontent-lax3-1.cdninstagram.com%26oh%3D00_AfDBYpjmuQi18T3U5czhOPPUSJx_uSIAxQ4VrmhR2PjsqA%26oe%3D6547391E",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://instagram.com",
+            "type": "instagram"
+        },
+
+        {
+            "id": "m16",
+            "name": "Taka Nihongo Dojo",
+            "link": "https://www.instagram.com/taka_nihongo_dojo/",
+            "description": "Japanese Teacher using his body to teach you words 🟦🟥",
+            "pic": "https://cdn.instadp.io/?url=https%3A%2F%2Fscontent-lax3-1.cdninstagram.com%2Fv%2Ft51.2885-19%2F234600552_364183525082532_3795249334167870057_n.jpg%3Fstp%3Ddst-jpg_s200x200%26_nc_cat%3D1%26ccb%3D1-7%26_nc_sid%3Dc4dd86%26_nc_ohc%3DDuTDzQ5ZOwgAX-x3Ph-%26_nc_ht%3Dscontent-lax3-1.cdninstagram.com%26oh%3D00_AfA840U7X7iUchJ7LE4C4GXn5sjWPaLhUkpbzrJu3KBb5g%26oe%3D6546F16D",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://instagram.com",
+            "type": "instagram"
         }
     ],
 

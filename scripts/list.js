@@ -41,12 +41,24 @@ function updateDisplayedItems (category) {
     mediaData = links.media.filter(all => all.type.includes(category))
   }
 
-  // Affichez les éléments correspondants
+  const mediaElements = document.querySelectorAll(
+    '.section-media-items .item-container'
+  )
 
-  while (mediaContainer.lastElementChild) {
-    mediaContainer.removeChild(mediaContainer.lastElementChild)
-  }
-  createElement(mediaData, 'media')
+  // Ajoutez une classe CSS pour activer l'animation de scale
+  mediaElements.forEach(element => {
+    element.classList.add('disappear')
+  })
+
+  // Attendez la fin de l'animation avant de supprimer les éléments
+  setTimeout(() => {
+    while (mediaContainer.lastElementChild) {
+      mediaContainer.lastElementChild.remove()
+    }
+
+    // Créez les nouveaux éléments
+    createElement(mediaData, 'media')
+  }, 300) // Assurez-vous que le délai correspond à la durée de l'animation CSS (0.3s dans cet exemple)
 }
 
 // Event listener pour l'élément select
@@ -54,6 +66,7 @@ const sortMediaSelect = document.getElementById('sort-media')
 const selectionMessage = document.querySelector('.selection-message')
 sortMediaSelect.selectedIndex = 0
 console.log(sortMediaSelect.selectedIndex)
+
 sortMediaSelect.addEventListener('change', event => {
   const selectedCategory = event.target.value
   selectionMessage.style.display = 'none'
@@ -138,8 +151,10 @@ function createElement (arrayElement, sectionToQuery) {
     // IF SECTION IS MEDIA, CREATE IMAGE MINIATURE //
 
     if (sectionToQuery === 'media') {
+      setTimeout(function () {
+        itemContainer.classList.add('appear')
+      })
       createImageTag(array, itemContainerParent)
-      console.log('Img created for ' + sectionToQuery)
     }
 
     // ADD FAVICON TO DESCRIPTION EXCEPT FOR SOFTWARE //

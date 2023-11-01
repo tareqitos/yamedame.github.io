@@ -108,6 +108,24 @@ section h3 {
     padding: 20px 0;
 }
 
+.section-media-items .item-container {
+    opacity: 0;
+    transform: scale(1);
+    transition: transform .3s, opacity .5s ease;
+}
+
+.section-media-items .item-container.appear {
+
+    animation: scale-in-center 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+}
+
+.section-media-items .item-container.disappear {
+
+    animation: scale-out-center 0.3s cubic-bezier(0.550, 0.055, 0.675, 0.190) both;
+
+}
+
 .media {
     height: 200px
 }
@@ -146,4 +164,30 @@ section h3 {
     grid-template-columns: repeat(4, auto);
     grid-template-rows: auto;
     gap: 20px;
+}
+
+
+@keyframes scale-in-center {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+@keyframes scale-out-center {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }

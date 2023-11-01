@@ -50,15 +50,20 @@ function updateDisplayedItems (category) {
     element.classList.add('disappear')
   })
 
-  // Attendez la fin de l'animation avant de supprimer les éléments
-  setTimeout(() => {
-    while (mediaContainer.lastElementChild) {
-      mediaContainer.lastElementChild.remove()
-    }
-
-    // Créez les nouveaux éléments
+  // Check si les éléments ne sont pas chargés
+  if (mediaContainer.lastElementChild == null) {
     createElement(mediaData, 'media')
-  }, 300) // Assurez-vous que le délai correspond à la durée de l'animation CSS (0.3s dans cet exemple)
+  } else {
+    // Attendez la fin de l'animation avant de supprimer les éléments
+    setTimeout(() => {
+      while (mediaContainer.lastElementChild) {
+        mediaContainer.lastElementChild.remove()
+      }
+
+      // Créez les nouveaux éléments
+      createElement(mediaData, 'media')
+    }, 300) // Assurez-vous que le délai correspond à la durée de l'animation CSS (0.3s dans cet exemple)
+  }
 }
 
 // Event listener pour l'élément select

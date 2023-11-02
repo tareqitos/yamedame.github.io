@@ -336,6 +336,16 @@
          
     ],
 
+    "speaking": [
+        {
+            "id": "sp1",
+            "name": "Kaiwakai",
+            "link": "https://www.kaiwakai.com/",
+            "description": "Practice japanese speaking with AI using generated guided conversations.",
+            "favicon": "https://kaiwakai.com/favicon.ico"
+        },
+    ],
+
     "misc": [
         {
             "id": "mi1",

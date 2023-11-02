@@ -336,16 +336,6 @@
          
     ],
 
-    "speaking": [
-        {
-            "id": "sp1",
-            "name": "Kaiwakai",
-            "link": "https://www.kaiwakai.com/",
-            "description": "Practice japanese speaking with AI using generated guided conversations.",
-            "favicon": "https://kaiwakai.com/favicon.ico"
-        },
-    ],
-
     "misc": [
         {
             "id": "mi1",
@@ -454,6 +444,14 @@
             "link": "https://discord.gg/japanese",
             "description": "English/Japanese language exchange discord server",
             "favicon": "http://www.google.com/s2/favicons?domain=https://discord.gg/japanese"
+        },
+
+        {
+            "id": "mi14",
+            "name": "Kaiwakai",
+            "link": "https://www.kaiwakai.com/",
+            "description": "Practice japanese speaking with AI using generated guided conversations.",
+            "favicon": "https://kaiwakai.com/favicon.ico"
         }
 
     ],

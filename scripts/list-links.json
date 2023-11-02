@@ -15,7 +15,7 @@
             "link": "https://github.com/birchill/10ten-ja-reader/",
             "description": "Web extension pop-up dictionary with image recognition",
             "favicon": "http://www.google.com/s2/favicons?domain=http://www.github.com",
-            "recommended": "true" 
+            "recommended": "" 
         },
 
         {
@@ -40,7 +40,7 @@
             "link": "https://kurumi.com/jp/kjbh/?k=%E6%9C%AC",
             "description": "Enter any character and it will show you its radicals and other parts",
             "favicon": "http://www.google.com/s2/favicons?domain=https://kurumi.com/jp/",
-            "recommended": "true"
+            "recommended": ""
         },
 
         {
@@ -65,7 +65,7 @@
             "id": "d2",
             "name": "Jotoba",
             "link": "https://jotoba.de/",
-            "description": "Jisho-like dictionary with name and sentence search options",
+            "description": "Jisho-like dictionary with multiple languages and pitch accent support",
             "favicon": ""
         },
 
@@ -124,7 +124,34 @@
             "link": "https://github.com/birchill/10ten-ja-reader/",
             "description": "Web extension pop-up dictionary with image recognition",
             "favicon": "http://www.google.com/s2/favicons?domain=http://www.github.com",
-            "recommended": "true" 
+            "recommended": "" 
+        },
+
+        {
+            "id": "d10",
+            "name": "Weblio",
+            "link": "https://thesaurus.weblio.jp/",
+            "description": "A free integrated bilingual dictionary website and online encyclopedia for Japanese-speaking sites",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://thesaurus.weblio.jp/",
+            "recommended": "" 
+        },
+
+        {
+            "id": "d11",
+            "name": "コトバンク",
+            "link": "https://kotobank.jp/",
+            "description": "A service that allows you to search the meaning of terms from highly reliable dictionaries, lexicons, and databases provided by publishers and other companies all at once.",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://kotobank.jp/",
+            "recommended": "" 
+        },
+
+        {
+            "id": "d12",
+            "name": "Takoboto",
+            "link": "https://takoboto.jp/",
+            "description": "Japanese/English dictionary and Japanese language learning tool.",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://takoboto.jp/",
+            "device": "windows android"
         }
     ],
 
@@ -197,10 +224,10 @@
         {
             "id": "g9",
             "name": "いまび",
-            "link": "https://www.imabi.net/",
+            "link": "https://www.imabi.org/",
             "description": "All level grammar list with explanations",
             "favicon": "http://www.google.com/s2/favicons?domain=https://www.imabi.net/",
-            "recommended": "true"
+            "recommended": ""
         },
 
         {
@@ -209,7 +236,7 @@
             "link": "https://minato-jf.jp/",
             "description": "Self-study courses/tutor support courses based on Marugoto learning materials",
             "favicon": "http://www.google.com/s2/favicons?domain=https://minato-jf.jp/",
-            "recommended": "true"
+            "recommended": ""
         },
 
         {
@@ -314,7 +341,7 @@
             "link": "https://japanesegraph.com/",
             "description": "Learn Japanese by exploring the relationships between characters alongside examples that illustrate their use.",
             "favicon": "http://www.google.com/s2/favicons?domain=https://japanesegraph.com/",
-            "recommended": "true"
+            "recommended": ""
         }, 
 
         {
@@ -331,9 +358,27 @@
             "link": "https://kurumi.com/jp/kjbh/?k=%E6%9C%AC",
             "description": "Enter any character and it will show you its radicals and other parts.",
             "favicon": "http://www.google.com/s2/favicons?domain=https://kurumi.com/jp/",
-            "recommended": "true"
+            "recommended": ""
+        },
+
+        {
+            "id": "k13",
+            "name": "Niai",
+            "link": "https://niai.mrahhal.net/similar",
+            "description": "Just start typing to search for similar Kanjis, homonyms, and synonyms!",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://niai.mrahhal.net/similar",
+            "recommended": ""
+        },
+
+        {
+            "id": "k14",
+            "name": "Wanikani",
+            "link": "https://www.wanikani.com/",
+            "description": "WaniKani is a web application that helps people learn Japanese kanji and associated vocabulary.",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://www.wanikani.com/",
+            "recommended": ""
         } 
-         
+            
     ],
 
     "misc": [
@@ -400,7 +445,7 @@
             "link": "https://learnnatively.com/",
             "description": "The book-reading community for Japanese language learners sorted by JLPT level",
             "favicon": "http://www.google.com/s2/favicons?domain=https://learnnatively.com/",
-            "recommended": "true"
+            "recommended": ""
         },
 
         {
@@ -409,7 +454,7 @@
             "link": "https://dokushoclub.com/",
             "description": "Free books and tales to read for all level",
             "favicon": "http://www.google.com/s2/favicons?domain=https://dokushoclub.com/",
-            "recommended": "true"
+            "recommended": ""
         },
 
         {
@@ -418,7 +463,7 @@
             "link": "https://langpractice.com/japanese/",
             "description": "Practice your Japanese number listening",
             "favicon": "http://www.google.com/s2/favicons?domain=https://langpractice.com/japanese/",
-            "recommended": "true"
+            "recommended": ""
         },
 
         {
@@ -427,7 +472,7 @@
             "link": "https://www.mangaz.com/",
             "description": "Free manga to read",
             "favicon": "http://www.google.com/s2/favicons?domain=https://www.mangaz.com/",
-            "recommended": "true"
+            "recommended": ""
         },
 
         {
@@ -564,7 +609,7 @@
             "description": "A channel to learn Japanese slang and idioms through watching skits 🟥",
             "pic": "https://yt3.ggpht.com/yti/AHyvSCCiHqsHpNibJ6I1tFsBXnEF5jRZQZfj0_fexFNVVQ=s108-c-k-c0x00ffffff-no-rj",
             "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
-            "recommended": "true",
+            "recommended": "",
             "type": "video"
         },
 
@@ -575,7 +620,7 @@
             "description": "Learn Japanese with Misa through videos about many different topics 🟦🟥",
             "pic": "https://yt3.googleusercontent.com/ww8nrZ4SohjHcYr9nKXvU96PfAO-4U1rlpzGUKmnu-xkH8JZqjBeEQ6ogB5yUau3zNzY3Wejqo8=s176-c-k-c0x00ffffff-no-rj",
             "favicon": "https://www.youtube.com/s/desktop/95c4ab27/img/favicon.ico",
-            "recommended": "true",
+            "recommended": "",
             "type": "video"
         },
 
@@ -620,13 +665,23 @@
         },
 
         {
-            "id": "m16",
+            "id": "m17",
             "name": "Taka Nihongo Dojo",
             "link": "https://www.instagram.com/taka_nihongo_dojo/",
             "description": "Japanese Teacher using his body to teach you words 🟦🟥",
             "pic": "https://scontent-lax3-1.cdninstagram.com/v/t51.2885-19/234600552_364183525082532_3795249334167870057_n.jpg?stp=dst-jpg_s200x200&_nc_cat=1&ccb=1-7&_nc_sid=c4dd86&_nc_ohc=DuTDzQ5ZOwgAX-x3Ph-&_nc_ht=scontent-lax3-1.cdninstagram.com&oh=00_AfA840U7X7iUchJ7LE4C4GXn5sjWPaLhUkpbzrJu3KBb5g&oe=6546F16D",
             "favicon": "http://www.google.com/s2/favicons?domain=https://instagram.com",
             "type": "instagram"
+        },
+
+        {
+            "id": "m18",
+            "name": "Nihongo con Teppei",
+            "link": "https://open.spotify.com/show/4W4jYoKRmjlURKO1fIfcOK?si=077f77f6e287415d",
+            "description": "The best way to learn how to speak Japanese naturally 🟦",
+            "pic": "https://i.scdn.co/image/2b0b464371d573d67c0553535984401feec74edc",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://open.spotify.com",
+            "type": "podcast"
         }
     ],
 
@@ -677,6 +732,33 @@
             "link": "https://quizlet.com",
             "description": "Flashcard app for iOS and Android",
             "device": "windows android apple"
+        },
+
+        {
+            "id": "so7",
+            "name": "Bunpro",
+            "link": "https://bunpro.jp/",
+            "description": "Learn and memorize grammar, vocabulary with space repetion",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://bunpro.jp/",
+            "device": "windows android apple"
+        },
+
+        {
+            "id": "so8",
+            "name": "Renshuu",
+            "link": "https://www.renshuu.org/",
+            "description": "A cute, ad-free, and enjoyable learning experience is waiting for you in the Renshuu community!",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://www.renshuu.org/",
+            "device": "android apple"
+        },
+
+        {
+            "id": "so9",
+            "name": "Takoboto",
+            "link": "https://takoboto.jp/apps/",
+            "description": "Japanese/English dictionary and Japanese language learning tool.",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://takoboto.jp/apps/",
+            "device": "windows android"
         }
     ]
 }

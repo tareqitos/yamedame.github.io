@@ -155,7 +155,6 @@ section h3 {
 
 .section-software-items .item-container-parent {
     width: 500px;
-    transition: width .2s ease;
 }
 
 .section-thanks {

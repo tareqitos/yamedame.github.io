@@ -162,6 +162,7 @@ function createElement (arrayElement, sectionToQuery) {
       createImageTag(array, itemContainerParent)
     }
 
+    /* causing ssl issues in firefox 
     // ADD FAVICON TO DESCRIPTION EXCEPT FOR SOFTWARE //
 
     if (sectionToQuery !== 'software') {
@@ -170,10 +171,12 @@ function createElement (arrayElement, sectionToQuery) {
       descIcon.src = array.favicon
       desc.appendChild(descIcon)
     }
+    */
 
     addSoftwareIcons(sectionToQuery, array, itemContainer)
     addRecommendationStar(array, itemContainerParent, linkName, sectionToQuery)
   }
+  
 }
 
 // ADD ATTRIBUTE TO CREATED ELEMENT //

@@ -4,6 +4,7 @@ const beginnersArray = links.beginners
 const dicoArray = links.dictionaries
 const grammarArray = links.grammar
 const kanjiArray = links.kanji
+const readingArray = links.reading
 const miscArray = links.misc
 const mediaArray = links.media
 const softwareArray = links.software
@@ -12,6 +13,7 @@ const categories = [
   dicoArray,
   grammarArray,
   kanjiArray,
+  readingArray,
   miscArray,
   mediaArray,
   softwareArray
@@ -21,6 +23,7 @@ const categoriesName = [
   'dictionaries',
   'grammar',
   'kanji',
+  'reading',
   'misc',
   'media',
   'software'
@@ -28,7 +31,7 @@ const categoriesName = [
 
 createCategoriesAndSort()
 
-// Fonction pour mettre à jour les éléments affichés en fonction de la catégorie sélectionnée
+// Fonction pour mettre à jour les éléments affichés en fonction de la catégorie sélectionnée //
 function updateDisplayedItems (category) {
   const mediaContainer = document.querySelector('.section-media-items')
 
@@ -61,7 +64,7 @@ function updateDisplayedItems (category) {
 
       // Créez les nouveaux éléments
       createElement(mediaData, 'media')
-      updateCollapseContentHeight();
+      updateCollapseContentHeight()
     }, 300) // Assurez-vous que le délai correspond à la durée de l'animation CSS (0.3s dans cet exemple)
   }
 }
@@ -70,7 +73,9 @@ function updateDisplayedItems (category) {
 const sortMediaSelect = document.getElementById('sort-media')
 const selectionMessage = document.querySelector('.selection-message')
 const mediaContainer = document.querySelector('.section-media-items')
-const collapseContent = document.querySelector('.collapse-media .collapse-content')
+const collapseContent = document.querySelector(
+  '.collapse-media .collapse-content'
+)
 const mediaHeader = document.querySelector('.collapse-media')
 
 sortMediaSelect.selectedIndex = 0
@@ -80,15 +85,15 @@ sortMediaSelect.addEventListener('change', event => {
   const selectedCategory = event.target.value
   selectionMessage.style.display = 'none'
   updateDisplayedItems(selectedCategory)
-  updateCollapseContentHeight();
+  updateCollapseContentHeight()
 })
 
-function updateCollapseContentHeight() {
+function updateCollapseContentHeight () {
   // Set the height of collapseContent to its scrollHeight
-  collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
+  collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
 }
 
-updateCollapseContentHeight();
+updateCollapseContentHeight()
 
 // Initialize en affichant tous les éléments initialement
 updateDisplayedItems()
@@ -188,7 +193,6 @@ function createElement (arrayElement, sectionToQuery) {
     addSoftwareIcons(sectionToQuery, array, itemContainer)
     addRecommendationStar(array, itemContainerParent, linkName, sectionToQuery)
   }
-  
 }
 
 // ADD ATTRIBUTE TO CREATED ELEMENT //

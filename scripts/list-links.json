@@ -140,7 +140,7 @@
             "id": "d11",
             "name": "コトバンク",
             "link": "https://kotobank.jp/",
-            "description": "A service that allows you to search the meaning of terms from highly reliable dictionaries, lexicons, and databases provided by publishers and other companies all at once.",
+            "description": "A service that allows you to search the meaning of terms from highly reliable dictionaries, lexicons, and databases provided by publishers and other companies all at once",
             "favicon": "http://www.google.com/s2/favicons?domain=https://kotobank.jp/",
             "recommended": "" 
         },
@@ -374,11 +374,58 @@
             "id": "k14",
             "name": "Wanikani",
             "link": "https://www.wanikani.com/",
-            "description": "WaniKani is a web application that helps people learn Japanese kanji and associated vocabulary.",
+            "description": "WaniKani is a web application that helps people learn Japanese kanji and associated vocabulary",
             "favicon": "http://www.google.com/s2/favicons?domain=https://www.wanikani.com/",
+            "recommended": ""
+        },
+
+        {
+            "id": "k15",
+            "name": "Kanji Recognition",
+            "link": "https://kanji.sljfaq.org/",
+            "description": "Handwritten kanji recognition.",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://kanji.sljfaq.org/",
             "recommended": ""
         } 
             
+    ],
+
+    "reading": [
+        {
+            "id": "re1",
+            "name": "Dokusho Bookclub",
+            "link": "https://dokushoclub.com/",
+            "description": "Free books and tales to read for all level",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://dokushoclub.com/",
+            "recommended": ""
+        },
+
+        {
+            "id": "re2",
+            "name": "Mangaz",
+            "link": "https://www.mangaz.com/",
+            "description": "Free manga to read",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://www.mangaz.com/",
+            "recommended": ""
+        },
+
+        {
+            "id": "re3",
+            "name": "Natively",
+            "link": "https://learnnatively.com/",
+            "description": "The book-reading community for Japanese language learners sorted by JLPT level",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://learnnatively.com/",
+            "recommended": ""
+        },
+        
+        {
+            "id": "re4",
+            "name": "yomu yomu",
+            "link": "https://yomuyomu.app/",
+            "description": "Yomu Yomu offers easy word look up and sentence translations to help learners understand the meaning of Japanese phrases as they read.",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://yomuyomu.app/",
+            "recommended": ""
+        }
     ],
 
     "misc": [
@@ -440,38 +487,11 @@
         },
 
         {
-            "id": "mi8",
-            "name": "Natively",
-            "link": "https://learnnatively.com/",
-            "description": "The book-reading community for Japanese language learners sorted by JLPT level",
-            "favicon": "http://www.google.com/s2/favicons?domain=https://learnnatively.com/",
-            "recommended": ""
-        },
-
-        {
-            "id": "mi9",
-            "name": "Dokusho Bookclub",
-            "link": "https://dokushoclub.com/",
-            "description": "Free books and tales to read for all level",
-            "favicon": "http://www.google.com/s2/favicons?domain=https://dokushoclub.com/",
-            "recommended": ""
-        },
-
-        {
             "id": "mi10",
             "name": "Number Listening Practice",
             "link": "https://langpractice.com/japanese/",
             "description": "Practice your Japanese number listening",
             "favicon": "http://www.google.com/s2/favicons?domain=https://langpractice.com/japanese/",
-            "recommended": ""
-        },
-
-        {
-            "id": "mi11",
-            "name": "Mangaz",
-            "link": "https://www.mangaz.com/",
-            "description": "Free manga to read",
-            "favicon": "http://www.google.com/s2/favicons?domain=https://www.mangaz.com/",
             "recommended": ""
         },
 
@@ -756,8 +776,17 @@
             "id": "so9",
             "name": "Takoboto",
             "link": "https://takoboto.jp/apps/",
-            "description": "Japanese/English dictionary and Japanese language learning tool.",
+            "description": "Japanese/English dictionary and Japanese language learning tool",
             "favicon": "http://www.google.com/s2/favicons?domain=https://takoboto.jp/apps/",
+            "device": "windows android"
+        },
+
+        {
+            "id": "s10",
+            "name": "Aedict",
+            "link": "http://aedict.eu/",
+            "description": "Powerful dictionary app for Android",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://aedict.eu/",
             "device": "windows android"
         }
     ]

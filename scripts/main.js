@@ -1,27 +1,3 @@
-//Prevent anchors links being added to the URL
-document.querySelectorAll("a[href*='#']").forEach(function(current) {
-
-  // Original JavaScript code by Chirp Internet: www.chirpinternet.eu
-  // Please acknowledge use of this code by including this header.
-
-  if(current.origin + current.pathname != self.location.href) {
-    return;
-  }
-
-  (function(anchorPoint) {
-    if(anchorPoint) {
-      current.addEventListener("click", function(e) {
-        anchorPoint.scrollIntoView({behavior: "smooth"});
-        e.preventDefault();
-      }, false);
-    }
-  })(document.querySelector(current.hash));
-
-});
-
-// SIDEBAR //
-toggleSidebar()
-
 // check if user is using a mobile browser
 function isMobileDevice () {
   return /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -34,6 +10,72 @@ if (isMobileDevice()) {
 } else {
   console.log("L'utilisateur n'utilise pas un navigateur mobile.")
 }
+
+// SHOW CHANGELOG //
+
+const lastUpdateText = document.getElementById('changelog')
+const changelogWin = document.querySelector('.changelog-popup')
+let isChangelogOpen = false
+
+if(!isMobileDevice()){
+  lastUpdateText.addEventListener('mouseenter', showChangelog)
+  lastUpdateText.addEventListener('mouseleave', hideChangelog)
+}
+
+if(isMobileDevice()){
+  lastUpdateText.addEventListener('click', () => {
+    lastUpdateText.classList.toggle('changelog--active')
+    if (lastUpdateText.classList.contains('changelog--active')) {
+      changelogWin.style.bottom = 220 + 'px';
+      changelogWin.style.width = 400 + 'px';
+      showChangelog()
+    } else {
+      hideChangelog()
+    }
+  })
+}
+
+function showChangelog () {
+  changelogWin.style.display = 'block'
+  setTimeout(() => {
+    changelogWin.style.opacity = 1
+  }, 10)
+  isChangelogOpen = true
+}
+
+function hideChangelog () {
+  changelogWin.style.opacity = 0
+  setTimeout(() => {
+    changelogWin.style.display = 'none'
+  }, 300)
+  isChangelogOpen = false
+}
+
+// Prevent anchors links being added to the URL //
+document.querySelectorAll("a[href*='#']").forEach(function (current) {
+  // Original JavaScript code by Chirp Internet: www.chirpinternet.eu
+  // Please acknowledge use of this code by including this header.
+
+  if (current.origin + current.pathname != self.location.href) {
+    return
+  }
+
+  ;(function (anchorPoint) {
+    if (anchorPoint) {
+      current.addEventListener(
+        'click',
+        function (e) {
+          anchorPoint.scrollIntoView({ behavior: 'smooth' })
+          e.preventDefault()
+        },
+        false
+      )
+    }
+  })(document.querySelector(current.hash))
+})
+
+// SIDEBAR //
+toggleSidebar()
 
 function toggleSidebar () {
   const button = document.getElementById('open-btn')
@@ -93,7 +135,7 @@ function openNav () {
     sidebar.style.overflowY = 'visible'
 
     if (isMobileDevice()) {
-      sidebar.style.top = -360 + 'px'
+      sidebar.style.top = -400 + 'px'
     } else {
       sidebar.style.top = 80 + 'px'
     }
@@ -193,7 +235,6 @@ window.onscroll = function () {
   if (button.classList.contains('open-btn--active')) {
     button.classList.toggle('open-btn--active')
   }
-
 }
 
 backToTopButton.addEventListener('click', backToTop)

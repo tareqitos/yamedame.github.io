@@ -97,6 +97,10 @@
   background: #ce42ff;
   background: linear-gradient(90deg, #a327ce 0, #c865ca 200%);
 }
+.reading {
+  background: #bea306;
+  background: linear-gradient(90deg, #d68844 0, #F2C94C 200%);
+}
 
 #so1 {
   background: linear-gradient(90deg, #373b41 0, #00ffdc 200%);
@@ -131,17 +135,6 @@
 }
 #so9 {
   background: linear-gradient(90deg, #bf0000 0%, #ff7b7b 150%);
-}
-#so8::after {
-  position:absolute;
-  display: inline-block;
-  width: 50px;
-  height: 70px;
-  content: "";
-  background: url("../images/kao.png") no-repeat 0 0;
-  background-size: 100%;
-  top:0;
-  right: 20px;
 }
 
 /* ================================================= MEDIA ICONS  ================================================= */

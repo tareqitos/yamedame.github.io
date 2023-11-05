@@ -187,6 +187,13 @@ const footer = document.getElementById('footer')
 window.onscroll = function () {
   scrollFunction()
   closeNav()
+  isNavOpen = false
+
+  const button = document.getElementById('open-btn')
+  if (button.classList.contains('open-btn--active')) {
+    button.classList.toggle('open-btn--active')
+  }
+
 }
 
 backToTopButton.addEventListener('click', backToTop)

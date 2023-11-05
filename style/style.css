@@ -20,7 +20,6 @@ html {
   --input-category-color: #9fa0a9;
   --category-bg-color: rgba(98, 140, 193, 0.11);
   --nav-bg-color: rgba(255, 255, 255, .8);
-  --soft-link-width: .section-software-items .item-container-parent .width;
 }
 
 html.nightMode {
@@ -115,13 +114,6 @@ header {
 .title-acronym {
   font-size: 1.3em;
   margin-bottom: 5px
-}
-
-.last-updated {
-  text-align: center;
-  right: 0;
-  padding-bottom: 10px;
-  margin-top: 5vh;
 }
 
 #lu-star {
@@ -269,4 +261,35 @@ header {
 
 .top:hover {
   transform: scale(1.5);
+}
+
+.changelog-popup {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  padding: 20px 0;
+  z-index: 4;
+  opacity: 0;
+  border-radius: 10px;
+  background-color: var(--nav-bg-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--btn-shadow) !important;
+  transition: opacity .3s ease;
+}
+
+.last-updated {
+  text-align: center;
+  right: 0;
+  padding-bottom: 10px;
+  margin-top: 5vh;
+}
+
+#changelog {
+  color: #e4461f
 }

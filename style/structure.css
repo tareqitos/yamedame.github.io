@@ -76,6 +76,7 @@ section h3 {
 .section-grammar-items,
 .section-dictionaries-items,
 .section-beginners-items,
+.section-reading-items,
 .section-kanji-items {
     display: grid;
     justify-content: center;
@@ -92,6 +93,7 @@ section h3 {
 .section-grammar-items .item-container,
 .section-dictionaries-items .item-container,
 .section-beginners-items .item-container,
+.section-reading-items .item-container,
 .section-kanji-items .item-container {
     display: flex;
     flex-direction: row;

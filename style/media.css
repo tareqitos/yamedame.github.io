@@ -6,6 +6,7 @@
   .section-grammar-items,
   .section-dictionaries-items,
   .section-beginners-items,
+  .section-reading-items,
   .section-kanji-items {
     grid-template-columns: repeat(1, 900px);
   }
@@ -43,6 +44,7 @@
   .section-grammar-items,
   .section-dictionaries-items,
   .section-beginners-items,
+  .section-reading-items,
   .section-kanji-items {
     grid-template-columns: repeat(1, 800px);
   }
@@ -76,6 +78,7 @@
   .section-grammar-items,
   .section-dictionaries-items,
   .section-beginners-items,
+  .section-reading-items,
   .section-kanji-items {
     grid-template-columns: repeat(1, 700px);
   }
@@ -87,6 +90,7 @@
   .section-dictionaries-items,
   .section-grammar-items,
   .section-beginners-items,
+  .section-reading-items,
   .section-kanji-items {
     grid-template-columns: repeat(1, 650px)
   }
@@ -95,6 +99,7 @@
   .section-grammar-items .item-container-parent,
   .section-dictionaries-items .item-container-parent,
   .section-beginners-items .item-container-parent,
+  .section-reading-items .item-container-parent,
   .section-kanji-items .item-container-parent {
     width: 200px;
     text-align: center;
@@ -187,6 +192,7 @@
   .section-dictionaries-items,
   .section-grammar-items,
   .section-beginners-items,
+  .section-reading-items,
   .section-kanji-items {
     grid-template-columns: repeat(1, 600px)
   }
@@ -195,6 +201,7 @@
   .section-grammar-items .item-container,
   .section-dictionaries-items .item-container,
   .section-beginners-items .item-container,
+  .section-reading-items .item-container,
   .section-kanji-items .item-container {
     gap: 15px;
   }
@@ -236,6 +243,7 @@
   .section-dictionaries-items,
   .section-grammar-items,
   .section-beginners-items,
+  .section-reading-items,
   .section-kanji-items {
     grid-template-columns: repeat(1, 580px)
   }
@@ -244,6 +252,7 @@
   .section-grammar-items .item-container-parent,
   .section-dictionaries-items .item-container-parent,
   .section-beginners-items .item-container-parent,
+  .section-reading-items .item-container-parent,
   .section-kanji-items .item-container-parent {
     width: 200px;
     text-align: center;
@@ -260,6 +269,7 @@
   .section-dictionaries-items,
   .section-grammar-items,
   .section-beginners-items,
+  .section-reading-items,
   .section-kanji-items {
     grid-template-columns: repeat(1, 420px)
   }
@@ -268,6 +278,7 @@
   .section-grammar-items .item-container,
   .section-dictionaries-items .item-container,
   .section-beginners-items .item-container,
+  .section-reading-items .item-container,
   .section-kanji-items .item-container {
     gap: 15px;
   }
@@ -276,17 +287,14 @@
   .section-grammar-items .item-container-parent,
   .section-dictionaries-items .item-container-parent,
   .section-beginners-items .item-container-parent,
+  .section-reading-items .item-container-parent,
   .section-kanji-items .item-container-parent {
     width: 160px;
     text-align: center;
     line-height: 20px;
   }
 
-  .section-misc-items .desc-favicon,
-  .section-dictionaries-items .desc-favicon,
-  .section-grammar-items .desc-favicon,
-  .section-beginners-items .desc-favicon,
-  .section-kanji-items .desc-favicon {
+  .desc-favicon {
     display: none;
   }
 
@@ -313,6 +321,7 @@
   .section-grammar-items,
   .section-dictionaries-items,
   .section-beginners-items,
+  .section-reading-items,
   .section-kanji-items {
     grid-template-columns: repeat(1, 350px)
   }

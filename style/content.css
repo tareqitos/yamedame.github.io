@@ -97,6 +97,10 @@
   background: #ce42ff;
   background: linear-gradient(90deg, #a327ce 0, #c865ca 200%);
 }
+.reading {
+  background: #bea306;
+  background: linear-gradient(90deg, #d68844 0, #F2C94C 200%);
+}
 
 #so1 {
   background: linear-gradient(90deg, #373b41 0, #00ffdc 200%);

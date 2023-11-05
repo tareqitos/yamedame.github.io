@@ -103,7 +103,7 @@
 }
 
 #so1 {
-  background: linear-gradient(90deg, #373b41 0, #00ffdc 200%);
+  background: linear-gradient(90deg, #2c7873 0, #00ffdda6 200%);
 }
 
 #so2 {
@@ -135,6 +135,9 @@
 }
 #so9 {
   background: linear-gradient(90deg, #bf0000 0%, #ff7b7b 150%);
+}
+#s10 {
+  background: linear-gradient(90deg, #64b5f6 0%, #bbdefb 150%);
 }
 
 /* ================================================= MEDIA ICONS  ================================================= */

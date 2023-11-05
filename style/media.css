@@ -27,6 +27,12 @@
     text-align: center;
   }
 
+  .section-software-items .item-desc {
+    width: 500px;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
 }
 
 /* ================================================= 1000 ================================================= */
@@ -130,7 +136,8 @@
     font-size: 1.1em;
   }
 
-  .section-software-items .item-container-parent {
+  .section-software-items .item-container-parent,
+  .section-software-items .item-desc {
     width: 350px
   }
 
@@ -322,7 +329,8 @@
     padding: 0;
   }
 
-  .section-software-items .item-container-parent {
+  .section-software-items .item-container-parent,
+  .section-software-items .item-desc  {
     width: 250px
   }
 

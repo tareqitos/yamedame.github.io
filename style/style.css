@@ -20,6 +20,7 @@ html {
   --input-category-color: #9fa0a9;
   --category-bg-color: rgba(98, 140, 193, 0.11);
   --nav-bg-color: rgba(255, 255, 255, .8);
+  --soft-link-width: .section-software-items .item-container-parent .width;
 }
 
 html.nightMode {

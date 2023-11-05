@@ -136,17 +136,6 @@
 #so9 {
   background: linear-gradient(90deg, #bf0000 0%, #ff7b7b 150%);
 }
-#so8::after {
-  position:absolute;
-  display: inline-block;
-  width: 50px;
-  height: 70px;
-  content: "";
-  background: url("../images/kao.png") no-repeat 0 0;
-  background-size: 100%;
-  top:0;
-  right: 20px;
-}
 
 /* ================================================= MEDIA ICONS  ================================================= */
 

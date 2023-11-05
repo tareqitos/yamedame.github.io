@@ -140,7 +140,7 @@
             "id": "d11",
             "name": "コトバンク",
             "link": "https://kotobank.jp/",
-            "description": "A service that allows you to search the meaning of terms from highly reliable dictionaries, lexicons, and databases provided by publishers and other companies all at once.",
+            "description": "A service that allows you to search the meaning of terms from highly reliable dictionaries, lexicons, and databases provided by publishers and other companies all at once",
             "favicon": "http://www.google.com/s2/favicons?domain=https://kotobank.jp/",
             "recommended": "" 
         },
@@ -374,7 +374,7 @@
             "id": "k14",
             "name": "Wanikani",
             "link": "https://www.wanikani.com/",
-            "description": "WaniKani is a web application that helps people learn Japanese kanji and associated vocabulary.",
+            "description": "WaniKani is a web application that helps people learn Japanese kanji and associated vocabulary",
             "favicon": "http://www.google.com/s2/favicons?domain=https://www.wanikani.com/",
             "recommended": ""
         },
@@ -776,8 +776,17 @@
             "id": "so9",
             "name": "Takoboto",
             "link": "https://takoboto.jp/apps/",
-            "description": "Japanese/English dictionary and Japanese language learning tool.",
+            "description": "Japanese/English dictionary and Japanese language learning tool",
             "favicon": "http://www.google.com/s2/favicons?domain=https://takoboto.jp/apps/",
+            "device": "windows android"
+        },
+
+        {
+            "id": "s10",
+            "name": "Aedict",
+            "link": "http://aedict.eu/",
+            "description": "Powerful dictionary app for Android",
+            "favicon": "http://www.google.com/s2/favicons?domain=http://aedict.eu/",
             "device": "windows android"
         }
     ]

@@ -17,19 +17,21 @@ const lastUpdateText = document.getElementById('changelog')
 const changelogWin = document.querySelector('.changelog-popup')
 let isChangelogOpen = false
 
-if(!isMobileDevice()){
+if (!isMobileDevice()) {
   lastUpdateText.addEventListener('mouseenter', showChangelog)
   lastUpdateText.addEventListener('mouseleave', hideChangelog)
 }
 
-if(isMobileDevice()){
+if (isMobileDevice()) {
   lastUpdateText.addEventListener('click', () => {
     lastUpdateText.classList.toggle('changelog--active')
     if (lastUpdateText.classList.contains('changelog--active')) {
-      changelogWin.style.bottom = 220 + 'px';
-      changelogWin.style.width = 400 + 'px';
+      changelogWin.style.bottom = 220 + 'px'
+      changelogWin.style.width = 400 + 'px'
+      lastUpdateText.innerText = 'close'
       showChangelog()
     } else {
+      lastUpdateText.innerText = 'changelog'
       hideChangelog()
     }
   })
@@ -230,6 +232,13 @@ window.onscroll = function () {
   scrollFunction()
   closeNav()
   isNavOpen = false
+  if (isMobileDevice) {
+    if (lastUpdateText.classList.contains('changelog--active')) {
+      lastUpdateText.classList.toggle('changelog--active')
+      lastUpdateText.innerText = 'changelog'
+      hideChangelog()
+    }
+  }
 
   const button = document.getElementById('open-btn')
   if (button.classList.contains('open-btn--active')) {

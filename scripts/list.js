@@ -33,7 +33,6 @@ function updateDisplayedItems (category) {
   const mediaContainer = document.querySelector('.section-media-items')
 
   let mediaData
-
   // Sélectionnez les données en fonction de la catégorie choisie
   if (category === 'all') {
     mediaData = links.media
@@ -62,6 +61,7 @@ function updateDisplayedItems (category) {
 
       // Créez les nouveaux éléments
       createElement(mediaData, 'media')
+      updateCollapseContentHeight();
     }, 300) // Assurez-vous que le délai correspond à la durée de l'animation CSS (0.3s dans cet exemple)
   }
 }
@@ -69,6 +69,10 @@ function updateDisplayedItems (category) {
 // Event listener pour l'élément select
 const sortMediaSelect = document.getElementById('sort-media')
 const selectionMessage = document.querySelector('.selection-message')
+const mediaContainer = document.querySelector('.section-media-items')
+const collapseContent = document.querySelector('.collapse-media .collapse-content')
+const mediaHeader = document.querySelector('.collapse-media')
+
 sortMediaSelect.selectedIndex = 0
 console.log(sortMediaSelect.selectedIndex)
 
@@ -76,7 +80,15 @@ sortMediaSelect.addEventListener('change', event => {
   const selectedCategory = event.target.value
   selectionMessage.style.display = 'none'
   updateDisplayedItems(selectedCategory)
+  updateCollapseContentHeight();
 })
+
+function updateCollapseContentHeight() {
+  // Set the height of collapseContent to its scrollHeight
+  collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px';
+}
+
+updateCollapseContentHeight();
 
 // Initialize en affichant tous les éléments initialement
 updateDisplayedItems()

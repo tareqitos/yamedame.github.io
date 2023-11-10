@@ -515,8 +515,16 @@
             "id": "mi14",
             "name": "Kaiwakai",
             "link": "https://www.kaiwakai.com/",
-            "description": "Practice japanese speaking with AI using generated guided conversations.",
+            "description": "Practice japanese speaking with AI using generated guided conversations",
             "favicon": "https://kaiwakai.com/favicon.ico"
+        },
+
+        {
+            "id": "mi15",
+            "name": "JLPT Simulation",
+            "link": "https://www.unagibun.com/jlpt-online/",
+            "description": "Accurate JLPT online simulation for N5 and N4 ",
+            "favicon": "http://www.google.com/s2/favicons?domain=https://www.unagibun.com/jlpt-online/"
         }
 
     ],

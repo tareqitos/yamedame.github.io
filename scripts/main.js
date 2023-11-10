@@ -27,7 +27,7 @@ if (isMobileDevice()) {
     lastUpdateText.classList.toggle('changelog--active')
     if (lastUpdateText.classList.contains('changelog--active')) {
       changelogWin.style.bottom = 220 + 'px'
-      changelogWin.style.width = 400 + 'px'
+      changelogWin.style.width = 90 + '%'
       lastUpdateText.innerText = 'close'
       showChangelog()
     } else {

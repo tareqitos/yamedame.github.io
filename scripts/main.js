@@ -11,30 +11,36 @@ if (isMobileDevice()) {
   console.log("L'utilisateur n'utilise pas un navigateur mobile.")
 }
 
-// SHOW CHANGELOG //
-
 const lastUpdateText = document.getElementById('changelog')
 const changelogWin = document.querySelector('.changelog-popup')
 let isChangelogOpen = false
+showChangelogListener()
 
-if (!isMobileDevice()) {
-  lastUpdateText.addEventListener('mouseenter', showChangelog)
-  lastUpdateText.addEventListener('mouseleave', hideChangelog)
-}
+// SHOW CHANGELOG //
+function showChangelogListener () {
+  if (lastUpdateText == null) {
+    return
+  }
 
-if (isMobileDevice()) {
-  lastUpdateText.addEventListener('click', () => {
-    lastUpdateText.classList.toggle('changelog--active')
-    if (lastUpdateText.classList.contains('changelog--active')) {
-      changelogWin.style.bottom = 220 + 'px'
-      changelogWin.style.width = 90 + '%'
-      lastUpdateText.innerText = 'close'
-      showChangelog()
-    } else {
-      lastUpdateText.innerText = 'changelog'
-      hideChangelog()
-    }
-  })
+  if (!isMobileDevice()) {
+    lastUpdateText.addEventListener('mouseenter', showChangelog)
+    lastUpdateText.addEventListener('mouseleave', hideChangelog)
+  }
+
+  if (isMobileDevice()) {
+    lastUpdateText.addEventListener('click', () => {
+      lastUpdateText.classList.toggle('changelog--active')
+      if (lastUpdateText.classList.contains('changelog--active')) {
+        changelogWin.style.bottom = 220 + 'px'
+        changelogWin.style.width = 90 + '%'
+        lastUpdateText.innerText = 'close'
+        showChangelog()
+      } else {
+        lastUpdateText.innerText = 'changelog'
+        hideChangelog()
+      }
+    })
+  }
 }
 
 function showChangelog () {
@@ -84,9 +90,13 @@ function toggleSidebar () {
   const mainArea = document.getElementById('main')
   const sidebar = document.getElementById('sidebar')
   const anchor = document.querySelectorAll('.anchorage')
-  let isNavOpen
 
-  if (button === null || mainArea === null || anchor === null) {
+  if (
+    button === null ||
+    mainArea === null ||
+    anchor === null ||
+    sidebar === null
+  ) {
     return
   }
 
@@ -97,6 +107,7 @@ function toggleSidebar () {
       anchor[i].style.bottom = 0
     }
   } else {
+    sidebar.style.display = 'none'
     sidebar.style.top = -400 + 'px'
   }
 
@@ -104,10 +115,8 @@ function toggleSidebar () {
     button.classList.toggle('open-btn--active')
 
     if (button.classList.contains('open-btn--active')) {
-      isNavOpen = true
       openNav()
     } else {
-      isNavOpen = false
       closeNav()
     }
   })
@@ -116,7 +125,6 @@ function toggleSidebar () {
     if (button.classList.contains('open-btn--active')) {
       button.classList.toggle('open-btn--active')
     }
-    isNavOpen = false
     closeNav()
   })
 
@@ -124,28 +132,37 @@ function toggleSidebar () {
     if (button.classList.contains('open-btn--active')) {
       button.classList.toggle('open-btn--active')
     }
-    isNavOpen = false
     closeNav()
   })
 }
 
 function openNav () {
   const sidebar = document.getElementById('sidebar')
+
+  if (sidebar === null) {
+    return
+  }
+
   sidebar.style.display = null
   setTimeout(function () {
     sidebar.style.opacity = 1
     sidebar.style.overflowY = 'visible'
 
     if (isMobileDevice()) {
-      sidebar.style.top = -400 + 'px'
+      sidebar.style.top = -460 + 'px'
     } else {
-      sidebar.style.top = 80 + 'px'
+      sidebar.style.top = 90 + 'px'
     }
   }, 10)
 }
 
 function closeNav () {
   const sidebar = document.getElementById('sidebar')
+
+  if (sidebar === null) {
+    return
+  }
+
   sidebar.style.opacity = 0
 
   if (isMobileDevice()) {
@@ -166,6 +183,10 @@ function navPositionBottom () {
   const nav = document.getElementById('nav-sticky')
   const footer = document.getElementById('footer')
   const main = document.getElementById('main')
+
+  if (nav == null) {
+    return
+  }
 
   if (isMobileDevice()) {
     if (nav.parentNode) {
@@ -233,16 +254,20 @@ window.onscroll = function () {
   closeNav()
   isNavOpen = false
   if (isMobileDevice) {
-    if (lastUpdateText.classList.contains('changelog--active')) {
-      lastUpdateText.classList.toggle('changelog--active')
-      lastUpdateText.innerText = 'changelog'
-      hideChangelog()
+    if (lastUpdateText !== null) {
+      if (lastUpdateText.classList.contains('changelog--active')) {
+        lastUpdateText.classList.toggle('changelog--active')
+        lastUpdateText.innerText = 'changelog'
+        hideChangelog()
+      }
     }
   }
 
   const button = document.getElementById('open-btn')
-  if (button.classList.contains('open-btn--active')) {
-    button.classList.toggle('open-btn--active')
+  if (button !== null) {
+    if (button.classList.contains('open-btn--active')) {
+      button.classList.toggle('open-btn--active')
+    }
   }
 }
 
@@ -283,16 +308,23 @@ function darkTheme () {
   const html = document.getElementsByTagName('html')[0]
   const themeSwitch = document.getElementById('theme-logo')
   const autoDarkTheme = window.matchMedia('(prefers-color-scheme: dark)')
+  const tareqitoscomIcon = document.getElementById('tareqitos-favico')
 
   // Fonction pour définir le thème et enregistrer la préférence de l'utilisateur
   function setTheme (theme) {
     if (theme === 'dark') {
       html.classList.toggle('nightMode')
       themeSwitch.innerHTML = '明'
+      if (tareqitoscomIcon != null) {
+        tareqitoscomIcon.style.filter = 'none'
+      }
       localStorage.setItem('themePreference', 'dark')
     } else {
       html.classList.remove('nightMode')
       themeSwitch.innerHTML = '暗'
+      if (tareqitoscomIcon != null) {
+        tareqitoscomIcon.style.filter = 'invert(1)'
+      }
       localStorage.setItem('themePreference', 'light')
     }
   }

@@ -31,7 +31,7 @@ function showChangelogListener () {
     lastUpdateText.addEventListener('click', () => {
       lastUpdateText.classList.toggle('changelog--active')
       if (lastUpdateText.classList.contains('changelog--active')) {
-        changelogWin.style.bottom = 220 + 'px'
+        changelogWin.style.bottom = 265 + 'px'
         changelogWin.style.width = 90 + '%'
         lastUpdateText.innerText = 'close'
         showChangelog()

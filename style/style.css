@@ -27,7 +27,7 @@ html.nightMode {
   --bg: #212529 !important;
   --text: #ffffff !important;
   --header-footer: #17191c !important;
-  --btn-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px !important;
+  --btn-shadow: rgba(0, 0, 0, .6) 0px 5px 8px !important;
   --mail-color: invert(1) !important;
   --input-bg-color: #303245 !important;
   --input-border: 0 !important;
@@ -56,7 +56,7 @@ body {
 
 .anchorage {
   position: relative;
-  bottom: 70px;
+  bottom: 110px;
 }
 
 #top {
@@ -147,8 +147,44 @@ header {
   font-weight: 100;
   font-size: 25px;
   width: 80px;
-  margin: 10px auto auto auto;
+  margin: 0 auto auto auto;
 }
+
+.expand-collapse {
+  display: flex;
+  gap: 20px;
+  transform: scale(.6);
+  justify-content: center;
+}
+
+.collapse-all,
+.roll-all {
+  z-index: 10;
+  cursor: pointer;
+  padding-bottom: 10px;
+  color: var(--text) !important;
+  background-color: var(--nav-bg-color) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  box-shadow: var(--btn-shadow) !important;
+  border-radius: 100px;
+  transition: transform .2s ease;
+  font-weight: 100;
+  font-size: 25px;
+  margin: 0;
+}
+
+.img-coll,
+.img-roll {
+  width: 45px;
+}
+
+.collapse-all:hover,
+.roll-all:hover {
+  transform: scale(1.1);
+}
+
 
 .sidebar {
   position: absolute;

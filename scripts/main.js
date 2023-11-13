@@ -210,37 +210,79 @@ function navPositionBottom () {
 
 // COLLAPSE CATEGORY //
 
+const collapseButton = document.querySelectorAll('.collapse-button')
+
 collapseCategories()
+collapseAll()
+expandAll()
+
+function expandAll () {
+  const collapseContent = document.querySelectorAll('.collapse-content')
+  const buttonExpandAll = document.querySelector('.roll-all')
+
+  if (buttonExpandAll == null) {
+    return
+  }
+
+  buttonExpandAll.addEventListener('click', () => {
+    for (i = 0; i < collapseContent.length; i++) {
+      collapse(collapseContent[i])
+      collapseButton[i].classList.replace('open', 'close')
+      collapseButton[i].classList.add('collapse-button--active')
+    }
+  })
+}
+
+function collapseAll () {
+  const collapseContent = document.querySelectorAll('.collapse-content')
+  const buttonCollapseAll = document.querySelector('.collapse-all')
+
+  if (buttonCollapseAll == null) {
+    return
+  }
+
+  buttonCollapseAll.addEventListener('click', () => {
+    for (i = 0; i < collapseContent.length; i++) {
+      roll(collapseContent[i])
+      collapseButton[i].classList.replace('close', 'open')
+      collapseButton[i].classList.remove('collapse-button--active')
+    }
+  })
+}
 
 function collapseCategories () {
-  document.querySelectorAll('.collapse-button').forEach(button => {
+  collapseButton.forEach(button => {
     const collapseContent = button.nextElementSibling
     button.addEventListener('click', () => {
       button.classList.toggle('collapse-button--active')
-
       if (button.classList.contains('collapse-button--active')) {
-        collapseContent.style.maxHeight = 0
-        collapseContent.style.opacity = 0
-        collapseContent.style.marginTop = 0
-        collapseContent.style.overflowY = 'hidden'
-
-        window.addEventListener('resize', () => {
-          collapseContent.style.maxHeight = 0
-        })
+        collapse(collapseContent)
       } else {
-        collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
-        collapseContent.style.opacity = 1
-        collapseContent.style.marginTop = 40 + 'px'
-        collapseContent.style.overflowY = 'visible'
-
-        if (collapseContent.style.maxHeight !== 0) {
-          window.addEventListener('resize', () => {
-            collapseContent.style.maxHeight =
-              collapseContent.scrollHeight + 'px'
-          })
-        }
+        roll(collapseContent)
       }
     })
+  })
+}
+function roll (collapseContent) {
+  collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
+  collapseContent.style.opacity = 1
+  collapseContent.style.marginTop = 40 + 'px'
+  collapseContent.style.overflowY = 'visible'
+
+  if (collapseContent.style.maxHeight !== 0) {
+    window.addEventListener('resize', () => {
+      collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
+    })
+  }
+}
+function collapse (collapseContent) {
+  collapseContent.style.maxHeight = 0
+  collapseContent.style.opacity = 0
+  collapseContent.style.marginTop = 0
+  collapseContent.style.overflowY = 'hidden'
+
+  window.addEventListener('resize', () => {
+    collapseContent.style.maxHeight = 0
   })
 }
 
@@ -309,6 +351,8 @@ function darkTheme () {
   const themeSwitch = document.getElementById('theme-logo')
   const autoDarkTheme = window.matchMedia('(prefers-color-scheme: dark)')
   const tareqitoscomIcon = document.getElementById('tareqitos-favico')
+  const buttonCollapseAll = document.querySelector('.img-coll')
+  const buttonExpandAll = document.querySelector('.img-roll')
 
   // Fonction pour définir le thème et enregistrer la préférence de l'utilisateur
   function setTheme (theme) {
@@ -318,12 +362,20 @@ function darkTheme () {
       if (tareqitoscomIcon != null) {
         tareqitoscomIcon.style.filter = 'none'
       }
+      if (buttonCollapseAll != null || buttonExpandAll != null) {
+        buttonCollapseAll.style.filter = 'brightness(100)'
+        buttonExpandAll.style.filter = 'brightness(100)'
+      }
       localStorage.setItem('themePreference', 'dark')
     } else {
       html.classList.remove('nightMode')
       themeSwitch.innerHTML = '暗'
       if (tareqitoscomIcon != null) {
         tareqitoscomIcon.style.filter = 'invert(1)'
+      }
+      if (buttonCollapseAll != null || buttonExpandAll != null) {
+        buttonCollapseAll.style.filter = 'none'
+        buttonExpandAll.style.filter = 'none'
       }
       localStorage.setItem('themePreference', 'light')
     }

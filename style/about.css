@@ -13,12 +13,10 @@
     padding: 20px 0;
     background-color: var(--category-bg-color);
     border-radius: 10px;
-
 }
 
 #about-face {
     width: 280px;
-
     transition: transform .2s ease;
 }
 
@@ -29,11 +27,10 @@
 
 #about-face:hover {
     transform: scale(110%) rotate(10deg);
-
 }
 
 .about-text {
-    background-color: var( --about-text-color);
+    background-color: var(--about-text-color);
     margin: 0px 30px;
     padding: 20px;
     border-radius: 20px;
@@ -99,7 +96,7 @@
 }
 
 #tareqitos-favico {
-    transform: scale(.4);
+    transform: scale(.3);
 }
 
 #about-button-back p {

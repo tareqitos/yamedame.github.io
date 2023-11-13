@@ -238,12 +238,29 @@
   .btn-container {
     transform: scale(.8);
   }
-  
+
+  .about {
+    padding: 0 20px;
+  }
+
+  .about-title {
+    width: 100%;
+  }
+
+  #about-face {
+    transform: scale(.8);
+  }
+
+  #about-face:hover {
+    transform: scale(.95) rotate(10deg);
+
+  }
 }
 
 /* ================================================= 712 ================================================= */
 
 @media screen and (max-width:750px) {
+
   .section-misc-items,
   .section-dictionaries-items,
   .section-grammar-items,
@@ -344,7 +361,7 @@
   }
 
   .section-software-items .item-container-parent,
-  .section-software-items .item-desc  {
+  .section-software-items .item-desc {
     width: 250px
   }
 
@@ -373,5 +390,14 @@
 
   form {
     width: 250px;
+  }
+
+  #about-face {
+    transform: scale(.7);
+  }
+
+  #about-face:hover {
+    transform: scale(.85) rotate(10deg);
+
   }
 }

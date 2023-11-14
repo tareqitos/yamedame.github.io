@@ -59,6 +59,10 @@
   gap: 10px;
 }
 
+.section-beginners-items .item-desc {
+  width: 300px;
+}
+
 .section-media-items p {
   font-size: 1.1em;
 }

@@ -167,6 +167,16 @@ section h3 {
     gap: 20px;
 }
 
+.section-beginners-items {
+    grid-template-columns: repeat(3, 400px);
+    gap: 10px;
+}
+
+.section-beginners-items .item-container {
+    flex-direction: column;
+    gap: 10px;
+}
+
 
 @keyframes scale-in-center {
     0% {

@@ -347,7 +347,7 @@ function backToTop () {
 darkTheme()
 
 function darkTheme () {
-  const html = document.getElementsByTagName('html')[0]
+  const html = document.getElementById('body')
   const themeSwitch = document.getElementById('theme-logo')
   const autoDarkTheme = window.matchMedia('(prefers-color-scheme: dark)')
   const tareqitoscomIcon = document.getElementById('tareqitos-favico')
@@ -357,7 +357,7 @@ function darkTheme () {
   // Fonction pour définir le thème et enregistrer la préférence de l'utilisateur
   function setTheme (theme) {
     if (theme === 'dark') {
-      html.classList.toggle('nightMode')
+      html.classList.toggle('night-mode')
       themeSwitch.innerHTML = '明'
       if (tareqitoscomIcon != null) {
         tareqitoscomIcon.style.filter = 'none'
@@ -368,7 +368,7 @@ function darkTheme () {
       }
       localStorage.setItem('themePreference', 'dark')
     } else {
-      html.classList.remove('nightMode')
+      html.classList.remove('night-mode')
       themeSwitch.innerHTML = '暗'
       if (tareqitoscomIcon != null) {
         tareqitoscomIcon.style.filter = 'invert(1)'
@@ -393,8 +393,8 @@ function darkTheme () {
   }
 
   themeSwitch.addEventListener('click', () => {
-    html.classList.contains('nightMode')
-    if (html.classList.contains('nightMode')) {
+    html.classList.contains('night-mode')
+    if (html.classList.contains('night-mode')) {
       setTheme('light')
     } else {
       setTheme('dark')

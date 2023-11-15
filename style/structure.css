@@ -351,6 +351,7 @@ section h3 {
   
   .sort-media {
     text-align: center;
+    text-align-last: center;
     border-radius: 10px;
     height: 50px;
     width: 100px;

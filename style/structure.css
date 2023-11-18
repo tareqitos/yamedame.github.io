@@ -334,14 +334,14 @@ form,
   top: 40%;
   z-index: 9999999;
   flex-direction: column;
-  margin: -100px auto 100px auto;
+  margin: -150px auto 100px auto;
   width: 500px;
-  background-color: var(--header-footer);
+  background-color: var(--nav-bg-color);
   box-shadow: var(--btn-shadow);
   padding: 40px 20px 40px 20px;
   border-radius: 20px;
   gap: 20px;
-  background-color: rgba(23, 25, 28, .7);
+  /*background-color: rgba(23, 25, 28, .7); */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }

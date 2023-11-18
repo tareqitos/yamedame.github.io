@@ -52,6 +52,49 @@
 
     </head>
     <body id="body">
+        <div class="suggestion-box">
+            <form id="myForm">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="title" id="add-title" class="input"
+                    placeholder="title" maxlength="50" required>
+                <input type="url" name="link" id="add-link" class="input"
+                    placeholder="https://..." maxlength="100" required>
+                <select name="category" id="category">
+                    <option value="dictionaries">beginners</option>
+                    <option value="dictionaries">dictionaries</option>
+                    <option value="structure">structure - grammar</option>
+                    <option value="kanji">kanji - vocabulary</option>
+                    <option value="media">media</option>
+                    <option value="reading">reading</option>
+                    <option value="misc">misc</option>
+                    <option value="software">software - apps</option>
+                </select>
+
+                <button type="button" id="submit"><p id="submit-text">SUBMIT</p><div
+                        class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></button>
+                <p class="incorrect-msg">title or/and link are missing or
+                    incorrect</p>
+            </form>
+
+        </div>
+        <div class="thankyou-box">
+            <p class="thankyou-thx">Thank you!</p>
+            <p class="thankyou-msg">Your suggestion has been successfully
+                sent and will be added after being reviewed!</p>
+            <img src="images/anya.gif" />
+            <button class="thankyou-close">CLOSE</button>
+        </div>
+
+        <div class="error-box">
+            <p class="error-head">Oh no!</p>
+            <p class="error-msg">There is an error somewhere that needs to
+                be fixed! Try again
+                later or send me your suggestion by email at:
+                languages@tareqitos.com</p>
+            <img src="images/anya-ohno.gif" />
+            <button class="error-close">CLOSE</button>
+        </div>
+
         <div class="suggestion-background"></div>
         <div id="top"></div>
         <header>
@@ -119,49 +162,6 @@
         <div class="anchorage" id="beginners"></div>
 
         <main id="main">
-            <div class="suggestion-box">
-                <form id="myForm">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="text" name="title" id="add-title" class="input"
-                        placeholder="title" maxlength="50" required>
-                    <input type="url" name="link" id="add-link" class="input"
-                        placeholder="https://..." maxlength="100" required>
-                    <select name="category" id="category">
-                        <option value="dictionaries">beginners</option>
-                        <option value="dictionaries">dictionaries</option>
-                        <option value="structure">structure - grammar</option>
-                        <option value="kanji">kanji - vocabulary</option>
-                        <option value="media">media</option>
-                        <option value="reading">reading</option>
-                        <option value="misc">misc</option>
-                        <option value="software">software - apps</option>
-                    </select>
-
-                    <button type="button" id="submit"><p id="submit-text">SUBMIT</p><div
-                            class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></button>
-                    <p class="incorrect-msg">title or/and link are missing or
-                        incorrect</p>
-                </form>
-
-            </div>
-            <div class="thankyou-box">
-                <p class="thankyou-thx">Thank you!</p>
-                <p class="thankyou-msg">Your suggestion has been successfully
-                    sent and will be added after being reviewed!</p>
-                <img src="images/anya.gif" />
-                <button class="thankyou-close">CLOSE</button>
-            </div>
-
-            <div class="error-box">
-                <p class="error-head">Oh no!</p>
-                <p class="error-msg">There is an error somewhere that needs to
-                    be fixed! Try again
-                    later or send me your suggestion by email at:
-                    languages@tareqitos.com</p>
-                <img src="images/anya-ohno.gif" />
-                <button class="error-close">CLOSE</button>
-            </div>
-
             <section class="section-beginners">
                 <div class="collapse-beginners">
                     <button type="button"

@@ -42,6 +42,7 @@ const thanksBox = document.querySelector('.thankyou-box')
 const thanksCloseButton = document.querySelector('.thankyou-close')
 const errorBox = document.querySelector('.error-box')
 const errorCloseButton = document.querySelector('.error-close')
+const errorMessage = document.querySelector('.incorrect-msg')
 
 suggestionButton.forEach(button => {
   button.addEventListener('click', () => {
@@ -75,6 +76,9 @@ function closeSuggestionBackground () {
   suggestionForm.style.display = 'none'
   thanksBox.style.display = 'none'
   document.body.style.overflow = 'visible'
+  errorMessage.style.display = 'none'
+  errorMessage.style.bottom = '45px'
+  errorMessage.style.opacity = '0'
 }
 
 function closeThanksButton (button) {
@@ -82,6 +86,9 @@ function closeThanksButton (button) {
   suggestionBackground.classList.remove('suggestion-background--active')
   suggestionBackground.style.display = 'none'
   document.body.style.overflow = 'visible'
+  errorMessage.style.display = 'none'
+  errorMessage.style.bottom = '45px'
+  errorMessage.style.opacity = '0'
 }
 
 function suggestionIsValid () {
@@ -134,7 +141,7 @@ $(document).ready(function () {
       })
     } else {
       // If the form is not valid, you can add your own handling logic here
-      const errorMessage = document.querySelector('.incorrect-msg')
+
       errorMessage.style.display = 'block'
       setTimeout(() => {
         errorMessage.style.bottom = '0'

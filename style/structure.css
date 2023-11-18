@@ -328,13 +328,13 @@ section h3 {
 form,
 .error-box,
 .thankyou-box {
+  display: none;
   position: fixed;
   left: 0;
   right: 0;
-  top: 40%;
+  top: 50%;
   z-index: 9999999;
   flex-direction: column;
-  margin: -150px auto 100px auto;
   width: 500px;
   background-color: var(--nav-bg-color);
   box-shadow: var(--btn-shadow);
@@ -344,6 +344,8 @@ form,
   /*background-color: rgba(23, 25, 28, .7); */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  transform: translateY(-50%);
+  margin: auto;
 }
 
 form {

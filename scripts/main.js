@@ -11,12 +11,13 @@ if (isMobileDevice()) {
   console.log("L'utilisateur n'utilise pas un navigateur mobile.")
 }
 
+////////////////////////////////////////////////// SHOW CHANGELOG //////////////////////////////////////////////////
+
 const lastUpdateText = document.getElementById('changelog')
 const changelogWin = document.querySelector('.changelog-popup')
 let isChangelogOpen = false
 showChangelogListener()
 
-// SHOW CHANGELOG //
 function showChangelogListener () {
   if (lastUpdateText == null) {
     return
@@ -59,7 +60,8 @@ function hideChangelog () {
   isChangelogOpen = false
 }
 
-// Prevent anchors links being added to the URL //
+////////////////////////////////////////////////// PREVENT ANCHOR LINKS BEING ADDED TO THE URL //////////////////////////////////////////////////
+
 document.querySelectorAll("a[href*='#']").forEach(function (current) {
   // Original JavaScript code by Chirp Internet: www.chirpinternet.eu
   // Please acknowledge use of this code by including this header.
@@ -82,7 +84,7 @@ document.querySelectorAll("a[href*='#']").forEach(function (current) {
   })(document.querySelector(current.hash))
 })
 
-// SIDEBAR //
+////////////////////////////////////////////////// NAVIGATION BAR //////////////////////////////////////////////////
 toggleSidebar()
 
 function toggleSidebar () {
@@ -174,7 +176,6 @@ function closeNav () {
   setTimeout(function () {
     sidebar.style.overflowY = 'hidden'
     sidebar.style.display = 'none'
-    console.log('I am the third log after 5 seconds')
   }, 50)
 }
 
@@ -208,7 +209,7 @@ function navPositionBottom () {
   }
 }
 
-// COLLAPSE CATEGORY //
+////////////////////////////////////////////////// COLLAPSE CATEGORIES //////////////////////////////////////////////////
 
 const collapseButton = document.querySelectorAll('.collapse-button')
 
@@ -286,7 +287,7 @@ function collapse (collapseContent) {
   })
 }
 
-// BACK TO TOP BUTTON //
+////////////////////////////////////////////////// BACK TO TOP BUTTON //////////////////////////////////////////////////
 
 const backToTopButton = document.getElementById('back-to-top')
 const footer = document.getElementById('footer')
@@ -342,7 +343,7 @@ function backToTop () {
   document.documentElement.scrollTop = 0
 }
 
-// COLOR SCHEME //
+////////////////////////////////////////////////// DAY/NIGHT MODE //////////////////////////////////////////////////
 
 darkTheme()
 

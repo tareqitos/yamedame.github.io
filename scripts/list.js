@@ -31,7 +31,123 @@ const categoriesName = [
 
 createCategoriesAndSort()
 
-// Fonction pour mettre à jour les éléments affichés en fonction de la catégorie sélectionnée //
+////////////////////////////////////////////////// SUGGESTION FORM //////////////////////////////////////////////////
+
+const suggestionForm = document.querySelector('.suggestion-box')
+const suggestionBackground = document.querySelector('.suggestion-background')
+const suggestionButton = document.querySelectorAll('#suggestion')
+const suggestionConfirmButton = document.getElementById('submit')
+
+const thanksBox = document.querySelector('.thankyou-box')
+const thanksCloseButton = document.querySelector('.thankyou-close')
+const errorBox = document.querySelector('.error-box')
+const errorCloseButton = document.querySelector('.error-close')
+
+suggestionButton.forEach(button => {
+  button.addEventListener('click', () => {
+    suggestionForm.classList.toggle('suggestion-box--active')
+    suggestionBackground.classList.toggle('suggestion-background--active')
+
+    if (suggestionForm.classList.contains('suggestion-box--active')) {
+      suggestionForm.style.display = 'flex'
+      suggestionBackground.style.display = 'block'
+      document.body.style.overflow = 'hidden'
+    }
+  })
+})
+
+suggestionBackground.addEventListener('click', () => {
+  closeSuggestionBackground()
+})
+
+thanksCloseButton.addEventListener('click', () => {
+  closeThanksButton(thanksBox)
+})
+
+errorCloseButton.addEventListener('click', () => {
+  closeThanksButton(errorBox)
+})
+
+function closeSuggestionBackground () {
+  suggestionBackground.classList.remove('suggestion-background--active')
+  suggestionForm.classList.remove('suggestion-box--active')
+  suggestionBackground.style.display = 'none'
+  suggestionForm.style.display = 'none'
+  thanksBox.style.display = 'none'
+  document.body.style.overflow = 'visible'
+}
+
+function closeThanksButton (button) {
+  button.style.display = 'none'
+  suggestionBackground.classList.remove('suggestion-background--active')
+  suggestionBackground.style.display = 'none'
+  document.body.style.overflow = 'visible'
+}
+
+function suggestionIsValid () {
+  suggestionForm.classList.remove('suggestion-box--active')
+  suggestionForm.style.display = 'none'
+  thanksBox.style.display = 'flex'
+}
+
+function suggestionIsNotValid () {
+  suggestionForm.classList.remove('suggestion-box--active')
+  suggestionForm.style.display = 'none'
+  errorBox.style.display = 'flex'
+}
+
+$(document).ready(function () {
+  $('#submit').on('click', function () {
+    var form = $('#myForm')[0]
+
+    if (form.checkValidity()) {
+      const loadingAnimation = document.querySelector('.lds-ellipsis')
+      const submitButtonText = document.getElementById('submit-text')
+      submitButtonText.style.display = 'none'
+      loadingAnimation.style.display = 'inline-block'
+
+      var formData = {
+        title: $('#add-title').val(),
+        link: $('#add-link').val(),
+        category: $('#category').val()
+      }
+
+      $.ajax({
+        url: 'https://formsubmit.co/ajax/languages@tareqitos.com',
+        method: 'POST',
+        data: formData,
+        dataType: 'json',
+        success: function (response) {
+          // Handle the success response
+          suggestionIsValid()
+          submitButtonText.style.display = 'block'
+          loadingAnimation.style.display = 'none'
+          console.log(response)
+        },
+        error: function (error) {
+          // Handle the error response
+          suggestionIsNotValid()
+          submitButtonText.style.display = 'block'
+          loadingAnimation.style.display = 'none'
+          console.error(error)
+        }
+      })
+    } else {
+      // If the form is not valid, you can add your own handling logic here
+      const errorMessage = document.querySelector('.incorrect-msg')
+      errorMessage.style.display = 'block'
+      setTimeout(() => {
+        errorMessage.style.bottom = '0'
+        errorMessage.style.opacity = '1'
+      }, 10)
+
+      console.log('Form is not valid')
+    }
+  })
+})
+
+////////////////////////////////////////////////// UPDATE ELEMENTS IN MEDIA //////////////////////////////////////////////////
+
 function updateDisplayedItems (category) {
   const mediaContainer = document.querySelector('.section-media-items')
 
@@ -63,9 +179,10 @@ function updateDisplayedItems (category) {
       }
 
       // Créez les nouveaux éléments
+
       createElement(mediaData, 'media')
       updateCollapseContentHeight()
-    }, 300) // Assurez-vous que le délai correspond à la durée de l'animation CSS (0.3s dans cet exemple)
+    }, 300) // la durée de l'animation CSS (0.3s dans cet exemple)
   }
 }
 
@@ -98,11 +215,10 @@ updateCollapseContentHeight()
 // Initialize en affichant tous les éléments initialement
 updateDisplayedItems()
 
-// SORT ELEMENT IN CATEGORY //
+////////////////////////////////////////////////// SORT ELEMENTS IN MEDIA //////////////////////////////////////////////////
 
 function sortItems () {
   const selectedCategory = document.getElementById('sort-media').value
-
   const items = document.querySelectorAll('.item')
 
   items.forEach(item => {
@@ -115,12 +231,12 @@ function sortItems () {
   })
 }
 
-// Écouter les changements de sélection dans la liste déroulante
 const selectElement = document.getElementById('sort-media')
 selectElement.addEventListener('change', sortItems)
 
-// Appeler la fonction de tri initialement pour afficher correctement la page
 sortItems()
+
+////////////////////////////////////////////////// CREATE AND SORT CATEGORIES //////////////////////////////////////////////////
 
 function createCategoriesAndSort () {
   for (let i = 0; i < categories.length; i++) {
@@ -129,12 +245,26 @@ function createCategoriesAndSort () {
     if (checkCategory) {
       console.log(categoriesName[i])
       sortByName(categories[i])
+
+      const suggestion = {
+        id: 'suggestion',
+        name: '+',
+        link: '',
+        description: 'Submit your recommendation/website!',
+        favicon: '',
+        device: '',
+        pic: '',
+        type: ' all video podcast instagram'
+      }
+
+      categories[i] = [...categories[i], suggestion]
+
       createElement(categories[i], categoriesName[i])
     }
   }
 }
 
-// CREATE HTML //
+////////////////////////////////////////////////// CREATE DOM ELEMENTS //////////////////////////////////////////////////
 
 function createElement (arrayElement, sectionToQuery) {
   for (let i = 0; i < arrayElement.length; i++) {
@@ -195,7 +325,7 @@ function createElement (arrayElement, sectionToQuery) {
   }
 }
 
-// ADD ATTRIBUTE TO CREATED ELEMENT //
+////////////////////////////////////////////////// ADD ATTRIBUTE TO CREATED ELEMENTS //////////////////////////////////////////////////
 
 function defineElements (
   array,
@@ -206,8 +336,8 @@ function defineElements (
   desc,
   sectionToQuery
 ) {
-  if (sectionToQuery === 'media') {
-    desc.id = array.id
+  if (sectionToQuery !== 'software') {
+    itemContainer.id = array.id
   }
 
   if (sectionToQuery === 'software') {
@@ -219,15 +349,18 @@ function defineElements (
 
   itemContainer.className = 'item-container'
   itemContainerParent.className = 'item-container-parent ' + sectionToQuery
-  link.href = array.link
-  link.setAttribute('target', '_blank')
+  if (array.id !== 'suggestion') {
+    link.href = array.link
+    link.setAttribute('target', '_blank')
+  }
+
   linkName.innerText = array.name
 
   desc.innerText = array.description
   desc.className = 'item-desc'
 }
 
-// PARENT ELEMENT TO HIERARCHY //
+////////////////////////////////////////////////// PARENT ELEMENTS //////////////////////////////////////////////////
 
 function appendElements (
   sectionItems,
@@ -250,7 +383,7 @@ function appendElements (
   itemContainer.appendChild(desc)
 }
 
-// ADD SOFTWARE ICONS //
+////////////////////////////////////////////////// ADD SOFTWARE ICONS IN SOFTWARE //////////////////////////////////////////////////
 
 function addSoftwareIcons (sectionToQuery, array, itemContainer) {
   if (sectionToQuery === 'software') {
@@ -273,7 +406,7 @@ function addSoftwareIcons (sectionToQuery, array, itemContainer) {
   }
 }
 
-// CREATE IMAGE TAG FOR MEDIA ELEMENTS //
+////////////////////////////////////////////////// CREATE IMAGE TAG FOR MEDIA ELEMENTS //////////////////////////////////////////////////
 
 function createImageTag (array, itemContainerParent) {
   const img = document.createElement('img')
@@ -303,7 +436,7 @@ function addRecommendationStar (
   }
 }
 
-// SORT ELEMENTS //
+////////////////////////////////////////////////// SORT ELEMENTS //////////////////////////////////////////////////
 
 function sortByName (array) {
   array.sort(function (a, b) {
@@ -313,6 +446,7 @@ function sortByName (array) {
     if (a.name > b.name) {
       return 1
     }
+
     return 0
   })
 }

@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html id="theme" lang="en">
     <head>
-        <!-- Basic Meta Tag --> 
+        <!-- Basic Meta Tag -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
-            content="List of Japanese language resources for Japanese learners">
+            content="A comprehensive list of Japanese learning resources for beginners and advanced learners. Discover online courses, language exchange partners, books, textbooks, and podcasts to enhance your Japanese language skills. Start learning Japanese today!">
         <meta name="keywords"
-            content="Japanese, language, learning, resources, japan, learn japanese, language learning, language resources">
+            content="Japanese, language, learning, resources, japan, learn japanese, language learning, language resources, Japanese, learn Japanese, Japanese resources, Japanese language, Japanese learning, online courses, language exchange, study materials, textbooks, podcasts, language journey">
         <meta name="author" content="Tareqitos">
 
         <!-- Open Graph Meta Tag -->
         <meta property="og:title" content="No excuses not to learn Japanese">
-        <meta property="og:description" content="List of Japanese language resources for Japanese learners">
+        <meta property="og:description"
+            content="List of Japanese language resources for Japanese learners">
         <meta property="og:image" content="images/netlj-thumbnail.png">
         <meta property="og:url" content="https://tareqitos.me">
         <meta property="og:type" content="website">
 
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="scripts/main.js" defer></script>
         <script type="module" src="scripts/list.js" defer></script>
         <link href="style/style.css" rel="stylesheet">
@@ -50,6 +52,7 @@
 
     </head>
     <body id="body">
+        <div class="suggestion-background"></div>
         <div id="top"></div>
         <header>
             <a href="index.html">
@@ -74,10 +77,12 @@
                 &#9776;
             </div>
             <div class="expand-collapse">
-                <div class="roll-all" title="Collapse all categories"><img class="img-coll" src="images/collapse.png"></div>
-                <div class="collapse-all" title="Expand all categories"><img class="img-roll" src="images/roll.png"></div>
+                <div class="roll-all" title="Collapse all categories"><img
+                        class="img-coll" src="images/collapse.png"></div>
+                <div class="collapse-all" title="Expand all categories"><img
+                        class="img-roll" src="images/roll.png"></div>
             </div>
-       
+
             <div class="sidebar" id="sidebar">
                 <p> ー 目次 ー </p>
                 <hr style="border-top: 1px solid var(--text);">
@@ -114,7 +119,49 @@
         <div class="anchorage" id="beginners"></div>
 
         <main id="main">
-            
+            <div class="suggestion-box">
+                <form id="myForm">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="title" id="add-title" class="input"
+                        placeholder="title" maxlength="50" required>
+                    <input type="url" name="link" id="add-link" class="input"
+                        placeholder="https://..." maxlength="100" required>
+                    <select name="category" id="category">
+                        <option value="dictionaries">beginners</option>
+                        <option value="dictionaries">dictionaries</option>
+                        <option value="structure">structure - grammar</option>
+                        <option value="kanji">kanji - vocabulary</option>
+                        <option value="media">media</option>
+                        <option value="reading">reading</option>
+                        <option value="misc">misc</option>
+                        <option value="software">software - apps</option>
+                    </select>
+
+                    <button type="button" id="submit"><p id="submit-text">SUBMIT</p><div
+                            class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></button>
+                    <p class="incorrect-msg">title or/and link are missing or
+                        incorrect</p>
+                </form>
+
+            </div>
+            <div class="thankyou-box">
+                <p class="thankyou-thx">Thank you!</p>
+                <p class="thankyou-msg">Your suggestion has been successfully
+                    sent and will be added after being reviewed!</p>
+                <img src="images/anya.gif" />
+                <button class="thankyou-close">CLOSE</button>
+            </div>
+
+            <div class="error-box">
+                <p class="error-head">Oh no!</p>
+                <p class="error-msg">There is an error somewhere that needs to
+                    be fixed! Try again
+                    later or send me your suggestion by email at:
+                    languages@tareqitos.com</p>
+                <img src="images/anya-ohno.gif" />
+                <button class="error-close">CLOSE</button>
+            </div>
+
             <section class="section-beginners">
                 <div class="collapse-beginners">
                     <button type="button"
@@ -251,18 +298,20 @@
             </section>
         </main>
         <div class="changelog-popup">
+            <p>2023年11月18日</p>
+            <ul>
+                <li>Added links where you can submit your suggestions. It will
+                    basically be sent to my email and I'll add it after
+                    reviewing it.</li>
+                <li>Optimisations in the CSS</li>
+            </ul>
             <p>2023年11月13日</p>
             <ul>
-                <li>Added <a href="about.html"
-                        style="text-decoration: none; color: #c93d1a">'about'</a>
+                <li>Added
+                    style="text-decoration: none; color: #c93d1a">'about'
                     page</li>
-                <li>Added the option to expand and collapse all categories at once</li>
-                <li>Visual fixes</li>
-            </ul>
-            <p>2023年11月10日</p>
-            <ul>
-                <li>Added 'JLPT Simulation' link (misc)</li>
-                <li>Added Ko-fi tip link</li>
+                <li>Added the option to expand and collapse all categories at
+                    once</li>
                 <li>Visual fixes</li>
             </ul>
         </div>
@@ -270,7 +319,7 @@
             <script type='text/javascript'
                 src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script
                 type='text/javascript'>kofiwidget2.init('Buy me a coffee', '#c93d1a', 'H2H0QZVAZ');kofiwidget2.draw();</script>
-            <p class="last-updated" id="lu-update">Last updated: 2023年11月13日 -
+            <p class="last-updated" id="lu-update">Last updated: 2023年11月18日 -
                 <span
                     id="changelog">changelog</span></p>
         </div>

@@ -20,6 +20,7 @@
   --category-bg-color: rgba(98, 140, 193, 0.11);
   --nav-bg-color: rgba(255, 255, 255, .8);
   --about-text-color: #dee7f4;
+  --suggestion-bg-opacity: .3;
 }
 
 #body {
@@ -43,6 +44,7 @@
   --category-bg-color: rgba(0, 0, 0, 0.1);
   --nav-bg-color: rgba(23, 25, 28, .8);
   --about-text-color: #1c1e22;
+  --suggestion-bg-opacity: .7;
 }
 
 .anchor {
@@ -344,42 +346,50 @@ header {
 /* ================================================= COLLAPSE ================================================= */
 
 .collapse-button {
-    display: block;
-    text-align: left;
-    font-size: 2em;
-    margin: auto auto 10px auto;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: none;
-    color: var(--text);
+  display: block;
+  text-align: left;
+  font-size: 2em;
+  margin: auto auto 10px auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  color: var(--text);
 }
 
 .collapse-button::after {
-    content: '';
-    background-image: url("../images/down-arrow.png");
-    background-size: 18px;
-    width: 18px;
-    height: 18px;
-    position: relative;
-    top: 20px;
-    left: 5px;
-    float: right;
-    filter: var(--mail-color)
+  content: '';
+  background-image: url("../images/down-arrow.png");
+  background-size: 18px;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 20px;
+  left: 5px;
+  float: right;
+  filter: var(--mail-color)
 }
 
 .collapse-button--active::after {
-    content: '';
-    background-image: url("../images/right-arrow.png");
+  content: '';
+  background-image: url("../images/right-arrow.png");
 }
 
 .collapse-content {
-    overflow-y: visible;
-    margin-top: 40px;
-    opacity: 1;
-    transition: max-height 0.2s, opacity 0.2s, margin-top 0.2s;
+  overflow-y: visible;
+  margin-top: 40px;
+  opacity: 1;
+  transition: max-height 0.2s, opacity 0.2s, margin-top 0.2s;
 }
 
 .collapse-contributors {
-    padding: 0 0 80px 0
+  padding: 0 0 80px 0
+}
+
+/* .suggestion-box {
+  width: 500px;
+  height: 500px;
+  background-color: #17191c;
+  margin: auto;
+
 }

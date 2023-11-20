@@ -129,7 +129,7 @@ header {
   top: 15px;
   z-index: 4;
   width: 250px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .open-btn {

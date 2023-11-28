@@ -350,6 +350,7 @@ $(document).ready(function () {
       loadingAnimation.style.display = 'inline-block'
 
       var formData = {
+        name: $('#add-name').val(),
         title: $('#add-title').val(),
         link: $('#add-link').val(),
         category: $('#category').val()

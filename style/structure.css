@@ -259,7 +259,7 @@ section h3 {
 
 .section-software-items .item-container-parent,
 #suggestion .item-container-parent {
-  background: linear-gradient(90deg, #929292 0%, #dbdbdb 200%);
+  background: linear-gradient(90deg, #acc2ec 0%, #c6c6c6 200%);
 }
 
 /* ================================================= MEDIA ICONS  ================================================= */
@@ -350,6 +350,10 @@ form,
 
 form {
   display: flex;
+}
+
+form h2 {
+  text-align: center;
 }
 
 .error-box,

@@ -372,8 +372,16 @@
       "id": "re4",
       "name": "yomu yomu",
       "link": "https://yomuyomu.app/",
-      "description": "Yomu Yomu offers easy word look up and sentence translations to help learners understand the meaning of Japanese phrases as they read.",
+      "description": "Yomu Yomu offers easy word look up and sentence translations to help learners understand the meaning of Japanese phrases as they read",
       "favicon": "http://www.google.com/s2/favicons?domain=https://yomuyomu.app/",
+      "recommended": ""
+    },
+    {
+      "id": "re5",
+      "name": "Tadoku",
+      "link": "https://tadoku.org/japanese/en/free-books-en/",
+      "description": "Free Japanese reading platform for all level",
+      "favicon": "http://www.google.com/s2/favicons?domain=https://tadoku.org/japanese/en/free-books-en/",
       "recommended": ""
     }
   ],

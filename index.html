@@ -50,8 +50,10 @@
 
 <body id="body">
     <div class="suggestion-box">
-        <form id="myForm">
+        <form id="myForm"> 
+            <h2>Your suggestion</h2>
             <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="name" id="add-name" class="input" placeholder="name (optional)" maxlength="50">
             <input type="text" name="title" id="add-title" class="input" placeholder="title" maxlength="50" required>
             <input type="text" name="link" id="add-link" class="input" placeholder="link" maxlength="100" required>
             <select name="category" id="category">
@@ -290,6 +292,7 @@
     <div class="changelog-popup">
         <p>2023年11月27日</p>
         <ul>
+            <li>Added recommended website 'Tadoku' (reading)</li>
             <li>Changed website name and URL (tareqitos.me -> yameda.me)</li>
         </ul>
         <p>2023年11月18日</p>

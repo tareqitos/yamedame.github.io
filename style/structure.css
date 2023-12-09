@@ -259,7 +259,7 @@ section h3 {
 
 .section-software-items .item-container-parent,
 #suggestion .item-container-parent {
-  background: linear-gradient(90deg, #acc2ec 0%, #c6c6c6 200%);
+  background: var(--suggestion-bg-color);
 }
 
 /* ================================================= MEDIA ICONS  ================================================= */

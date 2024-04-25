@@ -257,6 +257,10 @@ section h3 {
   background: linear-gradient(90deg, #64b5f6 0%, #bbdefb 150%);
 }
 
+#s11 {
+  background: linear-gradient(90deg, #34a83c 0%, #f0b761 200%);
+}
+
 .section-software-items .item-container-parent,
 #suggestion .item-container-parent {
   background: var(--suggestion-bg-color);

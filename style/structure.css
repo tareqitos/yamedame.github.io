@@ -582,3 +582,51 @@ form h2 {
     transform: translate(24px, 0);
   }
 }
+
+/* ================================================================= ANKI ================================================================= */
+
+.anki-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.section-anki {
+  margin: 80px auto;
+  width: 90%;
+  padding: 40px;
+  background-color: var(--category-bg-color);
+  border-radius: 10px;
+}
+
+.anki-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.anki-buttons a {
+  text-decoration: none;
+}
+
+#anki1,
+#anki2 {
+  background: linear-gradient(90deg, rgb(0, 132, 221) 0%, rgb(126, 193, 237) 200%);
+}
+
+i::before {
+  position: relative;
+  left: 25px;
+  font-size: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .1s;
+}
+
+#anki2:hover i::before {
+  visibility: visible;
+  left: -10px;
+  opacity: 1;
+  font-size: .7em;
+}

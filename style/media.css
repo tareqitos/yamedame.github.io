@@ -234,6 +234,11 @@
   .expand-collapse {
     transform: scale(.5);
   }
+
+  .anki-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* ================================================= 602 ================================================= */

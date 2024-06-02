@@ -615,7 +615,7 @@ form h2 {
   background: linear-gradient(90deg, rgb(0, 132, 221) 0%, rgb(126, 193, 237) 200%);
 }
 
-i::before {
+.fa-download::before {
   position: relative;
   left: 25px;
   font-size: 0;
@@ -624,7 +624,7 @@ i::before {
   transition: all .1s;
 }
 
-#anki2:hover i::before {
+#anki2:hover .fa-download::before {
   visibility: visible;
   left: -10px;
   opacity: 1;

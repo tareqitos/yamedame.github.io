@@ -357,7 +357,7 @@ $(document).ready(function () {
       }
 
       $.ajax({
-        url: 'https://formsubmit.co/ajax/languages@tareqitos.com',
+        url: 'https://formsubmit.co/ajax/social@tareqitos.com',
         method: 'POST',
         data: formData,
         dataType: 'json',

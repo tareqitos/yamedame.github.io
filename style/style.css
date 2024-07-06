@@ -22,6 +22,7 @@
   --about-text-color: #dee7f4;
   --suggestion-bg-opacity: .3;
   --suggestion-bg-color: #b8b8b8;
+  --border: rgba(0, 0, 0, 0.1);
 }
 
 #body {
@@ -47,6 +48,7 @@
   --about-text-color: #1c1e22;
   --suggestion-bg-opacity: .7;
   --suggestion-bg-color: #9e9e9e;
+  --border: rgba(255, 255, 255, 0.1);
 }
 
 .anchor {
@@ -396,4 +398,268 @@ header {
   background-color: #17191c;
   margin: auto;
 
+}
+
+/* ================================================= SUGGESTION FORM ================================================= */
+#suggestion {
+  cursor: pointer;
+}
+
+form,
+.error-box,
+.thankyou-box {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 9999999;
+  flex-direction: column;
+  width: 500px;
+  background-color: var(--nav-bg-color);
+  box-shadow: var(--btn-shadow);
+  padding: 40px 20px 40px 20px;
+  border-radius: 20px;
+  gap: 20px;
+  /*background-color: rgba(23, 25, 28, .7); */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+form {
+  display: flex;
+}
+
+form h2 {
+  text-align: center;
+}
+
+.error-box,
+.thankyou-box {
+  display: none;
+  align-items: center;
+}
+
+.error-head,
+.thankyou-thx {
+  font-size: 2em;
+  margin-bottom: 0px;
+  font-weight: 500;
+}
+
+.error-msg,
+.thankyou-msg {
+  padding: 0 20px;
+}
+
+.incorrect-msg {
+  display: none;
+  margin-bottom: 0;
+  text-align: center;
+  color: chocolate;
+  position: relative;
+  bottom: 45px;
+  opacity: 0;
+  transition: bottom .1s, opacity .1s ease;
+}
+
+.error-box img,
+.thankyou-box img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.suggestion-box {
+  display: none;
+}
+
+.suggestion-background {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999998;
+  opacity: var(--suggestion-bg-opacity);
+}
+
+.input,
+#category {
+  border-radius: 10px;
+  height: 50px;
+  border: var(--input-border);
+  outline: 0;
+  padding-left: 20px;
+  background-color: var(--input-bg-color);
+  color: var(--text)
+}
+
+.sort {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sort-media:hover {
+  cursor: pointer;
+}
+
+.sort-media {
+  text-align: center;
+  text-align-last: center;
+  border-radius: 10px;
+  height: 50px;
+  width: 100px;
+  margin-left: 10px;
+  border: var(--input-border);
+  outline: 0;
+  background-color: var(--input-bg-color);
+  color: var(--text);
+}
+
+.sort select {
+  appearance: none;
+}
+
+.sort-media,
+#category {
+  color: var(--input-category-color);
+}
+
+#category {
+  width: 200px;
+}
+
+#submit {
+  width: 200px;
+}
+
+#submit-text {
+  margin-bottom: 0px;
+}
+
+.error-close,
+.thankyou-close,
+#submit {
+  margin: auto;
+  border-radius: 20px;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 1.3em;
+  color: white;
+  outline: 0;
+  border: 0;
+  background: linear-gradient(90deg, #ee6c4d 0, #fcb045 100%);
+  transform: scale(1);
+  transition: transform .3s ease;
+}
+
+.error-close:hover,
+.thankyou-close:hover,
+#submit:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+@keyframes scale-out-center {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* ================================================================= LOADING ANIMATION ================================================================= */
+
+.lds-ellipsis {
+  display: none;
+  position: relative;
+  bottom: 13px;
+  width: 80px;
+  height: 80px;
+  z-index: 99999999;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
+p {
+  margin-bottom: 0;
 }

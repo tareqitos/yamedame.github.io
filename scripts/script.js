@@ -190,7 +190,7 @@ async function fetchData () {
     updateDisplayedItems()
 
     ////////////////////////////////////////////////// SUGGESTION FORM //////////////////////////////////////////////////
-
+    /*
     const suggestionForm = document.querySelector('.suggestion-box')
     const suggestionBackground = document.querySelector(
       '.suggestion-background'
@@ -262,7 +262,7 @@ async function fetchData () {
       suggestionForm.style.display = 'none'
       errorBox.style.display = 'flex'
     }
-
+*/
     $(document).ready(function () {
       $('#submit').on('click', function () {
         var form = $('#myForm')[0]
@@ -316,6 +316,8 @@ async function fetchData () {
   } catch (erreur) {
     console.error(erreur)
   }
+    
 }
+  
 
 fetchData()

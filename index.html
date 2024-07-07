@@ -52,7 +52,7 @@
 
 <body id="body">
     <div class="suggestion-box">
-        <form id="myForm">
+       <!-- <form id="myForm">
             <h2>Your suggestion</h2>
             <input type="hidden" name="_captcha" value="false">
             <input type="text" name="name" id="add-name" class="input" placeholder="name (optional)" maxlength="50">
@@ -102,6 +102,7 @@
     </div>
 
     <div class="suggestion-background"></div>
+    -->
     <div id="top"></div>
     <header>
         <a href="index.html">
@@ -222,7 +223,13 @@
                                     <p>+</p>
                                 </div>
                             </a>
-                            <p class="item-desc">Submit your recommendation/website!</p>
+                            <!-- <p class="item-desc">Submit your recommendation/website!</p> -->
+                            <form id="myForm">
+                            <input type="hidden" name="_captcha" value="false">
+                                <input type="text" name="name" id="add-name" class="input" placeholder="name (optional)" maxlength="15">
+                                <input type="text" name="title" id="add-title" class="input" placeholder="title" maxlength="25" required>
+                                <input type="text" name="link" id="add-link" class="input" placeholder="link" maxlength="100" required>
+                            </form>
                         </div>
                     </div>
                 </div>

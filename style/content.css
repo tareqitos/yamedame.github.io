@@ -1,0 +1,86 @@
+.section-list {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background-color: var(--category-bg-color);
+    border-radius: 10px;
+}
+
+.item-desc {
+    font-size: 1.1em;
+}
+
+.item-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.item-container a {
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.item-container-parent {
+    width: 250px;
+    text-align: center;
+    padding: 5px 20px;
+
+    border: solid 1px var(--border);
+    border-radius: 5px;
+    
+}
+
+.item-container-parent {
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 5px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.item-container-parent:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.item-container-parent:focus {
+    outline: none;
+}
+
+.item-container-parent.beginners {
+    background-image: linear-gradient(to right, #f59f3c, #e43603, #faba71, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.4);
+}
+
+.item-container-parent.dictionaries {
+    background-image: linear-gradient(to right, #40ec74, #39a464, #8df7ad, #2ae073);
+    box-shadow: 0 4px 15px 0 rgba(54, 229, 10, 0.4);
+}
+
+/* SUGGESTION FORM */
+
+.input {
+    border-radius: 10px;
+  height: 40px;
+  border: var(--input-border);
+  outline: 0;
+  padding-left: 20px;
+  background-color: var(--input-bg-color);
+  color: var(--text);
+}

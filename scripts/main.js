@@ -267,7 +267,8 @@ function collapseCategories () {
 function roll (collapseContent) {
   collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
   collapseContent.style.opacity = 1
-  collapseContent.style.marginTop = 40 + 'px'
+  collapseContent.style.marginTop = 10 + 'px'
+  collapseContent.style.marginBottom = 30 + 'px'
   collapseContent.style.overflowY = 'visible'
 
   if (collapseContent.style.maxHeight !== 0) {
@@ -280,6 +281,7 @@ function collapse (collapseContent) {
   collapseContent.style.maxHeight = 0
   collapseContent.style.opacity = 0
   collapseContent.style.marginTop = 0
+  collapseContent.style.marginBottom = 10 + 'px'
   collapseContent.style.overflowY = 'hidden'
 
   window.addEventListener('resize', () => {

@@ -354,8 +354,7 @@ header {
 .collapse-button {
   display: block;
   text-align: left;
-  font-size: 2em;
-  margin: auto auto 10px auto;
+  font-size: 1.5em;
   border: none;
   outline: none;
   cursor: pointer;
@@ -370,26 +369,32 @@ header {
   width: 18px;
   height: 18px;
   position: relative;
-  top: 20px;
+  top: 10px;
   left: 5px;
   float: right;
-  filter: var(--mail-color)
+  filter: var(--mail-color);
+  transform: rotate(0);
+  transition: transform .4s;
 }
 
 .collapse-button--active::after {
-  content: '';
-  background-image: url("../images/right-arrow.png");
+  transform: rotate(-90deg);
 }
 
 .collapse-content {
   overflow-y: visible;
-  margin-top: 40px;
+  margin-top: 10px;
   opacity: 1;
   transition: max-height 0.2s, opacity 0.2s, margin-top 0.2s;
 }
 
 .collapse-contributors {
   padding: 0 0 80px 0
+}
+
+.collapse-layout {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* .suggestion-box {

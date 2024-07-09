@@ -22,7 +22,7 @@
 }
 
 .item-container a {
-    font-size: 1.2em;
+    font-size: 1.1em;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -34,29 +34,37 @@
 
     border: solid 1px var(--border);
     border-radius: 5px;
-    
+
 }
 
 .item-container-parent {
-    font-weight: 600;
+    font-weight: 500;
     color: #fff;
     cursor: pointer;
-    text-align:center;
+    text-align: center;
     border: none;
     background-size: 300% 100%;
 
     border-radius: 5px;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
 }
-.item-container-parent:hover {
+
+.item-container-parent,
+.submit {
+    transform: scale(1.05);
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.item-container-parent:hover,
+.submit:hover {
     background-position: 100% 0;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+    transform: scale(1.1);
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .item-container-parent:focus {
@@ -64,8 +72,8 @@
 }
 
 .item-container-parent.beginners {
-    background-image: linear-gradient(to right, #f59f3c, #e43603, #faba71, #e85a19);
-    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.4);
+    background-image: linear-gradient(to right,  #f16f5c 0%,#e01511 34%,#f7767d 66%,#e73827 100%);
+    box-shadow: 0 4px 15px 0 rgba(238, 73, 73, 0.4);
 }
 
 .item-container-parent.dictionaries {
@@ -73,14 +81,60 @@
     box-shadow: 0 4px 15px 0 rgba(54, 229, 10, 0.4);
 }
 
+.item-container-parent.grammar {
+    background-image: linear-gradient(to right, #f59f3c, #e43603, #faba71, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.4);
+}
+
+.item-container-parent.kanji {
+    background-image: linear-gradient(to right,  #20d2fa 0%,#4297ff 37%,#4dceee 68%,#4266ff 100%);
+    box-shadow: 0 4px 15px 0 rgba(10, 105, 229, 0.425);
+}
+
+.item-container-parent.suggestion {
+    box-shadow: 0 4px 15px 0 rgba(56, 56, 56, 0.4);
+}
+
 /* SUGGESTION FORM */
 
-.input {
+.input,
+.submit {
     border-radius: 10px;
-  height: 40px;
-  border: var(--input-border);
-  outline: 0;
-  padding-left: 20px;
-  background-color: var(--input-bg-color);
-  color: var(--text);
+    height: 40px;
+    border: var(--input-border);
+}
+
+.input {
+    padding-left: 20px;
+    outline: 0;
+    background-color: var(--input-bg-color);
+    color: var(--text);
+}
+
+button.submit {
+    color: white;
+    margin-left: 10px;
+    padding: 0 20px;
+    background-size: 500% 100%;
+}
+
+.beginners.suggestion,
+.beginners button.submit {
+    background-image: linear-gradient(to right, rgba(190, 190, 190, 1) 0%, rgba(100, 100, 110, 1) 35%, #f7767d 66%,#e73827 100%);
+}
+
+.beginners.suggestion:hover,
+.beginners button.submit:hover {
+    box-shadow: 0 4px 15px 0 rgba(238, 73, 73, 0.4);
+
+}
+
+.grammar.suggestion,
+.grammar button.submit {
+    background-image: linear-gradient(to right, rgba(190, 190, 190, 1) 0%, rgba(100, 100, 110, 1) 35%, #faba71, #e85a19);
+}
+
+.grammar.suggestion:hover,
+.grammar button.submit:hover {
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.4);
 }

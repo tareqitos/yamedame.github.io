@@ -4,6 +4,7 @@ async function fetchData () {
     const links = await reponse.json()
     console.log(links)
 
+    /*
     const mediaArray = links.media
 
     sortByName(mediaArray)
@@ -189,129 +190,133 @@ async function fetchData () {
     // Initialize en affichant tous les éléments initialement
     updateDisplayedItems()
 
+    */
+
     ////////////////////////////////////////////////// SUGGESTION FORM //////////////////////////////////////////////////
 
-    const suggestionForm = document.querySelector('.suggestion-form');
-    const suggestionText = document.querySelector('.suggestion-text');
-    const suggButton = document.querySelector('.suggestion-button');
+    const suggestionForms = document.querySelectorAll('.suggestion-form')
+    const suggestionTexts = document.querySelectorAll('.suggestion-text')
+    const suggButtons = document.querySelectorAll('.suggestion-button')
+    const thanksTexts = document.querySelectorAll('.thanks-text')
+    const errorTexts = document.querySelectorAll('.error-text')
 
-    suggButton.addEventListener('click', () => {
-      //suggestionForm.classList.toggle('suggestion-form--active')
+    suggButtons.forEach((suggButton, index) => {
+      suggButton.addEventListener('click', () => {
+        const suggestionForm = suggestionForms[index]
+        const suggestionText = suggestionTexts[index]
+        const thanksText = thanksTexts[index]
+        const errorText = errorTexts[index]
 
-     /* if (suggestionForm.classList.contains('suggestion-form--active')) {
-        //suggestionText.style.opacity = 0;
-        setTimeout(() => {
-          suggestionText.style.display = 'none';
-          suggestionForm.style.display = 'flex';
-          suggestionForm.style.gap = 5 + 'px';
+        suggestionForm.classList.toggle('suggestion-form--active')
+
+        if (suggestionForm.classList.contains('suggestion-form--active')) {
+          suggestionText.style.opacity = 0
           setTimeout(() => {
-            suggestionForm.style.opacity = 1;
+            suggestionText.style.display = 'none'
+            suggestionForm.style.display = 'flex'
+            suggestionForm.style.gap = 5 + 'px'
+            setTimeout(() => {
+              suggestionForm.style.opacity = 1
+            }, 50)
           }, 50)
-        }, 50)
-        
-        
-      } else {
-        suggestionForm.classList.toggle('suggestion-form')
-        setTimeout(() => {
-          suggestionForm.style.display = 'none';
-          suggestionText.style.display = 'block';
+        } else {
+          suggestionForm.classList.toggle('suggestion-form')
+          suggestionForm.style.opacity = 0
+          thanksText.style.opacity = 0
+          errorText.style.opacity = 0
           setTimeout(() => {
-            suggestionText.style.opacity = 1;
+            suggestionForm.style.display = 'none'
+            suggestionText.style.display = 'block'
+            thanksText.style.display = 'none'
+            errorText.style.display = 'none'
+            setTimeout(() => {
+              suggestionText.style.opacity = 1
+            }, 50)
           }, 50)
-        }, 50)
-      }*/
 
-    }) 
-
-    /*
-    const suggestionForm = document.querySelector('.suggestion-box')
-    const suggestionBackground = document.querySelector(
-      '.suggestion-background'
-    )
-    const suggestionButton = document.querySelectorAll('#suggestion')
-    const suggestionConfirmButton = document.getElementById('submit')
-
-    const thanksBox = document.querySelector('.thankyou-box')
-    const thanksCloseButton = document.querySelector('.thankyou-close')
-    const errorBox = document.querySelector('.error-box')
-    const errorCloseButton = document.querySelector('.error-close')
-    const errorMessage = document.querySelector('.incorrect-msg')
-
-    suggestionButton.forEach(button => {
-      button.addEventListener('click', () => {
-        suggestionForm.classList.toggle('suggestion-box--active')
-        suggestionBackground.classList.toggle('suggestion-background--active')
-
-        if (suggestionForm.classList.contains('suggestion-box--active')) {
-          suggestionForm.style.display = 'flex'
-          suggestionBackground.style.display = 'block'
-          document.body.style.overflow = 'hidden'
+          thanksText.style.opacity = 0
+          errorText.style.opacity = 0
+          setTimeout(() => {
+            thanksText.style.display = 'none'
+            errorText.style.display = 'none'
+          }, 50)
         }
       })
     })
 
-    suggestionBackground.addEventListener('click', () => {
-      closeSuggestionBackground()
+    ////// INPUT VALIDATOR //////
+
+    let inputs = document.querySelectorAll('.input')
+    let buttonSends = document.querySelectorAll('.submit')
+
+    let inputValidator = {
+      name: false,
+      title: false,
+      link: false
+    }
+
+    inputs.forEach(input => {
+      input.addEventListener('input', event => {
+        let name = event.target.getAttribute('name')
+        if (event.target.value.length > 0) {
+          inputValidator[name] = true
+        } else {
+          inputValidator[name] = false
+        }
+
+        let allTrue = Object.keys(inputValidator).every(item => {
+          return inputValidator[item] === true
+        })
+
+        buttonSends.forEach(buttonSend => {
+          if (allTrue) {
+            buttonSend.disabled = false
+            buttonSend.style.pointerEvents = 'unset'
+          } else {
+            buttonSend.disabled = true
+            buttonSend.style.pointerEvents = 'none'
+          }
+        })
+      })
     })
 
-    thanksCloseButton.addEventListener('click', () => {
-      closeThanksButton(thanksBox)
-    })
-
-    errorCloseButton.addEventListener('click', () => {
-      closeThanksButton(errorBox)
-    })
-
-    function closeSuggestionBackground () {
-      suggestionBackground.classList.remove('suggestion-background--active')
-      suggestionForm.classList.remove('suggestion-box--active')
-      suggestionBackground.style.display = 'none'
+    function suggestionIsValid (suggestionForm, thanksTexts, form) {
+      suggestionForm.classList.toggle('suggestion-form')
       suggestionForm.style.display = 'none'
-      thanksBox.style.display = 'none'
-      document.body.style.overflow = 'visible'
-      errorMessage.style.display = 'none'
-      errorMessage.style.bottom = '45px'
-      errorMessage.style.opacity = '0'
+
+      thanksTexts.style.display = 'block'
+      thanksTexts.style.opacity = 1
+
+      form.reset()
     }
 
-    function closeThanksButton (button) {
-      button.style.display = 'none'
-      suggestionBackground.classList.remove('suggestion-background--active')
-      suggestionBackground.style.display = 'none'
-      document.body.style.overflow = 'visible'
-      errorMessage.style.display = 'none'
-      errorMessage.style.bottom = '45px'
-      errorMessage.style.opacity = '0'
-    }
+    buttonSends.forEach((buttonSend, index) => {
+      buttonSend.addEventListener('click', event => {
+        event.preventDefault()
 
-    function suggestionIsValid () {
-      suggestionForm.classList.remove('suggestion-box--active')
-      suggestionForm.style.display = 'none'
-      thanksBox.style.display = 'flex'
-    }
-
-    function suggestionIsNotValid () {
-      suggestionForm.classList.remove('suggestion-box--active')
-      suggestionForm.style.display = 'none'
-      errorBox.style.display = 'flex'
-    }
-    */
-
-    $(document).ready(function () {
-      $('#submit').on('click', function () {
-        var form = $('#myForm')[0]
+        let form = event.target.closest('form')
+        let loadingAnimation = form.querySelector('.lds-ellipsis')
+        let submitButtonText = form.querySelector('.submit-text')
+        const thanksText = thanksTexts[index]
+        const errorText = errorTexts[index]
+        const suggestionForm = suggestionForms[index]
+        const suggButton = suggButtons[index]
 
         if (form.checkValidity()) {
-          const loadingAnimation = document.querySelector('.lds-ellipsis')
-          const submitButtonText = document.getElementById('submit-text')
           submitButtonText.style.display = 'none'
           loadingAnimation.style.display = 'inline-block'
 
-          var formData = {
-            name: $('#add-name').val(),
-            title: $('#add-title').val(),
-            link: $('#add-link').val(),
-            //category: $('#category').val()
+          buttonSend.disabled = true
+          buttonSend.style.pointerEvents = 'none'
+          suggButtons.forEach(suggButton => {
+            suggButton.style.pointerEvents = 'none'
+          })
+
+          let formData = {
+            name: form.querySelector('#add-name').value,
+            title: form.querySelector('#add-title').value,
+            link: form.querySelector('#add-link').value,
+            category: form.querySelector('#category').value
           }
 
           $.ajax({
@@ -320,28 +325,33 @@ async function fetchData () {
             data: formData,
             dataType: 'json',
             success: function (response) {
-              // Handle the success response
               submitButtonText.style.display = 'block'
               loadingAnimation.style.display = 'none'
+
+              suggButton.style.pointerEvents = 'unset'
+
+              suggestionIsValid(suggestionForm, thanksText, form)
               console.log(response)
             },
             error: function (error) {
-              // Handle the error response
+              suggestionForm.classList.toggle('suggestion-form')
+              suggestionForm.style.display = 'none'
+
               submitButtonText.style.display = 'block'
               loadingAnimation.style.display = 'none'
+
+              suggButton.style.pointerEvents = 'none'
+
+              errorText.style.display = 'block'
+              setTimeout(() => {
+                errorText.style.opacity = 1
+              })
+
               console.error(error)
             }
           })
         } else {
-          // If the form is not valid, you can add your own handling logic here
-
-          errorMessage.style.display = 'block'
-          setTimeout(() => {
-            errorMessage.style.bottom = '0'
-            errorMessage.style.opacity = '1'
-          }, 10)
-
-          console.log('Form is not valid')
+          suggButton.style.pointerEvents = 'none'
         }
       })
     })

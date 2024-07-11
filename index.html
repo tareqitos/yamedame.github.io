@@ -215,14 +215,17 @@
                                     <p>+</p>
                                 </div>
                             </a>
-                            <p class="item-desc suggestion-text">Submit your recommendation/website!</p>
+                            <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
+                            <p class="item-desc thanks-text">Thank you! Your suggestion has been successfully sent and will be added after being reviewed!</p>
+                            <p class="item-desc error-text">Oops! An error has occured 😱 you can still send your suggestion <a href="mailto:social@tareqitos.com"><span class="sugg-mail">here</span></a> !</p>
                             <form class="suggestion-form beginners" id="myForm">
                                 <input type="hidden" name="_captcha" value="false">
-                                <input type="text" name="name" id="add-name" class="input" placeholder="nickname" maxlength="15" required>
-                                <input type="text" name="title" id="add-title" class="input" placeholder="title" maxlength="25" required>
-                                <input type="text" name="link" id="add-link" class="input" placeholder="link" maxlength="100" required>
-                                <button type="button" id="submit" class="submit">
-                                    <p id="submit-text">SEND</p>
+                                <input type="hidden" name="beginners" id="category" value="beginners">
+                                <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
+                                <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
+                                <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                                <button type="submit" id="submit" class="submit" disabled>
+                                    <p class="submit-text">SEND</p>
                                     <div class="lds-ellipsis">
                                         <div></div>
                                         <div></div>
@@ -337,12 +340,30 @@
                             </a>
                             <p class="item-desc">Exhaustive dictionary in Japanese</p>
                         </div>
-                        <div id="suggestion" class="item-container"><a>
-                                <div class="item-container-parent dictionaries">
-                                    <p>+</p>
-                                </div>
+                        <div id="suggestion" class="item-container"><a class="suggestion-button">
+                            <div class="item-container-parent dictionaries suggestion">
+                                <p>+</p>
+                            </div>
                             </a>
-                            <p class="item-desc">Submit your recommendation/website!</p>
+                            <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
+                            <p class="item-desc thanks-text">Thank you! Your suggestion has been successfully sent and will be added after being reviewed!</p>
+                            <p class="item-desc error-text">Oops! An error has occured 😱 you can still send your suggestion <a href="mailto:social@tareqitos.com"><span class="sugg-mail">here</span></a> !</p>
+                            <form class="suggestion-form dictionaries" id="myForm">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="dictionaries" id="category" value="dictionaries">
+                                <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
+                                <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
+                                <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                                <button type="submit" id="submit" class="submit" disabled>
+                                    <p class="submit-text">SEND</p>
+                                    <div class="lds-ellipsis">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -440,22 +461,31 @@
                             </a>
                             <p class="item-desc">All level grammar list with explanations</p>
                         </div>
-                        <div id="suggestion" class="item-container"><a>
-                                <div class="item-container-parent suggestion grammar">
-                                    <p>+</p>
+                        <div id="suggestion" class="item-container"><a class="suggestion-button">
+                            <div class="item-container-parent grammar suggestion">
+                                <p>+</p>
+                            </div>
+                        </a>
+                        <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
+                        <p class="item-desc thanks-text">Thank you! Your suggestion has been successfully sent and will be added after being reviewed!</p>
+                        <p class="item-desc error-text">Oops! An error has occured 😱 you can still send your suggestion <a href="mailto:social@tareqitos.com"><span class="sugg-mail">here</span></a> !</p>
+                        <form class="suggestion-form grammar" id="myForm">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="grammar" id="category" value="grammar">
+                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
+                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
+                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                            <button type="submit" id="submit" class="submit" disabled>
+                                <p class="submit-text">SEND</p>
+                                <div class="lds-ellipsis">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
                                 </div>
-                            </a>
-                            <!-- <p class="item-desc">Submit your recommendation/website!</p> -->
-                            <form class="suggestion-form grammar" id="myForm">
-                                <input type="hidden" name="_captcha" value="false">
-                                <input type="text" name="name" id="add-name" class="input" placeholder="nickname" maxlength="15" required>
-                                <input type="text" name="title" id="add-title" class="input" placeholder="title" maxlength="25" required>
-                                <input type="text" name="link" id="add-link" class="input" placeholder="link" maxlength="100" required>
-                                <button type="button" id="submit" class="submit">
-                                    <p id="submit-text">SEND</p>
-                                </button>
-                            </form>
-                        </div>
+                            </button>
+                        </form>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -600,18 +630,37 @@
                             </a>
                             <p class="item-desc">Test your vocabulary!</p>
                         </div>
-                        <div id="suggestion" class="item-container"><a>
-                                <div class="item-container-parent kanji">
-                                    <p>+</p>
+                        <div id="suggestion" class="item-container"><a class="suggestion-button">
+                            <div class="item-container-parent kanji suggestion">
+                                <p>+</p>
+                            </div>
+                        </a>
+                        <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
+                        <p class="item-desc thanks-text">Thank you! Your suggestion has been successfully sent and will be added after being reviewed!</p>
+                        <p class="item-desc error-text">Oops! An error has occured 😱 you can still send your suggestion <a href="mailto:social@tareqitos.com"><span class="sugg-mail">here</span></a> !</p>
+                        <form class="suggestion-form kanji" id="myForm">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="kanji" id="category" value="kanji">
+                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
+                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
+                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                            <button type="submit" id="submit" class="submit" disabled>
+                                <p class="submit-text">SEND</p>
+                                <div class="lds-ellipsis">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
                                 </div>
-                            </a>
-                            <p class="item-desc">Submit your recommendation/website!</p>
-                        </div>
+                            </button>
+                        </form>
+                    </div>
                     </div>
                 </div>
             </div>
             <div class="anchorage" id="media"></div>
         </section>
+        <!-- 
         <section class="section-media">
             <div class="collapse-media collapse-layout">
                 <button type="button" class="collapse-button anchor">
@@ -648,6 +697,7 @@
             </div>
             <div class="anchorage" id="reading"></div>
         </section>
+        -->
         <section class="section-reading">
             <div class="collapse-reading collapse-layout">
                 <button type="button" class="collapse-button anchor">
@@ -694,13 +744,31 @@
                             <p class="item-desc">Yomu Yomu offers easy word look up and sentence translations to help
                                 learners understand the meaning of Japanese phrases as they read</p>
                         </div>
-                        <div id="suggestion" class="item-container"><a>
-                                <div class="item-container-parent reading">
-                                    <p>+</p>
+                        <div id="suggestion" class="item-container"><a class="suggestion-button">
+                            <div class="item-container-parent reading suggestion">
+                                <p>+</p>
+                            </div>
+                        </a>
+                        <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
+                        <p class="item-desc thanks-text">Thank you! Your suggestion has been successfully sent and will be added after being reviewed!</p>
+                        <p class="item-desc error-text">Oops! An error has occured 😱 you can still send your suggestion <a href="mailto:social@tareqitos.com"><span class="sugg-mail">here</span></a> !</p>
+                        <form class="suggestion-form reading" id="myForm">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="reading" id="category" value="reading">
+                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
+                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
+                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                            <button type="submit" id="submit" class="submit" disabled>
+                                <p class="submit-text">SEND</p>
+                                <div class="lds-ellipsis">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
                                 </div>
-                            </a>
-                            <p class="item-desc">Submit your recommendation/website!</p>
-                        </div>
+                            </button>
+                        </form>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -807,13 +875,31 @@
                             </a>
                             <p class="item-desc">Vocabulary about pain. Useful when going to the doctor</p>
                         </div>
-                        <div id="suggestion" class="item-container"><a>
-                                <div class="item-container-parent misc">
-                                    <p>+</p>
+                        <div id="suggestion" class="item-container"><a class="suggestion-button">
+                            <div class="item-container-parent misc suggestion">
+                                <p>+</p>
+                            </div>
+                        </a>
+                        <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
+                        <p class="item-desc thanks-text">Thank you! Your suggestion has been successfully sent and will be added after being reviewed!</p>
+                        <p class="item-desc error-text">Oops! An error has occured 😱 you can still send your suggestion <a href="mailto:social@tareqitos.com"><span class="sugg-mail">here</span></a> !</p>
+                        <form class="suggestion-form misc" id="myForm">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="misc" id="category" value="misc">
+                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
+                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
+                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                            <button type="submit" id="submit" class="submit" disabled>
+                                <p class="submit-text">SEND</p>
+                                <div class="lds-ellipsis">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
                                 </div>
-                            </a>
-                            <p class="item-desc">Submit your recommendation/website!</p>
-                        </div>
+                            </button>
+                        </form>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -944,13 +1030,31 @@
                                 <i class="fa-brands fa-windows" aria-hidden="true"></i>
                             </div>
                         </div>
-                        <div class="item-container"><a>
-                                <div id="suggestion" class="item-container-parent software">
-                                    <p class="item-title" id="title-suggestion">+</p>
+                        <div id="suggestion" class="item-container"><a class="suggestion-button">
+                            <div class="item-container-parent software suggestion">
+                                <p>+</p>
+                            </div>
+                        </a>
+                        <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
+                        <p class="item-desc thanks-text">Thank you! Your suggestion has been successfully sent and will be added after being reviewed!</p>
+                        <p class="item-desc error-text">Oops! An error has occured 😱 you can still send your suggestion <a href="mailto:social@tareqitos.com"><span class="sugg-mail">here</span></a> !</p>
+                        <form class="suggestion-form software" id="myForm">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="software" id="category" value="software">
+                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
+                            <input type="text" name="title-category-software" id="add-title" class="input" placeholder="website name" maxlength="25" required>
+                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                            <button type="submit" id="submit" class="submit" disabled>
+                                <p class="submit-text">SEND</p>
+                                <div class="lds-ellipsis">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
                                 </div>
-                            </a>
-                            <p id="desc-suggestion" class="item-desc">Submit your recommendation/website!</p>
-                        </div>
+                            </button>
+                        </form>
+                    </div>
                     </div>
                 </div>
             </div>

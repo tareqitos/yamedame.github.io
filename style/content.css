@@ -50,7 +50,7 @@
 
 .item-container-parent,
 .submit {
-    transform: scale(1.05);
+    transform: scale(1);
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
@@ -97,10 +97,24 @@
 
 /* SUGGESTION FORM */
 
+[required] {
+    border: 2px dotted orange;
+ }
+
+.suggestion-form {
+    display: none;
+    opacity: 0;
+}
+
+.suggestion-text,
+.suggestion-form {
+    transition: all .2s;
+}
+
 .input,
 .submit {
-    border-radius: 10px;
-    height: 40px;
+    border-radius: 5px;
+    height: 36px;
     border: var(--input-border);
 }
 

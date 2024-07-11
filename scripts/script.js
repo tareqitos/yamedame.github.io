@@ -190,7 +190,40 @@ async function fetchData () {
     updateDisplayedItems()
 
     ////////////////////////////////////////////////// SUGGESTION FORM //////////////////////////////////////////////////
-/*
+
+    const suggestionForm = document.querySelector('.suggestion-form');
+    const suggestionText = document.querySelector('.suggestion-text');
+    const suggButton = document.querySelector('.suggestion-button');
+
+    suggButton.addEventListener('click', () => {
+      //suggestionForm.classList.toggle('suggestion-form--active')
+
+     /* if (suggestionForm.classList.contains('suggestion-form--active')) {
+        //suggestionText.style.opacity = 0;
+        setTimeout(() => {
+          suggestionText.style.display = 'none';
+          suggestionForm.style.display = 'flex';
+          suggestionForm.style.gap = 5 + 'px';
+          setTimeout(() => {
+            suggestionForm.style.opacity = 1;
+          }, 50)
+        }, 50)
+        
+        
+      } else {
+        suggestionForm.classList.toggle('suggestion-form')
+        setTimeout(() => {
+          suggestionForm.style.display = 'none';
+          suggestionText.style.display = 'block';
+          setTimeout(() => {
+            suggestionText.style.opacity = 1;
+          }, 50)
+        }, 50)
+      }*/
+
+    }) 
+
+    /*
     const suggestionForm = document.querySelector('.suggestion-box')
     const suggestionBackground = document.querySelector(
       '.suggestion-background'
@@ -278,7 +311,7 @@ async function fetchData () {
             name: $('#add-name').val(),
             title: $('#add-title').val(),
             link: $('#add-link').val(),
-            category: $('#category').val()
+            //category: $('#category').val()
           }
 
           $.ajax({
@@ -288,14 +321,12 @@ async function fetchData () {
             dataType: 'json',
             success: function (response) {
               // Handle the success response
-              suggestionIsValid()
               submitButtonText.style.display = 'block'
               loadingAnimation.style.display = 'none'
               console.log(response)
             },
             error: function (error) {
               // Handle the error response
-              suggestionIsNotValid()
               submitButtonText.style.display = 'block'
               loadingAnimation.style.display = 'none'
               console.error(error)

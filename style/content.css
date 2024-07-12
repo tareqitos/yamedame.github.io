@@ -50,11 +50,35 @@ section {
 .item-container-parent:hover,
 .submit:hover {
   background-position: 100% 0;
+  letter-spacing: 1.5px;
   transform: scale(1.1);
 }
 
 .item-container-parent:focus {
   outline: none;
+}
+
+i {
+  padding-left: 6px;
+}
+
+i:first-child {
+  padding-left: 10px;
+}
+
+.fa-windows {
+  color:  #73abf0;
+  text-shadow: 0 0px 10px  rgba(10, 105, 229, .4);
+}
+
+.fa-apple {
+  color:  #e9cb93;
+  text-shadow: 0 0px 10px  rgba(229, 127, 10, 0.4);
+}
+
+.fa-android {
+  color:  #73f088;
+  text-shadow: 0 0px 10px  rgba(54, 229, 10, 0.4);
 }
 
 /* SUGGESTION FORM */
@@ -185,10 +209,60 @@ button.submit {
 
 /* ================================================== READING ================================================= */
 
+.item-container-parent.reading {
+  background-image: linear-gradient(to right, #d68844 0%, #F2C94C 36%, #d89255 65%, #ce8320 100%);
+  box-shadow: 0 4px 15px 0 rgba(229, 171, 10, 0.425);
+}
+
+.reading.suggestion,
+.reading button.submit {
+  background-image: linear-gradient(to right, rgb(190, 190, 190) 0%, rgb(178, 178, 191) 35%, #d89255 65%, #ce8320 100%);
+}
+
+.reading.suggestion:hover,
+.reading button.submit:hover {
+  box-shadow: 0 4px 15px 0 rgba(229, 178, 10, 0.425);
+}
+
+/* ================================================== MISC ================================================= */
+
+.item-container-parent.misc {
+  background-image: linear-gradient(to right, #a327ce 0, #c865ca 36%, #d871b9 65%, #ad44af 100%);
+  box-shadow: 0 4px 15px 0 rgba(203, 10, 229, 0.425);
+}
+
+.misc.suggestion,
+.misc button.submit {
+  background-image: linear-gradient(to right, rgb(190, 190, 190) 0%, rgb(178, 178, 191) 35%, #d871b9 65%, #ad44af 100%);
+}
+
+.misc.suggestion:hover,
+.misc button.submit:hover {
+  box-shadow: 0 4px 15px 0 rgba(203, 10, 229, 0.425);
+}
+
+/* ================================================== SOFTWARE ================================================= */
+
+.item-container-parent.software {
+  background-image: linear-gradient(to right, #2c7873 0, #00ffdda6 36%, #419dad 65%, #00ffdda6 100%);
+  box-shadow: 0 4px 15px 0 rgba(44, 120, 115, 0.425);
+}
+
+.software.suggestion,
+.software button.submit {
+  background-image: linear-gradient(to right, rgb(190, 190, 190) 0%, rgb(178, 178, 191) 35%, #419dad 65%, #00ffdda6 100%);
+}
+
+.software.suggestion:hover,
+.software button.submit:hover {
+  box-shadow: 0 4px 15px 0 rgba(44, 120, 115, 0.425);
+}
+
+/* ================================================== SUGGESTION ================================================= */
+
 .item-container-parent.suggestion {
   box-shadow: 0 4px 15px 0 rgba(56, 56, 56, 0.4);
 }
-
 
 /* ===================== MEDIA ===================== */
 

@@ -325,8 +325,7 @@ async function fetchData () {
         
         suggButton.style.pointerEvents = 'none'
 
-        let formData = new FormData(form);
-
+        let formData = Object.fromEntries(new FormData(form))
         $.ajax({
           url: 'https://formsubmit.co/ajax/social@tareqitos.com',
           method: 'POST',

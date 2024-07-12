@@ -302,15 +302,16 @@ async function fetchData () {
         const suggestionForm = suggestionForms[index]
         const suggButton = suggButtons[index]
 
+        console.log(suggButton)
+
         if (form.checkValidity()) {
           submitButtonText.style.display = 'none'
           loadingAnimation.style.display = 'inline-block'
 
           buttonSend.disabled = true
           buttonSend.style.pointerEvents = 'none'
-          suggButtons.forEach(suggButton => {
-            suggButton.style.pointerEvents = 'none'
-          })
+          
+          suggButton.style.pointerEvents = 'none'
 
           let formData = {
             name: form.querySelector('#add-name').value,
@@ -324,6 +325,7 @@ async function fetchData () {
             method: 'POST',
             data: formData,
             dataType: 'json',
+
             success: function (response) {
               submitButtonText.style.display = 'block'
               loadingAnimation.style.display = 'none'
@@ -333,6 +335,7 @@ async function fetchData () {
               suggestionIsValid(suggestionForm, thanksText, form)
               console.log(response)
             },
+
             error: function (error) {
               suggestionForm.classList.toggle('suggestion-form')
               suggestionForm.style.display = 'none'
@@ -340,7 +343,7 @@ async function fetchData () {
               submitButtonText.style.display = 'block'
               loadingAnimation.style.display = 'none'
 
-              suggButton.style.pointerEvents = 'none'
+              suggButton.style.pointerEvents = 'unset'
 
               errorText.style.display = 'block'
               setTimeout(() => {
@@ -351,7 +354,7 @@ async function fetchData () {
             }
           })
         } else {
-          suggButton.style.pointerEvents = 'none'
+          suggButton.style.pointerEvents = 'unset'
         }
       })
     })

@@ -37,6 +37,7 @@
 
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
     <title>No excuses not to learn Japanese</title>
 
@@ -49,7 +50,7 @@
             <input type="hidden" name="_captcha" value="false">
             <input type="text" name="name" id="add-name" class="input" placeholder="name (optional)" maxlength="50">
             <input type="text" name="title" id="add-title" class="input" placeholder="title" maxlength="50" required>
-            <input type="text" name="link" id="add-link" class="input" placeholder="link" maxlength="100" required>
+            <input type="text" name="link" id="add-link" class="input" placeholder="link" maxlength="100" autocomplete="off" required>
             <select name="category" id="category">
                 <option value="dictionaries">beginners</option>
                 <option value="dictionaries">dictionaries</option>
@@ -212,7 +213,7 @@
                         </div>
                         <div id="suggestion" class="item-container"><a class="suggestion-button">
                                 <div class="item-container-parent beginners suggestion">
-                                    <p>+</p>
+                                    <p><i class="fa-regular fa-square-plus"></i></p>
                                 </div>
                             </a>
                             <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
@@ -221,9 +222,9 @@
                             <form class="suggestion-form beginners" id="myForm">
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="hidden" name="beginners" id="category" value="beginners">
-                                <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
-                                <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
-                                <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                                <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" autocomplete="off" required>
+                                <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" autocomplete="off" required>
+                                <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" autocomplete="off" required>
                                 <button type="submit" id="submit" class="submit" disabled>
                                     <p class="submit-text">SEND</p>
                                     <div class="lds-ellipsis">
@@ -342,7 +343,7 @@
                         </div>
                         <div id="suggestion" class="item-container"><a class="suggestion-button">
                             <div class="item-container-parent dictionaries suggestion">
-                                <p>+</p>
+                                <p><i class="fa-regular fa-square-plus"></i></p>
                             </div>
                             </a>
                             <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
@@ -351,9 +352,9 @@
                             <form class="suggestion-form dictionaries" id="myForm">
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="hidden" name="dictionaries" id="category" value="dictionaries">
-                                <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
-                                <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
-                                <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                                <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" autocomplete="off" required>
+                                <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" autocomplete="off" required>
+                                <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" autocomplete="off" required>
                                 <button type="submit" id="submit" class="submit" disabled>
                                     <p class="submit-text">SEND</p>
                                     <div class="lds-ellipsis">
@@ -463,7 +464,7 @@
                         </div>
                         <div id="suggestion" class="item-container"><a class="suggestion-button">
                             <div class="item-container-parent grammar suggestion">
-                                <p>+</p>
+                                <p><i class="fa-regular fa-square-plus"></i></p>
                             </div>
                         </a>
                         <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
@@ -472,9 +473,9 @@
                         <form class="suggestion-form grammar" id="myForm">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="grammar" id="category" value="grammar">
-                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
-                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
-                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" autocomplete="off" required>
+                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" autocomplete="off" required>
+                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" autocomplete="off" required>
                             <button type="submit" id="submit" class="submit" disabled>
                                 <p class="submit-text">SEND</p>
                                 <div class="lds-ellipsis">
@@ -632,7 +633,7 @@
                         </div>
                         <div id="suggestion" class="item-container"><a class="suggestion-button">
                             <div class="item-container-parent kanji suggestion">
-                                <p>+</p>
+                                <p><i class="fa-regular fa-square-plus"></i></p>
                             </div>
                         </a>
                         <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
@@ -641,9 +642,9 @@
                         <form class="suggestion-form kanji" id="myForm">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="kanji" id="category" value="kanji">
-                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
-                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
-                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" autocomplete="off" required>
+                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" autocomplete="off" required>
+                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" autocomplete="off" required>
                             <button type="submit" id="submit" class="submit" disabled>
                                 <p class="submit-text">SEND</p>
                                 <div class="lds-ellipsis">
@@ -746,7 +747,7 @@
                         </div>
                         <div id="suggestion" class="item-container"><a class="suggestion-button">
                             <div class="item-container-parent reading suggestion">
-                                <p>+</p>
+                                <p><i class="fa-regular fa-square-plus"></i></p>
                             </div>
                         </a>
                         <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
@@ -755,9 +756,9 @@
                         <form class="suggestion-form reading" id="myForm">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="reading" id="category" value="reading">
-                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
-                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
-                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" autocomplete="off" required>
+                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" autocomplete="off" required>
+                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" autocomplete="off" required>
                             <button type="submit" id="submit" class="submit" disabled>
                                 <p class="submit-text">SEND</p>
                                 <div class="lds-ellipsis">
@@ -877,7 +878,7 @@
                         </div>
                         <div id="suggestion" class="item-container"><a class="suggestion-button">
                             <div class="item-container-parent misc suggestion">
-                                <p>+</p>
+                                <p><i class="fa-regular fa-square-plus"></i></p>
                             </div>
                         </a>
                         <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
@@ -886,9 +887,9 @@
                         <form class="suggestion-form misc" id="myForm">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="misc" id="category" value="misc">
-                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
-                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" required>
-                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" autocomplete="off" required>
+                            <input type="text" name="title" id="add-title" class="input" placeholder="website name" maxlength="25" autocomplete="off" required>
+                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" autocomplete="off" required>
                             <button type="submit" id="submit" class="submit" disabled>
                                 <p class="submit-text">SEND</p>
                                 <div class="lds-ellipsis">
@@ -1032,7 +1033,7 @@
                         </div>
                         <div id="suggestion" class="item-container"><a class="suggestion-button">
                             <div class="item-container-parent software suggestion">
-                                <p>+</p>
+                                <p><i class="fa-regular fa-square-plus"></i></p>
                             </div>
                         </a>
                         <p class="item-desc suggestion-text">Share your recommendation or website with other learners!</p>
@@ -1041,9 +1042,9 @@
                         <form class="suggestion-form software" id="myForm">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="software" id="category" value="software">
-                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" required>
-                            <input type="text" name="title-category-software" id="add-title" class="input" placeholder="website name" maxlength="25" required>
-                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" required>
+                            <input type="text" name="name" id="add-name" class="input" placeholder="name" maxlength="15" autocomplete="off" required>
+                            <input type="text" name="title-category-software" id="add-title" class="input" placeholder="website name" maxlength="25" autocomplete="off" required>
+                            <input type="url" name="link" id="add-link" class="input" pattern="https?://.+" placeholder="link (https://...)" maxlength="100" autocomplete="off" required>
                             <button type="submit" id="submit" class="submit" disabled>
                                 <p class="submit-text">SEND</p>
                                 <div class="lds-ellipsis">

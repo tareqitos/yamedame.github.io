@@ -302,60 +302,69 @@ async function fetchData () {
         const suggestionForm = suggestionForms[index]
         const suggButton = suggButtons[index]
 
-        console.log(suggButton)
+        console.log(suggButton);
 
-        if (form.checkValidity()) {
-          submitButtonText.style.display = 'none'
-          loadingAnimation.style.display = 'inline-block'
-
-          buttonSend.disabled = true
-          buttonSend.style.pointerEvents = 'none'
-          
-          suggButton.style.pointerEvents = 'none'
-
-          let formData = {
-            name: form.querySelector('#add-name').value,
-            title: form.querySelector('#add-title').value,
-            link: form.querySelector('#add-link').value,
-            category: form.querySelector('#category').value
-          }
-
-          $.ajax({
-            url: 'https://formsubmit.co/ajax/social@tareqitos.com',
-            method: 'POST',
-            data: formData,
-            dataType: 'json',
-
-            success: function (response) {
-              submitButtonText.style.display = 'block'
-              loadingAnimation.style.display = 'none'
-
-              suggButton.style.pointerEvents = 'unset'
-
-              suggestionIsValid(suggestionForm, thanksText, form)
-              console.log(response)
-            },
-
-            error: function (error) {
-              suggestionForm.classList.toggle('suggestion-form')
-              suggestionForm.style.display = 'none'
-
-              submitButtonText.style.display = 'block'
-              loadingAnimation.style.display = 'none'
-
-              suggButton.style.pointerEvents = 'unset'
-
-              errorText.style.display = 'block'
-              setTimeout(() => {
-                errorText.style.opacity = 1
-              })
-
-              console.error(error)
-            }
-          })
-        } else {
-          suggButton.style.pointerEvents = 'unset'
+        if (!form.checkValidity()) {
+          suggButton.style.pointerEvents = 'unset';
+          return;
         }
+
+
+        form.classList.add('sending');
+        /*
+          Use the "sending" class that will be added to the form
+          to setup the CSS files accordingly instead of having
+          the style changes below as JS scripts.
+        */
+
+        submitButtonText.style.display = 'none'
+        loadingAnimation.style.display = 'inline-block'
+
+        buttonSend.disabled = true
+        buttonSend.style.pointerEvents = 'none'
+        
+        suggButton.style.pointerEvents = 'none'
+
+        let formData = new FormData(form);
+
+        $.ajax({
+          url: 'https://formsubmit.co/ajax/social@tareqitos.com',
+          method: 'POST',
+          data: formData,
+          dataType: 'json',
+
+          success: function (response) {
+            submitButtonText.style.display = 'block'
+            loadingAnimation.style.display = 'none'
+
+            suggButton.style.pointerEvents = 'unset'
+
+            suggestionIsValid(suggestionForm, thanksText, form)
+            console.log(response)
+
+            form.classList.remove('sending');
+          },
+
+          error: function (error) {
+            suggestionForm.classList.toggle('suggestion-form')
+            suggestionForm.style.display = 'none'
+
+            submitButtonText.style.display = 'block'
+            loadingAnimation.style.display = 'none'
+
+            suggButton.style.pointerEvents = 'unset'
+
+            errorText.style.display = 'block'
+
+            form.classList.remove('sending');
+
+            setTimeout(() => {
+              errorText.style.opacity = 1
+            })
+
+            console.error(error)
+          }
+        })
       })
     })
   } catch (erreur) {

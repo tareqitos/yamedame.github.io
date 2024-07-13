@@ -4,10 +4,11 @@ async function fetchData () {
     const links = await reponse.json()
     console.log(links)
 
- 
+ /*
     const mediaArray = links.media
 
     sortByName(mediaArray)
+    
     createElement(mediaArray, 'media')
 
     function createElement (arrayElement, sectionToQuery) {
@@ -49,7 +50,7 @@ async function fetchData () {
         })
         createImageTag(array, itemContainerParent)
       }
-    }
+    } 
 
     ////////////////////////////////////////////////// SORT ELEMENTS //////////////////////////////////////////////////
 
@@ -121,6 +122,7 @@ async function fetchData () {
       itemContainerParent.appendChild(img)
     }
 
+  
     ////////////////////////////////////////////////// UPDATE ELEMENTS IN MEDIA //////////////////////////////////////////////////
 
     function updateDisplayedItems (category) {
@@ -189,7 +191,7 @@ async function fetchData () {
 
     // Initialize en affichant tous les éléments initialement
     updateDisplayedItems()
-
+  */
 
     ////////////////////////////////////////////////// SUGGESTION FORM //////////////////////////////////////////////////
 

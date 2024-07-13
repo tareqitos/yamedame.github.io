@@ -259,6 +259,10 @@ function navPositionBottom () {
 ////////////////////////////////////////////////// COLLAPSE CATEGORIES //////////////////////////////////////////////////
 
 const collapseButton = document.querySelectorAll('.collapse-button')
+const collapseMedia = document.querySelector('.collapse-media .collapse-content')
+const collapsePodcast = document.querySelector('.collapse-podcast .collapse-content')
+const collapseSocial = document.querySelector('.collapse-social .collapse-content')
+const collapseVideo = document.querySelector('.collapse-video .collapse-content')
 
 collapseCategories()
 collapseAll()
@@ -312,11 +316,15 @@ function collapseCategories () {
   })
 }
 function roll (collapseContent) {
+
   collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
   collapseContent.style.opacity = 1
   collapseContent.style.marginTop = 10 + 'px'
   collapseContent.style.marginBottom = 30 + 'px'
-  collapseContent.style.overflowY = 'visible'
+  collapseContent.style.overflowY = 'visible'  
+
+  collapseMedia.style.maxHeight = collapseMedia.scrollHeight + collapseVideo.scrollHeight + collapsePodcast.scrollHeight + collapseSocial.scrollHeight + 'px'
+
 
   if (collapseContent.style.maxHeight !== 0) {
     window.addEventListener('resize', () => {
@@ -324,6 +332,7 @@ function roll (collapseContent) {
     })
   }
 }
+
 function collapse (collapseContent) {
   collapseContent.style.maxHeight = 0
   collapseContent.style.opacity = 0
@@ -334,7 +343,9 @@ function collapse (collapseContent) {
   window.addEventListener('resize', () => {
     collapseContent.style.maxHeight = 0
   })
+  
 }
+
 
 ////////////////////////////////////////////////// BACK TO TOP BUTTON //////////////////////////////////////////////////
 

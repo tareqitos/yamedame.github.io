@@ -4,7 +4,7 @@ async function fetchData () {
     const links = await reponse.json()
     console.log(links)
 
-    /*
+ 
     const mediaArray = links.media
 
     sortByName(mediaArray)
@@ -190,7 +190,6 @@ async function fetchData () {
     // Initialize en affichant tous les éléments initialement
     updateDisplayedItems()
 
-    */
 
     ////////////////////////////////////////////////// SUGGESTION FORM //////////////////////////////////////////////////
 

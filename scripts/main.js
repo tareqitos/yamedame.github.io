@@ -222,6 +222,8 @@ function closeNav () {
   }, 50)
 }
 
+/*
+
 navPositionBottom()
 function navPositionBottom () {
   const nav = document.getElementById('nav-sticky')
@@ -251,6 +253,8 @@ function navPositionBottom () {
     nav.style.bottom = null
   }
 }
+
+*/
 
 ////////////////////////////////////////////////// COLLAPSE CATEGORIES //////////////////////////////////////////////////
 

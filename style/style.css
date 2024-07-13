@@ -17,7 +17,7 @@
   --input-bg-color: #ffffff;
   --input-border: 1.5px solid #979797;
   --input-category-color: #9fa0a9;
-  --category-bg-color: rgba(98, 140, 193, 0.11);
+  --category-bg-color: rgb(238, 242, 248);
   --nav-bg-color: rgba(255, 255, 255, .8);
   --about-text-color: #dee7f4;
   --suggestion-bg-opacity: .3;
@@ -70,6 +70,7 @@ body {
 }
 
 main {
+  margin-top: 50px;
   margin-bottom: 30px;
 }
 
@@ -96,18 +97,18 @@ main {
   0% {
       opacity: 0;
       transform: scale(1) translate(0, 0);
-      text-shadow: 0 0 8px #fff;
+      text-shadow: 0 0 8px var(--text);
   }
   50% {
       opacity: .3;
-      color: #fff;
+      color: var(--text);
       text-shadow: none;
   }
   100% {
       opacity: 0;
       transform: scale(var(--scale-end)) translate(var(--translate-x-end), var(--translate-y-end));
       color: transparent;
-      text-shadow: 0 0 8px #fff;
+      text-shadow: 0 0 8px var(--text);
   }
 }
 
@@ -350,29 +351,6 @@ header {
   transform: scale(1.5);
 }
 
-body .changelog-popup {
-  margin-top: auto;
-}
-
-.changelog-popup {
-  display: block;
-  position: relative;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto auto 40px auto;
-  width: 500px;
-  padding: 20px 30px;
-  z-index: 4;
-  opacity: 1;
-  border-radius: 10px;
-  background-color: var(--nav-bg-color);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: var(--btn-shadow);
-  transition: opacity .3s ease;
-}
-
 .last-updated {
   text-align: center;
   right: 0;
@@ -390,10 +368,34 @@ body .changelog-popup {
 }
 
 .pre-footer {
+  margin-top: auto;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
+  gap: 20px;
+  margin: auto auto 40px auto;
+}
+
+.pre-footer-element {
+  padding: 10px 20px;
+  opacity: 1;
+  border-radius: 10px;
+  background-color: var(--nav-bg-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--btn-shadow);
+}
+
+.pre-footer-link a {
+  color: var(--text);
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.pre-footer-link {
+  transition: all .2s;
+}
+
+.pre-footer-link:hover {
+  transform: scale(1.1);
 }
 
 /* ================================================= COLLAPSE ================================================= */
@@ -409,7 +411,7 @@ body .changelog-popup {
   color: var(--text);
 
   margin-top: 5px;
-  background: #191b1e;
+  background: var(--category-bg-color);
   padding: 6px 15px;
   border-radius: 10px;
 }

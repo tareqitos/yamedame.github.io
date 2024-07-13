@@ -26,7 +26,7 @@
   --fa-apple: rgba(0, 0, 0, .4);
 }
 
-#body {
+body {
   color: var(--text);
   background-color: var(--bg);
   display: flex;
@@ -44,7 +44,7 @@
   --input-bg-color: #303245;
   --input-border: 0;
   --input-category-color: #979797;
-  --category-bg-color: rgba(0, 0, 0, 0.1);
+  --category-bg-color: rgb(25, 27, 30);
   --nav-bg-color: rgba(23, 25, 28, .8);
   --about-text-color: #1c1e22;
   --suggestion-bg-opacity: .7;
@@ -67,6 +67,48 @@
 #top {
   position: absolute;
   top: 0;
+}
+
+main {
+  margin-bottom: 30px;
+}
+
+/* ================================================= BACKGROUND ================================================= */
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.character {
+  position: absolute;
+  color: transparent;
+  font-size: 2rem;
+  opacity: 0;
+  animation: fadeZoom 10s infinite;
+}
+
+@keyframes fadeZoom {
+  0% {
+      opacity: 0;
+      transform: scale(1) translate(0, 0);
+      text-shadow: 0 0 8px #fff;
+  }
+  50% {
+      opacity: .3;
+      color: #fff;
+      text-shadow: none;
+  }
+  100% {
+      opacity: 0;
+      transform: scale(var(--scale-end)) translate(var(--translate-x-end), var(--translate-y-end));
+      color: transparent;
+      text-shadow: 0 0 8px #fff;
+  }
 }
 
 /* ================================================= HEADER ================================================= */
@@ -308,18 +350,21 @@ header {
   transform: scale(1.5);
 }
 
+body .changelog-popup {
+  margin-top: auto;
+}
+
 .changelog-popup {
-  display: none;
-  position: absolute;
+  display: block;
+  position: relative;
   left: 0;
   right: 0;
-  bottom: 120px;
-  margin-left: auto;
-  margin-right: auto;
+  bottom: 0;
+  margin: auto auto 40px auto;
   width: 500px;
   padding: 20px 30px;
   z-index: 4;
-  opacity: 0;
+  opacity: 1;
   border-radius: 10px;
   background-color: var(--nav-bg-color);
   backdrop-filter: blur(10px);
@@ -362,6 +407,11 @@ header {
   cursor: pointer;
   background: none;
   color: var(--text);
+
+  margin-top: 5px;
+  background: #191b1e;
+  padding: 6px 15px;
+  border-radius: 10px;
 }
 
 .collapse-button::after {
@@ -371,7 +421,7 @@ header {
   width: 18px;
   height: 18px;
   position: relative;
-  top: 10px;
+  top: 13px;
   left: 5px;
   float: right;
   filter: var(--mail-color);
@@ -397,6 +447,28 @@ header {
 .collapse-layout {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.collapse-beginners .collapse-button {
+  border-bottom: solid 2px rgb(232, 59, 42);
+}
+.collapse-dictionaries .collapse-button {
+  border-bottom: solid 2px #22ae5a
+}
+.collapse-grammar .collapse-button {
+  border-bottom: solid 2px #e95e1c
+}
+.collapse-kanji .collapse-button {
+  border-bottom: solid 2px #426bfe
+}
+.collapse-reading .collapse-button {
+  border-bottom: solid 2px #cf8424
+}
+.collapse-misc .collapse-button {
+  border-bottom: solid 2px #b047b0
+}
+.collapse-software .collapse-button {
+  border-bottom: solid 2px #0dae9c
 }
 
 /* .suggestion-box {

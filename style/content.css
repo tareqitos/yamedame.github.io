@@ -58,12 +58,8 @@ section {
   outline: none;
 }
 
-i {
+.fa-brands {
   padding-left: 6px;
-}
-
-i:first-child {
-  padding-left: 10px;
 }
 
 .fa-windows {

@@ -52,15 +52,15 @@
         <h1 class="title-acronym">yame dame</h1>
         <p>No excuses not to learn Japanese</p>
     </header>
-    <button class="button" for="theme-switch" id="theme-logo">暗</button>
     <button id="back-to-top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
     <div class="nav-sticky" id="nav-sticky">
         <div class="expand-collapse">
-            <div class="roll-all" title="Collapse all categories"><img class="img-coll" src="images/collapse.png"></div>
-            <div class="collapse-all" title="Expand all categories"><img class="img-roll" src="images/roll.png"></div>
+            <div class="roll-all" title="Collapse all categories"><i class="fa-solid fa-compress"></i></div>
+            <div class="collapse-all" title="Expand all categories"><i class="fa-solid fa-expand"></i></div>
+            <button class="button" for="theme-switch" id="theme-logo">暗</button>
         </div>
         <!--
         <div class="open-btn" id="open-btn">
@@ -103,6 +103,8 @@
         -->
     </div>
     <div class="anchorage" id="beginners"></div>
+    <div class="description-box">
+    </div>
 
     <main id="main">
         <div class="wrap-section">
@@ -654,10 +656,10 @@
                 </div>
                 <div class="anchorage" id="media"></div>
             </section>
-
+            
             <section class="section-media">
                 <div class="collapse-media collapse-layout">
-                    <button type="button" class="collapse-button anchor">
+                    <button type="button" class="collapse-button collapse-media-button anchor">
                         media
                     </button>
                     <div class="collapse-content collapse-media-content">
@@ -675,14 +677,15 @@
                             </button>
                             <div class="collapse-content">
                                 <div class="section-media-items section-list">
-
-                                    <div class="media-container"><a
-                                            href="https://www.youtube.com/@ArchipelDocumentaries" target="_blank">
-                                            <div class="item-container-parent media"><img class="thumbnail-m10"
-                                                    src="https://yt3.googleusercontent.com/ytc/AGIKgqMLg4N2y4myn5RqQZhrpCtl80Uis-NVNgUk8qMBSw=s176-c-k-c0x00ffffff-no-rj">
+                                    <div class="media-container">
+                                        
+                                        <a href="https://www.youtube.com/@ArchipelDocumentaries" target="_blank">
+                                            <div class="item-container-parent media">
+                                                <img class="thumbnail-m10" src="https://yt3.googleusercontent.com/ytc/AGIKgqMLg4N2y4myn5RqQZhrpCtl80Uis-NVNgUk8qMBSw=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>Archipel</p>
+                                        <p><i class="fa-brands fa-youtube"></i>Archipel</p>
+                                        <p class="media-item-desc">Documentaries about Japanese artists and creators</p>
 
                                     </div>
                                     <div class="media-container"><a href="https://www.youtube.com/@Dogen"
@@ -691,8 +694,8 @@
                                                     src="https://yt3.googleusercontent.com/2H0nF7hyTRv_tnN-uMAtX_PJyT2q7m1YRunz7nMtyu31GXTbZu4Q9PiJ3f--BawmD2U41b55pQ=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>Dogen</p>
-
+                                        <p><i class="fa-brands fa-youtube"></i>Dogen</p>
+                                        <p class="media-item-desc">Japanese teacher</p>
                                     </div>
                                     <div class="media-container"><a href="https://www.youtube.com/@JapaneseAmmowithMisa"
                                             target="_blank">
@@ -700,7 +703,8 @@
                                                     src="https://yt3.googleusercontent.com/ww8nrZ4SohjHcYr9nKXvU96PfAO-4U1rlpzGUKmnu-xkH8JZqjBeEQ6ogB5yUau3zNzY3Wejqo8=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>Japanese Ammo with Misa</p>
+                                        <p><i class="fa-brands fa-youtube"></i>Japanese Ammo with Misa</p>
+                                        <p class="media-item-desc">Learn Japanese with Misa through videos about many different topics</p>
 
                                     </div>
                                     <div class="media-container"><a
@@ -710,7 +714,8 @@
                                                     src="https://yt3.ggpht.com/yti/AHyvSCCiHqsHpNibJ6I1tFsBXnEF5jRZQZfj0_fexFNVVQ=s108-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>Japanese slang and idioms 101</p>
+                                        <p><i class="fa-brands fa-youtube"></i>Japanese slang and idioms 101</p>
+                                        <p class="media-item-desc">A channel to learn Japanese slang and idioms through watching skits</p>
 
                                     </div>
                                     <div class="media-container"><a href="https://www.youtube.com/@meshclass"
@@ -719,7 +724,8 @@
                                                     src="https://yt3.googleusercontent.com/d3oavNBiI2I9Ha2eUIOoUVLxe2ari9DHUHH-J_wILEwT01rs17tpmznVN6yhKuLfyWk5yJbjDA=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>Meshclass 日本語</p>
+                                        <p><i class="fa-brands fa-youtube"></i>Meshclass 日本語</p>
+                                        <p class="media-item-desc">Channel teachning mostly Japanese grammar</p>
 
                                     </div>
                                     <div class="media-container"><a href="https://www.youtube.com/@nihongonomori2013"
@@ -728,7 +734,8 @@
                                                     src="https://yt3.googleusercontent.com/OwiBlQvGLr3AjwETXWQG0yjmZab0eR41dhTnaXJaV8h5IzQMzzwfbf5iLX9FulOZxP96Opc0CA=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>Nihongo no Mori</p>
+                                        <p><i class="fa-brands fa-youtube"></i>Nihongo no Mori</p>
+                                        <p class="media-item-desc">A great youtube channel for all level</p>
 
                                     </div>
                                     <div class="media-container"><a href="https://www.youtube.com/@Onomappu/"
@@ -737,7 +744,8 @@
                                                     src="https://yt3.googleusercontent.com/_t51KqX6mv8SjFCCUModZKhjAKOWfIlIE7OY8aIDDL-VuntteU2ub5_UWmG8tMi0c-Oj_SLivg=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>Onomappu</p>
+                                        <p><i class="fa-brands fa-youtube"></i>Onomappu</p>
+                                        <p class="media-item-desc">Introducing onomatopoeia used in everyday life</p>
 
                                     </div>
                                     <div class="media-container"><a href="https://www.youtube.com/@osho_taigu/"
@@ -746,7 +754,8 @@
                                                     src="https://yt3.googleusercontent.com/ytc/AGIKgqPboCQXDb9eH6Qcc__SWRsSymRgRmLyTZFEPhto=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>Osho Taigu</p>
+                                        <p><i class="fa-brands fa-youtube"></i>Osho Taigu</p>
+                                        <p class="media-item-desc">A monk talking about positive things with a nice pace</p>
 
                                     </div>
                                     <div class="media-container"><a href="https://www.youtube.com/@Akane-JapaneseClass/"
@@ -755,7 +764,8 @@
                                                     src="https://yt3.googleusercontent.com/ytc/AGIKgqMePt9c6zAVqfa1RnX3CavP_aeIqf3aTDcASgNG=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>あかね的日本語教室</p>
+                                        <p><i class="fa-brands fa-youtube"></i>あかね的日本語教室</p>
+                                        <p class="media-item-desc">Japanese teacher/vloger</p>
 
                                     </div>
                                     <div class="media-container"><a
@@ -764,7 +774,8 @@
                                                     src="https://yt3.googleusercontent.com/ytc/APkrFKal-XrZEAWuVjbQUDI-z5ZgGh8bbA64JAzTSoNtxw=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>しのせんせい</p>
+                                        <p><i class="fa-brands fa-youtube"></i>しのせんせい</p>
+                                        <p class="media-item-desc">Japanese folk tales with native audio and transcripts</p>
 
                                     </div>
                                     <div class="media-container"><a href="https://www.youtube.com/@japasuta"
@@ -773,16 +784,18 @@
                                                     src="https://yt3.googleusercontent.com/ytc/AGIKgqOj5Y9XKr90qXcoXudRvr4TIlW4b8TJig7WY1Hr=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>じゃぱすた/Let's study Japanese</p>
+                                        <p><i class="fa-brands fa-youtube"></i>じゃぱすた/Let's study Japanese</p>
+                                        <p class="media-item-desc">Channel about Japanese grammar</p>
 
                                     </div>
-                                    <div class="media-container"><a href="https://www.youtube.com/@KIYOisGOD"
-                                            target="_blank">
+                                    <div class="media-container">
+                                        <a href="https://www.youtube.com/@KIYOisGOD" target="_blank">
                                             <div class="item-container-parent media"><img class="thumbnail-m9"
                                                     src="https://yt3.googleusercontent.com/ytc/AGIKgqMVCDHBjvGY04CNkr3YCDPhUBrEXiQZ7x66D97fSQ=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>キヨ。</p>
+                                        <p><i class="fa-brands fa-youtube"></i>キヨ。</p>
+                                        <p class="media-item-desc">Channel about games</p>
 
                                     </div>
                                     <div class="media-container"><a href="https://www.youtube.com/@sambonjuku/"
@@ -791,8 +804,8 @@
                                                     src="https://yt3.googleusercontent.com/M-d7HApBZIPAglxDCOmsu_jtQ2v8F7qihwl2DQ88b-XLF9bYyB77gI4BYujYSlT6-NqX0sJ_=s176-c-k-c0x00ffffff-no-rj">
                                             </div>
                                         </a>
-                                        <p>三本塾 Sambon Juku</p>
-
+                                        <p><i class="fa-brands fa-youtube"></i>三本塾 Sambon Juku</p>
+                                        <p class="media-item-desc">Japanese teacher speaking in a slow pace</p>
                                     </div>
                                 </div>
                             </div>

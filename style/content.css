@@ -59,7 +59,10 @@ section {
   outline: none;
 }
 
-.fa-brands {
+.fa-windows,
+.fa-apple,
+.fa-android
+ {
   padding-left: 6px;
 }
 
@@ -261,14 +264,14 @@ button.submit {
   box-shadow: 0 4px 15px 0 rgba(56, 56, 56, 0.4);
 }
 
-/* ===================== MEDIA ===================== */
+/* ================================================== MEDIA ================================================ */
 
 .section-media-items {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(6, 150px);
+  grid-template-columns: repeat(6, 160px);
   grid-template-rows: auto;
-  gap: 40px;
+  gap: 30px;
   padding: 50px;
 }
 
@@ -276,7 +279,54 @@ button.submit {
   display: flex;
   flex-direction: column;
   transform: scale(1);
-  transition: transform .3s, opacity .5s ease;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+/*
+  background-color: rgb(227, 231, 235) ;
+  border-radius: 12px;
+  height: 150px; */
+}
+
+
+.media-container a+p {
+  font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 12px;
+  height: 100px;
+  position: relative;
+  top: 15px;
+  z-index: -1;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.media-container a:hover + p {
+  letter-spacing: 1.5px;
+}
+
+.media-container:hover .fa-youtube::before {
+  visibility: visible;
+  padding-right: 5px;
+  opacity: 1;
+  left: 0;
+  font-size: 1em;
+}
+
+.fa-youtube::before {
+  color: #ff0000 ;
+  text-shadow: 0 0px 10px  rgba(229, 10, 10, 0.4);
+  position: relative;
+  
+  left: 15px;
+  font-size: 0;
+  opacity: 0;
+  visibility: hidden;
+  -o-transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .media {
@@ -286,7 +336,7 @@ button.submit {
   line-height: 30px;
   text-align: center;
   padding: 20px;
-  transition: background-color .25s, transform .25s ease;
+  transition: all .25s ease;
   width: auto;
   height: 160px;
 }
@@ -299,11 +349,13 @@ button.submit {
   height: 100%;
   object-fit: cover;
   transform: scale(1);
-  transition: transform .5s ease;
+  -o-transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .media img:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .media-legend {
@@ -315,10 +367,6 @@ button.submit {
   font-size: .8em;
 }
 
-.section-media-items p {
-  font-size: 1.1em;
-}
-
 .media a,
 .item-container a {
   text-decoration: none
@@ -326,4 +374,21 @@ button.submit {
 
 .sort-media:hover {
   cursor: pointer;
+}
+
+.media-item-desc {
+  display: none;
+}
+
+.description-box {
+  width: auto;
+  height: auto;
+  background-color: var(--nav-bg-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: absolute;
+  z-index: 1;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 20px;
 }

@@ -303,6 +303,7 @@ function collapseAll () {
 }
 
 function collapseCategories () {
+
   collapseButton.forEach(button => {
     const collapseContent = button.nextElementSibling
     button.addEventListener('click', () => {
@@ -317,18 +318,18 @@ function collapseCategories () {
 }
 function roll (collapseContent) {
 
-  collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
+  collapseContent.style.maxHeight = collapseContent.scrollHeight + collapseMedia.scrollHeight + collapseVideo.scrollHeight + collapsePodcast.scrollHeight + collapseSocial.scrollHeight + 'px'
+
   collapseContent.style.opacity = 1
   collapseContent.style.marginTop = 10 + 'px'
   collapseContent.style.marginBottom = 30 + 'px'
   collapseContent.style.overflowY = 'visible'  
 
-  collapseMedia.style.maxHeight = collapseMedia.scrollHeight + collapseVideo.scrollHeight + collapsePodcast.scrollHeight + collapseSocial.scrollHeight + 'px'
 
 
   if (collapseContent.style.maxHeight !== 0) {
     window.addEventListener('resize', () => {
-      collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
+        collapseContent.style.maxHeight = collapseContent.scrollHeight + collapseMedia.scrollHeight + collapseVideo.scrollHeight + collapsePodcast.scrollHeight + collapseSocial.scrollHeight + 'px'
     })
   }
 }

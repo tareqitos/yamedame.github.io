@@ -275,6 +275,10 @@ button.submit {
   padding: 50px;
 }
 
+.section-media-items.podcast {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .media-container {
   display: flex;
   flex-direction: column;
@@ -289,7 +293,8 @@ button.submit {
 }
 
 
-.media-container a+p {
+.media-container a+p,
+.media-container iframe+p {
   font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   display: inline-block;
@@ -307,6 +312,7 @@ button.submit {
   letter-spacing: 1.5px;
 }
 
+.media-container:hover .fa-instagram::before,
 .media-container:hover .fa-youtube::before {
   visibility: visible;
   padding-right: 5px;
@@ -315,6 +321,7 @@ button.submit {
   font-size: 1em;
 }
 
+.fa-instagram::before,
 .fa-youtube::before {
   color: #ff0000 ;
   text-shadow: 0 0px 10px  rgba(229, 10, 10, 0.4);
@@ -327,6 +334,15 @@ button.submit {
   -o-transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+}
+
+.fa-instagram::before {
+  background: linear-gradient(to right,#f9ce34 0, #ee2a7b 50%,  #6228d7 100%);
+  text-shadow: 0 0px 10px  rgba(229, 10, 10, 0.8);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .media {

@@ -267,16 +267,15 @@ button.submit {
 /* ================================================== MEDIA ================================================ */
 
 .section-media-items {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  grid-template-columns: repeat(6, 160px);
-  grid-template-rows: auto;
   gap: 30px;
-  padding: 50px;
+  transition: all .3s;
 }
 
-.section-media-items.podcast {
-  grid-template-columns: repeat(3, 1fr);
+.section-media-items.podcast .media-container {
+  width: auto;
 }
 
 .media-container {
@@ -286,12 +285,12 @@ button.submit {
   -o-transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  width: 150px;
 /*
   background-color: rgb(227, 231, 235) ;
   border-radius: 12px;
   height: 150px; */
 }
-
 
 .media-container a+p,
 .media-container iframe+p {
@@ -353,7 +352,7 @@ button.submit {
   text-align: center;
   padding: 20px;
   transition: all .25s ease;
-  width: auto;
+  width: 160px;
   height: 160px;
 }
 

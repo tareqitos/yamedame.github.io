@@ -100,20 +100,22 @@ main {
 
 @keyframes fadeZoom {
   0% {
-      opacity: 0;
-      transform: scale(1) translate(0, 0);
-      text-shadow: 0 0 8px var(--text);
+    opacity: 0;
+    transform: scale(1) translate(0, 0);
+    text-shadow: 0 0 8px var(--text);
   }
+
   50% {
-      opacity: .3;
-      color: var(--text);
-      text-shadow: none;
+    opacity: .3;
+    color: var(--text);
+    text-shadow: none;
   }
+
   100% {
-      opacity: 0;
-      transform: scale(var(--scale-end)) translate(var(--translate-x-end), var(--translate-y-end));
-      color: transparent;
-      text-shadow: 0 0 8px var(--text);
+    opacity: 0;
+    transform: scale(var(--scale-end)) translate(var(--translate-x-end), var(--translate-y-end));
+    color: transparent;
+    text-shadow: 0 0 8px var(--text);
   }
 }
 
@@ -185,7 +187,7 @@ header {
   top: 15px;
   z-index: 4;
   width: 250px;
-  margin: 0  auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 .open-btn {
@@ -491,24 +493,31 @@ header {
 .collapse-beginners .collapse-button {
   border-bottom: solid 2px rgb(232, 59, 42);
 }
+
 .collapse-dictionaries .collapse-button {
   border-bottom: solid 2px #22ae5a
 }
+
 .collapse-grammar .collapse-button {
   border-bottom: solid 2px #e95e1c
 }
+
 .collapse-kanji .collapse-button {
   border-bottom: solid 2px #426bfe
 }
-.collapse-media .collapse-media-button{
+
+.collapse-media .collapse-media-button {
   border-bottom: solid 2px #e3e7eb
 }
+
 .collapse-reading .collapse-button {
   border-bottom: solid 2px #cf8424
 }
+
 .collapse-misc .collapse-button {
   border-bottom: solid 2px #b047b0
 }
+
 .collapse-software .collapse-button {
   border-bottom: solid 2px #0dae9c
 }
@@ -595,4 +604,3 @@ header {
 p {
   margin-bottom: 0;
 }
-

@@ -1,30 +1,46 @@
 /* ================================================= 1280 ================================================= */
 
-@media screen and (max-width:1280px) {
-
-
-}
+@media screen and (max-width:1280px) {}
 
 /* ================================================= 1024 ================================================= */
 
-@media screen and (max-width:1024px) {
-
-
-}
+@media screen and (max-width:1024px) {}
 
 
 /* ================================================= 900 ================================================= */
 @media screen and (max-width:900px) {
+  .item-container-parent {
+    width: auto;
+    text-align: left;
+  }
 
+  .item-container {
+    align-items: flex-start; 
+    gap: 0; 
+    flex-direction: column; 
+  }
+
+  .suggestion-button {
+    margin-bottom: 5px;
+  }
 
 }
 
 /* ================================================= 815 ================================================= */
 @media screen and (max-width:815px) {
 
+  .section-media-items.podcast .media-container {
+    display: block;
+    width: 100%;
+    height: 220px;
+  }
 
-  .item-container-parent p {
-    font-size: 1.2em;
+  .collapse-button {
+    font-size: 1.3em;
+  }
+
+  .collapse-button::after {
+    top: 9px;
   }
 
   header a+h1+p {
@@ -47,18 +63,34 @@
 
 @media screen and (max-width:750px) {
 
-  .media-container a + p,
+  .media-container a+p,
   .media-container iframe+p {
     font-size: .8em;
-    height: 50px;
+    height: 60px;
   }
-  
-  .item-container-parent p {
-    font-size: 1.1em;
+
+  .media {
+    height: 100px;
   }
 
   .footer {
     gap: 180px;
+  }
+
+  .nav-sticky {
+    position: fixed;
+    width: 139px;
+    top:auto;
+    right: -55px;
+    bottom: 25vh;
+  }
+
+  .expand-collapse {
+    flex-direction: column;
+  }
+
+  .button {
+    text-align: left;
   }
 
   .btn-container {
@@ -83,7 +115,7 @@
   }
 
   .expand-collapse {
-    transform: scale(.5);
+    transform: scale(.55);
   }
 
   .anki-buttons {
@@ -102,13 +134,12 @@
   }
 
   .item-container-parent p {
-    font-size: 1.05em;
-
+    font-size: .9em;
     word-break: break-word;
   }
 
   .item-desc {
-    font-size: .8em;
+    font-size: .9em;
   }
 
   .desc-favicon {
@@ -121,29 +152,10 @@
 
 @media screen and (max-width:428px) {
 
-  .media-container a + p {
+  .media-container a+p {
     font-size: .8em;
     height: 50px;
   }
-
-  .collapse-button {
-    font-size: 1.5em;
-  }
-
-  .collapse-button::after {
-    top: 13px;
-  }
-
-  .button {
-    top: 10px;
-    right: 13px;
-    transform: scale(.6);
-  }
-
-  .button:hover {
-    transform: scale(.7);
-  }
-
 
   .error-box img,
   .thankyou-box img {
@@ -159,4 +171,3 @@
 
   }
 }
-

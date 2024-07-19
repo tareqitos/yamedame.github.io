@@ -10,6 +10,16 @@ section {
   border-radius: 10px;
 }
 
+.bullet {
+  
+    background-image: linear-gradient(to right, #f16f5c 0%, #e01511 34%, #f7767d 66%, #e73827 100%);
+    box-shadow: 0 4px 15px 0 rgba(238, 73, 73, 0.4);
+    width: 10px;
+    height: 30px;
+    border-radius: 3px;
+
+}
+
 .item-desc {
   font-size: 1em;
 }
@@ -101,6 +111,11 @@ section {
   text-transform: none;
 }
 
+.suggestion-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .suggestion-text,
 .suggestion-form {
   transition: all .2s;
@@ -129,7 +144,6 @@ section {
 
 button.submit {
   color: white;
-  margin-left: 10px;
   padding: 0 20px;
   background-size: 500% 100%;
   pointer-events: none;
@@ -290,6 +304,10 @@ button.submit {
   background-color: rgb(227, 231, 235) ;
   border-radius: 12px;
   height: 150px; */
+}
+
+.podcast .media-container {
+  display: grid;
 }
 
 .media-container a+p,

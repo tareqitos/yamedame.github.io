@@ -425,3 +425,13 @@ button.submit {
   border-radius: 10px;
   padding: 20px;
 }
+
+/* ================================================== AUDIO PLAYER ================================================ */
+
+.audio-player {
+  display: block;
+  position: fixed;
+  bottom: 50px;
+  margin: auto auto;
+  right: 50px;
+}

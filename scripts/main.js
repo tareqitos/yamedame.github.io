@@ -45,49 +45,6 @@ mediaItems.forEach((mediaItem, index) => {
 
 
 
-////////////////////////////////////////////////// BACKGROUND //////////////////////////////////////////////////
-
-
-const characters = ["人", "一", "日", "大", "年", "出", "本", "中", "子", "見", "国", "言", "上", "分", "生", "手", "自", "行", "者", "二", "間", "事", "思", "時", "気", "会", "十", "家", "女", "三", "前", "的", "方", "入", "小", "地", "合", "後", "目", "長", "場", "代", "私", "下", "立", "部", "学", "物", "月", "田", "何", "来", "彼", "話", "体", "動", "社", "知", "理", "山", "内", "同", "心", "発", "高", "実", "作", "当", "新", "世", "今", "書", "度", "明", "五", "戦", "力", "名", "金", "性", "対", "意", "用", "男", "主", "通", "関", "文", "屋", "感", "郎", "業", "定", "政", "持", "道", "外", "取", "所", "現"];
-const container = document.querySelector(".background");
-const numCharacters = 30; // Adjust this number as needed
-
-for (let i = 0; i < numCharacters; i++) {
-  const charElement = document.createElement("div");
-  charElement.classList.add("character");
-  charElement.textContent = characters[Math.floor(Math.random() * characters.length)];
-
-  // Random positions
-  const top = Math.random() * 100;
-  const left = Math.random() * 100;
-
-  // Random delays
-  const delay = Math.random() * 30;
-
-  // Random displacements
-  const translateX = (Math.random() - 0.5) * 40; // Random value between -20 and 20
-  const translateY = (Math.random() - 0.5) * 40;
-  const translateXEnd = (Math.random() - 0.5) * 80; // Random value between -40 and 40
-  const translateYEnd = (Math.random() - 0.5) * 80;
-
-  // Random scales
-  const scaleMid = 1 + Math.random() * 1; // Random value between 1 and 2
-  const scaleEnd = 1 + Math.random() * 1; // Random value between 1 and 2
-
-  charElement.style.top = `${top}%`;
-  charElement.style.left = `${left}%`;
-  charElement.style.animationDelay = `${delay}s`;
-  charElement.style.setProperty('--translate-x', `${translateX}px`);
-  charElement.style.setProperty('--translate-y', `${translateY}px`);
-  charElement.style.setProperty('--translate-x-end', `${translateXEnd}px`);
-  charElement.style.setProperty('--translate-y-end', `${translateYEnd}px`);
-  charElement.style.setProperty('--scale-mid', scaleMid);
-  charElement.style.setProperty('--scale-end', scaleEnd);
-
-  container.appendChild(charElement);
-}
-
-
 ////////////////////////////////////////////////// SHOW CHANGELOG //////////////////////////////////////////////////
 
 const lastUpdateText = document.getElementById('changelog')

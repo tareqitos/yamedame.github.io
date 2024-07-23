@@ -404,6 +404,7 @@ header {
 }
 
 .pre-footer-link a {
+  font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
   color: var(--text);
   text-decoration: none;
   transition: all .2s;

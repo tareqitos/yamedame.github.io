@@ -269,7 +269,7 @@ button.submit {
 
 .software.suggestion:hover,
 .software button.submit:hover {
-  box-shadow: 0 4px 15px 0 rgba(44, 120, 115, 0.425);
+  box-shadow: 0 4px 15px 0 rgba(44, 120, 115, 0.625);
 }
 
 /* ================================================== SUGGESTION ================================================= */
@@ -288,10 +288,6 @@ button.submit {
   transition: all .3s;
 }
 
-.section-media-items.podcast .media-container {
-  width: auto;
-}
-
 .media-container {
   display: flex;
   flex-direction: column;
@@ -306,12 +302,8 @@ button.submit {
   height: 150px; */
 }
 
-.podcast .media-container {
-  display: grid;
-}
 
-.media-container a+p,
-.media-container iframe+p {
+.media-item-title {
   font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   display: inline-block;
@@ -325,11 +317,12 @@ button.submit {
   transition: all .3s ease-in-out;
 }
 
-.media-container a:hover + p {
+.media-container a:hover + .media-item-title {
   letter-spacing: 1.5px;
 }
 
 .media-container:hover .fa-instagram::before,
+.media-container:hover .fa-spotify::before,
 .media-container:hover .fa-youtube::before {
   visibility: visible;
   padding-right: 5px;
@@ -339,6 +332,7 @@ button.submit {
 }
 
 .fa-instagram::before,
+.fa-spotify::before,
 .fa-youtube::before {
   color: #ff0000 ;
   text-shadow: 0 0px 10px  rgba(229, 10, 10, 0.4);
@@ -351,6 +345,11 @@ button.submit {
   -o-transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+}
+
+.fa-spotify::before {
+  color: #23d867 ;
+  text-shadow: 0 0px 10px  rgba(10, 229, 83, 0.4);
 }
 
 .fa-instagram::before {
@@ -429,9 +428,22 @@ button.submit {
 /* ================================================== AUDIO PLAYER ================================================ */
 
 .audio-player {
-  display: block;
+  display: none;
   position: fixed;
-  bottom: 50px;
+  bottom: 30px;
   margin: auto auto;
   right: 50px;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.fa-xmark {
+  display: block !important;
+  position: relative;
+  top: 20px;
+  width: 80px;
+
+  text-align: center;
+  margin: auto;
+  scale: .8;
 }

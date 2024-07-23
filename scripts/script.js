@@ -4,200 +4,11 @@ async function fetchData() {
     const links = await reponse.json()
     console.log(links)
 
-    /*
-       const mediaArray = links.media
-   
-       sortByName(mediaArray)
-       
-       createElement(mediaArray, 'media')
-   
-       function createElement (arrayElement, sectionToQuery) {
-         for (let i = 0; i < arrayElement.length; i++) {
-           const array = arrayElement[i]
-   
-           const sectionItems = document.querySelector(
-             '.section-' + sectionToQuery + '-items'
-           )
-   
-           const itemContainer = document.createElement('div')
-           const itemContainerParent = document.createElement('div')
-   
-           const link = document.createElement('a')
-           const linkName = document.createElement('p')
-           const desc = document.createElement('p')
-   
-           defineElements(
-             array,
-             itemContainer,
-             itemContainerParent,
-             link,
-             linkName,
-             desc,
-             sectionToQuery
-           )
-           appendElements(
-             sectionItems,
-             itemContainer,
-             itemContainerParent,
-             link,
-             linkName,
-             desc,
-             sectionToQuery
-           )
-   
-           setTimeout(function () {
-             itemContainer.classList.add('appear')
-           })
-           createImageTag(array, itemContainerParent)
-         }
-       } 
-   
-       ////////////////////////////////////////////////// SORT ELEMENTS //////////////////////////////////////////////////
-   
-       function sortByName (array) {
-         array.sort(function (a, b) {
-           if (a.name < b.name) {
-             return -1
-           }
-           if (a.name > b.name) {
-             return 1
-           }
-   
-           return 0
-         })
-       }
-   
-       ///////////////////////////////////////////////// ADD ATTRIBUTE TO CREATED ELEMENTS //////////////////////////////////////////////////
-   
-       function defineElements (
-         array,
-         itemContainer,
-         itemContainerParent,
-         link,
-         linkName,
-         desc,
-         sectionToQuery
-       ) {
-         itemContainer.className = 'item-container'
-         itemContainerParent.className = 'item-container-parent ' + sectionToQuery
-   
-         link.href = array.link
-         link.setAttribute('target', '_blank')
-   
-         linkName.innerText = array.name
-   
-         desc.innerText = array.description
-         desc.className = 'item-desc'
-       }
-   
-       ////////////////////////////////////////////////// PARENT ELEMENTS //////////////////////////////////////////////////
-   
-       function appendElements (
-         sectionItems,
-         itemContainer,
-         itemContainerParent,
-         link,
-         linkName,
-         desc,
-         sectionToQuery
-       ) {
-         sectionItems.appendChild(itemContainer)
-   
-         itemContainer.appendChild(link)
-         link.appendChild(itemContainerParent)
-         if (sectionToQuery === 'media') {
-           itemContainer.appendChild(linkName)
-         } else {
-           itemContainerParent.appendChild(linkName)
-         }
-         itemContainer.appendChild(desc)
-       }
-   
-       ////////////////////////////////////////////////// CREATE IMAGE TAG FOR MEDIA ELEMENTS //////////////////////////////////////////////////
-   
-       function createImageTag (array, itemContainerParent) {
-         const img = document.createElement('img')
-         img.className = 'thumbnail-' + array.id
-         img.src = array.pic
-         itemContainerParent.appendChild(img)
-       }
-   
-     
-       ////////////////////////////////////////////////// UPDATE ELEMENTS IN MEDIA //////////////////////////////////////////////////
-   
-       function updateDisplayedItems (category) {
-         const mediaContainer = document.querySelector('.section-media-items')
-   
-         let mediaData
-         // Sélectionnez les données en fonction de la catégorie choisie
-         if (category === 'all') {
-           mediaData = links.media
-         } else {
-           mediaData = links.media.filter(all => all.type.includes(category))
-         }
-   
-         const mediaElements = document.querySelectorAll(
-           '.section-media-items .item-container'
-         )
-   
-         // Ajoutez une classe CSS pour activer l'animation de scale
-         mediaElements.forEach(element => {
-           element.classList.add('disappear')
-         })
-   
-         // Check si les éléments ne sont pas chargés
-         if (mediaContainer.lastElementChild == null) {
-           createElement(mediaData, 'media')
-         } else {
-           // Attendez la fin de l'animation avant de supprimer les éléments
-           setTimeout(() => {
-             while (mediaContainer.lastElementChild) {
-               mediaContainer.lastElementChild.remove()
-             }
-   
-             // Créez les nouveaux éléments
-   
-             createElement(mediaData, 'media')
-             updateCollapseContentHeight()
-           }, 300) // la durée de l'animation CSS (0.3s dans cet exemple)
-         }
-       }
-   
-       // Event listener pour l'élément select
-       const sortMediaSelect = document.getElementById('sort-media')
-       const selectionMessage = document.querySelector('.selection-message')
-       const mediaContainer = document.querySelector('.section-media-items')
-       const collapseContent = document.querySelector(
-         '.collapse-media .collapse-content'
-       )
-       const mediaHeader = document.querySelector('.collapse-media')
-   
-       sortMediaSelect.selectedIndex = 0
-       console.log(sortMediaSelect.selectedIndex)
-   
-       sortMediaSelect.addEventListener('change', event => {
-         const selectedCategory = event.target.value
-         selectionMessage.style.display = 'none'
-         updateDisplayedItems(selectedCategory)
-         updateCollapseContentHeight()
-       })
-   
-       function updateCollapseContentHeight () {
-         // Set the height of collapseContent to its scrollHeight
-         collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
-       }
-   
-       updateCollapseContentHeight()
-   
-       // Initialize en affichant tous les éléments initialement
-       updateDisplayedItems()
-     */
-
-    ////////////////////////////////////////////////// SUGGESTION FORM //////////////////////////////////////////////////
+    ////////////////////////////////////////////////// PODCAST FLOATING WINDOWS //////////////////////////////////////////////////
 
     const body = document.getElementById('body');
     const podcastButton = document.querySelector('.podcast-button')
-    
+
 
     podcastButton.addEventListener('click', () => {
 
@@ -209,27 +20,31 @@ async function fetchData() {
       }
 
       if (audioPlayer === null) {
+        const podcasts = ['https://open.spotify.com/embed/episode/2Br6kFlZDCCizEV9cpy81B?utm_source=generator?play=1',
+          'https://open.spotify.com/embed/episode/4qjerzMw8jfD30VOG0tjpK?utm_source=generator', 'https://open.spotify.com/embed/episode/3UcFXYPz3Gs0RGb0p1bU6R?utm_source=generator', 'https://open.spotify.com/embed/episode/0AINRiHlZf72aKp87lhDTr?utm_source=generator'
+        ]
+
         const audioPlayerDiv = document.createElement('div')
-        
         const iframeElement = document.createElement('iframe')
-        const testElement = document.createElement('p')
 
         audioPlayerDiv.setAttribute('class', 'audio-player')
 
-        setAttributes(iframeElement, {'style':"border-radius:12px",
-        'src':"https://open.spotify.com/embed/episode/2Br6kFlZDCCizEV9cpy81B?utm_source=generator",
-        'width':"100%", 'height':"152", 'frameBorder':"0", 'allowfullscreen':"",
-        'allow':"autoplay",'loading':"lazy"})
+        setAttributes(iframeElement, {
+          'style': "border-radius:12px",
+          'src': "https://open.spotify.com/embed/episode/2Br6kFlZDCCizEV9cpy81B?utm_source=generator?play=1",
+          'width': "100%", 'height': "152", 'frameBorder': "0", 'allowfullscreen': "",
+          'allow': 'allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture', 'loading': "lazy"
+        })
 
         testElement.innerText = 'This is a text'
 
         body.appendChild(audioPlayerDiv)
         audioPlayerDiv.appendChild(iframeElement)
         iframeElement.appendChild(testElement)
-      } 
+      }
     })
 
-    function setAttributes (element, attr) {
+    function setAttributes(element, attr) {
       for (let key in attr) {
         element.setAttribute(key, attr[key])
       }

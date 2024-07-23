@@ -1,5 +1,5 @@
 // check if user is using a mobile browser
-function isMobileDevice () {
+function isMobileDevice() {
   return /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
     navigator.userAgent
   )
@@ -11,6 +11,40 @@ if (isMobileDevice()) {
   console.log("L'utilisateur n'utilise pas un navigateur mobile.")
 }
 
+////////////////////////////////////////////////// DESCRIPTION BOX //////////////////////////////////////////////////
+
+const box = document.querySelector('.description-box')
+const mediaItems = document.querySelectorAll('.media img')
+const mediaItemsDesc = document.querySelectorAll('.media-item-desc')
+
+console.log(mediaItemsDesc)
+
+mediaItems.forEach((mediaItem, index) => {
+  const desc = document.createElement('p');
+
+  mediaItem.addEventListener('mousemove', event => {
+    box.style.visibility = 'visible'
+    box.style.left = event.pageX + 50 + 'px'
+    box.style.top = event.pageY + -25 + 'px'
+
+
+    desc.textContent = mediaItemsDesc[index].textContent;
+    box.appendChild(desc); // Append individual media item descriptions
+
+  })
+
+  mediaItem.addEventListener('mouseleave', event => {
+    box.style.visibility = 'hidden'
+    box.style.left = 0
+    box.style.top = 0
+
+    box.removeChild(desc)
+
+  })
+})
+
+
+
 ////////////////////////////////////////////////// SHOW CHANGELOG //////////////////////////////////////////////////
 
 const lastUpdateText = document.getElementById('changelog')
@@ -18,7 +52,7 @@ const changelogWin = document.querySelector('.changelog-popup')
 let isChangelogOpen = false
 showChangelogListener()
 
-function showChangelogListener () {
+function showChangelogListener() {
   if (lastUpdateText == null) {
     return
   }
@@ -44,7 +78,7 @@ function showChangelogListener () {
   }
 }
 
-function showChangelog () {
+function showChangelog() {
   changelogWin.style.display = 'block'
   setTimeout(() => {
     changelogWin.style.opacity = 1
@@ -52,7 +86,7 @@ function showChangelog () {
   isChangelogOpen = true
 }
 
-function hideChangelog () {
+function hideChangelog() {
   changelogWin.style.opacity = 0
   setTimeout(() => {
     changelogWin.style.display = 'none'
@@ -70,7 +104,7 @@ document.querySelectorAll("a[href*='#']").forEach(function (current) {
     return
   }
 
-  ;(function (anchorPoint) {
+  ; (function (anchorPoint) {
     if (anchorPoint) {
       current.addEventListener(
         'click',
@@ -87,7 +121,7 @@ document.querySelectorAll("a[href*='#']").forEach(function (current) {
 ////////////////////////////////////////////////// NAVIGATION BAR //////////////////////////////////////////////////
 toggleSidebar()
 
-function toggleSidebar () {
+function toggleSidebar() {
   const button = document.getElementById('open-btn')
   const mainArea = document.getElementById('main')
   const sidebar = document.getElementById('sidebar')
@@ -138,7 +172,7 @@ function toggleSidebar () {
   })
 }
 
-function openNav () {
+function openNav() {
   const sidebar = document.getElementById('sidebar')
 
   if (sidebar === null) {
@@ -158,7 +192,7 @@ function openNav () {
   }, 10)
 }
 
-function closeNav () {
+function closeNav() {
   const sidebar = document.getElementById('sidebar')
 
   if (sidebar === null) {
@@ -178,6 +212,8 @@ function closeNav () {
     sidebar.style.display = 'none'
   }, 50)
 }
+
+/*
 
 navPositionBottom()
 function navPositionBottom () {
@@ -209,15 +245,21 @@ function navPositionBottom () {
   }
 }
 
+*/
+
 ////////////////////////////////////////////////// COLLAPSE CATEGORIES //////////////////////////////////////////////////
 
 const collapseButton = document.querySelectorAll('.collapse-button')
+const collapseMedia = document.querySelector('.collapse-media .collapse-content')
+const collapsePodcast = document.querySelector('.collapse-podcast .collapse-content')
+const collapseSocial = document.querySelector('.collapse-social .collapse-content')
+const collapseVideo = document.querySelector('.collapse-video .collapse-content')
 
 collapseCategories()
 collapseAll()
 expandAll()
 
-function expandAll () {
+function expandAll() {
   const collapseContent = document.querySelectorAll('.collapse-content')
   const buttonExpandAll = document.querySelector('.roll-all')
 
@@ -234,7 +276,7 @@ function expandAll () {
   })
 }
 
-function collapseAll () {
+function collapseAll() {
   const collapseContent = document.querySelectorAll('.collapse-content')
   const buttonCollapseAll = document.querySelector('.collapse-all')
 
@@ -251,7 +293,8 @@ function collapseAll () {
   })
 }
 
-function collapseCategories () {
+function collapseCategories() {
+
   collapseButton.forEach(button => {
     const collapseContent = button.nextElementSibling
     button.addEventListener('click', () => {
@@ -264,28 +307,37 @@ function collapseCategories () {
     })
   })
 }
-function roll (collapseContent) {
-  collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
+function roll(collapseContent) {
+
+  collapseContent.style.maxHeight = collapseContent.scrollHeight + collapseMedia.scrollHeight + collapseVideo.scrollHeight + collapsePodcast.scrollHeight + collapseSocial.scrollHeight + 'px'
+
   collapseContent.style.opacity = 1
-  collapseContent.style.marginTop = 40 + 'px'
+  collapseContent.style.marginTop = 10 + 'px'
+  collapseContent.style.marginBottom = 30 + 'px'
   collapseContent.style.overflowY = 'visible'
+
+
 
   if (collapseContent.style.maxHeight !== 0) {
     window.addEventListener('resize', () => {
-      collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
+      collapseContent.style.maxHeight = collapseContent.scrollHeight + collapseMedia.scrollHeight + collapseVideo.scrollHeight + collapsePodcast.scrollHeight + collapseSocial.scrollHeight + 'px'
     })
   }
 }
-function collapse (collapseContent) {
+
+function collapse(collapseContent) {
   collapseContent.style.maxHeight = 0
   collapseContent.style.opacity = 0
   collapseContent.style.marginTop = 0
+  collapseContent.style.marginBottom = 10 + 'px'
   collapseContent.style.overflowY = 'hidden'
 
   window.addEventListener('resize', () => {
     collapseContent.style.maxHeight = 0
   })
+
 }
+
 
 ////////////////////////////////////////////////// BACK TO TOP BUTTON //////////////////////////////////////////////////
 
@@ -320,12 +372,12 @@ backToTopButton.addEventListener('scoll', event => {
   console.log(backToTopButton.scrollTop)
 })
 
-function isFooterVisible () {
+function isFooterVisible() {
   const rect = footer.getBoundingClientRect()
   return rect.top <= window.innerHeight + 50
 }
 
-function scrollFunction () {
+function scrollFunction() {
   if (
     document.body.scrollTop > 150 ||
     (document.documentElement.scrollTop > 150 && !isFooterVisible())
@@ -338,7 +390,7 @@ function scrollFunction () {
   }
 }
 
-function backToTop () {
+function backToTop() {
   document.body.scrollTop = 0
   document.documentElement.scrollTop = 0
 }
@@ -347,7 +399,7 @@ function backToTop () {
 
 darkTheme()
 
-function darkTheme () {
+function darkTheme() {
   const html = document.getElementById('body')
   const themeSwitch = document.getElementById('theme-logo')
   const autoDarkTheme = window.matchMedia('(prefers-color-scheme: dark)')
@@ -356,7 +408,7 @@ function darkTheme () {
   const buttonExpandAll = document.querySelector('.img-roll')
 
   // Fonction pour définir le thème et enregistrer la préférence de l'utilisateur
-  function setTheme (theme) {
+  function setTheme(theme) {
     if (theme === 'dark') {
       html.classList.toggle('night-mode')
       themeSwitch.innerHTML = '明'

@@ -17,14 +17,16 @@
   --input-bg-color: #ffffff;
   --input-border: 1.5px solid #979797;
   --input-category-color: #9fa0a9;
-  --category-bg-color: rgba(98, 140, 193, 0.11);
+  --category-bg-color: rgb(238, 242, 248);
   --nav-bg-color: rgba(255, 255, 255, .8);
   --about-text-color: #dee7f4;
   --suggestion-bg-opacity: .3;
   --suggestion-bg-color: #b8b8b8;
+  --border: rgba(0, 0, 0, 0.1);
+  --fa-apple: rgba(0, 0, 0, .4);
 }
 
-#body {
+body {
   color: var(--text);
   background-color: var(--bg);
   display: flex;
@@ -42,16 +44,19 @@
   --input-bg-color: #303245;
   --input-border: 0;
   --input-category-color: #979797;
-  --category-bg-color: rgba(0, 0, 0, 0.1);
+  --category-bg-color: rgb(25, 27, 30);
   --nav-bg-color: rgba(23, 25, 28, .8);
   --about-text-color: #1c1e22;
   --suggestion-bg-opacity: .7;
   --suggestion-bg-color: #9e9e9e;
+  --border: rgba(255, 255, 255, 0.1);
+  --fa-apple: rgba(255, 255, 255, .4);
 }
 
 .anchor {
   padding-top: 20px;
   margin-top: -20px;
+  -webkit-transition: padding-top .2s ease;
   transition: padding-top .2s ease;
 }
 
@@ -65,18 +70,68 @@
   top: 0;
 }
 
+main {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.wrap-section {
+  margin: 0 5%;
+}
+
+/* ================================================= BACKGROUND ================================================= */
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.character {
+  position: absolute;
+  color: transparent;
+  font-size: 2rem;
+  opacity: 0;
+  animation: fadeZoom 10s infinite;
+}
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(1) translate(0, 0);
+    text-shadow: 0 0 8px var(--text);
+  }
+
+  50% {
+    opacity: .3;
+    color: var(--text);
+    text-shadow: none;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(var(--scale-end)) translate(var(--translate-x-end), var(--translate-y-end));
+    color: transparent;
+    text-shadow: 0 0 8px var(--text);
+  }
+}
+
 /* ================================================= HEADER ================================================= */
 
 header {
   top: 0;
   z-index: 5;
   text-align: center;
-  padding: 20px 20px 5px 20px;
+  padding: 20px 20px 20px 20px;
   margin-bottom: 10px;
   background-color: var(--header-footer);
   box-shadow: 1px 3px 12px -1px rgba(0, 0, 0, .15);
 }
 
+/*
 .button {
   position: absolute;
   top: 30px;
@@ -91,13 +146,14 @@ header {
   box-shadow: var(--btn-shadow);
   border-radius: 100px;
   transform: scale(1);
+  -webkit-transition: transform .2s ease;
   transition: transform .2s ease;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   cursor: pointer;
   text-transform: lowercase;
-}
+} */
 
 .button:hover,
 .open-btn:hover {
@@ -131,7 +187,7 @@ header {
   top: 15px;
   z-index: 4;
   width: 250px;
-  margin: 0  auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 .open-btn {
@@ -146,6 +202,7 @@ header {
   padding: 10px 16px;
   box-shadow: var(--btn-shadow);
   border-radius: 100px;
+  -webkit-transition: transform .2s ease;
   transition: transform .2s ease;
   font-weight: 100;
   font-size: 25px;
@@ -160,6 +217,9 @@ header {
   justify-content: center;
 }
 
+
+
+.button,
 .collapse-all,
 .roll-all {
   z-index: 10;
@@ -169,13 +229,19 @@ header {
   background-color: var(--nav-bg-color);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 10px 16px;
+  padding: 20px 30px;
   box-shadow: var(--btn-shadow);
   border-radius: 100px;
+  -webkit-transition: transform .2s ease;
   transition: transform .2s ease;
   font-weight: 100;
   font-size: 25px;
   margin: 0;
+}
+
+.button {
+  font-weight: 600;
+  border: none;
 }
 
 .img-coll,
@@ -304,26 +370,6 @@ header {
   transform: scale(1.5);
 }
 
-.changelog-popup {
-  display: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 120px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 500px;
-  padding: 20px 30px;
-  z-index: 4;
-  opacity: 0;
-  border-radius: 10px;
-  background-color: var(--nav-bg-color);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: var(--btn-shadow);
-  transition: opacity .3s ease;
-}
-
 .last-updated {
   text-align: center;
   right: 0;
@@ -341,10 +387,35 @@ header {
 }
 
 .pre-footer {
+  margin-top: auto;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
+  gap: 20px;
+  margin: auto auto 40px auto;
+}
+
+.pre-footer-element {
+  padding: 10px 20px;
+  opacity: 1;
+  border-radius: 10px;
+  background-color: var(--nav-bg-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--btn-shadow);
+}
+
+.pre-footer-link a {
+  font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
+  color: var(--text);
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.pre-footer-link {
+  transition: all .2s;
+}
+
+.pre-footer-link:hover {
+  transform: scale(1.1);
 }
 
 /* ================================================= COLLAPSE ================================================= */
@@ -352,13 +423,17 @@ header {
 .collapse-button {
   display: block;
   text-align: left;
-  font-size: 2em;
-  margin: auto auto 10px auto;
+  font-size: 1.5em;
   border: none;
   outline: none;
   cursor: pointer;
   background: none;
   color: var(--text);
+
+  margin-top: 5px;
+  background: var(--category-bg-color);
+  padding: 6px 15px;
+  border-radius: 10px;
 }
 
 .collapse-button::after {
@@ -368,20 +443,30 @@ header {
   width: 18px;
   height: 18px;
   position: relative;
-  top: 20px;
+  top: 13px;
   left: 5px;
   float: right;
-  filter: var(--mail-color)
+  filter: var(--mail-color);
+  transform: rotate(0);
+  transition: transform .4s;
+}
+
+.collapse-video .collapse-button::after,
+.collapse-podcast .collapse-button::after,
+.collapse-social .collapse-button::after {
+  background-size: 14px;
+  width: 14px;
+  height: 14px;
+  top: 10px;
 }
 
 .collapse-button--active::after {
-  content: '';
-  background-image: url("../images/right-arrow.png");
+  transform: rotate(-90deg);
 }
 
 .collapse-content {
   overflow-y: visible;
-  margin-top: 40px;
+  margin-top: 10px;
   opacity: 1;
   transition: max-height 0.2s, opacity 0.2s, margin-top 0.2s;
 }
@@ -390,10 +475,133 @@ header {
   padding: 0 0 80px 0
 }
 
+.collapse-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.collapse-video .collapse-button,
+.collapse-podcast .collapse-button,
+.collapse-social .collapse-button {
+  font-size: 1.25em;
+}
+
+.collapse-media-content {
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding-left: 20px;
+}
+
+.collapse-beginners .collapse-button {
+  border-bottom: solid 2px rgb(232, 59, 42);
+}
+
+.collapse-dictionaries .collapse-button {
+  border-bottom: solid 2px #22ae5a
+}
+
+.collapse-grammar .collapse-button {
+  border-bottom: solid 2px #e95e1c
+}
+
+.collapse-kanji .collapse-button {
+  border-bottom: solid 2px #426bfe
+}
+
+.collapse-media .collapse-media-button {
+  border-bottom: solid 2px #e3e7eb
+}
+
+.collapse-reading .collapse-button {
+  border-bottom: solid 2px #cf8424
+}
+
+.collapse-misc .collapse-button {
+  border-bottom: solid 2px #b047b0
+}
+
+.collapse-software .collapse-button {
+  border-bottom: solid 2px #0dae9c
+}
+
 /* .suggestion-box {
   width: 500px;
   height: 500px;
   background-color: #17191c;
   margin: auto;
 
+}
+
+/* ================================================================= LOADING ANIMATION ================================================================= */
+
+.lds-ellipsis {
+  display: none;
+  position: relative;
+  bottom: 13px;
+  width: 80px;
+  z-index: 99999999;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  /*top: 33px;*/
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
+p {
+  margin-bottom: 0;
 }

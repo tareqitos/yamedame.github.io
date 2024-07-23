@@ -1,143 +1,45 @@
 /* ================================================= 1280 ================================================= */
 
-@media screen and (max-width:1280px) {
-
-  .section-list {
-    grid-template-columns: repeat(1, 900px);
-  }
-
-  .section-media-items {
-    grid-template-columns: repeat(4, 200px)
-  }
-
-  .media {
-    height: 200px
-  }
-
-  .section-software-items .item-container {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .software-icon {
-    text-align: center;
-  }
-
-  .section-software-items .item-desc {
-    width: 500px;
-    justify-content: center;
-    margin-top: 5px;
-  }
-
-}
+@media screen and (max-width:1280px) {}
 
 /* ================================================= 1024 ================================================= */
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1024px) {}
 
-  .section-list {
-    grid-template-columns: repeat(1, 800px);
-  }
-
-
-  .section-media-items {
-    grid-template-columns: repeat(4, 150px)
-  }
-
-  .media {
-    height: 150px;
-  }
-
-
-  .error-box img,
-  .thankyou-box img {
-    width: 300px;
-  }
-
-  .anchor {
-    padding-top: 20px;
-  }
-
-  section {
-    padding: 0;
-  }
-}
 
 /* ================================================= 900 ================================================= */
 @media screen and (max-width:900px) {
-
-  .section-list {
-    grid-template-columns: repeat(1, 700px);
+  .item-container-parent {
+    width: auto;
+    text-align: left;
   }
+
+  .item-container {
+    align-items: flex-start; 
+    gap: 0; 
+    flex-direction: column; 
+  }
+
+  .suggestion-button {
+    margin-bottom: 5px;
+  }
+
 }
 
 /* ================================================= 815 ================================================= */
 @media screen and (max-width:815px) {
 
-  .section-list {
-    grid-template-columns: repeat(1, 650px)
+
+  .collapse-button {
+    font-size: 1.3em;
   }
 
-  .section-list .item-container-parent {
-    width: 200px;
-    text-align: center;
-    line-height: 15px;
-  }
-
-  .section-media-items {
-    grid-template-columns: repeat(3, 150px)
-  }
-
-  .media {
-    height: 150px
-  }
-
-  .item-container-parent img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(1.2)
-  }
-
-  .item-container-parent:hover {
-    transform: scale(1)
-  }
-
-  .item-container-parent:active {
-    transform: scale(.9)
-  }
-
-  .section-media-items .item-container-parent img:hover {
-    transform: scale(1.3)
-  }
-
-  .item-container-parent p {
-    font-size: 1.2em;
-  }
-
-  .section-software-items .item-container-parent,
-  .section-software-items .item-desc {
-    width: 350px
-  }
-
-  .section-software-items .item-title::after {
-    opacity: 1;
-    left: -80px
-  }
-
-  .item-container a:hover #title-mi1::after,
-  .item-container a:hover #title-mi2::after,
-  .item-container a:hover #title-mi3::after {
-    opacity: 1;
-    left: -80px
+  .collapse-button::after {
+    top: 9px;
   }
 
   header a+h1+p {
-    display: none
+    font-size: .8em;
   }
 
   .circle {
@@ -147,18 +49,8 @@
 
   .title-acronym {
     font-size: 1em;
-    padding-bottom: 10px;
+
     margin-bottom: 5px
-  }
-
-  .button {
-    top: 23px;
-    right: 15px;
-    transform: scale(.8);
-  }
-
-  .button:hover {
-    transform: scale(.9);
   }
 }
 
@@ -166,48 +58,43 @@
 
 @media screen and (max-width:750px) {
 
-  .section-list {
-    grid-template-columns: repeat(1, 580px)
+  .media-item-title {
+    font-size: .8em;
+    height: 60px;
   }
 
-  .section-list .item-container {
-    gap: 15px;
+  .media {
+    height: 100px;
   }
 
-  .section-list .item-container-parent {
-    width: 200px;
-    text-align: center;
-    line-height: 20px;
+  .audio-player {
+    right: 30px;
+    left: 30px;
   }
 
-  .section-media-items {
-    grid-template-columns: repeat(2, 150px)
-  }
-
-  .section-thanks {
-    grid-template-columns: repeat(1, auto);
-    text-align: center;
-  }
-
-  .section-thanks p {
-    margin-bottom: 0;
-  }
-
-  .item-container-parent img {
-    transform: scale(1.1);
-  }
-
-  .item-container-parent p {
-    font-size: 1.1em;
-  }
-
-  .error-box img,
-  .thankyou-box img {
-    width: 250px;
+  .fa-xmark {
+    top: 30px;
+    scale: .6;
   }
 
   .footer {
     gap: 180px;
+  }
+
+  .nav-sticky {
+    position: fixed;
+    width: 139px;
+    top:auto;
+    right: -55px;
+    bottom: 25vh;
+  }
+
+  .expand-collapse {
+    flex-direction: column;
+  }
+
+  .button {
+    text-align: left;
   }
 
   .btn-container {
@@ -232,7 +119,7 @@
   }
 
   .expand-collapse {
-    transform: scale(.5);
+    transform: scale(.55);
   }
 
   .anki-buttons {
@@ -245,18 +132,8 @@
 
 @media screen and (max-width: 602px) {
 
-  .section-list {
-    grid-template-columns: repeat(1, 420px)
-  }
-
-  .section-list .item-container {
-    gap: 15px;
-  }
-
-  .section-list .item-container-parent {
-    width: 160px;
-    text-align: center;
-    line-height: 20px;
+  .description-box {
+    display: none;
   }
 
   .desc-favicon {
@@ -264,74 +141,32 @@
   }
 
   .item-container-parent p {
-    font-size: 1.05em;
-
+    font-size: .9em;
     word-break: break-word;
   }
 
   .item-desc {
-    font-size: .8em;
+    font-size: .9em;
   }
 
   .desc-favicon {
     height: 15px;
   }
 
-  .error-box,
-  .thankyou-box,
-  form {
-    width: 80%;
-  }
 }
 
-/* ================================================= 428 ================================================= */
+/* ================================================= 450 ================================================= */
 
 @media screen and (max-width:428px) {
 
-  .section-list {
-    grid-template-columns: repeat(1, 350px)
+  .media-container {
+    width: 120px;
   }
 
-  .section-media-items {
-    grid-template-columns: repeat(2, 120px);
+  .media-item-title {
+    font-size: .8em;
+    height: 50px;
   }
-
-  .section-media-items .item-desc {
-    font-size: .9em;
-  }
-
-  .section-software-items {
-    padding: 0;
-  }
-
-  .section-software-items .item-container-parent,
-  .section-software-items .item-desc {
-    width: 250px
-  }
-
-  .section-software-items .item-title::after {
-    opacity: 1;
-    left: -70px
-  }
-
-  .collapse-button {
-    font-size: 1.5em;
-  }
-
-  .collapse-button::after {
-    top: 13px;
-  }
-
-  .button {
-    top: 10px;
-    right: 13px;
-    transform: scale(.6);
-  }
-
-  .button:hover {
-    transform: scale(.7);
-  }
-
 
   .error-box img,
   .thankyou-box img {

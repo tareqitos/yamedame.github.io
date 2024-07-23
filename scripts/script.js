@@ -4,313 +4,298 @@ async function fetchData () {
     const links = await reponse.json()
     console.log(links)
 
-    const mediaArray = links.media
+    ////////////////////////////////////////////////// PODCAST FLOATING WINDOWS //////////////////////////////////////////////////
 
-    sortByName(mediaArray)
-    createElement(mediaArray, 'media')
+    const body = document.getElementById('body')
+    const podcastButtons = document.querySelectorAll('.podcast-button') // Select all buttons
 
-    function createElement (arrayElement, sectionToQuery) {
-      for (let i = 0; i < arrayElement.length; i++) {
-        const array = arrayElement[i]
+    podcastButtons.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        const audioPlayer = document.querySelector('.audio-player') // Find existing audio player
 
-        const sectionItems = document.querySelector(
-          '.section-' + sectionToQuery + '-items'
+        // Create new audio player
+        const audioPlayerDiv = document.createElement('div')
+        const iframeElement = document.createElement('iframe')
+        const closePodcast = document.createElement('i')
+
+        audioPlayerDiv.setAttribute('class', 'audio-player')
+        closePodcast.setAttribute(
+          'class',
+          'button podcast-close fa-solid fa-xmark'
         )
 
-        const itemContainer = document.createElement('div')
-        const itemContainerParent = document.createElement('div')
+        // Get the URL from the button's data attribute
+        const podcasts = [
+          'https://open.spotify.com/embed/episode/2Br6kFlZDCCizEV9cpy81B?utm_source=generator',
+          'https://open.spotify.com/embed/episode/4qjerzMw8jfD30VOG0tjpK?utm_source=generator',
+          'https://open.spotify.com/embed/episode/3UcFXYPz3Gs0RGb0p1bU6R?utm_source=generator',
+          'https://open.spotify.com/embed/episode/0AINRiHlZf72aKp87lhDTr?utm_source=generator'
+        ]
 
-        const link = document.createElement('a')
-        const linkName = document.createElement('p')
-        const desc = document.createElement('p')
+        let podcastHeight = 152
 
-        defineElements(
-          array,
-          itemContainer,
-          itemContainerParent,
-          link,
-          linkName,
-          desc,
-          sectionToQuery
-        )
-        appendElements(
-          sectionItems,
-          itemContainer,
-          itemContainerParent,
-          link,
-          linkName,
-          desc,
-          sectionToQuery
-        )
+        if (window.innerWidth < 750) {
+          podcastHeight = 100
+        }
 
-        setTimeout(function () {
-          itemContainer.classList.add('appear')
+        // Set attributes for the iframe
+        setAttributes(iframeElement, {
+          style: 'border-radius:12px',
+          src: podcasts[index], // Use the URL from the button
+          width: '100%',
+          height: podcastHeight,
+          frameBorder: '0',
+          allowfullscreen: '',
+          allow:
+            'allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"',
+          loading: 'lazy'
         })
-        createImageTag(array, itemContainerParent)
-      }
-    }
 
-    ////////////////////////////////////////////////// SORT ELEMENTS //////////////////////////////////////////////////
+        body.appendChild(audioPlayerDiv)
+        audioPlayerDiv.appendChild(closePodcast)
+        audioPlayerDiv.appendChild(iframeElement)
 
-    function sortByName (array) {
-      array.sort(function (a, b) {
-        if (a.name < b.name) {
-          return -1
-        }
-        if (a.name > b.name) {
-          return 1
-        }
-
-        return 0
-      })
-    }
-
-    ///////////////////////////////////////////////// ADD ATTRIBUTE TO CREATED ELEMENTS //////////////////////////////////////////////////
-
-    function defineElements (
-      array,
-      itemContainer,
-      itemContainerParent,
-      link,
-      linkName,
-      desc,
-      sectionToQuery
-    ) {
-      itemContainer.className = 'item-container'
-      itemContainerParent.className = 'item-container-parent ' + sectionToQuery
-
-      link.href = array.link
-      link.setAttribute('target', '_blank')
-
-      linkName.innerText = array.name
-
-      desc.innerText = array.description
-      desc.className = 'item-desc'
-    }
-
-    ////////////////////////////////////////////////// PARENT ELEMENTS //////////////////////////////////////////////////
-
-    function appendElements (
-      sectionItems,
-      itemContainer,
-      itemContainerParent,
-      link,
-      linkName,
-      desc,
-      sectionToQuery
-    ) {
-      sectionItems.appendChild(itemContainer)
-
-      itemContainer.appendChild(link)
-      link.appendChild(itemContainerParent)
-      if (sectionToQuery === 'media') {
-        itemContainer.appendChild(linkName)
-      } else {
-        itemContainerParent.appendChild(linkName)
-      }
-      itemContainer.appendChild(desc)
-    }
-
-    ////////////////////////////////////////////////// CREATE IMAGE TAG FOR MEDIA ELEMENTS //////////////////////////////////////////////////
-
-    function createImageTag (array, itemContainerParent) {
-      const img = document.createElement('img')
-      img.className = 'thumbnail-' + array.id
-      img.src = array.pic
-      itemContainerParent.appendChild(img)
-    }
-
-    ////////////////////////////////////////////////// UPDATE ELEMENTS IN MEDIA //////////////////////////////////////////////////
-
-    function updateDisplayedItems (category) {
-      const mediaContainer = document.querySelector('.section-media-items')
-
-      let mediaData
-      // Sélectionnez les données en fonction de la catégorie choisie
-      if (category === 'all') {
-        mediaData = links.media
-      } else {
-        mediaData = links.media.filter(all => all.type.includes(category))
-      }
-
-      const mediaElements = document.querySelectorAll(
-        '.section-media-items .item-container'
-      )
-
-      // Ajoutez une classe CSS pour activer l'animation de scale
-      mediaElements.forEach(element => {
-        element.classList.add('disappear')
-      })
-
-      // Check si les éléments ne sont pas chargés
-      if (mediaContainer.lastElementChild == null) {
-        createElement(mediaData, 'media')
-      } else {
-        // Attendez la fin de l'animation avant de supprimer les éléments
+        audioPlayerDiv.style.display = 'block'
         setTimeout(() => {
-          while (mediaContainer.lastElementChild) {
-            mediaContainer.lastElementChild.remove()
-          }
+          audioPlayerDiv.style.opacity = 1
+        }, 500)
 
-          // Créez les nouveaux éléments
+        // Remove existing audio player if it exists
+        if (audioPlayer !== null) {
+          audioPlayer.remove()
+          console.log('audio player has been removed')
+        }
 
-          createElement(mediaData, 'media')
-          updateCollapseContentHeight()
-        }, 300) // la durée de l'animation CSS (0.3s dans cet exemple)
-      }
-    }
-
-    // Event listener pour l'élément select
-    const sortMediaSelect = document.getElementById('sort-media')
-    const selectionMessage = document.querySelector('.selection-message')
-    const mediaContainer = document.querySelector('.section-media-items')
-    const collapseContent = document.querySelector(
-      '.collapse-media .collapse-content'
-    )
-    const mediaHeader = document.querySelector('.collapse-media')
-
-    sortMediaSelect.selectedIndex = 0
-    console.log(sortMediaSelect.selectedIndex)
-
-    sortMediaSelect.addEventListener('change', event => {
-      const selectedCategory = event.target.value
-      selectionMessage.style.display = 'none'
-      updateDisplayedItems(selectedCategory)
-      updateCollapseContentHeight()
+        // Add event listener for the close button after it has been created
+        closePodcast.addEventListener('click', () => {
+          audioPlayerDiv.remove() // Remove the audio player div
+          console.log('audio player has been closed')
+        })
+      })
     })
 
-    function updateCollapseContentHeight () {
-      // Set the height of collapseContent to its scrollHeight
-      collapseContent.style.maxHeight = collapseContent.scrollHeight + 'px'
+    // Function to set attributes on an element
+    function setAttributes (element, attr) {
+      for (let key in attr) {
+        element.setAttribute(key, attr[key])
+      }
     }
 
-    updateCollapseContentHeight()
+    ////////////////////////////////////////////////// BACKGROUND //////////////////////////////////////////////////
 
-    // Initialize en affichant tous les éléments initialement
-    updateDisplayedItems()
+
+    const characters = ["人", "一", "日", "大", "年", "出", "本", "中", "子", "見", "国", "言", "上", "分", "生", "手", "自", "行", "者", "二", "間", "事", "思", "時", "気", "会", "十", "家", "女", "三", "前", "的", "方", "入", "小", "地", "合", "後", "目", "長", "場", "代", "私", "下", "立", "部", "学", "物", "月", "田", "何", "来", "彼", "話", "体", "動", "社", "知", "理", "山", "内", "同", "心", "発", "高", "実", "作", "当", "新", "世", "今", "書", "度", "明", "五", "戦", "力", "名", "金", "性", "対", "意", "用", "男", "主", "通", "関", "文", "屋", "感", "郎", "業", "定", "政", "持", "道", "外", "取", "所", "現"];
+    const container = document.querySelector('.background')
+    const numCharacters = 30 // Adjust this number as needed
+
+    for (let i = 0; i < numCharacters; i++) {
+      const charElement = document.createElement('div')
+      charElement.classList.add('character')
+      charElement.textContent =
+        characters[Math.floor(Math.random() * characters.length)]
+
+      // Random positions
+      const top = Math.random() * 100
+      const left = Math.random() * 100
+
+      // Random delays
+      const delay = Math.random() * 30
+
+      // Random displacements
+      const translateX = (Math.random() - 0.5) * 40 // Random value between -20 and 20
+      const translateY = (Math.random() - 0.5) * 40
+      const translateXEnd = (Math.random() - 0.5) * 80 // Random value between -40 and 40
+      const translateYEnd = (Math.random() - 0.5) * 80
+
+      // Random scales
+      const scaleMid = 1 + Math.random() * 1 // Random value between 1 and 2
+      const scaleEnd = 1 + Math.random() * 1 // Random value between 1 and 2
+
+      charElement.style.top = `${top}%`
+      charElement.style.left = `${left}%`
+      charElement.style.animationDelay = `${delay}s`
+      charElement.style.setProperty('--translate-x', `${translateX}px`)
+      charElement.style.setProperty('--translate-y', `${translateY}px`)
+      charElement.style.setProperty('--translate-x-end', `${translateXEnd}px`)
+      charElement.style.setProperty('--translate-y-end', `${translateYEnd}px`)
+      charElement.style.setProperty('--scale-mid', scaleMid)
+      charElement.style.setProperty('--scale-end', scaleEnd)
+
+      container.appendChild(charElement)
+    }
+
 
     ////////////////////////////////////////////////// SUGGESTION FORM //////////////////////////////////////////////////
 
-    const suggestionForm = document.querySelector('.suggestion-box')
-    const suggestionBackground = document.querySelector(
-      '.suggestion-background'
-    )
-    const suggestionButton = document.querySelectorAll('#suggestion')
-    const suggestionConfirmButton = document.getElementById('submit')
+    const suggestionForms = document.querySelectorAll('.suggestion-form')
+    const suggestionTexts = document.querySelectorAll('.suggestion-text')
+    const suggButtons = document.querySelectorAll('.suggestion-button')
+    const thanksTexts = document.querySelectorAll('.thanks-text')
+    const errorTexts = document.querySelectorAll('.error-text')
 
-    const thanksBox = document.querySelector('.thankyou-box')
-    const thanksCloseButton = document.querySelector('.thankyou-close')
-    const errorBox = document.querySelector('.error-box')
-    const errorCloseButton = document.querySelector('.error-close')
-    const errorMessage = document.querySelector('.incorrect-msg')
+    suggButtons.forEach((suggButton, index) => {
+      suggButton.addEventListener('click', () => {
+        const suggestionForm = suggestionForms[index]
+        const suggestionText = suggestionTexts[index]
+        const thanksText = thanksTexts[index]
+        const errorText = errorTexts[index]
 
-    suggestionButton.forEach(button => {
-      button.addEventListener('click', () => {
-        suggestionForm.classList.toggle('suggestion-box--active')
-        suggestionBackground.classList.toggle('suggestion-background--active')
+        suggestionForm.classList.toggle('suggestion-form--active')
 
-        if (suggestionForm.classList.contains('suggestion-box--active')) {
-          suggestionForm.style.display = 'flex'
-          suggestionBackground.style.display = 'block'
-          document.body.style.overflow = 'hidden'
+        if (suggestionForm.classList.contains('suggestion-form--active')) {
+          suggestionText.style.opacity = 0
+          setTimeout(() => {
+            suggestionText.style.display = 'none'
+            suggestionForm.style.display = 'flex'
+            suggestionForm.style.gap = 5 + 'px'
+            setTimeout(() => {
+              suggestionForm.style.opacity = 1
+            }, 50)
+          }, 50)
+        } else {
+          suggestionForm.classList.toggle('suggestion-form')
+          suggestionForm.style.opacity = 0
+          thanksText.style.opacity = 0
+          errorText.style.opacity = 0
+          setTimeout(() => {
+            suggestionForm.style.display = 'none'
+            suggestionText.style.display = 'block'
+            thanksText.style.display = 'none'
+            errorText.style.display = 'none'
+            setTimeout(() => {
+              suggestionText.style.opacity = 1
+            }, 50)
+          }, 50)
+
+          thanksText.style.opacity = 0
+          errorText.style.opacity = 0
+          setTimeout(() => {
+            thanksText.style.display = 'none'
+            errorText.style.display = 'none'
+          }, 50)
         }
       })
     })
 
-    suggestionBackground.addEventListener('click', () => {
-      closeSuggestionBackground()
-    })
+    ////// INPUT VALIDATOR //////
 
-    thanksCloseButton.addEventListener('click', () => {
-      closeThanksButton(thanksBox)
-    })
+    let inputs = document.querySelectorAll('.input')
+    let buttonSends = document.querySelectorAll('.submit')
 
-    errorCloseButton.addEventListener('click', () => {
-      closeThanksButton(errorBox)
-    })
-
-    function closeSuggestionBackground () {
-      suggestionBackground.classList.remove('suggestion-background--active')
-      suggestionForm.classList.remove('suggestion-box--active')
-      suggestionBackground.style.display = 'none'
-      suggestionForm.style.display = 'none'
-      thanksBox.style.display = 'none'
-      document.body.style.overflow = 'visible'
-      errorMessage.style.display = 'none'
-      errorMessage.style.bottom = '45px'
-      errorMessage.style.opacity = '0'
+    let inputValidator = {
+      name: false,
+      title: false,
+      link: false
     }
 
-    function closeThanksButton (button) {
-      button.style.display = 'none'
-      suggestionBackground.classList.remove('suggestion-background--active')
-      suggestionBackground.style.display = 'none'
-      document.body.style.overflow = 'visible'
-      errorMessage.style.display = 'none'
-      errorMessage.style.bottom = '45px'
-      errorMessage.style.opacity = '0'
-    }
-
-    function suggestionIsValid () {
-      suggestionForm.classList.remove('suggestion-box--active')
-      suggestionForm.style.display = 'none'
-      thanksBox.style.display = 'flex'
-    }
-
-    function suggestionIsNotValid () {
-      suggestionForm.classList.remove('suggestion-box--active')
-      suggestionForm.style.display = 'none'
-      errorBox.style.display = 'flex'
-    }
-
-    $(document).ready(function () {
-      $('#submit').on('click', function () {
-        var form = $('#myForm')[0]
-
-        if (form.checkValidity()) {
-          const loadingAnimation = document.querySelector('.lds-ellipsis')
-          const submitButtonText = document.getElementById('submit-text')
-          submitButtonText.style.display = 'none'
-          loadingAnimation.style.display = 'inline-block'
-
-          var formData = {
-            name: $('#add-name').val(),
-            title: $('#add-title').val(),
-            link: $('#add-link').val(),
-            category: $('#category').val()
-          }
-
-          $.ajax({
-            url: 'https://formsubmit.co/ajax/social@tareqitos.com',
-            method: 'POST',
-            data: formData,
-            dataType: 'json',
-            success: function (response) {
-              // Handle the success response
-              suggestionIsValid()
-              submitButtonText.style.display = 'block'
-              loadingAnimation.style.display = 'none'
-              console.log(response)
-            },
-            error: function (error) {
-              // Handle the error response
-              suggestionIsNotValid()
-              submitButtonText.style.display = 'block'
-              loadingAnimation.style.display = 'none'
-              console.error(error)
-            }
-          })
+    inputs.forEach(input => {
+      input.addEventListener('input', event => {
+        let name = event.target.getAttribute('name')
+        if (event.target.value.length > 0) {
+          inputValidator[name] = true
         } else {
-          // If the form is not valid, you can add your own handling logic here
-
-          errorMessage.style.display = 'block'
-          setTimeout(() => {
-            errorMessage.style.bottom = '0'
-            errorMessage.style.opacity = '1'
-          }, 10)
-
-          console.log('Form is not valid')
+          inputValidator[name] = false
         }
+
+        let allTrue = Object.keys(inputValidator).every(item => {
+          return inputValidator[item] === true
+        })
+
+        buttonSends.forEach(buttonSend => {
+          if (allTrue) {
+            buttonSend.disabled = false
+            buttonSend.style.pointerEvents = 'unset'
+          } else {
+            buttonSend.disabled = true
+            buttonSend.style.pointerEvents = 'none'
+          }
+        })
+      })
+    })
+
+    function suggestionIsValid (suggestionForm, thanksTexts, form) {
+      suggestionForm.classList.toggle('suggestion-form')
+      suggestionForm.style.display = 'none'
+
+      thanksTexts.style.display = 'block'
+      thanksTexts.style.opacity = 1
+
+      form.reset()
+    }
+
+    buttonSends.forEach((buttonSend, index) => {
+      buttonSend.addEventListener('click', event => {
+        event.preventDefault()
+
+        let form = event.target.closest('form')
+        let loadingAnimation = form.querySelector('.lds-ellipsis')
+        let submitButtonText = form.querySelector('.submit-text')
+        const thanksText = thanksTexts[index]
+        const errorText = errorTexts[index]
+        const suggestionForm = suggestionForms[index]
+        const suggButton = suggButtons[index]
+
+        console.log(suggButton)
+
+        if (!form.checkValidity()) {
+          suggButton.style.pointerEvents = 'unset'
+          return
+        }
+
+        form.classList.add('sending')
+        /*
+          Use the "sending" class that will be added to the form
+          to setup the CSS files accordingly instead of having
+          the style changes below as JS scripts.
+        */
+
+        submitButtonText.style.display = 'none'
+        loadingAnimation.style.display = 'inline-block'
+
+        buttonSend.disabled = true
+        buttonSend.style.pointerEvents = 'none'
+
+        suggButton.style.pointerEvents = 'none'
+
+        let formData = Object.fromEntries(new FormData(form))
+        $.ajax({
+          url: 'https://formsubmit.co/ajax/social@tareqitos.com',
+          method: 'POST',
+          data: formData,
+          dataType: 'json',
+
+          success: function (response) {
+            submitButtonText.style.display = 'block'
+            loadingAnimation.style.display = 'none'
+
+            suggButton.style.pointerEvents = 'unset'
+
+            suggestionIsValid(suggestionForm, thanksText, form)
+            console.log(response)
+
+            form.classList.remove('sending')
+          },
+
+          error: function (error) {
+            suggestionForm.classList.toggle('suggestion-form')
+            suggestionForm.style.display = 'none'
+
+            submitButtonText.style.display = 'block'
+            loadingAnimation.style.display = 'none'
+
+            suggButton.style.pointerEvents = 'unset'
+
+            errorText.style.display = 'block'
+
+            form.classList.remove('sending')
+
+            setTimeout(() => {
+              errorText.style.opacity = 1
+            })
+
+            console.error(error)
+          }
+        })
       })
     })
   } catch (erreur) {

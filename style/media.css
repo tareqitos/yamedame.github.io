@@ -70,6 +70,7 @@
   .audio-player {
     right: 30px;
     left: 30px;
+    width: 90%;
   }
 
   .fa-xmark {

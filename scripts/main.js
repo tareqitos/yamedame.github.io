@@ -12,12 +12,13 @@ if (isMobileDevice()) {
 }
 
 ////////////////////////////////////////////////// DESCRIPTION BOX //////////////////////////////////////////////////
-
+/*
 const buttons = document.querySelectorAll('a');
 
 buttons.forEach(button => {
-  button.onclick = () => umami.track(button.getAttribute('href'));
+  button.onclick = () => window.umami.track(button.getAttribute('href'));
 })
+*/
 
 ////////////////////////////////////////////////// DESCRIPTION BOX //////////////////////////////////////////////////
 
@@ -274,15 +275,6 @@ window.onscroll = function () {
   scrollFunction()
   closeNav()
   isNavOpen = false
-  if (isMobileDevice) {
-    if (lastUpdateText !== null) {
-      if (lastUpdateText.classList.contains('changelog--active')) {
-        lastUpdateText.classList.toggle('changelog--active')
-        lastUpdateText.innerText = 'changelog'
-        hideChangelog()
-      }
-    }
-  }
 
   const button = document.getElementById('open-btn')
   if (button !== null) {

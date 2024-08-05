@@ -11,12 +11,12 @@ section {
 }
 
 .bullet {
-  
-    background-image: linear-gradient(to right, #f16f5c 0%, #e01511 34%, #f7767d 66%, #e73827 100%);
-    box-shadow: 0 4px 15px 0 rgba(238, 73, 73, 0.4);
-    width: 10px;
-    height: 30px;
-    border-radius: 3px;
+
+  background-image: linear-gradient(to right, #f16f5c 0%, #e01511 34%, #f7767d 66%, #e73827 100%);
+  box-shadow: 0 4px 15px 0 rgba(238, 73, 73, 0.4);
+  width: 10px;
+  height: 30px;
+  border-radius: 3px;
 
 }
 
@@ -71,24 +71,23 @@ section {
 
 .fa-windows,
 .fa-apple,
-.fa-android
- {
+.fa-android {
   padding-left: 6px;
 }
 
 .fa-windows {
-  color:  #73abf0;
-  text-shadow: 0 0px 10px  rgba(10, 105, 229, .4);
+  color: #73abf0;
+  text-shadow: 0 0px 10px rgba(10, 105, 229, .4);
 }
 
 .fa-apple {
-  color:  #e9cb93;
-  text-shadow: 0 0px 10px  rgba(229, 127, 10, 0.4);
+  color: #e9cb93;
+  text-shadow: 0 0px 10px rgba(229, 127, 10, 0.4);
 }
 
 .fa-android {
-  color:  #73f088;
-  text-shadow: 0 0px 10px  rgba(54, 229, 10, 0.4);
+  color: #73f088;
+  text-shadow: 0 0px 10px rgba(54, 229, 10, 0.4);
 }
 
 /* SUGGESTION FORM */
@@ -283,8 +282,8 @@ button.submit {
 .section-media-items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  justify-content: left;
+  gap: 10px;
   transition: all .3s;
 }
 
@@ -296,7 +295,7 @@ button.submit {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   width: 150px;
-/*
+  /*
   background-color: rgb(227, 231, 235) ;
   border-radius: 12px;
   height: 150px; */
@@ -310,14 +309,14 @@ button.submit {
   border-radius: 12px;
   height: 100px;
   position: relative;
-  top: 15px;
+  top: 10px;
   z-index: -1;
   -o-transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
-.media-container a:hover + .media-item-title {
+.media-container a:hover+.media-item-title {
   letter-spacing: 1.5px;
 }
 
@@ -334,10 +333,10 @@ button.submit {
 .fa-instagram::before,
 .fa-spotify::before,
 .fa-youtube::before {
-  color: #ff0000 ;
-  text-shadow: 0 0px 10px  rgba(229, 10, 10, 0.4);
+  color: #ff0000;
+  text-shadow: 0 0px 10px rgba(229, 10, 10, 0.4);
   position: relative;
-  
+
   left: 15px;
   font-size: 0;
   opacity: 0;
@@ -348,13 +347,13 @@ button.submit {
 }
 
 .fa-spotify::before {
-  color: #23d867 ;
-  text-shadow: 0 0px 10px  rgba(10, 229, 83, 0.4);
+  color: #23d867;
+  text-shadow: 0 0px 10px rgba(10, 229, 83, 0.4);
 }
 
 .fa-instagram::before {
-  background: linear-gradient(to right,#f9ce34 0, #ee2a7b 50%,  #6228d7 100%);
-  text-shadow: 0 0px 10px  rgba(229, 10, 10, 0.8);
+  background: linear-gradient(to right, #f9ce34 0, #ee2a7b 50%, #6228d7 100%);
+  text-shadow: 0 0px 10px rgba(229, 10, 10, 0.8);
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -369,8 +368,8 @@ button.submit {
   text-align: center;
   padding: 20px;
   transition: all .25s ease;
-  width: 160px;
-  height: 160px;
+  width: 140px;
+  height: 140px;
 }
 
 .media img {
@@ -386,7 +385,7 @@ button.submit {
   transition: all .5s ease-in-out;
 }
 
-.media img:hover{
+.media img:hover {
   transform: scale(1.05);
 }
 
@@ -424,6 +423,48 @@ button.submit {
   border-radius: 10px;
   padding: 20px;
 }
+
+.media-legend {
+  padding: 15px;
+  background-color: var(--category-bg-color);
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.media-category span,
+.media-category p {
+  display: inline-block;
+
+}
+
+.media-category p {
+  margin-right: 10px;
+}
+
+.media-category span {
+  vertical-align: middle;
+  width: 25px;
+  height: 6px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.type-culture {
+  background-color: green;
+}
+
+.type-convo {
+  background-color: #4297ff;
+}
+
+.type-fun {
+  background-color: #d871b9;
+}
+
+.type-grammar {
+  background-color: #fb7641;
+}
+
 
 /* ================================================== AUDIO PLAYER ================================================ */
 

@@ -2,7 +2,6 @@ async function fetchData () {
   try {
     const reponse = await fetch('scripts/list-links.json')
     const links = await reponse.json()
-    console.log(links)
 
     ////////////////////////////////////////////////// PODCAST FLOATING WINDOWS //////////////////////////////////////////////////
 

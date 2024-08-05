@@ -17,8 +17,6 @@ const box = document.querySelector('.description-box')
 const mediaItems = document.querySelectorAll('.media img')
 const mediaItemsDesc = document.querySelectorAll('.media-item-desc')
 
-console.log(mediaItemsDesc)
-
 mediaItems.forEach((mediaItem, index) => {
   const desc = document.createElement('p');
 
@@ -43,56 +41,6 @@ mediaItems.forEach((mediaItem, index) => {
   })
 })
 
-
-
-////////////////////////////////////////////////// SHOW CHANGELOG //////////////////////////////////////////////////
-
-const lastUpdateText = document.getElementById('changelog')
-const changelogWin = document.querySelector('.changelog-popup')
-let isChangelogOpen = false
-showChangelogListener()
-
-function showChangelogListener() {
-  if (lastUpdateText == null) {
-    return
-  }
-
-  if (!isMobileDevice()) {
-    lastUpdateText.addEventListener('mouseenter', showChangelog)
-    lastUpdateText.addEventListener('mouseleave', hideChangelog)
-  }
-
-  if (isMobileDevice()) {
-    lastUpdateText.addEventListener('click', () => {
-      lastUpdateText.classList.toggle('changelog--active')
-      if (lastUpdateText.classList.contains('changelog--active')) {
-        changelogWin.style.bottom = 265 + 'px'
-        changelogWin.style.width = 90 + '%'
-        lastUpdateText.innerText = 'close'
-        showChangelog()
-      } else {
-        lastUpdateText.innerText = 'changelog'
-        hideChangelog()
-      }
-    })
-  }
-}
-
-function showChangelog() {
-  changelogWin.style.display = 'block'
-  setTimeout(() => {
-    changelogWin.style.opacity = 1
-  }, 10)
-  isChangelogOpen = true
-}
-
-function hideChangelog() {
-  changelogWin.style.opacity = 0
-  setTimeout(() => {
-    changelogWin.style.display = 'none'
-  }, 300)
-  isChangelogOpen = false
-}
 
 ////////////////////////////////////////////////// PREVENT ANCHOR LINKS BEING ADDED TO THE URL //////////////////////////////////////////////////
 
@@ -213,54 +161,23 @@ function closeNav() {
   }, 50)
 }
 
-/*
-
-navPositionBottom()
-function navPositionBottom () {
-  const nav = document.getElementById('nav-sticky')
-  const footer = document.getElementById('footer')
-  const main = document.getElementById('main')
-
-  if (nav == null) {
-    return
-  }
-
-  if (isMobileDevice()) {
-    if (nav.parentNode) {
-      nav.parentNode.removeChild(nav)
-    }
-    // Insérez-le avant le footer
-    footer.parentNode.insertBefore(nav, footer)
-    nav.style.top = null
-    nav.style.bottom = 15 + 'px'
-    nav.style.marginBottom = 2 + 'em'
-  } else {
-    if (nav.parentNode) {
-      nav.parentNode.removeChild(nav)
-    }
-    // Insérez-le avant le main
-    main.parentNode.insertBefore(nav, main)
-    nav.style.top = 15 + 'px'
-    nav.style.bottom = null
-  }
-}
-
-*/
-
 ////////////////////////////////////////////////// COLLAPSE CATEGORIES //////////////////////////////////////////////////
 
 const collapseButton = document.querySelectorAll('.collapse-button')
+const collapseContent = document.querySelectorAll('.collapse-content')
+
 const collapseMedia = document.querySelector('.collapse-media .collapse-content')
 const collapsePodcast = document.querySelector('.collapse-podcast .collapse-content')
 const collapseSocial = document.querySelector('.collapse-social .collapse-content')
 const collapseVideo = document.querySelector('.collapse-video .collapse-content')
+
+
 
 collapseCategories()
 collapseAll()
 expandAll()
 
 function expandAll() {
-  const collapseContent = document.querySelectorAll('.collapse-content')
   const buttonExpandAll = document.querySelector('.roll-all')
 
   if (buttonExpandAll == null) {
@@ -277,7 +194,6 @@ function expandAll() {
 }
 
 function collapseAll() {
-  const collapseContent = document.querySelectorAll('.collapse-content')
   const buttonCollapseAll = document.querySelector('.collapse-all')
 
   if (buttonCollapseAll == null) {
@@ -316,7 +232,7 @@ function roll(collapseContent) {
   collapseContent.style.marginBottom = 30 + 'px'
   collapseContent.style.overflowY = 'visible'
 
-
+  collapseContent.style.userSelect = 'unset'
 
   if (collapseContent.style.maxHeight !== 0) {
     window.addEventListener('resize', () => {
@@ -331,6 +247,8 @@ function collapse(collapseContent) {
   collapseContent.style.marginTop = 0
   collapseContent.style.marginBottom = 10 + 'px'
   collapseContent.style.overflowY = 'hidden'
+
+  collapseContent.style.userSelect = 'none'
 
   window.addEventListener('resize', () => {
     collapseContent.style.maxHeight = 0

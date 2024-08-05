@@ -13,6 +13,14 @@ if (isMobileDevice()) {
 
 ////////////////////////////////////////////////// DESCRIPTION BOX //////////////////////////////////////////////////
 
+const buttons = document.querySelectorAll('a');
+
+buttons.forEach(button => {
+  button.onclick = () => umami.track(button.getAttribute('href'));
+})
+
+////////////////////////////////////////////////// DESCRIPTION BOX //////////////////////////////////////////////////
+
 const box = document.querySelector('.description-box')
 const mediaItems = document.querySelectorAll('.media img')
 const mediaItemsDesc = document.querySelectorAll('.media-item-desc')

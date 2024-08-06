@@ -12,13 +12,13 @@ if (isMobileDevice()) {
 }
 
 ////////////////////////////////////////////////// DESCRIPTION BOX //////////////////////////////////////////////////
-/*
+
 const buttons = document.querySelectorAll('a');
 
 buttons.forEach(button => {
-  button.onclick = () => window.umami.track(button.getAttribute('href'));
+  button.onclick = () => umami.track(button.getAttribute('href'));
 })
-*/
+
 
 ////////////////////////////////////////////////// DESCRIPTION BOX //////////////////////////////////////////////////
 

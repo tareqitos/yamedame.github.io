@@ -28,24 +28,6 @@
     <link href="style/media.css" rel="stylesheet">
 
     <script defer src="https://analytics.tareqitos.me/script.js" data-website-id="420f37a5-a3c0-424a-803f-3b937bf0c67f"></script>
-    <script>
-        document.addEventListener('click', function (event) {
-            var link = event.target;
-            while (link && (typeof link.tagName == 'undefined' || link.tagName.toLowerCase() != 'a' || !link.href)) {
-                link = link.parentNode
-            }
-
-            if (link && link.href && link.host && link.host !== location.host) {
-                umami.track('Outbound Link', { link: link.href });
-
-                // Allow event to be sent before the page is unloaded
-                if (!link.target || link.target.match(/^_(self|parent|top)$/i)) {
-                    setTimeout(function () { location.href = link.href; }, 150);
-                    event.preventDefault();
-                }
-            }
-        })
-    </script>
     <script src="scripts/main.js" defer></script>
     <script src="scripts/script.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

@@ -4,7 +4,42 @@
 
 /* ================================================= 1024 ================================================= */
 
-@media screen and (max-width:1024px) {}
+@media screen and (max-width:1024px) {
+  .main-sidebar {
+    display: none;
+  }
+
+  .nav-sticky {
+    position: fixed;
+    width: 139px;
+    top:auto;
+    right: -55px;
+    bottom: 25vh;
+  }
+
+  .expand-collapse {
+    flex-direction: column;
+    gap: 20px;
+    transform: scale(.55);
+    justify-content: center;
+  }
+
+  .button {
+    text-align: left;
+  }
+
+  .button,
+.collapse-all,
+.roll-all {
+  padding: 20px 30px;
+  font-size: 25px;
+}
+
+
+  .btn-container {
+    transform: scale(.8);
+  }
+}
 
 
 /* ================================================= 900 ================================================= */
@@ -82,26 +117,6 @@
     gap: 180px;
   }
 
-  .nav-sticky {
-    position: fixed;
-    width: 139px;
-    top:auto;
-    right: -55px;
-    bottom: 25vh;
-  }
-
-  .expand-collapse {
-    flex-direction: column;
-  }
-
-  .button {
-    text-align: left;
-  }
-
-  .btn-container {
-    transform: scale(.8);
-  }
-
   .about {
     padding: 0 20px;
   }
@@ -117,10 +132,6 @@
   #about-face:hover {
     transform: scale(.95) rotate(10deg);
 
-  }
-
-  .expand-collapse {
-    transform: scale(.55);
   }
 
   .anki-buttons {

@@ -42,7 +42,7 @@ window.addEventListener('resize', () => {
         audioPlayerDiv.setAttribute('class', 'audio-player')
         closePodcast.setAttribute(
           'class',
-          'button podcast-close fa-solid fa-xmark'
+          'button pod-button fa-solid fa-xmark'
         )
 
         // Get the URL from the button's data attribute
@@ -50,7 +50,8 @@ window.addEventListener('resize', () => {
           'https://open.spotify.com/embed/episode/2Br6kFlZDCCizEV9cpy81B?utm_source=generator',
           'https://open.spotify.com/embed/episode/4qjerzMw8jfD30VOG0tjpK?utm_source=generator',
           'https://open.spotify.com/embed/episode/3UcFXYPz3Gs0RGb0p1bU6R?utm_source=generator',
-          'https://open.spotify.com/embed/episode/0AINRiHlZf72aKp87lhDTr?utm_source=generator'
+          'https://open.spotify.com/embed/episode/0AINRiHlZf72aKp87lhDTr?utm_source=generator',
+          'https://open.spotify.com/embed/episode/19erZTAnA2yi5WET81rvfh?utm_source=generator'
         ]
 
         let podcastHeight = 152

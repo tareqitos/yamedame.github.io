@@ -174,18 +174,6 @@ const collapsePodcast = document.querySelector('.collapse-podcast .collapse-cont
 const collapseSocial = document.querySelector('.collapse-social .collapse-content')
 const collapseVideo = document.querySelector('.collapse-video .collapse-content')
 
-const stickyNav = document.querySelector('.nav-sticky');
-const sidebarNav = document.querySelector('.sidebar-nav');
-
-window.addEventListener('resize', () => {
-  if ($(window).width() < 1024) {
-    document.body.appendChild(stickyNav);
-  } else {
-    sidebarNav.appendChild(stickyNav);
-  }
-})
-
-
 collapseCategories()
 collapseAll()
 expandAll()
@@ -279,15 +267,6 @@ window.onscroll = function () {
   scrollFunction()
   closeNav()
   isNavOpen = false
-  if (isMobileDevice) {
-    if (lastUpdateText !== null) {
-      if (lastUpdateText.classList.contains('changelog--active')) {
-        lastUpdateText.classList.toggle('changelog--active')
-        lastUpdateText.innerText = 'changelog'
-        hideChangelog()
-      }
-    }
-  }
 
   const button = document.getElementById('open-btn')
   if (button !== null) {

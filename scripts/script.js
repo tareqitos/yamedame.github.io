@@ -5,6 +5,28 @@ async function fetchData () {
 
     ////////////////////////////////////////////////// PODCAST FLOATING WINDOWS //////////////////////////////////////////////////
 
+    
+    const stickyNav = document.querySelector('.nav-sticky');
+
+const sidebarDisplay = (stickyNav, width) => {
+  const sidebarNav = document.querySelector('.sidebar-nav');
+
+  if ($(window).width() < width) {
+    document.body.appendChild(stickyNav);
+  } else {
+    sidebarNav.appendChild(stickyNav);
+  }
+}
+
+window.addEventListener('resize', () => {
+  sidebarDisplay(stickyNav, 1024);
+})
+  sidebarDisplay(stickyNav, 1024);
+
+
+
+    ////////////////////////////////////////////////// PODCAST FLOATING WINDOWS //////////////////////////////////////////////////
+
     const body = document.getElementById('body')
     const podcastButtons = document.querySelectorAll('.podcast-button') // Select all buttons
 

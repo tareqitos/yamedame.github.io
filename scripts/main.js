@@ -11,7 +11,7 @@ if (isMobileDevice()) {
   console.log("L'utilisateur n'utilise pas un navigateur mobile.")
 }
 
-////////////////////////////////////////////////// DESCRIPTION BOX //////////////////////////////////////////////////
+////////////////////////////////////////////////// UMAMI ANALYTICS //////////////////////////////////////////////////
 
 const buttons = document.querySelectorAll('a');
 
@@ -34,9 +34,10 @@ mediaItems.forEach((mediaItem, index) => {
     box.style.left = event.pageX + 50 + 'px'
     box.style.top = event.pageY + -25 + 'px'
 
-
     desc.textContent = mediaItemsDesc[index].textContent;
-    box.appendChild(desc); // Append individual media item descriptions
+    if (!box.contains(desc)) {
+      box.appendChild(desc); // Append only if not already added
+    }
 
   })
 
@@ -45,7 +46,9 @@ mediaItems.forEach((mediaItem, index) => {
     box.style.left = 0
     box.style.top = 0
 
-    box.removeChild(desc)
+    if (box.contains(desc)) {
+      box.removeChild(desc); // Remove if added
+    }
 
   })
 })
@@ -179,8 +182,6 @@ const collapseMedia = document.querySelector('.collapse-media .collapse-content'
 const collapsePodcast = document.querySelector('.collapse-podcast .collapse-content')
 const collapseSocial = document.querySelector('.collapse-social .collapse-content')
 const collapseVideo = document.querySelector('.collapse-video .collapse-content')
-
-
 
 collapseCategories()
 collapseAll()
@@ -329,7 +330,7 @@ function darkTheme() {
   function setTheme(theme) {
     if (theme === 'dark') {
       html.classList.toggle('night-mode')
-      themeSwitch.innerHTML = '明'
+      themeSwitch.innerHTML = '🔆'
       if (tareqitoscomIcon != null) {
         tareqitoscomIcon.style.filter = 'none'
       }
@@ -340,7 +341,7 @@ function darkTheme() {
       localStorage.setItem('themePreference', 'dark')
     } else {
       html.classList.remove('night-mode')
-      themeSwitch.innerHTML = '暗'
+      themeSwitch.innerHTML = '🌙'
       if (tareqitoscomIcon != null) {
         tareqitoscomIcon.style.filter = 'invert(1)'
       }

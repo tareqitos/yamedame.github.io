@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Pomeranian';
+  src: url('../resources/PomeranianRegular.ttf') format('truetype');
+}
+
 section {
   margin-bottom: 20px;
 }
@@ -422,6 +427,7 @@ button.submit {
   visibility: hidden;
   border-radius: 10px;
   padding: 20px;
+  transition: none;
 }
 
 .media-legend {
@@ -465,6 +471,9 @@ button.submit {
   background-color: #fb7641;
 }
 
+.pod-button {
+  padding: 15px;
+}
 
 /* ================================================== AUDIO PLAYER ================================================ */
 
@@ -488,4 +497,67 @@ button.submit {
   text-align: center;
   margin: auto;
   scale: .8;
+}
+
+/* ================================================== SIDEBAR ================================================ */
+
+.body-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0 5%;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 25px;
+  background-color: var(--category-bg-color);
+  padding: 25px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
+  margin: 2px 0;
+}
+
+li a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.sidebar-link-before {
+  /*font-family:'Pomeranian';*/
+  font-size: 12px;
+  font-weight: 800;
+ 
+  border-radius: 3px;
+  font-size: 10px;
+  padding: 3%;
+  margin-right: 10px;
+}
+
+.separator {
+  border-bottom: solid 1px gray;
+  margin-top: 10px;
+  opacity: .3;
+}
+
+.nav-med-list {
+  margin-left: 35px;
+  border-left: solid 1px var(--sub-category-line);
+  padding-left: 15px;
+}
+
+.nav-sticky {
+  margin-top: 15px;
 }

@@ -9,6 +9,10 @@
     display: none;
   }
 
+  .pre-footer {
+    display: flex;
+  }
+
   .nav-sticky {
     position: fixed;
     width: 139px;

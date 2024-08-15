@@ -393,13 +393,14 @@ header {
 }
 
 .pre-footer {
+  display: none;
   margin-top: auto;
-  display: flex;
   gap: 20px;
   margin: auto auto 40px auto;
 }
 
 .pre-footer-element {
+  font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
   padding: 10px 20px;
   opacity: 1;
   border-radius: 10px;
@@ -410,7 +411,6 @@ header {
 }
 
 .pre-footer-link a {
-  font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
   color: var(--text);
   text-decoration: none;
 }
@@ -419,16 +419,13 @@ header {
   transition: transform .2s;
 }
 
-.pre-footer-link:hover {
-  transform: scale(1.1);
-}
-
 /* ================================================= COLLAPSE ================================================= */
 
 .collapse-button {
+  font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
   display: block;
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1.3em;
   border: none;
   outline: none;
   cursor: pointer;
@@ -448,7 +445,7 @@ header {
   width: 18px;
   height: 18px;
   position: relative;
-  top: 13px;
+  top: 8px;
   left: 5px;
   float: right;
   filter: var(--mail-color);

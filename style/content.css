@@ -531,6 +531,8 @@ li {
 }
 
 li a {
+  font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 14px;
   color: var(--text);
   text-decoration: none;
 }
@@ -548,7 +550,7 @@ li a {
 
 .separator {
   border-bottom: solid 1px gray;
-  margin-top: 10px;
+  margin: 10px 0;
   opacity: .3;
 }
 
@@ -560,4 +562,18 @@ li a {
 
 .nav-sticky {
   margin-top: 15px;
+}
+
+.sidebar-info-element {
+  font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding: 5px 0;
+}
+
+.sidebar-info-element a {
+  transition: letter-spacing .2s ease;
+}
+
+.sidebar-info-element a:hover {
+  letter-spacing: 2px;
 }

@@ -3,26 +3,25 @@ async function fetchData () {
     const reponse = await fetch('scripts/list-links.json')
     const links = await reponse.json()
 
-    ////////////////////////////////////////////////// PODCAST FLOATING WINDOWS //////////////////////////////////////////////////
+    ////////////////////////////////////////////////// SIDEBAR //////////////////////////////////////////////////
 
     
-    const stickyNav = document.querySelector('.nav-sticky');
+    const stickyNav = document.querySelector('.nav-sticky')
 
-const sidebarDisplay = (stickyNav, width) => {
-  const sidebarNav = document.querySelector('.sidebar-nav');
+    const sidebarDisplay = (stickyNav, width) => {
+      const sidebarNav = document.querySelector('.sidebar-nav')
 
-  if ($(window).width() < width) {
-    document.body.appendChild(stickyNav);
-  } else {
-    sidebarNav.appendChild(stickyNav);
-  }
-}
+      if ($(window).width() < width) {
+        document.body.appendChild(stickyNav)
+      } else {
+        sidebarNav.appendChild(stickyNav)
+      }
+    }
 
-window.addEventListener('resize', () => {
-  sidebarDisplay(stickyNav, 1024);
-})
-  sidebarDisplay(stickyNav, 1024);
-
+    window.addEventListener('resize', () => {
+      sidebarDisplay(stickyNav, 1024)
+    })
+    sidebarDisplay(stickyNav, 1024)
 
 
     ////////////////////////////////////////////////// PODCAST FLOATING WINDOWS //////////////////////////////////////////////////

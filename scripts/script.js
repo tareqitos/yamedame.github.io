@@ -3,6 +3,27 @@ async function fetchData () {
     const reponse = await fetch('scripts/list-links.json')
     const links = await reponse.json()
 
+    ////////////////////////////////////////////////// SIDEBAR //////////////////////////////////////////////////
+
+    
+    const stickyNav = document.querySelector('.nav-sticky')
+
+    const sidebarDisplay = (stickyNav, width) => {
+      const sidebarNav = document.querySelector('.sidebar-nav')
+
+      if ($(window).width() < width) {
+        document.body.appendChild(stickyNav)
+      } else {
+        sidebarNav.appendChild(stickyNav)
+      }
+    }
+
+    window.addEventListener('resize', () => {
+      sidebarDisplay(stickyNav, 1024)
+    })
+    sidebarDisplay(stickyNav, 1024)
+
+
     ////////////////////////////////////////////////// PODCAST FLOATING WINDOWS //////////////////////////////////////////////////
 
     const body = document.getElementById('body')
@@ -20,7 +41,7 @@ async function fetchData () {
         audioPlayerDiv.setAttribute('class', 'audio-player')
         closePodcast.setAttribute(
           'class',
-          'button podcast-close fa-solid fa-xmark'
+          'button pod-button fa-solid fa-xmark'
         )
 
         // Get the URL from the button's data attribute
@@ -28,7 +49,8 @@ async function fetchData () {
           'https://open.spotify.com/embed/episode/2Br6kFlZDCCizEV9cpy81B?utm_source=generator',
           'https://open.spotify.com/embed/episode/4qjerzMw8jfD30VOG0tjpK?utm_source=generator',
           'https://open.spotify.com/embed/episode/3UcFXYPz3Gs0RGb0p1bU6R?utm_source=generator',
-          'https://open.spotify.com/embed/episode/0AINRiHlZf72aKp87lhDTr?utm_source=generator'
+          'https://open.spotify.com/embed/episode/0AINRiHlZf72aKp87lhDTr?utm_source=generator',
+          'https://open.spotify.com/embed/episode/19erZTAnA2yi5WET81rvfh?utm_source=generator'
         ]
 
         let podcastHeight = 152
@@ -82,10 +104,9 @@ async function fetchData () {
 
     ////////////////////////////////////////////////// BACKGROUND //////////////////////////////////////////////////
 
-
     const characters = ["人", "一", "日", "大", "年", "出", "本", "中", "子", "見", "国", "言", "上", "分", "生", "手", "自", "行", "者", "二", "間", "事", "思", "時", "気", "会", "十", "家", "女", "三", "前", "的", "方", "入", "小", "地", "合", "後", "目", "長", "場", "代", "私", "下", "立", "部", "学", "物", "月", "田", "何", "来", "彼", "話", "体", "動", "社", "知", "理", "山", "内", "同", "心", "発", "高", "実", "作", "当", "新", "世", "今", "書", "度", "明", "五", "戦", "力", "名", "金", "性", "対", "意", "用", "男", "主", "通", "関", "文", "屋", "感", "郎", "業", "定", "政", "持", "道", "外", "取", "所", "現"];
     const container = document.querySelector('.background')
-    const numCharacters = 30 // Adjust this number as needed
+    const numCharacters = 20 // Adjust this number as needed
 
     for (let i = 0; i < numCharacters; i++) {
       const charElement = document.createElement('div')
@@ -122,7 +143,6 @@ async function fetchData () {
 
       container.appendChild(charElement)
     }
-
 
     ////////////////////////////////////////////////// SUGGESTION FORM //////////////////////////////////////////////////
 

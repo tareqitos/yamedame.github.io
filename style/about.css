@@ -1,5 +1,5 @@
 #about-main {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .about-title {
@@ -45,8 +45,8 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 300px;
-    font-size: 20px;
+    width: 280px;
+    font-size: 15px;
     gap: 10px;
     opacity: 1;
     padding: 10px 20px;
@@ -60,7 +60,7 @@
     border-radius: 100px;
 
     transform: scale(1);
-    transition: transform .3s, width .3s ease;
+    transition: transform .3s, width .3s, letter-spacing .3s ease;
     cursor: pointer;
 }
 
@@ -112,8 +112,8 @@
 }
 
 #about-button-back:hover {
-    width: 320px;
     transform: scale(1.05);
+    letter-spacing: 1px;
 }
 
 .about-pre-footer {

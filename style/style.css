@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Pomeranian';
+  src: url('../resources/PomeranianRegular.ttf') format('truetype');
+}
+
+
 /* ================================================= HTML ================================================= */
 :root {
   position: relative;
@@ -24,6 +30,7 @@
   --suggestion-bg-color: #b8b8b8;
   --border: rgba(0, 0, 0, 0.1);
   --fa-apple: rgba(0, 0, 0, .4);
+  --sub-category-line: rgba(0, 0, 0, 0.4);
 }
 
 body {
@@ -51,6 +58,7 @@ body {
   --suggestion-bg-color: #9e9e9e;
   --border: rgba(255, 255, 255, 0.1);
   --fa-apple: rgba(255, 255, 255, .4);
+  --sub-category-line: rgba(255, 255, 255, .4);
 }
 
 .anchor {
@@ -62,7 +70,7 @@ body {
 
 .anchorage {
   position: relative;
-  bottom: 110px;
+  bottom: 25px;
 }
 
 #top {
@@ -71,13 +79,9 @@ body {
 }
 
 main {
-  margin-top: 50px;
   margin-bottom: 30px;
 }
 
-.wrap-section {
-  margin: 0 5%;
-}
 
 /* ================================================= BACKGROUND ================================================= */
 
@@ -183,11 +187,10 @@ header {
 /* ================================================= NAV ================================================= */
 
 .nav-sticky {
-  position: sticky;
-  top: 15px;
+
+
   z-index: 4;
-  width: 250px;
-  margin: 0 auto 0 auto;
+
 }
 
 .open-btn {
@@ -212,31 +215,15 @@ header {
 
 .expand-collapse {
   display: flex;
-  gap: 20px;
-  transform: scale(.6);
-  justify-content: center;
+  gap: 10px;
 }
 
 
 
-.button,
-.collapse-all,
-.roll-all {
-  z-index: 10;
-  cursor: pointer;
-  padding-bottom: 10px;
-  color: var(--text);
-  background-color: var(--nav-bg-color);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 20px 30px;
-  box-shadow: var(--btn-shadow);
-  border-radius: 100px;
-  -webkit-transition: transform .2s ease;
-  transition: transform .2s ease;
-  font-weight: 100;
-  font-size: 25px;
-  margin: 0;
+.expand-collapse {
+  display: flex;
+  gap: 10px;
+
 }
 
 .button {
@@ -289,6 +276,25 @@ header {
 
 .sidebar a:hover {
   color: #c93d1a
+}
+
+.button,
+.collapse-all,
+.roll-all {
+  z-index: 10;
+  cursor: pointer;
+  color: var(--text);
+  background-color: var(--nav-bg-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 5px 9px;
+  box-shadow: var(--btn-shadow);
+  border-radius: 100px;
+  -webkit-transition: transform .2s ease;
+  transition: transform .2s ease;
+  font-weight: 100;
+  font-size: 12px;
+  margin: 0;
 }
 
 /* ================================================= GO TO TOP BUTTON ================================================= */
@@ -387,13 +393,14 @@ header {
 }
 
 .pre-footer {
+  display: none;
   margin-top: auto;
-  display: flex;
   gap: 20px;
   margin: auto auto 40px auto;
 }
 
 .pre-footer-element {
+  font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
   padding: 10px 20px;
   opacity: 1;
   border-radius: 10px;
@@ -404,33 +411,28 @@ header {
 }
 
 .pre-footer-link a {
-  font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
   color: var(--text);
   text-decoration: none;
-  transition: all .2s;
 }
 
 .pre-footer-link {
-  transition: all .2s;
-}
-
-.pre-footer-link:hover {
-  transform: scale(1.1);
+  transition: transform .2s;
 }
 
 /* ================================================= COLLAPSE ================================================= */
 
 .collapse-button {
+  font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
   display: block;
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1.3em;
   border: none;
   outline: none;
   cursor: pointer;
   background: none;
   color: var(--text);
 
-  margin-top: 5px;
+  margin-top: 0px;
   background: var(--category-bg-color);
   padding: 6px 15px;
   border-radius: 10px;
@@ -443,7 +445,7 @@ header {
   width: 18px;
   height: 18px;
   position: relative;
-  top: 13px;
+  top: 8px;
   left: 5px;
   float: right;
   filter: var(--mail-color);
@@ -467,6 +469,7 @@ header {
 .collapse-content {
   overflow-y: visible;
   margin-top: 10px;
+  margin-bottom: 10px;
   opacity: 1;
   transition: max-height 0.2s, opacity 0.2s, margin-top 0.2s;
 }
@@ -487,38 +490,46 @@ header {
 }
 
 .collapse-media-content {
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid var(--sub-category-line);
   padding-left: 20px;
 }
 
-.collapse-beginners .collapse-button {
+.collapse-beginners .collapse-button,
+#nav-beg {
   border-bottom: solid 2px rgb(232, 59, 42);
 }
 
+#nav-dic,
 .collapse-dictionaries .collapse-button {
   border-bottom: solid 2px #22ae5a
 }
 
+#nav-gra,
 .collapse-grammar .collapse-button {
   border-bottom: solid 2px #e95e1c
 }
 
+#nav-voc,
 .collapse-kanji .collapse-button {
   border-bottom: solid 2px #426bfe
 }
 
+#nav-med,
 .collapse-media .collapse-media-button {
   border-bottom: solid 2px #e3e7eb
 }
 
+#nav-rea,
 .collapse-reading .collapse-button {
   border-bottom: solid 2px #cf8424
 }
 
+#nav-mis,
 .collapse-misc .collapse-button {
   border-bottom: solid 2px #b047b0
 }
 
+#nav-app,
 .collapse-software .collapse-button {
   border-bottom: solid 2px #0dae9c
 }

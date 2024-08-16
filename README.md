@@ -12,4 +12,12 @@
 <p align="center"><a href="https://yameda.me">https://yameda.me</a></p>
 <br>
 <br>
-<img src="https://github.com/tareqitos/nentlj.github.io/assets/28717232/023ba828-8a28-4c43-b8ad-142817a3ee06" align="center">
+<img src="https://github.com/tareqitos/yamedame.github.io/blob/master/readme/desktop1.png" align="center">
+<img src="https://github.com/tareqitos/yamedame.github.io/blob/master/readme/desktop2.png" align="center">
+<br>
+<div align="center">
+  <img src="https://github.com/tareqitos/yamedame.github.io/blob/master/readme/mobile1.png" align="center" width="400px">
+  <img src="https://github.com/tareqitos/yamedame.github.io/blob/master/readme/mobile2.png" align="center" width="400px">
+</div>
+
+

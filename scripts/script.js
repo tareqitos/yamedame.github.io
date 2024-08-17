@@ -254,8 +254,6 @@ async function fetchData () {
         const suggestionForm = suggestionForms[index]
         const suggButton = suggButtons[index]
 
-        console.log(suggButton)
-
         if (!form.checkValidity()) {
           suggButton.style.pointerEvents = 'unset'
           return

@@ -26,9 +26,9 @@
     <link href="style/style.css" rel="stylesheet">
     <link href="style/content.css" rel="stylesheet">
     <link href="style/media.css" rel="stylesheet">
-
+    <!--
     <script defer src="https://analytics.tareqitos.me/script.js"
-        data-website-id="420f37a5-a3c0-424a-803f-3b937bf0c67f"></script>
+        data-website-id="420f37a5-a3c0-424a-803f-3b937bf0c67f"></script> -->
     <script src="scripts/main.js" defer></script>
     <script src="scripts/script.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -41,7 +41,7 @@
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <title>No excuses not to learn Japanese</title>
-
+ 
 </head>
 
 <body id="body">
@@ -1261,9 +1261,44 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="suggestion" class="item-container">
+                                <a class="suggestion-button">
+                                    <div class="item-container-parent media-suggestion suggestion">
+                                        <p><i class="fa-regular fa-square-plus"></i></p>
+                                    </div>
+                                </a>
+                                <p class="item-desc suggestion-text">Share your recommendation or website with other
+                                    learners!</p>
+                                <p class="item-desc thanks-text">Thank you! Your suggestion has been successfully
+                                    sent
+                                    and will be added after being reviewed!</p>
+                                <p class="item-desc error-text">Oops! An error has occured 😱 you can still send
+                                    your
+                                    suggestion <a href="mailto:social@tareqitos.com"><span
+                                            class="sugg-mail">here</span></a> !</p>
+                                <form class="suggestion-form" id="myForm">
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="media" id="category" value="media">
+                                    <input type="text" name="name" id="add-name" class="input" placeholder="name"
+                                        maxlength="15" autocomplete="off" required>
+                                    <input type="text" name="title" id="add-title" class="input"
+                                        placeholder="website name" maxlength="25" autocomplete="off" required>
+                                    <input type="url" name="link" id="add-link" class="input" pattern="https?://.+"
+                                        placeholder="link (https://...)" maxlength="100" autocomplete="off"
+                                        required>
+                                    <button type="submit" id="submit" class="media-submit submit" disabled>
+                                        <p class="submit-text">SEND</p>
+                                        <div class="lds-ellipsis">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
-
                 </section>
                 <section class="section-reading">
                     <div class="collapse-reading collapse-layout">

@@ -225,6 +225,12 @@ button.submit {
   box-shadow: 0 4px 15px 0 rgba(10, 105, 229, 0.425);
 }
 
+.media-suggestion,
+.media-submit
+ {
+  background-image: linear-gradient(to right, rgb(190, 190, 190) 0%, rgb(178, 178, 191) 35%, #656768 68%, #49494d 100%);
+}
+
 /* ================================================== READING ================================================= */
 
 .item-container-parent.reading {

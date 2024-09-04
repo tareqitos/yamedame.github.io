@@ -400,6 +400,7 @@ header {
 }
 
 .pre-footer-element {
+  font-size: 14px;
   font-family: 'Quicksand', 'Montserrat', Arial, Helvetica, sans-serif;
   padding: 10px 20px;
   opacity: 1;

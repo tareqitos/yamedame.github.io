@@ -125,12 +125,13 @@ function anchorOpenCategories() {
     anchor.addEventListener('click', () => {
       if (collapseButton[index].classList.contains('collapse-button--active')) {
         const videoCategoryIndex = collapseButton[index].parentNode.classList.contains('collapse-video')
+        const gamingCategoryIndex = collapseButton[index].parentNode.classList.contains('collapse-gaming')
         const audioCategoryIndex = collapseButton[index].parentNode.classList.contains('collapse-podcast')
         const socialCategoryIndex = collapseButton[index].parentNode.classList.contains('collapse-social')
 
         collapseButton[index].classList.toggle('collapse-button--active')
 
-        if (videoCategoryIndex || audioCategoryIndex || socialCategoryIndex) {
+        if (videoCategoryIndex || gamingCategoryIndex || audioCategoryIndex || socialCategoryIndex) {
           const collapseMediaButton = document.querySelector('.collapse-media-button')
           const collapseMediaContent = document.querySelector('.collapse-media-content')
 
@@ -155,12 +156,13 @@ function roll(collapseContent) {
   const collapsePodcast = document.querySelector('.collapse-podcast .collapse-content')
   const collapseSocial = document.querySelector('.collapse-social .collapse-content')
   const collapseVideo = document.querySelector('.collapse-video .collapse-content')
+  const collapseGaming = document.querySelector('.collapse-gaming .collapse-content')
 
   isCollapsed = false
   rollAndCollapseIcon.classList.remove('fa-expand')
   rollAndCollapseIcon.classList.add('fa-compress')
 
-  collapseContent.style.maxHeight = collapseContent.scrollHeight + collapseMedia.scrollHeight + collapseVideo.scrollHeight + collapsePodcast.scrollHeight + collapseSocial.scrollHeight + 'px'
+  collapseContent.style.maxHeight = collapseContent.scrollHeight + collapseMedia.scrollHeight + collapseVideo.scrollHeight + collapseGaming.scrollHeight + collapsePodcast.scrollHeight + collapseSocial.scrollHeight + 'px'
 
   collapseContent.style.opacity = 1
   collapseContent.style.marginTop = 10 + 'px'
@@ -171,7 +173,7 @@ function roll(collapseContent) {
 
   if (collapseContent.style.maxHeight !== 0) {
     window.addEventListener('resize', () => {
-      collapseContent.style.maxHeight = collapseContent.scrollHeight + collapseMedia.scrollHeight + collapseVideo.scrollHeight + collapsePodcast.scrollHeight + collapseSocial.scrollHeight + 'px'
+      collapseContent.style.maxHeight = collapseContent.scrollHeight + collapseMedia.scrollHeight + collapseVideo.scrollHeight + collapseGaming.scrollHeight + collapsePodcast.scrollHeight + collapseSocial.scrollHeight + 'px'
     })
   }
 }

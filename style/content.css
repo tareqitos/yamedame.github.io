@@ -515,6 +515,10 @@ button.submit {
   gap: 20px;
 }
 
+.main-sidebar {
+  margin-bottom: 80px;
+}
+
 .sidebar-nav {
   display: flex;
   flex-direction: column;

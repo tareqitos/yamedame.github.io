@@ -610,6 +610,16 @@
         "image": null
     },
     {
+        "name": "Origa",
+        "description": "Open source Japanese learning app — built-in dictionaries, kanji with furigana, grammar guide, and phrase library. FSRS spaced repetition. Russian and English UI. Works offline.",
+        "link": "https://origa.uwuwu.net",
+        "category": "Apps",
+        "platform": null,
+        "slug": "applications",
+        "path": "applications",
+        "image": null
+    },
+    {
         "name": "Free Japanese Font",
         "description": "Download free fonts.",
         "link": "https://www.freejapanesefont.com/",
